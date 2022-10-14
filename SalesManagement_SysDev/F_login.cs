@@ -77,5 +77,17 @@ namespace SalesManagement_SysDev
             }
 
         }
+
+        private void PwShow_CheckedChanged(object sender, EventArgs e)
+        {
+            if (PwShow.Checked)
+            {
+                PW_textBox.PasswordChar = default(char);
+            }
+            else
+            {
+                PW_textBox.PasswordChar = '*';
+            }
+        }
     }
 }
