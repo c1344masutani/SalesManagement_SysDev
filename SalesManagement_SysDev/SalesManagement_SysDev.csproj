@@ -57,6 +57,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="F_arrival.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_arrival.Designer.cs">
+      <DependentUpon>F_arrival.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_sale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_sale.Designer.cs">
+      <DependentUpon>F_sale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_employee.Designer.cs">
+      <DependentUpon>F_employee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entity\M_MajorCassification.cs" />
     <Compile Include="Entity\M_Product.cs" />
     <Compile Include="F_client.cs">
@@ -83,6 +101,36 @@
     <Compile Include="F_menu.Designer.cs">
       <DependentUpon>F_menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_chumon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_chumon.Designer.cs">
+      <DependentUpon>F_chumon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_hattyu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_hattyu.Designer.cs">
+      <DependentUpon>F_hattyu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_product.Designer.cs">
+      <DependentUpon>F_product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_syukko.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_syukko.Designer.cs">
+      <DependentUpon>F_syukko.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_warehousing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_warehousing.Designer.cs">
+      <DependentUpon>F_warehousing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entity\T_Arrival.cs" />
@@ -105,6 +153,18 @@
     <Compile Include="Entity\T_Warehousing.cs" />
     <Compile Include="Entity\T_WarehousingDetail.cs" />
     <Compile Include="SalesManagement_DevContext.cs" />
+    <Compile Include="F_shipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_shipment.Designer.cs">
+      <DependentUpon>F_shipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_stock.Designer.cs">
+      <DependentUpon>F_stock.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="F_client.resx">
       <DependentUpon>F_client.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_menu.resx">
       <DependentUpon>F_menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_chumon.resx">
+      <DependentUpon>F_chumon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
