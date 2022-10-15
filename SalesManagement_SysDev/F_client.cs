@@ -16,5 +16,162 @@ namespace SalesManagement_SysDev
         {
             InitializeComponent();
         }
+
+        private void Regester_button_Click(object sender, EventArgs e)
+        {
+            int flg;
+            if (checkBoxClflg.Checked == true)
+            {
+                flg = 1;
+            }
+            else
+            {
+                flg = 0;
+            }
+            var client = new M_Client
+            {
+                
+                SoID = int.Parse(textBoxSalesOfficeID.Text.Trim()),
+                ClName = textBoxClientName.Text.Trim(),
+                ClAddress = textBoxAddress.Text.Trim(),
+                ClPhone = textBoxTel.Text.Trim(),
+                ClPostal = textBoxPostnumber.Text.Trim(),
+                ClFAX = textBoxFAX.Text.Trim(),
+                ClFlag = flg,
+                ClHidden = textBoxHidden.Text.Trim()
+
+            };
+            try
+            {
+                var context = new SalesManagement_DevContext();
+                context.M_Clients.Add(client);
+                context.SaveChanges();
+                context.Dispose();
+                fncAllSelect();
+                MessageBox.Show("登録完了");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Update_button_Click(object sender, EventArgs e)
+        {
+            int flg;
+            if (checkBoxClflg.Checked == true)
+            {
+                flg = 1;
+            }
+            else
+            {
+                flg = 0;
+            }
+            try
+            {
+                int clid = int.Parse(textBoxClientID.Text);
+                var context = new SalesManagement_DevContext();
+                var client = context.M_Clients.Single(x => x.ClID == clid);
+                client.SoID = int.Parse(textBoxSalesOfficeID.Text.Trim());
+                client.ClName = textBoxClientName.Text.Trim();
+                client.ClAddress = textBoxAddress.Text.Trim();
+                client.ClPhone = textBoxTel.Text.Trim();
+                client.ClPostal = textBoxPostnumber.Text.Trim();
+                client.ClFAX = textBoxFAX.Text.Trim();
+                client.ClFlag = flg;
+                client.ClHidden = textBoxHidden.Text.Trim();
+                context.SaveChanges();
+                context.Dispose();
+                fncAllSelect();
+                MessageBox.Show("更新完了");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Delete_button_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int clid = int.Parse(textBoxClientID.Text);
+                var context = new SalesManagement_DevContext();
+                var client = context.M_Clients.Single(x => x.ClID == clid);
+                context.M_Clients.Remove(client);
+                context.SaveChanges();
+                context.Dispose();
+                fncAllSelect();
+                MessageBox.Show("削除完了");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBoxClientID.Text = "";
+            textBoxSalesOfficeID.Text = "";
+            textBoxClientName.Text = "";
+            textBoxPostnumber.Text = "";
+            textBoxAddress.Text = "";
+            textBoxTel.Text = "";
+            textBoxFAX.Text = "";
+            checkBoxClflg.Checked = false;
+            textBoxHidden.Text = "";
+        }
+
+        private void fncAllSelect()
+        {
+            dataGridViewDsp.Rows.Clear();
+            try
+            {
+                var context = new SalesManagement_DevContext();
+                foreach (var p in context.M_Clients)
+                {
+                    dataGridViewDsp.Rows.Add(p.ClID, p.SoID, p.ClName, p.ClAddress, p.ClPhone, p.ClPostal, p.ClFAX, p.ClFlag, p.ClHidden);
+                }
+                context.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void F_client_Load(object sender, EventArgs e)
+        {
+            //列数の指定
+            dataGridViewDsp.ColumnCount = 9;
+            //0番目（左端）の列幅を設定
+            dataGridViewDsp.Columns[0].Width = 70;
+            //0番目（左端）の項目名を設定
+            dataGridViewDsp.Columns[0].HeaderText = "顧客ID";
+            dataGridViewDsp.Columns[1].Width = 70;
+            dataGridViewDsp.Columns[1].HeaderText = "営業所ID";
+            dataGridViewDsp.Columns[2].Width = 130;
+            dataGridViewDsp.Columns[2].HeaderText = "顧客名";
+            dataGridViewDsp.Columns[3].Width = 200;
+            dataGridViewDsp.Columns[3].HeaderText = "住所";
+            dataGridViewDsp.Columns[4].Width = 130;
+            dataGridViewDsp.Columns[4].HeaderText = "電話番号";
+            dataGridViewDsp.Columns[5].Width = 130;
+            dataGridViewDsp.Columns[5].HeaderText = "郵便番号";
+            dataGridViewDsp.Columns[6].Width = 130;
+            dataGridViewDsp.Columns[6].HeaderText = "FAX";
+            dataGridViewDsp.Columns[7].Width = 70;
+            dataGridViewDsp.Columns[7].HeaderText = "顧客管理フラグ";
+            dataGridViewDsp.Columns[8].Width = 200;
+            dataGridViewDsp.Columns[8].HeaderText = "非表示理由";
+            //選択モードを行単位
+            dataGridViewDsp.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            //読み取り専用
+            dataGridViewDsp.ReadOnly = true;
+            //全データ表示
+            fncAllSelect();
+        }
     }
 }

@@ -65,9 +65,7 @@ namespace SalesManagement_SysDev
 
                     frm.ShowDialog();
 
-                    //開いたフォームから戻ってきたら
-                    //メモリを解放する
-                    frm.Dispose();
+                    this.Close();
                 }
                 
             }

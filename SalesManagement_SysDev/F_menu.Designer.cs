@@ -150,6 +150,7 @@ namespace SalesManagement_SysDev
             this.Customer_button.TabIndex = 12;
             this.Customer_button.Text = "顧客管理";
             this.Customer_button.UseVisualStyleBackColor = true;
+            this.Customer_button.Click += new System.EventHandler(this.Customer_button_Click);
             // 
             // F_menu
             // 

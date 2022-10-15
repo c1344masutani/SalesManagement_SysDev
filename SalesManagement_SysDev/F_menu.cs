@@ -16,5 +16,16 @@ namespace SalesManagement_SysDev
         {
             InitializeComponent();
         }
+
+        private void Customer_button_Click(object sender, EventArgs e)
+        {
+            Form frm = new F_client();
+
+            Opacity = 0;
+
+            frm.ShowDialog();
+
+            this.Close();
+        }
     }
 }

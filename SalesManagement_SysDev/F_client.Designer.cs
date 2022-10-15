@@ -29,10 +29,10 @@ namespace SalesManagement_SysDev
         /// </summary>
         private void InitializeComponent()
         {
-            this.Customer_dataGridView = new System.Windows.Forms.DataGridView();
-            this.Customer_checkBox = new System.Windows.Forms.CheckBox();
-            this.FAX_textBox = new System.Windows.Forms.TextBox();
-            this.Reason_textBox = new System.Windows.Forms.TextBox();
+            this.dataGridViewDsp = new System.Windows.Forms.DataGridView();
+            this.checkBoxClflg = new System.Windows.Forms.CheckBox();
+            this.textBoxFAX = new System.Windows.Forms.TextBox();
+            this.textBoxHidden = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxSalesOfficeID = new System.Windows.Forms.TextBox();
@@ -51,47 +51,48 @@ namespace SalesManagement_SysDev
             this.Update_button = new System.Windows.Forms.Button();
             this.Delete_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.Customer_dataGridView)).BeginInit();
+            this.buttonClear = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             this.SuspendLayout();
             // 
-            // Customer_dataGridView
+            // dataGridViewDsp
             // 
-            this.Customer_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Customer_dataGridView.Location = new System.Drawing.Point(35, 552);
-            this.Customer_dataGridView.Name = "Customer_dataGridView";
-            this.Customer_dataGridView.RowHeadersWidth = 62;
-            this.Customer_dataGridView.RowTemplate.Height = 27;
-            this.Customer_dataGridView.Size = new System.Drawing.Size(1162, 150);
-            this.Customer_dataGridView.TabIndex = 44;
+            this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDsp.Location = new System.Drawing.Point(35, 442);
+            this.dataGridViewDsp.Name = "dataGridViewDsp";
+            this.dataGridViewDsp.RowHeadersWidth = 62;
+            this.dataGridViewDsp.RowTemplate.Height = 27;
+            this.dataGridViewDsp.Size = new System.Drawing.Size(1499, 314);
+            this.dataGridViewDsp.TabIndex = 44;
             // 
-            // Customer_checkBox
+            // checkBoxClflg
             // 
-            this.Customer_checkBox.AutoSize = true;
-            this.Customer_checkBox.Location = new System.Drawing.Point(592, 156);
-            this.Customer_checkBox.Name = "Customer_checkBox";
-            this.Customer_checkBox.Size = new System.Drawing.Size(144, 22);
-            this.Customer_checkBox.TabIndex = 43;
-            this.Customer_checkBox.Text = "顧客管理フラグ";
-            this.Customer_checkBox.UseVisualStyleBackColor = true;
+            this.checkBoxClflg.AutoSize = true;
+            this.checkBoxClflg.Location = new System.Drawing.Point(592, 298);
+            this.checkBoxClflg.Name = "checkBoxClflg";
+            this.checkBoxClflg.Size = new System.Drawing.Size(144, 22);
+            this.checkBoxClflg.TabIndex = 43;
+            this.checkBoxClflg.Text = "顧客管理フラグ";
+            this.checkBoxClflg.UseVisualStyleBackColor = true;
             // 
-            // FAX_textBox
+            // textBoxFAX
             // 
-            this.FAX_textBox.Location = new System.Drawing.Point(289, 482);
-            this.FAX_textBox.Name = "FAX_textBox";
-            this.FAX_textBox.Size = new System.Drawing.Size(100, 25);
-            this.FAX_textBox.TabIndex = 42;
+            this.textBoxFAX.Location = new System.Drawing.Point(850, 215);
+            this.textBoxFAX.Name = "textBoxFAX";
+            this.textBoxFAX.Size = new System.Drawing.Size(100, 25);
+            this.textBoxFAX.TabIndex = 42;
             // 
-            // Reason_textBox
+            // textBoxHidden
             // 
-            this.Reason_textBox.Location = new System.Drawing.Point(784, 212);
-            this.Reason_textBox.Name = "Reason_textBox";
-            this.Reason_textBox.Size = new System.Drawing.Size(100, 25);
-            this.Reason_textBox.TabIndex = 41;
+            this.textBoxHidden.Location = new System.Drawing.Point(850, 333);
+            this.textBoxHidden.Name = "textBoxHidden";
+            this.textBoxHidden.Size = new System.Drawing.Size(100, 25);
+            this.textBoxHidden.TabIndex = 41;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(588, 215);
+            this.label10.Location = new System.Drawing.Point(589, 343);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(98, 18);
             this.label10.TabIndex = 40;
@@ -100,7 +101,7 @@ namespace SalesManagement_SysDev
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(32, 482);
+            this.label8.Location = new System.Drawing.Point(593, 215);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(40, 18);
             this.label8.TabIndex = 39;
@@ -115,7 +116,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxTel
             // 
-            this.textBoxTel.Location = new System.Drawing.Point(289, 442);
+            this.textBoxTel.Location = new System.Drawing.Point(850, 175);
             this.textBoxTel.Name = "textBoxTel";
             this.textBoxTel.Size = new System.Drawing.Size(100, 25);
             this.textBoxTel.TabIndex = 37;
@@ -151,7 +152,7 @@ namespace SalesManagement_SysDev
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(32, 432);
+            this.label7.Location = new System.Drawing.Point(593, 165);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 18);
             this.label7.TabIndex = 32;
@@ -204,12 +205,13 @@ namespace SalesManagement_SysDev
             // 
             // Regester_button
             // 
-            this.Regester_button.Location = new System.Drawing.Point(592, 80);
+            this.Regester_button.Location = new System.Drawing.Point(63, 80);
             this.Regester_button.Name = "Regester_button";
             this.Regester_button.Size = new System.Drawing.Size(75, 36);
             this.Regester_button.TabIndex = 26;
             this.Regester_button.Text = "追加";
             this.Regester_button.UseVisualStyleBackColor = true;
+            this.Regester_button.Click += new System.EventHandler(this.Regester_button_Click);
             // 
             // Update_button
             // 
@@ -219,15 +221,17 @@ namespace SalesManagement_SysDev
             this.Update_button.TabIndex = 25;
             this.Update_button.Text = "更新";
             this.Update_button.UseVisualStyleBackColor = true;
+            this.Update_button.Click += new System.EventHandler(this.Update_button_Click);
             // 
             // Delete_button
             // 
-            this.Delete_button.Location = new System.Drawing.Point(61, 80);
+            this.Delete_button.Location = new System.Drawing.Point(561, 80);
             this.Delete_button.Name = "Delete_button";
             this.Delete_button.Size = new System.Drawing.Size(75, 36);
             this.Delete_button.TabIndex = 24;
             this.Delete_button.Text = "削除";
             this.Delete_button.UseVisualStyleBackColor = true;
+            this.Delete_button.Click += new System.EventHandler(this.Delete_button_Click);
             // 
             // label1
             // 
@@ -238,15 +242,26 @@ namespace SalesManagement_SysDev
             this.label1.TabIndex = 23;
             this.label1.Text = "顧客管理";
             // 
+            // buttonClear
+            // 
+            this.buttonClear.Location = new System.Drawing.Point(1097, 52);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(100, 33);
+            this.buttonClear.TabIndex = 45;
+            this.buttonClear.Text = "入力クリア";
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
             // F_client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1228, 714);
-            this.Controls.Add(this.Customer_dataGridView);
-            this.Controls.Add(this.Customer_checkBox);
-            this.Controls.Add(this.FAX_textBox);
-            this.Controls.Add(this.Reason_textBox);
+            this.ClientSize = new System.Drawing.Size(1546, 768);
+            this.Controls.Add(this.buttonClear);
+            this.Controls.Add(this.dataGridViewDsp);
+            this.Controls.Add(this.checkBoxClflg);
+            this.Controls.Add(this.textBoxFAX);
+            this.Controls.Add(this.textBoxHidden);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBoxSalesOfficeID);
@@ -267,7 +282,8 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.label1);
             this.Name = "F_client";
             this.Text = "F_client";
-            ((System.ComponentModel.ISupportInitialize)(this.Customer_dataGridView)).EndInit();
+            this.Load += new System.EventHandler(this.F_client_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,10 +291,10 @@ namespace SalesManagement_SysDev
 
         #endregion
 
-        private System.Windows.Forms.DataGridView Customer_dataGridView;
-        private System.Windows.Forms.CheckBox Customer_checkBox;
-        private System.Windows.Forms.TextBox FAX_textBox;
-        private System.Windows.Forms.TextBox Reason_textBox;
+        private System.Windows.Forms.DataGridView dataGridViewDsp;
+        private System.Windows.Forms.CheckBox checkBoxClflg;
+        private System.Windows.Forms.TextBox textBoxFAX;
+        private System.Windows.Forms.TextBox textBoxHidden;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBoxSalesOfficeID;
@@ -297,5 +313,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Button Update_button;
         private System.Windows.Forms.Button Delete_button;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonClear;
     }
 }
