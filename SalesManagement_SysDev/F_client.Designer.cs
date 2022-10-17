@@ -64,6 +64,8 @@ namespace SalesManagement_SysDev
             this.dataGridViewDsp.RowTemplate.Height = 27;
             this.dataGridViewDsp.Size = new System.Drawing.Size(1499, 314);
             this.dataGridViewDsp.TabIndex = 44;
+            this.dataGridViewDsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellClick);
+            this.dataGridViewDsp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellContentClick);
             // 
             // checkBoxClflg
             // 
@@ -146,6 +148,7 @@ namespace SalesManagement_SysDev
             // 
             this.textBoxClientID.Location = new System.Drawing.Point(289, 149);
             this.textBoxClientID.Name = "textBoxClientID";
+            this.textBoxClientID.ReadOnly = true;
             this.textBoxClientID.Size = new System.Drawing.Size(100, 25);
             this.textBoxClientID.TabIndex = 33;
             // 

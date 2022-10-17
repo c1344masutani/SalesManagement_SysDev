@@ -67,7 +67,12 @@ namespace SalesManagement_SysDev
 
                     this.Close();
                 }
-                
+                else
+                {
+                    MessageBox.Show("IDまたはPWが違います。");
+
+                }
+
             }
             catch (Exception ex)
             {
@@ -86,6 +91,11 @@ namespace SalesManagement_SysDev
             {
                 PW_textBox.PasswordChar = '*';
             }
+        }
+
+        private void F_Login_Load(object sender, EventArgs e)
+        {
+            ID_textBox.Focus();
         }
     }
 }
