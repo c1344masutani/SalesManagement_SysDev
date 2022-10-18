@@ -16,5 +16,10 @@ namespace SalesManagement_SysDev
         {
             InitializeComponent();
         }
+
+        private void Regester_button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

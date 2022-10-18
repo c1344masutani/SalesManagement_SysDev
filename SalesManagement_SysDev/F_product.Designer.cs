@@ -228,6 +228,7 @@ namespace SalesManagement_SysDev
             this.Regester_button.TabIndex = 49;
             this.Regester_button.Text = "追加";
             this.Regester_button.UseVisualStyleBackColor = true;
+            this.Regester_button.Click += new System.EventHandler(this.Regester_button_Click);
             // 
             // Update_button
             // 
