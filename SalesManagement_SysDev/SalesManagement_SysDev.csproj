@@ -177,6 +177,9 @@
     <EmbeddedResource Include="F_chumon.resx">
       <DependentUpon>F_chumon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="F_product.resx">
+      <DependentUpon>F_product.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
