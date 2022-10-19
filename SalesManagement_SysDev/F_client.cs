@@ -198,5 +198,22 @@ namespace SalesManagement_SysDev
             }
             textBoxHidden.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[8].Value.ToString();
         }
+
+        private void Search_button_Click(object sender, EventArgs e)
+        {
+            dataGridViewDsp.Rows.Clear();
+            int clid = int.Parse(textBoxClientID.Text);
+            try
+            {
+                var context = new SalesManagement_DevContext();
+                var client = context.M_Clients.Where(x => x.ClID == clid).ToArray();
+                dataGridViewDsp.Rows.Add(client[0].ClID, client[0].SoID, client[0].ClName, client[0].ClPostal, client[0].ClAddress, client[0].ClPhone, client[0].ClFAX, client[0].ClFlag, client[0].ClHidden);
+                context.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

@@ -52,6 +52,7 @@ namespace SalesManagement_SysDev
             this.Delete_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonClear = new System.Windows.Forms.Button();
+            this.Search_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -255,11 +256,22 @@ namespace SalesManagement_SysDev
             this.buttonClear.UseVisualStyleBackColor = true;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
+            // Search_button
+            // 
+            this.Search_button.Location = new System.Drawing.Point(783, 80);
+            this.Search_button.Name = "Search_button";
+            this.Search_button.Size = new System.Drawing.Size(82, 36);
+            this.Search_button.TabIndex = 46;
+            this.Search_button.Text = "検索";
+            this.Search_button.UseVisualStyleBackColor = true;
+            this.Search_button.Click += new System.EventHandler(this.Search_button_Click);
+            // 
             // F_client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1546, 768);
+            this.Controls.Add(this.Search_button);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.dataGridViewDsp);
             this.Controls.Add(this.checkBoxClflg);
@@ -317,5 +329,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Button Delete_button;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Button Search_button;
     }
 }
