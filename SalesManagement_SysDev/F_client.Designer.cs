@@ -310,7 +310,7 @@ namespace SalesManagement_SysDev
             this.Search_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Search_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.Search_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Search_button.Location = new System.Drawing.Point(1120, 101);
+            this.Search_button.Location = new System.Drawing.Point(1108, 101);
             this.Search_button.Name = "Search_button";
             this.Search_button.Size = new System.Drawing.Size(148, 57);
             this.Search_button.TabIndex = 46;
