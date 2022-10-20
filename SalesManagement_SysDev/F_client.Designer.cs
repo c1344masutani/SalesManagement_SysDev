@@ -59,11 +59,12 @@ namespace SalesManagement_SysDev
             // dataGridViewDsp
             // 
             this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDsp.Location = new System.Drawing.Point(35, 442);
+            this.dataGridViewDsp.Location = new System.Drawing.Point(28, 368);
+            this.dataGridViewDsp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewDsp.Name = "dataGridViewDsp";
             this.dataGridViewDsp.RowHeadersWidth = 62;
             this.dataGridViewDsp.RowTemplate.Height = 27;
-            this.dataGridViewDsp.Size = new System.Drawing.Size(1499, 314);
+            this.dataGridViewDsp.Size = new System.Drawing.Size(1199, 262);
             this.dataGridViewDsp.TabIndex = 44;
             this.dataGridViewDsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellClick);
             this.dataGridViewDsp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellContentClick);
@@ -71,147 +72,165 @@ namespace SalesManagement_SysDev
             // checkBoxClflg
             // 
             this.checkBoxClflg.AutoSize = true;
-            this.checkBoxClflg.Location = new System.Drawing.Point(592, 298);
+            this.checkBoxClflg.Location = new System.Drawing.Point(474, 248);
+            this.checkBoxClflg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBoxClflg.Name = "checkBoxClflg";
-            this.checkBoxClflg.Size = new System.Drawing.Size(144, 22);
+            this.checkBoxClflg.Size = new System.Drawing.Size(121, 19);
             this.checkBoxClflg.TabIndex = 43;
             this.checkBoxClflg.Text = "顧客管理フラグ";
             this.checkBoxClflg.UseVisualStyleBackColor = true;
             // 
             // textBoxFAX
             // 
-            this.textBoxFAX.Location = new System.Drawing.Point(850, 215);
+            this.textBoxFAX.Location = new System.Drawing.Point(680, 179);
+            this.textBoxFAX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxFAX.Name = "textBoxFAX";
-            this.textBoxFAX.Size = new System.Drawing.Size(100, 25);
+            this.textBoxFAX.Size = new System.Drawing.Size(81, 22);
             this.textBoxFAX.TabIndex = 42;
             // 
             // textBoxHidden
             // 
-            this.textBoxHidden.Location = new System.Drawing.Point(850, 333);
+            this.textBoxHidden.Location = new System.Drawing.Point(680, 277);
+            this.textBoxHidden.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxHidden.Name = "textBoxHidden";
-            this.textBoxHidden.Size = new System.Drawing.Size(100, 25);
+            this.textBoxHidden.Size = new System.Drawing.Size(81, 22);
             this.textBoxHidden.TabIndex = 41;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(589, 343);
+            this.label10.Location = new System.Drawing.Point(471, 286);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(98, 18);
+            this.label10.Size = new System.Drawing.Size(82, 15);
             this.label10.TabIndex = 40;
             this.label10.Text = "非表示理由";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(593, 215);
+            this.label8.Location = new System.Drawing.Point(474, 179);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(40, 18);
+            this.label8.Size = new System.Drawing.Size(33, 15);
             this.label8.TabIndex = 39;
             this.label8.Text = "FAX";
             // 
             // textBoxSalesOfficeID
             // 
-            this.textBoxSalesOfficeID.Location = new System.Drawing.Point(289, 212);
+            this.textBoxSalesOfficeID.Location = new System.Drawing.Point(231, 177);
+            this.textBoxSalesOfficeID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSalesOfficeID.Name = "textBoxSalesOfficeID";
-            this.textBoxSalesOfficeID.Size = new System.Drawing.Size(100, 25);
+            this.textBoxSalesOfficeID.Size = new System.Drawing.Size(81, 22);
             this.textBoxSalesOfficeID.TabIndex = 38;
             // 
             // textBoxTel
             // 
-            this.textBoxTel.Location = new System.Drawing.Point(850, 175);
+            this.textBoxTel.Location = new System.Drawing.Point(680, 146);
+            this.textBoxTel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxTel.Name = "textBoxTel";
-            this.textBoxTel.Size = new System.Drawing.Size(100, 25);
+            this.textBoxTel.Size = new System.Drawing.Size(81, 22);
             this.textBoxTel.TabIndex = 37;
             // 
             // textBoxAddress
             // 
-            this.textBoxAddress.Location = new System.Drawing.Point(289, 398);
+            this.textBoxAddress.Location = new System.Drawing.Point(231, 332);
+            this.textBoxAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(100, 25);
+            this.textBoxAddress.Size = new System.Drawing.Size(81, 22);
             this.textBoxAddress.TabIndex = 36;
             // 
             // textBoxPostnumber
             // 
-            this.textBoxPostnumber.Location = new System.Drawing.Point(289, 340);
+            this.textBoxPostnumber.Location = new System.Drawing.Point(231, 283);
+            this.textBoxPostnumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxPostnumber.Name = "textBoxPostnumber";
-            this.textBoxPostnumber.Size = new System.Drawing.Size(100, 25);
+            this.textBoxPostnumber.Size = new System.Drawing.Size(81, 22);
             this.textBoxPostnumber.TabIndex = 35;
             // 
             // textBoxClientName
             // 
-            this.textBoxClientName.Location = new System.Drawing.Point(289, 275);
+            this.textBoxClientName.Location = new System.Drawing.Point(231, 229);
+            this.textBoxClientName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxClientName.Name = "textBoxClientName";
-            this.textBoxClientName.Size = new System.Drawing.Size(100, 25);
+            this.textBoxClientName.Size = new System.Drawing.Size(81, 22);
             this.textBoxClientName.TabIndex = 34;
             // 
             // textBoxClientID
             // 
-            this.textBoxClientID.Location = new System.Drawing.Point(289, 149);
+            this.textBoxClientID.Location = new System.Drawing.Point(231, 124);
+            this.textBoxClientID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxClientID.Name = "textBoxClientID";
             this.textBoxClientID.ReadOnly = true;
-            this.textBoxClientID.Size = new System.Drawing.Size(100, 25);
+            this.textBoxClientID.Size = new System.Drawing.Size(81, 22);
             this.textBoxClientID.TabIndex = 33;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(593, 165);
+            this.label7.Location = new System.Drawing.Point(474, 137);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 18);
+            this.label7.Size = new System.Drawing.Size(67, 15);
             this.label7.TabIndex = 32;
             this.label7.Text = "電話番号";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(32, 388);
+            this.label6.Location = new System.Drawing.Point(26, 323);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 18);
+            this.label6.Size = new System.Drawing.Size(37, 15);
             this.label6.TabIndex = 31;
             this.label6.Text = "住所";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(32, 340);
+            this.label5.Location = new System.Drawing.Point(26, 283);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 18);
+            this.label5.Size = new System.Drawing.Size(67, 15);
             this.label5.TabIndex = 30;
             this.label5.Text = "郵便番号";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 275);
+            this.label4.Location = new System.Drawing.Point(26, 229);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 18);
+            this.label4.Size = new System.Drawing.Size(52, 15);
             this.label4.TabIndex = 29;
             this.label4.Text = "顧客名";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(32, 215);
+            this.label3.Location = new System.Drawing.Point(26, 179);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 18);
+            this.label3.Size = new System.Drawing.Size(66, 15);
             this.label3.TabIndex = 28;
             this.label3.Text = "営業所ID";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 156);
+            this.label2.Location = new System.Drawing.Point(26, 130);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 18);
+            this.label2.Size = new System.Drawing.Size(51, 15);
             this.label2.TabIndex = 27;
             this.label2.Text = "顧客ID";
             // 
             // Regester_button
             // 
-            this.Regester_button.Location = new System.Drawing.Point(63, 80);
+            this.Regester_button.Location = new System.Drawing.Point(50, 67);
+            this.Regester_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Regester_button.Name = "Regester_button";
-            this.Regester_button.Size = new System.Drawing.Size(75, 36);
+            this.Regester_button.Size = new System.Drawing.Size(60, 30);
             this.Regester_button.TabIndex = 26;
             this.Regester_button.Text = "追加";
             this.Regester_button.UseVisualStyleBackColor = true;
@@ -219,9 +238,10 @@ namespace SalesManagement_SysDev
             // 
             // Update_button
             // 
-            this.Update_button.Location = new System.Drawing.Point(314, 80);
+            this.Update_button.Location = new System.Drawing.Point(251, 67);
+            this.Update_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Update_button.Name = "Update_button";
-            this.Update_button.Size = new System.Drawing.Size(75, 36);
+            this.Update_button.Size = new System.Drawing.Size(60, 30);
             this.Update_button.TabIndex = 25;
             this.Update_button.Text = "更新";
             this.Update_button.UseVisualStyleBackColor = true;
@@ -229,9 +249,10 @@ namespace SalesManagement_SysDev
             // 
             // Delete_button
             // 
-            this.Delete_button.Location = new System.Drawing.Point(561, 80);
+            this.Delete_button.Location = new System.Drawing.Point(449, 67);
+            this.Delete_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Delete_button.Name = "Delete_button";
-            this.Delete_button.Size = new System.Drawing.Size(75, 36);
+            this.Delete_button.Size = new System.Drawing.Size(60, 30);
             this.Delete_button.TabIndex = 24;
             this.Delete_button.Text = "削除";
             this.Delete_button.UseVisualStyleBackColor = true;
@@ -240,17 +261,19 @@ namespace SalesManagement_SysDev
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(335, 12);
+            this.label1.Location = new System.Drawing.Point(268, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 18);
+            this.label1.Size = new System.Drawing.Size(67, 15);
             this.label1.TabIndex = 23;
             this.label1.Text = "顧客管理";
             // 
             // buttonClear
             // 
-            this.buttonClear.Location = new System.Drawing.Point(1097, 52);
+            this.buttonClear.Location = new System.Drawing.Point(878, 43);
+            this.buttonClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(100, 33);
+            this.buttonClear.Size = new System.Drawing.Size(80, 27);
             this.buttonClear.TabIndex = 45;
             this.buttonClear.Text = "入力クリア";
             this.buttonClear.UseVisualStyleBackColor = true;
@@ -258,9 +281,10 @@ namespace SalesManagement_SysDev
             // 
             // Search_button
             // 
-            this.Search_button.Location = new System.Drawing.Point(783, 80);
+            this.Search_button.Location = new System.Drawing.Point(665, 67);
+            this.Search_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Search_button.Name = "Search_button";
-            this.Search_button.Size = new System.Drawing.Size(82, 36);
+            this.Search_button.Size = new System.Drawing.Size(66, 30);
             this.Search_button.TabIndex = 46;
             this.Search_button.Text = "検索";
             this.Search_button.UseVisualStyleBackColor = true;
@@ -268,9 +292,9 @@ namespace SalesManagement_SysDev
             // 
             // F_client
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1546, 768);
+            this.ClientSize = new System.Drawing.Size(1237, 640);
             this.Controls.Add(this.Search_button);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.dataGridViewDsp);
@@ -295,6 +319,7 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.Update_button);
             this.Controls.Add(this.Delete_button);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "F_client";
             this.Text = "F_client";
             this.Load += new System.EventHandler(this.F_client_Load);
