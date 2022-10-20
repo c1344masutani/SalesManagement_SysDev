@@ -59,5 +59,15 @@ namespace SalesManagement_SysDev.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap S__32612390 {
+            get {
+                object obj = ResourceManager.GetObject("S__32612390", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -39,7 +39,7 @@
             // 
             // btn_CleateDabase
             // 
-            this.btn_CleateDabase.Location = new System.Drawing.Point(1102, 584);
+            this.btn_CleateDabase.Location = new System.Drawing.Point(747, 536);
             this.btn_CleateDabase.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btn_CleateDabase.Name = "btn_CleateDabase";
             this.btn_CleateDabase.Size = new System.Drawing.Size(178, 74);
@@ -100,7 +100,7 @@
             // 
             this.PwShow.AutoSize = true;
             this.PwShow.Location = new System.Drawing.Point(559, 236);
-            this.PwShow.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PwShow.Margin = new System.Windows.Forms.Padding(4);
             this.PwShow.Name = "PwShow";
             this.PwShow.Size = new System.Drawing.Size(171, 22);
             this.PwShow.TabIndex = 6;
@@ -112,7 +112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1332, 674);
+            this.ClientSize = new System.Drawing.Size(974, 641);
             this.Controls.Add(this.PwShow);
             this.Controls.Add(this.Login_button);
             this.Controls.Add(this.PW_textBox);
