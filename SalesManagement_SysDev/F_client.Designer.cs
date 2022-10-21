@@ -36,7 +36,7 @@ namespace SalesManagement_SysDev
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxSalesOfficeID = new System.Windows.Forms.TextBox();
-            this.textBoxTel = new System.Windows.Forms.TextBox();
+            this.textBoxPostnumber = new System.Windows.Forms.TextBox();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.textBoxClientName = new System.Windows.Forms.TextBox();
             this.textBoxClientID = new System.Windows.Forms.TextBox();
@@ -133,13 +133,13 @@ namespace SalesManagement_SysDev
             this.textBoxSalesOfficeID.Size = new System.Drawing.Size(185, 47);
             this.textBoxSalesOfficeID.TabIndex = 38;
             // 
-            // textBoxTel
+            // textBoxPostnumber
             // 
-            this.textBoxTel.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxTel.Location = new System.Drawing.Point(1098, 180);
-            this.textBoxTel.Name = "textBoxTel";
-            this.textBoxTel.Size = new System.Drawing.Size(302, 47);
-            this.textBoxTel.TabIndex = 37;
+            this.textBoxPostnumber.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBoxPostnumber.Location = new System.Drawing.Point(1098, 180);
+            this.textBoxPostnumber.Name = "textBoxPostnumber";
+            this.textBoxPostnumber.Size = new System.Drawing.Size(302, 47);
+            this.textBoxPostnumber.TabIndex = 37;
             // 
             // textBoxAddress
             // 
@@ -335,7 +335,7 @@ namespace SalesManagement_SysDev
             this.panel1.Controls.Add(this.textBoxClientName);
             this.panel1.Controls.Add(this.dataGridViewDsp);
             this.panel1.Controls.Add(this.checkBoxClflg);
-            this.panel1.Controls.Add(this.textBoxTel);
+            this.panel1.Controls.Add(this.textBoxPostnumber);
             this.panel1.Controls.Add(this.textBoxHidden);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label6);
@@ -395,7 +395,7 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBoxSalesOfficeID;
-        private System.Windows.Forms.TextBox textBoxTel;
+        private System.Windows.Forms.TextBox textBoxPostnumber;
         private System.Windows.Forms.TextBox textBoxAddress;
         private System.Windows.Forms.TextBox textBoxClientName;
         private System.Windows.Forms.TextBox textBoxClientID;

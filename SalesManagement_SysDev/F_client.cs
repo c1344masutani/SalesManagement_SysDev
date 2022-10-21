@@ -34,7 +34,7 @@ namespace SalesManagement_SysDev
                 SoID = int.Parse(textBoxSalesOfficeID.Text.Trim()),
                 ClName = textBoxClientName.Text.Trim(),
                 ClAddress = textBoxAddress.Text.Trim(),
-                ClPhone = textBoxTel.Text.Trim(),
+                ClPhone = textBoxPostnumber.Text.Trim(),
                 ClPostal = textBoxPostnumber.Text.Trim(),
                 ClFAX = textBoxFAX.Text.Trim(),
                 ClFlag = flg,
@@ -76,7 +76,7 @@ namespace SalesManagement_SysDev
                 client.SoID = int.Parse(textBoxSalesOfficeID.Text.Trim());
                 client.ClName = textBoxClientName.Text.Trim();
                 client.ClAddress = textBoxAddress.Text.Trim();
-                client.ClPhone = textBoxTel.Text.Trim();
+                client.ClPhone = textBoxPostnumber.Text.Trim();
                 client.ClPostal = textBoxPostnumber.Text.Trim();
                 client.ClFAX = textBoxFAX.Text.Trim();
                 client.ClFlag = flg;
@@ -118,7 +118,7 @@ namespace SalesManagement_SysDev
             textBoxClientName.Text = "";
             textBoxPostnumber.Text = "";
             textBoxAddress.Text = "";
-            textBoxTel.Text = "";
+            textBoxPostnumber.Text = "";
             textBoxFAX.Text = "";
             checkBoxClflg.Checked = false;
             textBoxHidden.Text = "";
@@ -186,7 +186,7 @@ namespace SalesManagement_SysDev
             textBoxClientName.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
             textBoxPostnumber.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
             textBoxAddress.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
-            textBoxTel.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString();
+            textBoxPostnumber.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString();
             textBoxFAX.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[6].Value.ToString();
             if(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[7].Value.ToString() == "0")
             {
