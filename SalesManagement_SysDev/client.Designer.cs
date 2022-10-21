@@ -53,8 +53,8 @@ namespace SalesManagement_SysDev
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonClear = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -343,6 +343,16 @@ namespace SalesManagement_SysDev
             this.panel1.Size = new System.Drawing.Size(1737, 889);
             this.panel1.TabIndex = 51;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__32669703;
+            this.pictureBox1.Location = new System.Drawing.Point(1290, 686);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(234, 138);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 47;
+            this.pictureBox1.TabStop = false;
+            // 
             // buttonClear
             // 
             this.buttonClear.BackColor = System.Drawing.Color.White;
@@ -355,16 +365,6 @@ namespace SalesManagement_SysDev
             this.buttonClear.TabIndex = 50;
             this.buttonClear.Text = "入力クリア";
             this.buttonClear.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__32612390;
-            this.pictureBox1.Location = new System.Drawing.Point(1312, 625);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(184, 190);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 47;
-            this.pictureBox1.TabStop = false;
             // 
             // client
             // 

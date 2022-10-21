@@ -99,5 +99,10 @@ namespace SalesManagement_SysDev
         {
             ID_textBox.Focus();
         }
+
+        private void ID_textBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

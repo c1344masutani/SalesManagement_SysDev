@@ -305,9 +305,9 @@ namespace SalesManagement_SysDev
             this.label1.Location = new System.Drawing.Point(21, 25);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(282, 52);
+            this.label1.Size = new System.Drawing.Size(231, 52);
             this.label1.TabIndex = 46;
-            this.label1.Text = "顧 客 管 理";
+            this.label1.Text = "メニュー";
             // 
             // PrColorTextBox
             // 
@@ -421,11 +421,11 @@ namespace SalesManagement_SysDev
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__32612390;
+            this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__32669703;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(1228, 610);
+            this.pictureBox1.Location = new System.Drawing.Point(1212, 563);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(183, 177);
+            this.pictureBox1.Size = new System.Drawing.Size(213, 233);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 76;
             this.pictureBox1.TabStop = false;

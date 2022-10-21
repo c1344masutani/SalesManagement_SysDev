@@ -231,11 +231,11 @@ namespace SalesManagement_SysDev
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__32612390;
+            this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__32669703;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(1070, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(1004, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(111, 102);
+            this.pictureBox1.Size = new System.Drawing.Size(196, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
