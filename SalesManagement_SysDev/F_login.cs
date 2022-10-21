@@ -41,6 +41,8 @@ namespace SalesManagement_SysDev
             string loginID = ID_textBox.Text;
             string loginPW = PW_textBox.Text;
             bool flg;
+            Form frm = new F_menu();
+            frm.ShowDialog();
 
             //ユーザID・PWの入力状況チェック
             if (loginID.Trim() == "" || loginID == null || loginPW.Trim() == "" || loginPW == null)
@@ -59,7 +61,7 @@ namespace SalesManagement_SysDev
                 flg = context.M_Employees.Any(x => x.EmID.ToString() == loginID && x.EmPassword == loginPW && x.EmFlag == 0);
                 if(flg == true)
                 {
-                    Form frm = new F_menu();
+                   // Form frm = new F_menu();
 
                     Opacity = 0;
 

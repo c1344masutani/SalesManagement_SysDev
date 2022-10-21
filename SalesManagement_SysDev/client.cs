@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_client : Form
+    public partial class client : Form
     {
-        public F_client()
+        public client()
         {
             InitializeComponent();
         }
@@ -30,7 +30,7 @@ namespace SalesManagement_SysDev
             }
             var client = new M_Client
             {
-                
+
                 SoID = int.Parse(textBoxSalesOfficeID.Text.Trim()),
                 ClName = textBoxClientName.Text.Trim(),
                 ClAddress = textBoxAddress.Text.Trim(),
@@ -110,20 +110,6 @@ namespace SalesManagement_SysDev
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void buttonClear_Click(object sender, EventArgs e)
-        {
-            textBoxClientID.Text = "";
-            textBoxSalesOfficeID.Text = "";
-            textBoxClientName.Text = "";
-            textBoxPostnumber.Text = "";
-            textBoxAddress.Text = "";
-            textBoxPostnumber.Text = "";
-            textBoxFAX.Text = "";
-            checkBoxClflg.Checked = false;
-            textBoxHidden.Text = "";
-        }
-
         private void fncAllSelect()
         {
             dataGridViewDsp.Rows.Clear();
@@ -142,7 +128,45 @@ namespace SalesManagement_SysDev
             }
         }
 
-        private void F_client_Load(object sender, EventArgs e)
+        private void Search_button_Click(object sender, EventArgs e)
+        {
+            dataGridViewDsp.Rows.Clear();
+            int clid = int.Parse(textBoxClientID.Text);
+            try
+            {
+                var context = new SalesManagement_DevContext();
+                var client = context.M_Clients.Where(x => x.ClID == clid).ToArray();
+                dataGridViewDsp.Rows.Add(client[0].ClID, client[0].SoID, client[0].ClName, client[0].ClPostal, client[0].ClAddress, client[0].ClPhone, client[0].ClFAX, client[0].ClFlag, client[0].ClHidden);
+                context.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dataGridViewDsp_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBoxClientID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[0].Value.ToString();
+            textBoxSalesOfficeID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
+            textBoxClientName.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
+            textBoxPostnumber.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
+            textBoxAddress.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
+            textBoxPostnumber.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString();
+            textBoxFAX.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[6].Value.ToString();
+            if (dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[7].Value.ToString() == "0")
+            {
+                checkBoxClflg.Checked = false;
+            }
+            else if (dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[7].Value.ToString() == "1")
+            {
+                checkBoxClflg.Checked = true;
+            }
+            textBoxHidden.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[8].Value.ToString();
+
+        }
+
+        private void client_Load(object sender, EventArgs e)
         {
             //列数の指定
             dataGridViewDsp.ColumnCount = 9;
@@ -172,48 +196,6 @@ namespace SalesManagement_SysDev
             dataGridViewDsp.ReadOnly = true;
             //全データ表示
             fncAllSelect();
-        }
-
-        private void dataGridViewDsp_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridViewDsp_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            textBoxClientID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[0].Value.ToString();
-            textBoxSalesOfficeID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
-            textBoxClientName.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
-            textBoxPostnumber.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
-            textBoxAddress.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
-            textBoxPostnumber.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString();
-            textBoxFAX.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[6].Value.ToString();
-            if(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[7].Value.ToString() == "0")
-            {
-                checkBoxClflg.Checked = false;
-            }
-            else if(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[7].Value.ToString() == "1")
-            {
-                checkBoxClflg.Checked = true;
-            }
-            textBoxHidden.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[8].Value.ToString();
-        }
-
-        private void Search_button_Click(object sender, EventArgs e)
-        {
-            dataGridViewDsp.Rows.Clear();
-            int clid = int.Parse(textBoxClientID.Text);
-            try
-            {
-                var context = new SalesManagement_DevContext();
-                var client = context.M_Clients.Where(x => x.ClID == clid).ToArray();
-                dataGridViewDsp.Rows.Add(client[0].ClID, client[0].SoID, client[0].ClName, client[0].ClPostal, client[0].ClAddress, client[0].ClPhone, client[0].ClFAX, client[0].ClFlag, client[0].ClHidden);
-                context.Dispose();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
     }
 }

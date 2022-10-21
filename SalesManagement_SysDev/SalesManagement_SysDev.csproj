@@ -57,6 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="client.Designer.cs">
+      <DependentUpon>client.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_arrival.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,12 +83,6 @@
     </Compile>
     <Compile Include="Entity\M_MajorCassification.cs" />
     <Compile Include="Entity\M_Product.cs" />
-    <Compile Include="F_client.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="F_client.Designer.cs">
-      <DependentUpon>F_client.cs</DependentUpon>
-    </Compile>
     <Compile Include="F_login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,8 +165,8 @@
     <Compile Include="F_stock.Designer.cs">
       <DependentUpon>F_stock.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="F_client.resx">
-      <DependentUpon>F_client.cs</DependentUpon>
+    <EmbeddedResource Include="client.resx">
+      <DependentUpon>client.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_login.resx">
       <DependentUpon>F_login.cs</DependentUpon>

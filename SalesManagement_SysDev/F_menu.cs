@@ -19,7 +19,7 @@ namespace SalesManagement_SysDev
 
         private void Customer_button_Click(object sender, EventArgs e)
         {
-            Form frm = new F_client();
+            Form frm = new client();
 
             Opacity = 0;
 
