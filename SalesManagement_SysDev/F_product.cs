@@ -21,5 +21,30 @@ namespace SalesManagement_SysDev
         {
 
         }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Update_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Delete_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewDsp_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void F_product_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
