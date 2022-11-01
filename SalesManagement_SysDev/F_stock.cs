@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_client : Form
+    public partial class F_stock : Form
     {
-        public F_client()
+        public F_stock()
         {
             InitializeComponent();
         }
