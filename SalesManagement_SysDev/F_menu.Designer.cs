@@ -44,6 +44,7 @@ namespace SalesManagement_SysDev
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Search_button = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -210,8 +211,8 @@ namespace SalesManagement_SysDev
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.Search_button);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.Customer_button);
             this.panel1.Controls.Add(this.OutGoodsbutton);
@@ -244,6 +245,20 @@ namespace SalesManagement_SysDev
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
+            // 
+            // Search_button
+            // 
+            this.Search_button.BackColor = System.Drawing.Color.Gainsboro;
+            this.Search_button.Font = new System.Drawing.Font("HGS明朝E", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Search_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.Search_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Search_button.Location = new System.Drawing.Point(732, 28);
+            this.Search_button.Name = "Search_button";
+            this.Search_button.Size = new System.Drawing.Size(212, 69);
+            this.Search_button.TabIndex = 47;
+            this.Search_button.Text = "ログアウト";
+            this.Search_button.UseVisualStyleBackColor = false;
+            this.Search_button.Click += new System.EventHandler(this.Search_button_Click);
             // 
             // F_menu
             // 
@@ -279,5 +294,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button Search_button;
     }
 }

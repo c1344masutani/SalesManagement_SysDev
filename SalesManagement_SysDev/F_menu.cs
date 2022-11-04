@@ -44,12 +44,7 @@ namespace SalesManagement_SysDev
             this.Close();
         }
 
-        private void F_menu_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void Search_button_Click(object sender, EventArgs e)
         {
 
         }
