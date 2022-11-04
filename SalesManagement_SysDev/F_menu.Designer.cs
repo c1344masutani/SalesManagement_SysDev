@@ -108,6 +108,7 @@ namespace SalesManagement_SysDev
             this.Customer_button.TabIndex = 12;
             this.Customer_button.Text = "顧客管理";
             this.Customer_button.UseVisualStyleBackColor = false;
+            this.Customer_button.Click += new System.EventHandler(this.Customer_button_Click);
             // 
             // OutGoodsbutton
             // 
@@ -156,6 +157,7 @@ namespace SalesManagement_SysDev
             this.Goods_button.TabIndex = 13;
             this.Goods_button.Text = "商品管理";
             this.Goods_button.UseVisualStyleBackColor = false;
+            this.Goods_button.Click += new System.EventHandler(this.Goods_button_Click);
             // 
             // Received_button
             // 
