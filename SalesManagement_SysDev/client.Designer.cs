@@ -30,7 +30,7 @@ namespace SalesManagement_SysDev
         private void InitializeComponent()
         {
             this.Search_button = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxPhone = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Update_button = new System.Windows.Forms.Button();
             this.Delete_button = new System.Windows.Forms.Button();
@@ -74,13 +74,13 @@ namespace SalesManagement_SysDev
             this.Search_button.UseVisualStyleBackColor = false;
             this.Search_button.Click += new System.EventHandler(this.Search_button_Click);
             // 
-            // textBox1
+            // textBoxPhone
             // 
-            this.textBox1.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox1.Location = new System.Drawing.Point(1098, 402);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(302, 47);
-            this.textBox1.TabIndex = 45;
+            this.textBoxPhone.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBoxPhone.Location = new System.Drawing.Point(1098, 332);
+            this.textBoxPhone.Name = "textBoxPhone";
+            this.textBoxPhone.Size = new System.Drawing.Size(302, 47);
+            this.textBoxPhone.TabIndex = 45;
             // 
             // label1
             // 
@@ -133,7 +133,7 @@ namespace SalesManagement_SysDev
             // textBoxAddress
             // 
             this.textBoxAddress.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxAddress.Location = new System.Drawing.Point(1098, 478);
+            this.textBoxAddress.Location = new System.Drawing.Point(1098, 261);
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(302, 47);
             this.textBoxAddress.TabIndex = 36;
@@ -162,7 +162,7 @@ namespace SalesManagement_SysDev
             // textBoxFAX
             // 
             this.textBoxFAX.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxFAX.Location = new System.Drawing.Point(1098, 258);
+            this.textBoxFAX.Location = new System.Drawing.Point(1098, 405);
             this.textBoxFAX.Name = "textBoxFAX";
             this.textBoxFAX.Size = new System.Drawing.Size(302, 47);
             this.textBoxFAX.TabIndex = 42;
@@ -210,7 +210,7 @@ namespace SalesManagement_SysDev
             // textBoxHidden
             // 
             this.textBoxHidden.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxHidden.Location = new System.Drawing.Point(1098, 329);
+            this.textBoxHidden.Location = new System.Drawing.Point(310, 506);
             this.textBoxHidden.Name = "textBoxHidden";
             this.textBoxHidden.Size = new System.Drawing.Size(302, 47);
             this.textBoxHidden.TabIndex = 41;
@@ -316,7 +316,7 @@ namespace SalesManagement_SysDev
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.Search_button);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.textBoxPhone);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.Update_button);
             this.panel1.Controls.Add(this.Delete_button);
@@ -388,7 +388,7 @@ namespace SalesManagement_SysDev
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Search_button;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxPhone;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Update_button;
         private System.Windows.Forms.Button Delete_button;

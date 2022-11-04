@@ -180,6 +180,7 @@ namespace SalesManagement_SysDev
             this.Goods_button.TabIndex = 13;
             this.Goods_button.Text = "商品管理";
             this.Goods_button.UseVisualStyleBackColor = false;
+            this.Goods_button.Click += new System.EventHandler(this.Goods_button_Click);
             // 
             // Customer_button
             // 

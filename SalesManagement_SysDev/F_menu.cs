@@ -32,5 +32,16 @@ namespace SalesManagement_SysDev
         {
 
         }
+
+        private void Goods_button_Click(object sender, EventArgs e)
+        {
+            Form frm = new F_product();
+
+            Opacity = 0;
+
+            frm.ShowDialog();
+
+            this.Close();
+        }
     }
 }
