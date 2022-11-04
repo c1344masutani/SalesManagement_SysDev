@@ -194,6 +194,7 @@ namespace SalesManagement_SysDev
             this.Customer_button.Text = "顧客管理";
             this.Customer_button.UseVisualStyleBackColor = false;
             this.Customer_button.Click += new System.EventHandler(this.Customer_button_Click);
+            this.Goods_button.Click += new System.EventHandler(this.Goods_button_Click);
             // 
             // label1
             // 
