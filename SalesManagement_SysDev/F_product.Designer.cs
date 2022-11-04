@@ -432,8 +432,8 @@ namespace SalesManagement_SysDev
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__33333259;
-            this.pictureBox1.InitialImage = global::SalesManagement_SysDev.Properties.Resources.S__33333259;
+            this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
+            this.pictureBox1.InitialImage = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
             this.pictureBox1.Location = new System.Drawing.Point(29, 20);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";

@@ -236,7 +236,7 @@ namespace SalesManagement_SysDev
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__33333259;
+            this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
