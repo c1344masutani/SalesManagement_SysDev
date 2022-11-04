@@ -311,10 +311,11 @@ namespace SalesManagement_SysDev
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(231, 52);
             this.label1.Size = new System.Drawing.Size(231, 52);
-=======
+
             this.label1.Size = new System.Drawing.Size(241, 44);
->>>>>>> 255b46725fce0efbbcb6817de3cda6b77f001dd7
-            this.label1.TabIndex = 46;
+
+            F_product f_product = this;
+            f_product.label1.TabIndex = 46;
             this.label1.Text = "メニュー";
             // 
             // PrColorTextBox
@@ -432,16 +433,10 @@ namespace SalesManagement_SysDev
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__32669703;
             this.pictureBox1.Size = new System.Drawing.Size(266, 280);
-<<<<<<< HEAD
-            this.pictureBox1.Location = new System.Drawing.Point(1212, 563);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(213, 233);
-=======
             this.pictureBox1.Location = new System.Drawing.Point(982, 508);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(146, 147);
->>>>>>> 255b46725fce0efbbcb6817de3cda6b77f001dd7
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 76;
             this.pictureBox1.TabStop = false;
