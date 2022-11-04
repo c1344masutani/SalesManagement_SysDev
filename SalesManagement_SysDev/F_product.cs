@@ -46,5 +46,15 @@ namespace SalesManagement_SysDev
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PrColorTextBox_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
