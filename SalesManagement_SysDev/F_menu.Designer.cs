@@ -194,18 +194,16 @@ namespace SalesManagement_SysDev
             this.Customer_button.Text = "顧客管理";
             this.Customer_button.UseVisualStyleBackColor = false;
             this.Customer_button.Click += new System.EventHandler(this.Customer_button_Click);
-            this.Goods_button.Click += new System.EventHandler(this.Goods_button_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.label1.Location = new System.Drawing.Point(533, 61);
+            this.label1.Location = new System.Drawing.Point(542, 78);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 42);
+            this.label1.Size = new System.Drawing.Size(177, 40);
             this.label1.TabIndex = 24;
             this.label1.Text = "メニュー";
             // 
@@ -231,16 +229,17 @@ namespace SalesManagement_SysDev
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1271, 658);
             this.panel1.TabIndex = 25;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BackColor = System.Drawing.Color.AntiqueWhite;
             this.pictureBox1.ErrorImage = null;
             this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(153, 85);
+            this.pictureBox1.Size = new System.Drawing.Size(153, 84);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
