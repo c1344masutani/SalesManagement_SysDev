@@ -199,11 +199,12 @@ namespace SalesManagement_SysDev
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.label1.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Font = new System.Drawing.Font("HGS明朝E", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.label1.Location = new System.Drawing.Point(542, 78);
+            this.label1.Location = new System.Drawing.Point(463, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 40);
+            this.label1.Size = new System.Drawing.Size(320, 74);
             this.label1.TabIndex = 24;
             this.label1.Text = "メニュー";
             // 
