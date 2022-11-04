@@ -151,7 +151,7 @@ namespace SalesManagement_SysDev
             this.Regester_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
             this.Regester_button.Location = new System.Drawing.Point(716, 30);
             this.Regester_button.Name = "Regester_button";
-            this.Regester_button.Size = new System.Drawing.Size(199, 50);
+            this.Regester_button.Size = new System.Drawing.Size(220, 50);
             this.Regester_button.TabIndex = 26;
             this.Regester_button.Text = "新規追加";
             this.Regester_button.UseVisualStyleBackColor = false;
@@ -357,7 +357,7 @@ namespace SalesManagement_SysDev
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label9.Location = new System.Drawing.Point(369, 169);
+            this.label9.Location = new System.Drawing.Point(378, 169);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(44, 18);
             this.label9.TabIndex = 52;
@@ -366,9 +366,10 @@ namespace SalesManagement_SysDev
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label11.Location = new System.Drawing.Point(407, 256);
+            this.label11.Location = new System.Drawing.Point(419, 256);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(44, 18);
             this.label11.TabIndex = 53;
@@ -377,9 +378,10 @@ namespace SalesManagement_SysDev
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label12.Location = new System.Drawing.Point(1089, 166);
+            this.label12.Location = new System.Drawing.Point(1101, 166);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(44, 18);
             this.label12.TabIndex = 54;
@@ -388,9 +390,10 @@ namespace SalesManagement_SysDev
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label13.Location = new System.Drawing.Point(1089, 253);
+            this.label13.Location = new System.Drawing.Point(1101, 252);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(44, 18);
             this.label13.TabIndex = 55;
@@ -399,9 +402,10 @@ namespace SalesManagement_SysDev
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label14.Location = new System.Drawing.Point(1015, 337);
+            this.label14.Location = new System.Drawing.Point(1021, 334);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(44, 18);
             this.label14.TabIndex = 56;
@@ -410,13 +414,15 @@ namespace SalesManagement_SysDev
             // label15
             // 
             this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label15.Location = new System.Drawing.Point(369, 334);
+            this.label15.Location = new System.Drawing.Point(378, 334);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(44, 18);
             this.label15.TabIndex = 57;
             this.label15.Text = "必須";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // label16
             // 

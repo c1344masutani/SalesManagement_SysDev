@@ -197,5 +197,10 @@ namespace SalesManagement_SysDev
             //全データ表示
             fncAllSelect();
         }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
