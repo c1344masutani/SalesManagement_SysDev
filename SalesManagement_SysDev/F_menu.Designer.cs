@@ -138,7 +138,7 @@ namespace SalesManagement_SysDev
             // 
             this.Profit_button.BackColor = System.Drawing.Color.Green;
             this.Profit_button.Font = new System.Drawing.Font("HG創英角ｺﾞｼｯｸUB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Profit_button.ForeColor = System.Drawing.Color.White;
+            this.Profit_button.ForeColor = System.Drawing.Color.Transparent;
             this.Profit_button.Location = new System.Drawing.Point(58, 291);
             this.Profit_button.Name = "Profit_button";
             this.Profit_button.Size = new System.Drawing.Size(232, 112);
@@ -187,7 +187,7 @@ namespace SalesManagement_SysDev
             // 
             this.Customer_button.BackColor = System.Drawing.Color.Green;
             this.Customer_button.Font = new System.Drawing.Font("HG創英角ｺﾞｼｯｸUB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Customer_button.ForeColor = System.Drawing.Color.White;
+            this.Customer_button.ForeColor = System.Drawing.Color.Transparent;
             this.Customer_button.Location = new System.Drawing.Point(58, 133);
             this.Customer_button.Name = "Customer_button";
             this.Customer_button.Size = new System.Drawing.Size(232, 112);
@@ -199,12 +199,13 @@ namespace SalesManagement_SysDev
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("HGP明朝E", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(45, 33);
+            this.label1.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Font = new System.Drawing.Font("HGS明朝E", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.label1.Location = new System.Drawing.Point(463, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(269, 72);
+            this.label1.Size = new System.Drawing.Size(320, 74);
             this.label1.TabIndex = 24;
             this.label1.Text = "メニュー";
             // 
@@ -225,20 +226,22 @@ namespace SalesManagement_SysDev
             this.panel1.Controls.Add(this.InHouse_button);
             this.panel1.Controls.Add(this.Stock_button);
             this.panel1.Controls.Add(this.Member_button);
-            this.panel1.Location = new System.Drawing.Point(24, 21);
+            this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.panel1.Location = new System.Drawing.Point(-3, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1216, 609);
+            this.panel1.Size = new System.Drawing.Size(1271, 658);
             this.panel1.TabIndex = 25;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BackColor = System.Drawing.Color.AntiqueWhite;
             this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__32669703;
+            this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(1004, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(196, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(153, 84);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
@@ -261,15 +264,16 @@ namespace SalesManagement_SysDev
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1268, 659);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Name = "F_menu";
             this.Text = "menu";
+            this.Load += new System.EventHandler(this.F_menu_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
