@@ -97,12 +97,6 @@
     <Compile Include="Entity\M_Position.cs" />
     <Compile Include="Entity\M_SalesOffice.cs" />
     <Compile Include="Entity\M_SmallClassification.cs" />
-    <Compile Include="F_menu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="F_menu.Designer.cs">
-      <DependentUpon>F_menu.cs</DependentUpon>
-    </Compile>
     <Compile Include="F_chumon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,9 +166,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_login.resx">
       <DependentUpon>F_login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="F_menu.resx">
-      <DependentUpon>F_menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_chumon.resx">
       <DependentUpon>F_chumon.cs</DependentUpon>
