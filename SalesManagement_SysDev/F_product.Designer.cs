@@ -50,18 +50,23 @@ namespace SalesManagement_SysDev
             this.Update_button = new System.Windows.Forms.Button();
             this.Delete_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.PrColorTextBox = new System.Windows.Forms.Label();
             this.PrReleaseDateTextBox = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.PrHiddenTextBox = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,10 +74,10 @@ namespace SalesManagement_SysDev
             // 
             this.buttonClear.BackColor = System.Drawing.Color.White;
             this.buttonClear.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.buttonClear.Location = new System.Drawing.Point(1404, 32);
+            this.buttonClear.Location = new System.Drawing.Point(1345, 23);
             this.buttonClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(270, 59);
+            this.buttonClear.Size = new System.Drawing.Size(321, 59);
             this.buttonClear.TabIndex = 68;
             this.buttonClear.Text = "入力クリア";
             this.buttonClear.UseVisualStyleBackColor = false;
@@ -81,12 +86,12 @@ namespace SalesManagement_SysDev
             // dataGridViewDsp
             // 
             this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDsp.Location = new System.Drawing.Point(71, 578);
+            this.dataGridViewDsp.Location = new System.Drawing.Point(47, 677);
             this.dataGridViewDsp.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewDsp.Name = "dataGridViewDsp";
             this.dataGridViewDsp.RowHeadersWidth = 62;
             this.dataGridViewDsp.RowTemplate.Height = 27;
-            this.dataGridViewDsp.Size = new System.Drawing.Size(1774, 405);
+            this.dataGridViewDsp.Size = new System.Drawing.Size(1809, 311);
             this.dataGridViewDsp.TabIndex = 67;
             this.dataGridViewDsp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellContentClick);
             // 
@@ -96,7 +101,7 @@ namespace SalesManagement_SysDev
             this.PrFlag.BackColor = System.Drawing.Color.Transparent;
             this.PrFlag.Font = new System.Drawing.Font("HGS明朝E", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.PrFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.PrFlag.Location = new System.Drawing.Point(729, 510);
+            this.PrFlag.Location = new System.Drawing.Point(781, 484);
             this.PrFlag.Margin = new System.Windows.Forms.Padding(2);
             this.PrFlag.Name = "PrFlag";
             this.PrFlag.Size = new System.Drawing.Size(149, 40);
@@ -107,7 +112,7 @@ namespace SalesManagement_SysDev
             // textBoxFAX
             // 
             this.textBoxFAX.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxFAX.Location = new System.Drawing.Point(865, 212);
+            this.textBoxFAX.Location = new System.Drawing.Point(1026, 268);
             this.textBoxFAX.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFAX.Name = "textBoxFAX";
             this.textBoxFAX.Size = new System.Drawing.Size(206, 51);
@@ -116,7 +121,7 @@ namespace SalesManagement_SysDev
             // textBoxHidden
             // 
             this.textBoxHidden.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxHidden.Location = new System.Drawing.Point(908, 499);
+            this.textBoxHidden.Location = new System.Drawing.Point(1026, 473);
             this.textBoxHidden.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxHidden.Name = "textBoxHidden";
             this.textBoxHidden.Size = new System.Drawing.Size(206, 51);
@@ -128,7 +133,7 @@ namespace SalesManagement_SysDev
             this.PrModelNumberTextBox.BackColor = System.Drawing.Color.Transparent;
             this.PrModelNumberTextBox.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.PrModelNumberTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.PrModelNumberTextBox.Location = new System.Drawing.Point(702, 300);
+            this.PrModelNumberTextBox.Location = new System.Drawing.Point(833, 374);
             this.PrModelNumberTextBox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PrModelNumberTextBox.Name = "PrModelNumberTextBox";
             this.PrModelNumberTextBox.Size = new System.Drawing.Size(97, 40);
@@ -141,7 +146,7 @@ namespace SalesManagement_SysDev
             this.ScIDTextBox.BackColor = System.Drawing.Color.Transparent;
             this.ScIDTextBox.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.ScIDTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.ScIDTextBox.Location = new System.Drawing.Point(641, 218);
+            this.ScIDTextBox.Location = new System.Drawing.Point(752, 275);
             this.ScIDTextBox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ScIDTextBox.Name = "ScIDTextBox";
             this.ScIDTextBox.Size = new System.Drawing.Size(178, 40);
@@ -151,7 +156,7 @@ namespace SalesManagement_SysDev
             // textBoxSalesOfficeID
             // 
             this.textBoxSalesOfficeID.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxSalesOfficeID.Location = new System.Drawing.Point(293, 223);
+            this.textBoxSalesOfficeID.Location = new System.Drawing.Point(315, 275);
             this.textBoxSalesOfficeID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSalesOfficeID.Name = "textBoxSalesOfficeID";
             this.textBoxSalesOfficeID.Size = new System.Drawing.Size(206, 51);
@@ -160,7 +165,7 @@ namespace SalesManagement_SysDev
             // textBoxTel
             // 
             this.textBoxTel.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxTel.Location = new System.Drawing.Point(865, 134);
+            this.textBoxTel.Location = new System.Drawing.Point(1026, 164);
             this.textBoxTel.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTel.Name = "textBoxTel";
             this.textBoxTel.Size = new System.Drawing.Size(206, 51);
@@ -169,7 +174,7 @@ namespace SalesManagement_SysDev
             // textBoxPostnumber
             // 
             this.textBoxPostnumber.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxPostnumber.Location = new System.Drawing.Point(293, 391);
+            this.textBoxPostnumber.Location = new System.Drawing.Point(315, 381);
             this.textBoxPostnumber.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPostnumber.Name = "textBoxPostnumber";
             this.textBoxPostnumber.Size = new System.Drawing.Size(206, 51);
@@ -178,7 +183,7 @@ namespace SalesManagement_SysDev
             // textBoxClientName
             // 
             this.textBoxClientName.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxClientName.Location = new System.Drawing.Point(293, 304);
+            this.textBoxClientName.Location = new System.Drawing.Point(315, 466);
             this.textBoxClientName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxClientName.Name = "textBoxClientName";
             this.textBoxClientName.Size = new System.Drawing.Size(206, 51);
@@ -187,7 +192,7 @@ namespace SalesManagement_SysDev
             // textBoxClientID
             // 
             this.textBoxClientID.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxClientID.Location = new System.Drawing.Point(293, 139);
+            this.textBoxClientID.Location = new System.Drawing.Point(315, 164);
             this.textBoxClientID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxClientID.Name = "textBoxClientID";
             this.textBoxClientID.ReadOnly = true;
@@ -200,7 +205,7 @@ namespace SalesManagement_SysDev
             this.PrSafetyStockTextBox.BackColor = System.Drawing.Color.Transparent;
             this.PrSafetyStockTextBox.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.PrSafetyStockTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.PrSafetyStockTextBox.Location = new System.Drawing.Point(702, 134);
+            this.PrSafetyStockTextBox.Location = new System.Drawing.Point(713, 175);
             this.PrSafetyStockTextBox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PrSafetyStockTextBox.Name = "PrSafetyStockTextBox";
             this.PrSafetyStockTextBox.Size = new System.Drawing.Size(217, 40);
@@ -213,7 +218,7 @@ namespace SalesManagement_SysDev
             this.PriceTextBox.BackColor = System.Drawing.Color.Transparent;
             this.PriceTextBox.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.PriceTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.PriceTextBox.Location = new System.Drawing.Point(115, 391);
+            this.PriceTextBox.Location = new System.Drawing.Point(150, 175);
             this.PriceTextBox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PriceTextBox.Name = "PriceTextBox";
             this.PriceTextBox.Size = new System.Drawing.Size(97, 40);
@@ -226,7 +231,7 @@ namespace SalesManagement_SysDev
             this.PrNameTextBox.BackColor = System.Drawing.Color.Transparent;
             this.PrNameTextBox.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.PrNameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.PrNameTextBox.Location = new System.Drawing.Point(93, 300);
+            this.PrNameTextBox.Location = new System.Drawing.Point(110, 275);
             this.PrNameTextBox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PrNameTextBox.Name = "PrNameTextBox";
             this.PrNameTextBox.Size = new System.Drawing.Size(137, 40);
@@ -239,7 +244,7 @@ namespace SalesManagement_SysDev
             this.MaIDTextBox.BackColor = System.Drawing.Color.Transparent;
             this.MaIDTextBox.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.MaIDTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.MaIDTextBox.Location = new System.Drawing.Point(53, 223);
+            this.MaIDTextBox.Location = new System.Drawing.Point(69, 381);
             this.MaIDTextBox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.MaIDTextBox.Name = "MaIDTextBox";
             this.MaIDTextBox.Size = new System.Drawing.Size(178, 40);
@@ -252,7 +257,7 @@ namespace SalesManagement_SysDev
             this.PrIDTextBox.BackColor = System.Drawing.Color.Transparent;
             this.PrIDTextBox.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.PrIDTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.PrIDTextBox.Location = new System.Drawing.Point(93, 146);
+            this.PrIDTextBox.Location = new System.Drawing.Point(109, 473);
             this.PrIDTextBox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PrIDTextBox.Name = "PrIDTextBox";
             this.PrIDTextBox.Size = new System.Drawing.Size(138, 40);
@@ -264,12 +269,12 @@ namespace SalesManagement_SysDev
             this.Regester_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Regester_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Regester_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.Regester_button.Location = new System.Drawing.Point(665, 35);
+            this.Regester_button.Location = new System.Drawing.Point(567, 26);
             this.Regester_button.Margin = new System.Windows.Forms.Padding(2);
             this.Regester_button.Name = "Regester_button";
-            this.Regester_button.Size = new System.Drawing.Size(154, 56);
+            this.Regester_button.Size = new System.Drawing.Size(204, 56);
             this.Regester_button.TabIndex = 49;
-            this.Regester_button.Text = "追加";
+            this.Regester_button.Text = "新規追加";
             this.Regester_button.UseVisualStyleBackColor = false;
             this.Regester_button.Click += new System.EventHandler(this.Regester_button_Click);
             // 
@@ -278,7 +283,7 @@ namespace SalesManagement_SysDev
             this.Update_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Update_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Update_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.Update_button.Location = new System.Drawing.Point(908, 35);
+            this.Update_button.Location = new System.Drawing.Point(857, 23);
             this.Update_button.Margin = new System.Windows.Forms.Padding(2);
             this.Update_button.Name = "Update_button";
             this.Update_button.Size = new System.Drawing.Size(154, 56);
@@ -292,7 +297,7 @@ namespace SalesManagement_SysDev
             this.Delete_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Delete_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Delete_button.ForeColor = System.Drawing.Color.Red;
-            this.Delete_button.Location = new System.Drawing.Point(1151, 35);
+            this.Delete_button.Location = new System.Drawing.Point(1114, 23);
             this.Delete_button.Margin = new System.Windows.Forms.Padding(2);
             this.Delete_button.Name = "Delete_button";
             this.Delete_button.Size = new System.Drawing.Size(154, 56);
@@ -305,29 +310,15 @@ namespace SalesManagement_SysDev
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("HGS明朝E", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Font = new System.Drawing.Font("HGS明朝E", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.label1.Location = new System.Drawing.Point(284, 39);
+            this.label1.Location = new System.Drawing.Point(206, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 52);
+            this.label1.Size = new System.Drawing.Size(305, 56);
             this.label1.TabIndex = 46;
-            this.label1.Text = "商品管理";
+            this.label1.Text = "商 品 管 理";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // PrColorTextBox
-            // 
-            this.PrColorTextBox.AutoSize = true;
-            this.PrColorTextBox.BackColor = System.Drawing.Color.Transparent;
-            this.PrColorTextBox.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.PrColorTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.PrColorTextBox.Location = new System.Drawing.Point(742, 391);
-            this.PrColorTextBox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.PrColorTextBox.Name = "PrColorTextBox";
-            this.PrColorTextBox.Size = new System.Drawing.Size(57, 40);
-            this.PrColorTextBox.TabIndex = 69;
-            this.PrColorTextBox.Text = "色";
-            this.PrColorTextBox.Click += new System.EventHandler(this.PrColorTextBox_Click);
             // 
             // PrReleaseDateTextBox
             // 
@@ -335,7 +326,7 @@ namespace SalesManagement_SysDev
             this.PrReleaseDateTextBox.BackColor = System.Drawing.Color.Transparent;
             this.PrReleaseDateTextBox.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.PrReleaseDateTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.PrReleaseDateTextBox.Location = new System.Drawing.Point(1397, 145);
+            this.PrReleaseDateTextBox.Location = new System.Drawing.Point(1361, 171);
             this.PrReleaseDateTextBox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PrReleaseDateTextBox.Name = "PrReleaseDateTextBox";
             this.PrReleaseDateTextBox.Size = new System.Drawing.Size(137, 40);
@@ -357,7 +348,7 @@ namespace SalesManagement_SysDev
             this.PrHiddenTextBox.BackColor = System.Drawing.Color.Transparent;
             this.PrHiddenTextBox.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.PrHiddenTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.PrHiddenTextBox.Location = new System.Drawing.Point(84, 510);
+            this.PrHiddenTextBox.Location = new System.Drawing.Point(59, 609);
             this.PrHiddenTextBox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PrHiddenTextBox.Name = "PrHiddenTextBox";
             this.PrHiddenTextBox.Size = new System.Drawing.Size(217, 40);
@@ -367,7 +358,7 @@ namespace SalesManagement_SysDev
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox1.Location = new System.Drawing.Point(865, 304);
+            this.textBox1.Location = new System.Drawing.Point(1026, 367);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(206, 51);
@@ -376,7 +367,7 @@ namespace SalesManagement_SysDev
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox2.Location = new System.Drawing.Point(1513, 189);
+            this.textBox2.Location = new System.Drawing.Point(1590, 164);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(230, 51);
@@ -385,56 +376,30 @@ namespace SalesManagement_SysDev
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox3.Location = new System.Drawing.Point(865, 391);
+            this.textBox3.Location = new System.Drawing.Point(337, 602);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(206, 51);
             this.textBox3.TabIndex = 75;
             // 
-            // panel1
+            // button1
             // 
-            this.panel1.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBoxClientName);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.dataGridViewDsp);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.buttonClear);
-            this.panel1.Controls.Add(this.PrHiddenTextBox);
-            this.panel1.Controls.Add(this.textBoxHidden);
-            this.panel1.Controls.Add(this.PrReleaseDateTextBox);
-            this.panel1.Controls.Add(this.Regester_button);
-            this.panel1.Controls.Add(this.textBoxFAX);
-            this.panel1.Controls.Add(this.PrColorTextBox);
-            this.panel1.Controls.Add(this.Update_button);
-            this.panel1.Controls.Add(this.textBoxPostnumber);
-            this.panel1.Controls.Add(this.PrFlag);
-            this.panel1.Controls.Add(this.Delete_button);
-            this.panel1.Controls.Add(this.PrModelNumberTextBox);
-            this.panel1.Controls.Add(this.PriceTextBox);
-            this.panel1.Controls.Add(this.PrIDTextBox);
-            this.panel1.Controls.Add(this.MaIDTextBox);
-            this.panel1.Controls.Add(this.ScIDTextBox);
-            this.panel1.Controls.Add(this.PrNameTextBox);
-            this.panel1.Controls.Add(this.textBoxTel);
-            this.panel1.Controls.Add(this.textBoxSalesOfficeID);
-            this.panel1.Controls.Add(this.textBoxClientID);
-            this.panel1.Controls.Add(this.PrSafetyStockTextBox);
-            this.panel1.Location = new System.Drawing.Point(-12, -9);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1920, 1080);
-            this.panel1.TabIndex = 76;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button1.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.button1.Location = new System.Drawing.Point(1711, 24);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(145, 60);
+            this.button1.TabIndex = 77;
+            this.button1.Text = "戻る";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
             this.pictureBox1.InitialImage = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 20);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(146, 94);
@@ -442,32 +407,150 @@ namespace SalesManagement_SysDev
             this.pictureBox1.TabIndex = 76;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // label3
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button1.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.button1.Location = new System.Drawing.Point(1744, 31);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 60);
-            this.button1.TabIndex = 77;
-            this.button1.Text = "戻る";
-            this.button1.UseVisualStyleBackColor = false;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(266, 197);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 18);
+            this.label3.TabIndex = 78;
+            this.label3.Text = "必須";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label4.ForeColor = System.Drawing.Color.Red;
+            this.label4.Location = new System.Drawing.Point(266, 492);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 18);
+            this.label4.TabIndex = 79;
+            this.label4.Text = "必須";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(266, 400);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 18);
+            this.label5.TabIndex = 80;
+            this.label5.Text = "必須";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(266, 294);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 18);
+            this.label6.TabIndex = 81;
+            this.label6.Text = "必須";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(946, 396);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(44, 18);
+            this.label7.TabIndex = 82;
+            this.label7.Text = "必須";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(946, 297);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 18);
+            this.label8.TabIndex = 83;
+            this.label8.Text = "必須";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(946, 197);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(44, 18);
+            this.label9.TabIndex = 84;
+            this.label9.Text = "必須";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(1519, 197);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(44, 18);
+            this.label10.TabIndex = 85;
+            this.label10.Text = "必須";
             // 
             // F_product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.dataGridViewDsp);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxClientName);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.PrReleaseDateTextBox);
+            this.Controls.Add(this.textBoxHidden);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.PrHiddenTextBox);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.textBoxFAX);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Regester_button);
+            this.Controls.Add(this.textBoxTel);
+            this.Controls.Add(this.PrFlag);
+            this.Controls.Add(this.Update_button);
+            this.Controls.Add(this.PrModelNumberTextBox);
+            this.Controls.Add(this.buttonClear);
+            this.Controls.Add(this.ScIDTextBox);
+            this.Controls.Add(this.Delete_button);
+            this.Controls.Add(this.PrIDTextBox);
+            this.Controls.Add(this.PrSafetyStockTextBox);
+            this.Controls.Add(this.textBoxPostnumber);
+            this.Controls.Add(this.MaIDTextBox);
+            this.Controls.Add(this.textBoxClientID);
+            this.Controls.Add(this.textBoxSalesOfficeID);
+            this.Controls.Add(this.PrNameTextBox);
+            this.Controls.Add(this.PriceTextBox);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "F_product";
             this.Text = "product";
             this.Load += new System.EventHandler(this.F_product_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -497,15 +580,21 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Button Update_button;
         private System.Windows.Forms.Button Delete_button;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label PrColorTextBox;
         private System.Windows.Forms.Label PrReleaseDateTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label PrHiddenTextBox;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }
