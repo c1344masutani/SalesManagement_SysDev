@@ -71,6 +71,12 @@
     <Compile Include="F_arrival.Designer.cs">
       <DependentUpon>F_arrival.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_menu.Designer.cs">
+      <DependentUpon>F_menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_sale.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_chumon.resx">
       <DependentUpon>F_chumon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_menu.resx">
+      <DependentUpon>F_menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_product.resx">
       <DependentUpon>F_product.cs</DependentUpon>
