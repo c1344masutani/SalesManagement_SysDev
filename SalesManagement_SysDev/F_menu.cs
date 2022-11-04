@@ -43,5 +43,10 @@ namespace SalesManagement_SysDev
 
             this.Close();
         }
+
+        private void F_menu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
