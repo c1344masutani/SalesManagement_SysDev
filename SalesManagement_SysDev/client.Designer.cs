@@ -55,6 +55,7 @@ namespace SalesManagement_SysDev
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonClear = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -314,6 +315,7 @@ namespace SalesManagement_SysDev
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.Search_button);
             this.panel1.Controls.Add(this.textBoxPhone);
@@ -366,6 +368,19 @@ namespace SalesManagement_SysDev
             this.buttonClear.Text = "入力クリア";
             this.buttonClear.UseVisualStyleBackColor = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Gainsboro;
+            this.button1.Font = new System.Drawing.Font("HGS明朝E", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(1502, 20);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(208, 57);
+            this.button1.TabIndex = 48;
+            this.button1.Text = "メニュー";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -412,5 +427,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Button button1;
     }
 }

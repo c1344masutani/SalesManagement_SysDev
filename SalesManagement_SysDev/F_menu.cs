@@ -43,5 +43,10 @@ namespace SalesManagement_SysDev
 
             this.Close();
         }
+
+        private void Search_button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
