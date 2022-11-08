@@ -132,7 +132,6 @@ namespace SalesManagement_SysDev
             this.textBoxClientID.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxClientID.Location = new System.Drawing.Point(523, 147);
             this.textBoxClientID.Name = "textBoxClientID";
-            this.textBoxClientID.ReadOnly = true;
             this.textBoxClientID.Size = new System.Drawing.Size(185, 47);
             this.textBoxClientID.TabIndex = 33;
             // 
