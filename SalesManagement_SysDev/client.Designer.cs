@@ -53,8 +53,7 @@ namespace SalesManagement_SysDev
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.buttonClear = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.back_button = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -62,6 +61,7 @@ namespace SalesManagement_SysDev
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -329,27 +329,16 @@ namespace SalesManagement_SysDev
             this.buttonClear.Text = "入力クリア";
             this.buttonClear.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // back_button
             // 
-            this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
-            this.pictureBox1.InitialImage = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
-            this.pictureBox1.Location = new System.Drawing.Point(31, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(181, 85);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 47;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.button1.Location = new System.Drawing.Point(1808, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 50);
-            this.button1.TabIndex = 51;
-            this.button1.Text = "戻る";
-            this.button1.UseVisualStyleBackColor = true;
+            this.back_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.back_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.back_button.Location = new System.Drawing.Point(1808, 30);
+            this.back_button.Name = "back_button";
+            this.back_button.Size = new System.Drawing.Size(140, 50);
+            this.back_button.TabIndex = 51;
+            this.back_button.Text = "戻る";
+            this.back_button.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -434,6 +423,17 @@ namespace SalesManagement_SysDev
             this.label16.TabIndex = 58;
             this.label16.Text = "必須";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
+            this.pictureBox1.InitialImage = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
+            this.pictureBox1.Location = new System.Drawing.Point(31, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(181, 85);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 47;
+            this.pictureBox1.TabStop = false;
+            // 
             // client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -447,7 +447,7 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.back_button);
             this.Controls.Add(this.dataGridViewDsp);
             this.Controls.Add(this.textBoxClientID);
             this.Controls.Add(this.textBoxPhone);
@@ -510,7 +510,7 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button buttonClear;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button back_button;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
