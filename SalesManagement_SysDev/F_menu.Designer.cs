@@ -170,6 +170,7 @@ namespace SalesManagement_SysDev
             this.Received_button.TabIndex = 17;
             this.Received_button.Text = "受注管理";
             this.Received_button.UseVisualStyleBackColor = false;
+            this.Received_button.Click += new System.EventHandler(this.Received_button_Click);
             // 
             // OutHouse_button
             // 
@@ -194,6 +195,7 @@ namespace SalesManagement_SysDev
             this.Profit_button.TabIndex = 16;
             this.Profit_button.Text = "売上管理";
             this.Profit_button.UseVisualStyleBackColor = false;
+            this.Profit_button.Click += new System.EventHandler(this.Profit_button_Click);
             // 
             // HOrder_button
             // 
@@ -230,6 +232,7 @@ namespace SalesManagement_SysDev
             this.Stock_button.TabIndex = 14;
             this.Stock_button.Text = "在庫管理";
             this.Stock_button.UseVisualStyleBackColor = false;
+            this.Stock_button.Click += new System.EventHandler(this.Stock_button_Click);
             // 
             // Member_button
             // 
@@ -242,6 +245,7 @@ namespace SalesManagement_SysDev
             this.Member_button.TabIndex = 15;
             this.Member_button.Text = "社員管理";
             this.Member_button.UseVisualStyleBackColor = false;
+            this.Member_button.Click += new System.EventHandler(this.Member_button_Click);
             // 
             // F_menu
             // 

@@ -16,5 +16,10 @@ namespace SalesManagement_SysDev
         {
             InitializeComponent();
         }
+
+        private void F_employee_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
