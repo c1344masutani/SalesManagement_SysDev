@@ -60,7 +60,9 @@ namespace SalesManagement_SysDev
             this.label16 = new System.Windows.Forms.Label();
             this.back_button = new System.Windows.Forms.Button();
             this.EmHiredate = new System.Windows.Forms.DateTimePicker();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -241,9 +243,9 @@ namespace SalesManagement_SysDev
             this.Regester_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
             this.Regester_button.Location = new System.Drawing.Point(716, 30);
             this.Regester_button.Name = "Regester_button";
-            this.Regester_button.Size = new System.Drawing.Size(141, 50);
+            this.Regester_button.Size = new System.Drawing.Size(218, 50);
             this.Regester_button.TabIndex = 19;
-            this.Regester_button.Text = "登録";
+            this.Regester_button.Text = "新規追加";
             this.Regester_button.UseVisualStyleBackColor = true;
             // 
             // Update_button
@@ -374,12 +376,24 @@ namespace SalesManagement_SysDev
             this.EmHiredate.Size = new System.Drawing.Size(200, 25);
             this.EmHiredate.TabIndex = 31;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
+            this.pictureBox1.InitialImage = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
+            this.pictureBox1.Location = new System.Drawing.Point(27, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(181, 85);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 48;
+            this.pictureBox1.TabStop = false;
+            // 
             // F_employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.EmHiredate);
             this.Controls.Add(this.back_button);
             this.Controls.Add(this.label16);
@@ -415,6 +429,7 @@ namespace SalesManagement_SysDev
             this.Text = "employee";
             this.Load += new System.EventHandler(this.F_employee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -453,5 +468,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button back_button;
         private System.Windows.Forms.DateTimePicker EmHiredate;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

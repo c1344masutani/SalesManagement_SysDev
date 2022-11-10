@@ -103,11 +103,11 @@
     <Compile Include="Entity\M_Position.cs" />
     <Compile Include="Entity\M_SalesOffice.cs" />
     <Compile Include="Entity\M_SmallClassification.cs" />
-    <Compile Include="F_chumon.cs">
+    <Compile Include="F_Order.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_chumon.Designer.cs">
-      <DependentUpon>F_chumon.cs</DependentUpon>
+    <Compile Include="F_Order.Designer.cs">
+      <DependentUpon>F_Order.cs</DependentUpon>
     </Compile>
     <Compile Include="F_hattyu.cs">
       <SubType>Form</SubType>
@@ -176,8 +176,8 @@
     <EmbeddedResource Include="F_login.resx">
       <DependentUpon>F_login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_chumon.resx">
-      <DependentUpon>F_chumon.cs</DependentUpon>
+    <EmbeddedResource Include="F_Order.resx">
+      <DependentUpon>F_Order.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_menu.resx">
       <DependentUpon>F_menu.cs</DependentUpon>

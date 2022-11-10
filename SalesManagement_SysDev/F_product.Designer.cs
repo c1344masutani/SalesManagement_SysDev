@@ -74,7 +74,7 @@ namespace SalesManagement_SysDev
             // 
             this.buttonClear.BackColor = System.Drawing.Color.White;
             this.buttonClear.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.buttonClear.Location = new System.Drawing.Point(1345, 23);
+            this.buttonClear.Location = new System.Drawing.Point(1353, 23);
             this.buttonClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(321, 59);
@@ -272,7 +272,7 @@ namespace SalesManagement_SysDev
             this.Regester_button.Location = new System.Drawing.Point(567, 26);
             this.Regester_button.Margin = new System.Windows.Forms.Padding(2);
             this.Regester_button.Name = "Regester_button";
-            this.Regester_button.Size = new System.Drawing.Size(204, 56);
+            this.Regester_button.Size = new System.Drawing.Size(232, 56);
             this.Regester_button.TabIndex = 49;
             this.Regester_button.Text = "新規追加";
             this.Regester_button.UseVisualStyleBackColor = false;
@@ -283,7 +283,7 @@ namespace SalesManagement_SysDev
             this.Update_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Update_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Update_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.Update_button.Location = new System.Drawing.Point(857, 23);
+            this.Update_button.Location = new System.Drawing.Point(873, 23);
             this.Update_button.Margin = new System.Windows.Forms.Padding(2);
             this.Update_button.Name = "Update_button";
             this.Update_button.Size = new System.Drawing.Size(154, 56);
@@ -297,7 +297,7 @@ namespace SalesManagement_SysDev
             this.Delete_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Delete_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Delete_button.ForeColor = System.Drawing.Color.Red;
-            this.Delete_button.Location = new System.Drawing.Point(1114, 23);
+            this.Delete_button.Location = new System.Drawing.Point(1126, 23);
             this.Delete_button.Margin = new System.Windows.Forms.Padding(2);
             this.Delete_button.Name = "Delete_button";
             this.Delete_button.Size = new System.Drawing.Size(154, 56);
@@ -387,7 +387,7 @@ namespace SalesManagement_SysDev
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button1.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.button1.Location = new System.Drawing.Point(1711, 24);
+            this.button1.Location = new System.Drawing.Point(1727, 24);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(145, 60);
             this.button1.TabIndex = 77;
