@@ -45,14 +45,15 @@ namespace SalesManagement_SysDev
             dataGridViewDsp.ReadOnly = true;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void back_button_Click(object sender, EventArgs e)
         {
+            Form frm = new F_menu();
 
-        }
+            Opacity = 0;
 
-        private void label2_Click(object sender, EventArgs e)
-        {
+            frm.ShowDialog();
 
+            this.Close();
         }
     }
 }
