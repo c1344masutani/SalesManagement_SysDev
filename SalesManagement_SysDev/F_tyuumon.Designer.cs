@@ -220,7 +220,7 @@ namespace SalesManagement_SysDev
             // ChID_textBox
             // 
             this.ChID_textBox.Location = new System.Drawing.Point(404, 164);
-            this.ChID_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ChID_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.ChID_textBox.Multiline = true;
             this.ChID_textBox.Name = "ChID_textBox";
             this.ChID_textBox.Size = new System.Drawing.Size(206, 51);
@@ -229,7 +229,7 @@ namespace SalesManagement_SysDev
             // SoID_textBox
             // 
             this.SoID_textBox.Location = new System.Drawing.Point(404, 250);
-            this.SoID_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SoID_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.SoID_textBox.Multiline = true;
             this.SoID_textBox.Name = "SoID_textBox";
             this.SoID_textBox.Size = new System.Drawing.Size(206, 51);
@@ -238,7 +238,7 @@ namespace SalesManagement_SysDev
             // EmID_textBox
             // 
             this.EmID_textBox.Location = new System.Drawing.Point(404, 329);
-            this.EmID_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.EmID_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.EmID_textBox.Multiline = true;
             this.EmID_textBox.Name = "EmID_textBox";
             this.EmID_textBox.Size = new System.Drawing.Size(206, 52);
@@ -247,7 +247,7 @@ namespace SalesManagement_SysDev
             // ChHidden_textBox
             // 
             this.ChHidden_textBox.Location = new System.Drawing.Point(404, 536);
-            this.ChHidden_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ChHidden_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.ChHidden_textBox.Multiline = true;
             this.ChHidden_textBox.Name = "ChHidden_textBox";
             this.ChHidden_textBox.Size = new System.Drawing.Size(206, 51);
@@ -256,7 +256,7 @@ namespace SalesManagement_SysDev
             // OrID_textBox
             // 
             this.OrID_textBox.Location = new System.Drawing.Point(1170, 175);
-            this.OrID_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.OrID_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.OrID_textBox.Multiline = true;
             this.OrID_textBox.Name = "OrID_textBox";
             this.OrID_textBox.Size = new System.Drawing.Size(206, 51);
@@ -279,7 +279,7 @@ namespace SalesManagement_SysDev
             // ClID_textBox
             // 
             this.ClID_textBox.Location = new System.Drawing.Point(404, 421);
-            this.ClID_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClID_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.ClID_textBox.Multiline = true;
             this.ClID_textBox.Name = "ClID_textBox";
             this.ClID_textBox.Size = new System.Drawing.Size(206, 52);
@@ -288,7 +288,7 @@ namespace SalesManagement_SysDev
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(1170, 260);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(206, 25);
             this.dateTimePicker1.TabIndex = 104;
@@ -297,7 +297,7 @@ namespace SalesManagement_SysDev
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(99, 628);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -310,7 +310,7 @@ namespace SalesManagement_SysDev
             this.checkBox1.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
             this.checkBox1.Location = new System.Drawing.Point(889, 421);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(185, 40);
             this.checkBox1.TabIndex = 106;
@@ -323,7 +323,7 @@ namespace SalesManagement_SysDev
             this.checkBox2.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
             this.checkBox2.Location = new System.Drawing.Point(891, 347);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(149, 40);
             this.checkBox2.TabIndex = 107;
@@ -407,7 +407,7 @@ namespace SalesManagement_SysDev
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(1924, 1050);
+            this.ClientSize = new System.Drawing.Size(1898, 1024);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -437,7 +437,7 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.ClID);
             this.Controls.Add(this.EmID);
             this.Controls.Add(this.ChID);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "F_tyuumon";
             this.Text = "F_tyuumon";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
