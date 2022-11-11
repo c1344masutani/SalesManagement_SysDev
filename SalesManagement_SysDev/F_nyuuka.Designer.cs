@@ -149,7 +149,7 @@ namespace SalesManagement_SysDev
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(305, 56);
             this.label5.TabIndex = 84;
-            this.label5.Text = "商 品 管 理";
+            this.label5.Text = "入 荷 管 理";
             // 
             // checkBox_ArStateFlag
             // 
