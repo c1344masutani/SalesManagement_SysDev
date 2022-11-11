@@ -179,6 +179,9 @@
     <EmbeddedResource Include="F_kokyaku.resx">
       <DependentUpon>F_kokyaku.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="F_nyuuka.resx">
+      <DependentUpon>F_nyuuka.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_nyuuko.resx">
       <DependentUpon>F_nyuuko.cs</DependentUpon>
     </EmbeddedResource>
