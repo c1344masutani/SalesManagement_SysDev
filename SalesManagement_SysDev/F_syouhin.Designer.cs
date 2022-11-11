@@ -378,10 +378,10 @@ namespace SalesManagement_SysDev
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBox3.Location = new System.Drawing.Point(337, 602);
+            this.textBox3.Location = new System.Drawing.Point(315, 602);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(206, 51);
+            this.textBox3.Size = new System.Drawing.Size(393, 51);
             this.textBox3.TabIndex = 75;
             // 
             // button1
@@ -516,7 +516,7 @@ namespace SalesManagement_SysDev
             this.Search_button.Text = "検索";
             this.Search_button.UseVisualStyleBackColor = true;
             // 
-            // F_product
+            // F_syouhin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -561,7 +561,7 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.PrNameTextBox);
             this.Controls.Add(this.PriceTextBox);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "F_product";
+            this.Name = "F_syouhin";
             this.Text = "product";
             this.Load += new System.EventHandler(this.F_product_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).EndInit();
