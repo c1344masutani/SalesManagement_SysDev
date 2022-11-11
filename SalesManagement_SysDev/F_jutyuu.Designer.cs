@@ -1,7 +1,7 @@
 ﻿
 namespace SalesManagement_SysDev
 {
-    partial class F_order_received
+    partial class F_jutyuu
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +35,6 @@ namespace SalesManagement_SysDev
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -46,14 +45,21 @@ namespace SalesManagement_SysDev
             this.Delete_button = new System.Windows.Forms.Button();
             this.Search_button = new System.Windows.Forms.Button();
             this.back_button = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.OrID = new System.Windows.Forms.TextBox();
+            this.SoID = new System.Windows.Forms.TextBox();
+            this.EmID = new System.Windows.Forms.TextBox();
+            this.OrHidden = new System.Windows.Forms.TextBox();
+            this.ClID = new System.Windows.Forms.TextBox();
+            this.ClCharge = new System.Windows.Forms.TextBox();
+            this.OrDate = new System.Windows.Forms.DateTimePicker();
+            this.OrStateFlag = new System.Windows.Forms.CheckBox();
+            this.OrFlag = new System.Windows.Forms.CheckBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -96,7 +102,7 @@ namespace SalesManagement_SysDev
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label4.Location = new System.Drawing.Point(705, 186);
+            this.label4.Location = new System.Drawing.Point(817, 185);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(138, 40);
             this.label4.TabIndex = 3;
@@ -124,23 +130,12 @@ namespace SalesManagement_SysDev
             this.pictureBox1.TabIndex = 48;
             this.pictureBox1.TabStop = false;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label6.Location = new System.Drawing.Point(1267, 270);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(297, 40);
-            this.label6.TabIndex = 49;
-            this.label6.Text = "受注状態フラグ";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label7.Location = new System.Drawing.Point(1267, 186);
+            this.label7.Location = new System.Drawing.Point(1401, 185);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(217, 40);
             this.label7.TabIndex = 50;
@@ -162,7 +157,7 @@ namespace SalesManagement_SysDev
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label9.Location = new System.Drawing.Point(705, 270);
+            this.label9.Location = new System.Drawing.Point(817, 271);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(257, 40);
             this.label9.TabIndex = 52;
@@ -185,9 +180,8 @@ namespace SalesManagement_SysDev
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
             this.label10.Location = new System.Drawing.Point(1267, 352);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(297, 40);
+            this.label10.Size = new System.Drawing.Size(0, 40);
             this.label10.TabIndex = 54;
-            this.label10.Text = "受注管理フラグ";
             // 
             // Regester_button
             // 
@@ -244,84 +238,172 @@ namespace SalesManagement_SysDev
             this.back_button.Text = "戻る";
             this.back_button.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // OrID
             // 
-            this.textBox1.Location = new System.Drawing.Point(463, 186);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(178, 39);
-            this.textBox1.TabIndex = 60;
+            this.OrID.Location = new System.Drawing.Point(539, 187);
+            this.OrID.Multiline = true;
+            this.OrID.Name = "OrID";
+            this.OrID.Size = new System.Drawing.Size(178, 39);
+            this.OrID.TabIndex = 60;
             // 
-            // textBox2
+            // SoID
             // 
-            this.textBox2.Location = new System.Drawing.Point(463, 270);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(178, 39);
-            this.textBox2.TabIndex = 61;
+            this.SoID.Location = new System.Drawing.Point(539, 270);
+            this.SoID.Multiline = true;
+            this.SoID.Name = "SoID";
+            this.SoID.Size = new System.Drawing.Size(178, 39);
+            this.SoID.TabIndex = 61;
             // 
-            // textBox3
+            // EmID
             // 
-            this.textBox3.Location = new System.Drawing.Point(463, 353);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(178, 39);
-            this.textBox3.TabIndex = 62;
+            this.EmID.Location = new System.Drawing.Point(539, 353);
+            this.EmID.Multiline = true;
+            this.EmID.Name = "EmID";
+            this.EmID.Size = new System.Drawing.Size(178, 39);
+            this.EmID.TabIndex = 62;
             // 
-            // textBox4
+            // OrHidden
             // 
-            this.textBox4.Location = new System.Drawing.Point(463, 442);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(399, 39);
-            this.textBox4.TabIndex = 63;
+            this.OrHidden.Location = new System.Drawing.Point(539, 442);
+            this.OrHidden.Multiline = true;
+            this.OrHidden.Name = "OrHidden";
+            this.OrHidden.Size = new System.Drawing.Size(447, 87);
+            this.OrHidden.TabIndex = 63;
             // 
-            // textBox5
+            // ClID
             // 
-            this.textBox5.Location = new System.Drawing.Point(993, 187);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(178, 39);
-            this.textBox5.TabIndex = 64;
+            this.ClID.Location = new System.Drawing.Point(1173, 187);
+            this.ClID.Multiline = true;
+            this.ClID.Name = "ClID";
+            this.ClID.Size = new System.Drawing.Size(178, 39);
+            this.ClID.TabIndex = 64;
             // 
-            // textBox6
+            // ClCharge
             // 
-            this.textBox6.Location = new System.Drawing.Point(993, 271);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(178, 39);
-            this.textBox6.TabIndex = 65;
+            this.ClCharge.Location = new System.Drawing.Point(1173, 270);
+            this.ClCharge.Multiline = true;
+            this.ClCharge.Name = "ClCharge";
+            this.ClCharge.Size = new System.Drawing.Size(178, 39);
+            this.ClCharge.TabIndex = 65;
             // 
-            // textBox7
+            // OrDate
             // 
-            this.textBox7.Location = new System.Drawing.Point(1615, 270);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(240, 39);
-            this.textBox7.TabIndex = 66;
+            this.OrDate.Location = new System.Drawing.Point(1705, 201);
+            this.OrDate.Name = "OrDate";
+            this.OrDate.Size = new System.Drawing.Size(200, 25);
+            this.OrDate.TabIndex = 68;
             // 
-            // textBox8
+            // OrStateFlag
             // 
-            this.textBox8.Location = new System.Drawing.Point(1615, 352);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(240, 39);
-            this.textBox8.TabIndex = 67;
+            this.OrStateFlag.AutoSize = true;
+            this.OrStateFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.OrStateFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.OrStateFlag.Location = new System.Drawing.Point(1274, 485);
+            this.OrStateFlag.Name = "OrStateFlag";
+            this.OrStateFlag.Size = new System.Drawing.Size(203, 44);
+            this.OrStateFlag.TabIndex = 69;
+            this.OrStateFlag.Text = "受注確定";
+            this.OrStateFlag.UseVisualStyleBackColor = true;
             // 
-            // F_order_received
+            // OrFlag
+            // 
+            this.OrFlag.AutoSize = true;
+            this.OrFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.OrFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.OrFlag.Location = new System.Drawing.Point(1588, 485);
+            this.OrFlag.Name = "OrFlag";
+            this.OrFlag.Size = new System.Drawing.Size(163, 44);
+            this.OrFlag.TabIndex = 70;
+            this.OrFlag.Text = "非表示";
+            this.OrFlag.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label6.Location = new System.Drawing.Point(973, 204);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 18);
+            this.label6.TabIndex = 71;
+            this.label6.Text = "必須";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label11.Location = new System.Drawing.Point(394, 371);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(44, 18);
+            this.label11.TabIndex = 72;
+            this.label11.Text = "必須";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label12.Location = new System.Drawing.Point(433, 293);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(44, 18);
+            this.label12.TabIndex = 73;
+            this.label12.Text = "必須";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label13.Location = new System.Drawing.Point(394, 208);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(44, 18);
+            this.label13.TabIndex = 74;
+            this.label13.Text = "必須";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label14.Location = new System.Drawing.Point(1641, 204);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(44, 18);
+            this.label14.TabIndex = 75;
+            this.label14.Text = "必須";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label15.Location = new System.Drawing.Point(1098, 291);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(44, 18);
+            this.label15.TabIndex = 76;
+            this.label15.Text = "必須";
+            // 
+            // F_jutyuu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.OrFlag);
+            this.Controls.Add(this.OrStateFlag);
+            this.Controls.Add(this.OrDate);
+            this.Controls.Add(this.ClCharge);
+            this.Controls.Add(this.ClID);
+            this.Controls.Add(this.OrHidden);
+            this.Controls.Add(this.EmID);
+            this.Controls.Add(this.SoID);
+            this.Controls.Add(this.OrID);
             this.Controls.Add(this.back_button);
             this.Controls.Add(this.Search_button);
             this.Controls.Add(this.Delete_button);
@@ -332,15 +414,14 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "F_order_received";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "F_jutyuu";
             this.Text = "F_order_received";
             this.Load += new System.EventHandler(this.F_order_received_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -358,7 +439,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
@@ -369,13 +449,20 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Button Delete_button;
         private System.Windows.Forms.Button Search_button;
         private System.Windows.Forms.Button back_button;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox OrID;
+        private System.Windows.Forms.TextBox SoID;
+        private System.Windows.Forms.TextBox EmID;
+        private System.Windows.Forms.TextBox OrHidden;
+        private System.Windows.Forms.TextBox ClID;
+        private System.Windows.Forms.TextBox ClCharge;
+        private System.Windows.Forms.DateTimePicker OrDate;
+        private System.Windows.Forms.CheckBox OrStateFlag;
+        private System.Windows.Forms.CheckBox OrFlag;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
     }
 }

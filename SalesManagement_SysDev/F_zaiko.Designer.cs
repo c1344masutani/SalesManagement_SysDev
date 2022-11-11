@@ -1,7 +1,7 @@
 ﻿
 namespace SalesManagement_SysDev
 {
-    partial class F_stock
+    partial class F_zaiko
     {
         /// <summary>
         /// Required designer variable.
@@ -33,17 +33,20 @@ namespace SalesManagement_SysDev
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBoxStockID = new System.Windows.Forms.TextBox();
-            this.textBoxProductID = new System.Windows.Forms.TextBox();
+            this.textBoxStID = new System.Windows.Forms.TextBox();
+            this.textBoxPrID = new System.Windows.Forms.TextBox();
             this.textBoxStQuantity = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.button_Search = new System.Windows.Forms.Button();
+            this.button_Update = new System.Windows.Forms.Button();
+            this.button_back = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.checkBox_StFlag = new System.Windows.Forms.CheckBox();
+            this.button_Clear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +54,7 @@ namespace SalesManagement_SysDev
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("HGS明朝E", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label1.Location = new System.Drawing.Point(206, 20);
+            this.label1.Location = new System.Drawing.Point(312, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(305, 56);
             this.label1.TabIndex = 0;
@@ -90,21 +93,21 @@ namespace SalesManagement_SysDev
             this.label4.TabIndex = 3;
             this.label4.Text = "在庫数";
             // 
-            // textBoxStockID
+            // textBoxStID
             // 
-            this.textBoxStockID.Location = new System.Drawing.Point(352, 175);
-            this.textBoxStockID.Multiline = true;
-            this.textBoxStockID.Name = "textBoxStockID";
-            this.textBoxStockID.Size = new System.Drawing.Size(206, 51);
-            this.textBoxStockID.TabIndex = 4;
+            this.textBoxStID.Location = new System.Drawing.Point(352, 175);
+            this.textBoxStID.Multiline = true;
+            this.textBoxStID.Name = "textBoxStID";
+            this.textBoxStID.Size = new System.Drawing.Size(206, 51);
+            this.textBoxStID.TabIndex = 4;
             // 
-            // textBoxProductID
+            // textBoxPrID
             // 
-            this.textBoxProductID.Location = new System.Drawing.Point(352, 279);
-            this.textBoxProductID.Multiline = true;
-            this.textBoxProductID.Name = "textBoxProductID";
-            this.textBoxProductID.Size = new System.Drawing.Size(206, 51);
-            this.textBoxProductID.TabIndex = 5;
+            this.textBoxPrID.Location = new System.Drawing.Point(352, 279);
+            this.textBoxPrID.Multiline = true;
+            this.textBoxPrID.Name = "textBoxPrID";
+            this.textBoxPrID.Size = new System.Drawing.Size(206, 51);
+            this.textBoxPrID.TabIndex = 5;
             // 
             // textBoxStQuantity
             // 
@@ -118,7 +121,7 @@ namespace SalesManagement_SysDev
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(285, 197);
+            this.label5.Location = new System.Drawing.Point(302, 197);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 18);
             this.label5.TabIndex = 7;
@@ -128,21 +131,11 @@ namespace SalesManagement_SysDev
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(281, 297);
+            this.label6.Location = new System.Drawing.Point(302, 299);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 18);
             this.label6.TabIndex = 8;
             this.label6.Text = "必須";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(804, 197);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 18);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "必須";
             // 
             // dataGridView1
             // 
@@ -154,38 +147,73 @@ namespace SalesManagement_SysDev
             this.dataGridView1.Size = new System.Drawing.Size(1700, 550);
             this.dataGridView1.TabIndex = 10;
             // 
-            // button1
+            // button_Search
             // 
-            this.button1.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.button1.Location = new System.Drawing.Point(793, 26);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(154, 56);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "検索";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_Search.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button_Search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.button_Search.Location = new System.Drawing.Point(716, 30);
+            this.button_Search.Name = "button_Search";
+            this.button_Search.Size = new System.Drawing.Size(154, 56);
+            this.button_Search.TabIndex = 11;
+            this.button_Search.Text = "検索";
+            this.button_Search.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // button_Update
             // 
-            this.button2.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.button2.Location = new System.Drawing.Point(1008, 26);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(154, 56);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "更新";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_Update.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button_Update.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.button_Update.Location = new System.Drawing.Point(1018, 31);
+            this.button_Update.Name = "button_Update";
+            this.button_Update.Size = new System.Drawing.Size(154, 56);
+            this.button_Update.TabIndex = 12;
+            this.button_Update.Text = "更新";
+            this.button_Update.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // button_back
             // 
-            this.button3.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.button3.Location = new System.Drawing.Point(1703, 26);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(154, 56);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "戻る";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button_back.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button_back.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.button_back.Location = new System.Drawing.Point(1703, 26);
+            this.button_back.Name = "button_back";
+            this.button_back.Size = new System.Drawing.Size(154, 56);
+            this.button_back.TabIndex = 13;
+            this.button_back.Text = "戻る";
+            this.button_back.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
+            this.pictureBox1.InitialImage = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
+            this.pictureBox1.Location = new System.Drawing.Point(27, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(181, 85);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 49;
+            this.pictureBox1.TabStop = false;
+            // 
+            // checkBox_StFlag
+            // 
+            this.checkBox_StFlag.AutoSize = true;
+            this.checkBox_StFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.checkBox_StFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.checkBox_StFlag.Location = new System.Drawing.Point(669, 279);
+            this.checkBox_StFlag.Name = "checkBox_StFlag";
+            this.checkBox_StFlag.Size = new System.Drawing.Size(163, 44);
+            this.checkBox_StFlag.TabIndex = 50;
+            this.checkBox_StFlag.Text = "非表示";
+            this.checkBox_StFlag.UseVisualStyleBackColor = true;
+            // 
+            // button_Clear
+            // 
+            this.button_Clear.BackColor = System.Drawing.Color.White;
+            this.button_Clear.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button_Clear.Location = new System.Drawing.Point(1275, 31);
+            this.button_Clear.Margin = new System.Windows.Forms.Padding(2);
+            this.button_Clear.Name = "button_Clear";
+            this.button_Clear.Size = new System.Drawing.Size(321, 59);
+            this.button_Clear.TabIndex = 69;
+            this.button_Clear.Text = "入力クリア";
+            this.button_Clear.UseVisualStyleBackColor = false;
             // 
             // F_stock
             // 
@@ -193,16 +221,18 @@ namespace SalesManagement_SysDev
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_Clear);
+            this.Controls.Add(this.checkBox_StFlag);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.button_back);
+            this.Controls.Add(this.button_Update);
+            this.Controls.Add(this.button_Search);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBoxStQuantity);
-            this.Controls.Add(this.textBoxProductID);
-            this.Controls.Add(this.textBoxStockID);
+            this.Controls.Add(this.textBoxPrID);
+            this.Controls.Add(this.textBoxStID);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -210,6 +240,7 @@ namespace SalesManagement_SysDev
             this.Name = "F_stock";
             this.Text = "stock";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,15 +252,17 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBoxStockID;
-        private System.Windows.Forms.TextBox textBoxProductID;
+        private System.Windows.Forms.TextBox textBoxStID;
+        private System.Windows.Forms.TextBox textBoxPrID;
         private System.Windows.Forms.TextBox textBoxStQuantity;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button_Search;
+        private System.Windows.Forms.Button button_Update;
+        private System.Windows.Forms.Button button_back;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox checkBox_StFlag;
+        private System.Windows.Forms.Button button_Clear;
     }
 }

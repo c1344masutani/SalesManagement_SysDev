@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class client : Form
+    public partial class F_kokyaku : Form
     {
-        public client()
+        public F_kokyaku()
         {
             InitializeComponent();
         }

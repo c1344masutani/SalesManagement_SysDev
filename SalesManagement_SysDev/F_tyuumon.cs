@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_sale : Form
+    public partial class F_tyuumon : Form
     {
-        public F_sale()
+        public F_tyuumon()
         {
             InitializeComponent();
         }

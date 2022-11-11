@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_stock : Form
+    public partial class F_syukka : Form
     {
-        public F_stock()
+        public F_syukka()
         {
             InitializeComponent();
         }

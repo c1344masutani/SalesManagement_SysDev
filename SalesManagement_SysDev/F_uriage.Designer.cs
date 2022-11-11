@@ -1,7 +1,7 @@
 ﻿
 namespace SalesManagement_SysDev
 {
-    partial class F_sale
+    partial class F_uriage
     {
         /// <summary>
         /// Required designer variable.

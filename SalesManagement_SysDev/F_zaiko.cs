@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_order_received : Form
+    public partial class F_zaiko : Form
     {
-        public F_order_received()
+        public F_zaiko()
         {
             InitializeComponent();
-        }
-
-        private void F_order_received_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

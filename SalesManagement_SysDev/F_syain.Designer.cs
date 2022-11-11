@@ -1,7 +1,7 @@
 ﻿
 namespace SalesManagement_SysDev
 {
-    partial class F_employee
+    partial class F_syain
     {
         /// <summary>
         /// Required designer variable.
@@ -61,6 +61,7 @@ namespace SalesManagement_SysDev
             this.back_button = new System.Windows.Forms.Button();
             this.EmHiredate = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.checkBoxEmFlag = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -419,12 +420,25 @@ namespace SalesManagement_SysDev
             this.pictureBox1.TabIndex = 48;
             this.pictureBox1.TabStop = false;
             // 
+            // checkBoxEmFlag
+            // 
+            this.checkBoxEmFlag.AutoSize = true;
+            this.checkBoxEmFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.checkBoxEmFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.checkBoxEmFlag.Location = new System.Drawing.Point(1532, 390);
+            this.checkBoxEmFlag.Name = "checkBoxEmFlag";
+            this.checkBoxEmFlag.Size = new System.Drawing.Size(163, 44);
+            this.checkBoxEmFlag.TabIndex = 49;
+            this.checkBoxEmFlag.Text = "非表示";
+            this.checkBoxEmFlag.UseVisualStyleBackColor = true;
+            // 
             // F_employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(1518, 853);
+            this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.checkBoxEmFlag);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.EmHiredate);
             this.Controls.Add(this.back_button);
@@ -502,5 +516,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Button back_button;
         private System.Windows.Forms.DateTimePicker EmHiredate;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox checkBoxEmFlag;
     }
 }

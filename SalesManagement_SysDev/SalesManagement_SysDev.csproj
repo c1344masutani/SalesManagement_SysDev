@@ -59,17 +59,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="client.cs">
+    <Compile Include="F_kokyaku.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="client.Designer.cs">
-      <DependentUpon>client.cs</DependentUpon>
+    <Compile Include="F_kokyaku.Designer.cs">
+      <DependentUpon>F_kokyaku.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_arrival.cs">
+    <Compile Include="F_nyuuka.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_arrival.Designer.cs">
-      <DependentUpon>F_arrival.cs</DependentUpon>
+    <Compile Include="F_nyuuka.Designer.cs">
+      <DependentUpon>F_nyuuka.cs</DependentUpon>
     </Compile>
     <Compile Include="F_menu.cs">
       <SubType>Form</SubType>
@@ -77,17 +77,23 @@
     <Compile Include="F_menu.Designer.cs">
       <DependentUpon>F_menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_sale.cs">
+    <Compile Include="F_tyuumon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_sale.Designer.cs">
-      <DependentUpon>F_sale.cs</DependentUpon>
+    <Compile Include="F_tyuumon.Designer.cs">
+      <DependentUpon>F_tyuumon.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_employee.cs">
+    <Compile Include="F_uriage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_employee.Designer.cs">
-      <DependentUpon>F_employee.cs</DependentUpon>
+    <Compile Include="F_uriage.Designer.cs">
+      <DependentUpon>F_uriage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_syain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_syain.Designer.cs">
+      <DependentUpon>F_syain.cs</DependentUpon>
     </Compile>
     <Compile Include="Entity\M_MajorCassification.cs" />
     <Compile Include="Entity\M_Product.cs" />
@@ -103,11 +109,11 @@
     <Compile Include="Entity\M_Position.cs" />
     <Compile Include="Entity\M_SalesOffice.cs" />
     <Compile Include="Entity\M_SmallClassification.cs" />
-    <Compile Include="F_Order.cs">
+    <Compile Include="F_jutyuu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_Order.Designer.cs">
-      <DependentUpon>F_Order.cs</DependentUpon>
+    <Compile Include="F_jutyuu.Designer.cs">
+      <DependentUpon>F_jutyuu.cs</DependentUpon>
     </Compile>
     <Compile Include="F_hattyu.cs">
       <SubType>Form</SubType>
@@ -115,11 +121,11 @@
     <Compile Include="F_hattyu.Designer.cs">
       <DependentUpon>F_hattyu.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_product.cs">
+    <Compile Include="F_syouhin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_product.Designer.cs">
-      <DependentUpon>F_product.cs</DependentUpon>
+    <Compile Include="F_syouhin.Designer.cs">
+      <DependentUpon>F_syouhin.cs</DependentUpon>
     </Compile>
     <Compile Include="F_syukko.cs">
       <SubType>Form</SubType>
@@ -127,11 +133,11 @@
     <Compile Include="F_syukko.Designer.cs">
       <DependentUpon>F_syukko.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_warehousing.cs">
+    <Compile Include="F_nyuuko.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_warehousing.Designer.cs">
-      <DependentUpon>F_warehousing.cs</DependentUpon>
+    <Compile Include="F_nyuuko.Designer.cs">
+      <DependentUpon>F_nyuuko.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -155,41 +161,41 @@
     <Compile Include="Entity\T_Warehousing.cs" />
     <Compile Include="Entity\T_WarehousingDetail.cs" />
     <Compile Include="SalesManagement_DevContext.cs" />
-    <Compile Include="F_shipment.cs">
+    <Compile Include="F_syukka.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_shipment.Designer.cs">
-      <DependentUpon>F_shipment.cs</DependentUpon>
+    <Compile Include="F_syukka.Designer.cs">
+      <DependentUpon>F_syukka.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_stock.cs">
+    <Compile Include="F_zaiko.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="F_stock.Designer.cs">
-      <DependentUpon>F_stock.cs</DependentUpon>
+    <Compile Include="F_zaiko.Designer.cs">
+      <DependentUpon>F_zaiko.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="client.resx">
-      <DependentUpon>client.cs</DependentUpon>
+    <EmbeddedResource Include="F_kokyaku.resx">
+      <DependentUpon>F_kokyaku.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_employee.resx">
-      <DependentUpon>F_employee.cs</DependentUpon>
+    <EmbeddedResource Include="F_syain.resx">
+      <DependentUpon>F_syain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_login.resx">
       <DependentUpon>F_login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_Order.resx">
-      <DependentUpon>F_Order.cs</DependentUpon>
+    <EmbeddedResource Include="F_jutyuu.resx">
+      <DependentUpon>F_jutyuu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_menu.resx">
       <DependentUpon>F_menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_product.resx">
-      <DependentUpon>F_product.cs</DependentUpon>
+    <EmbeddedResource Include="F_syouhin.resx">
+      <DependentUpon>F_syouhin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_sale.resx">
-      <DependentUpon>F_sale.cs</DependentUpon>
+    <EmbeddedResource Include="F_syukka.resx">
+      <DependentUpon>F_syukka.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="F_stock.resx">
-      <DependentUpon>F_stock.cs</DependentUpon>
+    <EmbeddedResource Include="F_zaiko.resx">
+      <DependentUpon>F_zaiko.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

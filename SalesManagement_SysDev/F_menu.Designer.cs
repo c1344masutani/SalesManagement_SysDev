@@ -121,6 +121,7 @@ namespace SalesManagement_SysDev
             this.OutGoodsbutton.TabIndex = 23;
             this.OutGoodsbutton.Text = "出荷管理";
             this.OutGoodsbutton.UseVisualStyleBackColor = false;
+            this.OutGoodsbutton.Click += new System.EventHandler(this.OutGoodsbutton_Click);
             // 
             // Order_button
             // 
@@ -133,6 +134,7 @@ namespace SalesManagement_SysDev
             this.Order_button.TabIndex = 18;
             this.Order_button.Text = "注文管理";
             this.Order_button.UseVisualStyleBackColor = false;
+            this.Order_button.Click += new System.EventHandler(this.Order_button_Click);
             // 
             // InGoods_button
             // 
@@ -145,6 +147,7 @@ namespace SalesManagement_SysDev
             this.InGoods_button.TabIndex = 22;
             this.InGoods_button.Text = "入荷管理";
             this.InGoods_button.UseVisualStyleBackColor = false;
+            this.InGoods_button.Click += new System.EventHandler(this.InGoods_button_Click);
             // 
             // Goods_button
             // 
@@ -183,6 +186,7 @@ namespace SalesManagement_SysDev
             this.OutHouse_button.TabIndex = 21;
             this.OutHouse_button.Text = "出庫管理";
             this.OutHouse_button.UseVisualStyleBackColor = false;
+            this.OutHouse_button.Click += new System.EventHandler(this.OutHouse_button_Click);
             // 
             // Profit_button
             // 
@@ -208,6 +212,7 @@ namespace SalesManagement_SysDev
             this.HOrder_button.TabIndex = 19;
             this.HOrder_button.Text = "発注管理";
             this.HOrder_button.UseVisualStyleBackColor = false;
+            this.HOrder_button.Click += new System.EventHandler(this.HOrder_button_Click);
             // 
             // InHouse_button
             // 
@@ -220,6 +225,7 @@ namespace SalesManagement_SysDev
             this.InHouse_button.TabIndex = 20;
             this.InHouse_button.Text = "入庫管理";
             this.InHouse_button.UseVisualStyleBackColor = false;
+            this.InHouse_button.Click += new System.EventHandler(this.InHouse_button_Click);
             // 
             // Stock_button
             // 

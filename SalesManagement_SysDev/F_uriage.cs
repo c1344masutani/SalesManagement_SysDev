@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_warehousing : Form
+    public partial class F_uriage : Form
     {
-        public F_warehousing()
+        public F_uriage()
         {
             InitializeComponent();
         }
