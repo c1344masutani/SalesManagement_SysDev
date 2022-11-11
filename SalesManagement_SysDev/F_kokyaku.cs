@@ -202,5 +202,16 @@ namespace SalesManagement_SysDev
         {
 
         }
+
+        private void back_button_Click(object sender, EventArgs e)
+        {
+            Form frm = new F_menu();
+
+            Opacity = 0;
+
+            frm.ShowDialog();
+
+            this.Close();
+        }
     }
 }

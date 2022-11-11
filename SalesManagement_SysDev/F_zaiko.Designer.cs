@@ -179,6 +179,7 @@ namespace SalesManagement_SysDev
             this.button_back.TabIndex = 13;
             this.button_back.Text = "戻る";
             this.button_back.UseVisualStyleBackColor = true;
+            this.button_back.Click += new System.EventHandler(this.button_back_Click);
             // 
             // pictureBox1
             // 
@@ -215,7 +216,7 @@ namespace SalesManagement_SysDev
             this.button_Clear.Text = "入力クリア";
             this.button_Clear.UseVisualStyleBackColor = false;
             // 
-            // F_stock
+            // F_zaiko
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -237,7 +238,7 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "F_stock";
+            this.Name = "F_zaiko";
             this.Text = "stock";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

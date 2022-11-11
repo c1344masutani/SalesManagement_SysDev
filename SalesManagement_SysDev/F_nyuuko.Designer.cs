@@ -142,6 +142,7 @@ namespace SalesManagement_SysDev
             this.back_button.TabIndex = 54;
             this.back_button.Text = "戻る";
             this.back_button.UseVisualStyleBackColor = true;
+            this.back_button.Click += new System.EventHandler(this.back_button_Click);
             // 
             // buttonClear
             // 
