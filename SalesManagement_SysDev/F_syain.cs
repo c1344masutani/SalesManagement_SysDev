@@ -44,5 +44,15 @@ namespace SalesManagement_SysDev
             //読み取り専用
             dataGridViewDsp.ReadOnly = true;
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

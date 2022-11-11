@@ -77,6 +77,7 @@ namespace SalesManagement_SysDev
             this.label1.Size = new System.Drawing.Size(118, 34);
             this.label1.TabIndex = 0;
             this.label1.Text = "社員ID";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
@@ -161,6 +162,7 @@ namespace SalesManagement_SysDev
             this.label2.Size = new System.Drawing.Size(117, 34);
             this.label2.TabIndex = 1;
             this.label2.Text = "社員名";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label9
             // 
@@ -177,7 +179,7 @@ namespace SalesManagement_SysDev
             // EmID
             // 
             this.EmID.Location = new System.Drawing.Point(418, 119);
-            this.EmID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EmID.Margin = new System.Windows.Forms.Padding(2);
             this.EmID.Multiline = true;
             this.EmID.Name = "EmID";
             this.EmID.Size = new System.Drawing.Size(149, 40);
@@ -186,7 +188,7 @@ namespace SalesManagement_SysDev
             // EmName
             // 
             this.EmName.Location = new System.Drawing.Point(418, 189);
-            this.EmName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EmName.Margin = new System.Windows.Forms.Padding(2);
             this.EmName.Multiline = true;
             this.EmName.Name = "EmName";
             this.EmName.Size = new System.Drawing.Size(149, 40);
@@ -195,7 +197,7 @@ namespace SalesManagement_SysDev
             // SoID
             // 
             this.SoID.Location = new System.Drawing.Point(418, 254);
-            this.SoID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SoID.Margin = new System.Windows.Forms.Padding(2);
             this.SoID.Multiline = true;
             this.SoID.Name = "SoID";
             this.SoID.Size = new System.Drawing.Size(220, 40);
@@ -204,7 +206,7 @@ namespace SalesManagement_SysDev
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(418, 325);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(242, 38);
@@ -213,7 +215,7 @@ namespace SalesManagement_SysDev
             // textBox5
             // 
             this.textBox5.Location = new System.Drawing.Point(879, 137);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(1, 22);
             this.textBox5.TabIndex = 13;
@@ -221,7 +223,7 @@ namespace SalesManagement_SysDev
             // EmPhone
             // 
             this.EmPhone.Location = new System.Drawing.Point(978, 262);
-            this.EmPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EmPhone.Margin = new System.Windows.Forms.Padding(2);
             this.EmPhone.Multiline = true;
             this.EmPhone.Name = "EmPhone";
             this.EmPhone.Size = new System.Drawing.Size(204, 38);
@@ -230,7 +232,7 @@ namespace SalesManagement_SysDev
             // EmPasseWord
             // 
             this.EmPasseWord.Location = new System.Drawing.Point(978, 325);
-            this.EmPasseWord.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EmPasseWord.Margin = new System.Windows.Forms.Padding(2);
             this.EmPasseWord.Multiline = true;
             this.EmPasseWord.Name = "EmPasseWord";
             this.EmPasseWord.Size = new System.Drawing.Size(204, 38);
@@ -240,7 +242,7 @@ namespace SalesManagement_SysDev
             // 
             this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDsp.Location = new System.Drawing.Point(100, 396);
-            this.dataGridViewDsp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewDsp.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewDsp.Name = "dataGridViewDsp";
             this.dataGridViewDsp.RowHeadersWidth = 62;
             this.dataGridViewDsp.RowTemplate.Height = 27;
@@ -250,7 +252,7 @@ namespace SalesManagement_SysDev
             // PoID
             // 
             this.PoID.Location = new System.Drawing.Point(978, 114);
-            this.PoID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PoID.Margin = new System.Windows.Forms.Padding(2);
             this.PoID.Multiline = true;
             this.PoID.Name = "PoID";
             this.PoID.Size = new System.Drawing.Size(220, 38);
@@ -261,7 +263,7 @@ namespace SalesManagement_SysDev
             this.Regester_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Regester_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
             this.Regester_button.Location = new System.Drawing.Point(573, 25);
-            this.Regester_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Regester_button.Margin = new System.Windows.Forms.Padding(2);
             this.Regester_button.Name = "Regester_button";
             this.Regester_button.Size = new System.Drawing.Size(174, 42);
             this.Regester_button.TabIndex = 19;
@@ -273,7 +275,7 @@ namespace SalesManagement_SysDev
             this.Update_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Update_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
             this.Update_button.Location = new System.Drawing.Point(814, 26);
-            this.Update_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Update_button.Margin = new System.Windows.Forms.Padding(2);
             this.Update_button.Name = "Update_button";
             this.Update_button.Size = new System.Drawing.Size(113, 42);
             this.Update_button.TabIndex = 20;
@@ -285,7 +287,7 @@ namespace SalesManagement_SysDev
             this.Search_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Search_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
             this.Search_button.Location = new System.Drawing.Point(1235, 26);
-            this.Search_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Search_button.Margin = new System.Windows.Forms.Padding(2);
             this.Search_button.Name = "Search_button";
             this.Search_button.Size = new System.Drawing.Size(113, 42);
             this.Search_button.TabIndex = 21;
@@ -297,7 +299,7 @@ namespace SalesManagement_SysDev
             this.Delete_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Delete_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.Delete_button.Location = new System.Drawing.Point(1046, 26);
-            this.Delete_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Delete_button.Margin = new System.Windows.Forms.Padding(2);
             this.Delete_button.Name = "Delete_button";
             this.Delete_button.Size = new System.Drawing.Size(113, 42);
             this.Delete_button.TabIndex = 22;
@@ -393,7 +395,7 @@ namespace SalesManagement_SysDev
             this.back_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.back_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
             this.back_button.Location = new System.Drawing.Point(1408, 26);
-            this.back_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.back_button.Margin = new System.Windows.Forms.Padding(2);
             this.back_button.Name = "back_button";
             this.back_button.Size = new System.Drawing.Size(113, 42);
             this.back_button.TabIndex = 30;
@@ -403,7 +405,7 @@ namespace SalesManagement_SysDev
             // EmHiredate
             // 
             this.EmHiredate.Location = new System.Drawing.Point(978, 205);
-            this.EmHiredate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EmHiredate.Margin = new System.Windows.Forms.Padding(2);
             this.EmHiredate.Name = "EmHiredate";
             this.EmHiredate.Size = new System.Drawing.Size(161, 22);
             this.EmHiredate.TabIndex = 31;
@@ -413,7 +415,7 @@ namespace SalesManagement_SysDev
             this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
             this.pictureBox1.InitialImage = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
             this.pictureBox1.Location = new System.Drawing.Point(22, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(145, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -427,12 +429,12 @@ namespace SalesManagement_SysDev
             this.checkBoxEmFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
             this.checkBoxEmFlag.Location = new System.Drawing.Point(1532, 390);
             this.checkBoxEmFlag.Name = "checkBoxEmFlag";
-            this.checkBoxEmFlag.Size = new System.Drawing.Size(163, 44);
+            this.checkBoxEmFlag.Size = new System.Drawing.Size(139, 38);
             this.checkBoxEmFlag.TabIndex = 49;
             this.checkBoxEmFlag.Text = "非表示";
             this.checkBoxEmFlag.UseVisualStyleBackColor = true;
             // 
-            // F_employee
+            // F_syain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -471,8 +473,8 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "F_employee";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "F_syain";
             this.Text = "employee";
             this.Load += new System.EventHandler(this.F_employee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).EndInit();
