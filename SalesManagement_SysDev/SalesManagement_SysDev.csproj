@@ -209,6 +209,9 @@
     <EmbeddedResource Include="F_tyuumon.resx">
       <DependentUpon>F_tyuumon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="F_uriage.resx">
+      <DependentUpon>F_uriage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_zaiko.resx">
       <DependentUpon>F_zaiko.cs</DependentUpon>
     </EmbeddedResource>

@@ -68,8 +68,9 @@ namespace SalesManagement_SysDev
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1269, 768);
+            this.panel1.Size = new System.Drawing.Size(1920, 1080);
             this.panel1.TabIndex = 26;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -78,11 +79,12 @@ namespace SalesManagement_SysDev
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("HGS明朝E", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.label1.Location = new System.Drawing.Point(481, 44);
+            this.label1.Location = new System.Drawing.Point(891, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(320, 74);
             this.label1.TabIndex = 24;
             this.label1.Text = "メニュー";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -90,21 +92,22 @@ namespace SalesManagement_SysDev
             this.pictureBox1.ErrorImage = null;
             this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(49, 11);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(153, 84);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Customer_button
             // 
-            this.Customer_button.BackColor = System.Drawing.Color.Green;
+            this.Customer_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
             this.Customer_button.Font = new System.Drawing.Font("HG創英角ｺﾞｼｯｸUB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Customer_button.ForeColor = System.Drawing.Color.Transparent;
-            this.Customer_button.Location = new System.Drawing.Point(58, 133);
+            this.Customer_button.ForeColor = System.Drawing.Color.White;
+            this.Customer_button.Location = new System.Drawing.Point(291, 230);
             this.Customer_button.Name = "Customer_button";
-            this.Customer_button.Size = new System.Drawing.Size(232, 112);
+            this.Customer_button.Size = new System.Drawing.Size(278, 136);
             this.Customer_button.TabIndex = 12;
             this.Customer_button.Text = "顧客管理";
             this.Customer_button.UseVisualStyleBackColor = false;
@@ -112,12 +115,12 @@ namespace SalesManagement_SysDev
             // 
             // OutGoodsbutton
             // 
-            this.OutGoodsbutton.BackColor = System.Drawing.Color.Green;
+            this.OutGoodsbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
             this.OutGoodsbutton.Font = new System.Drawing.Font("HG創英角ｺﾞｼｯｸUB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.OutGoodsbutton.ForeColor = System.Drawing.Color.White;
-            this.OutGoodsbutton.Location = new System.Drawing.Point(940, 446);
+            this.OutGoodsbutton.Location = new System.Drawing.Point(1581, 710);
             this.OutGoodsbutton.Name = "OutGoodsbutton";
-            this.OutGoodsbutton.Size = new System.Drawing.Size(232, 112);
+            this.OutGoodsbutton.Size = new System.Drawing.Size(278, 136);
             this.OutGoodsbutton.TabIndex = 23;
             this.OutGoodsbutton.Text = "出荷管理";
             this.OutGoodsbutton.UseVisualStyleBackColor = false;
@@ -125,12 +128,12 @@ namespace SalesManagement_SysDev
             // 
             // Order_button
             // 
-            this.Order_button.BackColor = System.Drawing.Color.Green;
+            this.Order_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
             this.Order_button.Font = new System.Drawing.Font("HG創英角ｺﾞｼｯｸUB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Order_button.ForeColor = System.Drawing.Color.White;
-            this.Order_button.Location = new System.Drawing.Point(651, 291);
+            this.Order_button.Location = new System.Drawing.Point(1150, 460);
             this.Order_button.Name = "Order_button";
-            this.Order_button.Size = new System.Drawing.Size(232, 112);
+            this.Order_button.Size = new System.Drawing.Size(278, 136);
             this.Order_button.TabIndex = 18;
             this.Order_button.Text = "注文管理";
             this.Order_button.UseVisualStyleBackColor = false;
@@ -138,12 +141,12 @@ namespace SalesManagement_SysDev
             // 
             // InGoods_button
             // 
-            this.InGoods_button.BackColor = System.Drawing.Color.Green;
+            this.InGoods_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
             this.InGoods_button.Font = new System.Drawing.Font("HG創英角ｺﾞｼｯｸUB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.InGoods_button.ForeColor = System.Drawing.Color.White;
-            this.InGoods_button.Location = new System.Drawing.Point(651, 446);
+            this.InGoods_button.Location = new System.Drawing.Point(1150, 710);
             this.InGoods_button.Name = "InGoods_button";
-            this.InGoods_button.Size = new System.Drawing.Size(232, 112);
+            this.InGoods_button.Size = new System.Drawing.Size(278, 136);
             this.InGoods_button.TabIndex = 22;
             this.InGoods_button.Text = "入荷管理";
             this.InGoods_button.UseVisualStyleBackColor = false;
@@ -151,12 +154,12 @@ namespace SalesManagement_SysDev
             // 
             // Goods_button
             // 
-            this.Goods_button.BackColor = System.Drawing.Color.Green;
+            this.Goods_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
             this.Goods_button.Font = new System.Drawing.Font("HG創英角ｺﾞｼｯｸUB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Goods_button.ForeColor = System.Drawing.Color.White;
-            this.Goods_button.Location = new System.Drawing.Point(358, 133);
+            this.Goods_button.Location = new System.Drawing.Point(710, 230);
             this.Goods_button.Name = "Goods_button";
-            this.Goods_button.Size = new System.Drawing.Size(232, 112);
+            this.Goods_button.Size = new System.Drawing.Size(278, 136);
             this.Goods_button.TabIndex = 13;
             this.Goods_button.Text = "商品管理";
             this.Goods_button.UseVisualStyleBackColor = false;
@@ -164,12 +167,12 @@ namespace SalesManagement_SysDev
             // 
             // Received_button
             // 
-            this.Received_button.BackColor = System.Drawing.Color.Green;
+            this.Received_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
             this.Received_button.Font = new System.Drawing.Font("HG創英角ｺﾞｼｯｸUB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Received_button.ForeColor = System.Drawing.Color.White;
-            this.Received_button.Location = new System.Drawing.Point(358, 291);
+            this.Received_button.Location = new System.Drawing.Point(710, 459);
             this.Received_button.Name = "Received_button";
-            this.Received_button.Size = new System.Drawing.Size(232, 113);
+            this.Received_button.Size = new System.Drawing.Size(278, 136);
             this.Received_button.TabIndex = 17;
             this.Received_button.Text = "受注管理";
             this.Received_button.UseVisualStyleBackColor = false;
@@ -177,12 +180,12 @@ namespace SalesManagement_SysDev
             // 
             // OutHouse_button
             // 
-            this.OutHouse_button.BackColor = System.Drawing.Color.Green;
+            this.OutHouse_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
             this.OutHouse_button.Font = new System.Drawing.Font("HG創英角ｺﾞｼｯｸUB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.OutHouse_button.ForeColor = System.Drawing.Color.White;
-            this.OutHouse_button.Location = new System.Drawing.Point(358, 446);
+            this.OutHouse_button.Location = new System.Drawing.Point(710, 710);
             this.OutHouse_button.Name = "OutHouse_button";
-            this.OutHouse_button.Size = new System.Drawing.Size(232, 112);
+            this.OutHouse_button.Size = new System.Drawing.Size(278, 136);
             this.OutHouse_button.TabIndex = 21;
             this.OutHouse_button.Text = "出庫管理";
             this.OutHouse_button.UseVisualStyleBackColor = false;
@@ -190,12 +193,12 @@ namespace SalesManagement_SysDev
             // 
             // Profit_button
             // 
-            this.Profit_button.BackColor = System.Drawing.Color.Green;
+            this.Profit_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
             this.Profit_button.Font = new System.Drawing.Font("HG創英角ｺﾞｼｯｸUB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Profit_button.ForeColor = System.Drawing.Color.Transparent;
-            this.Profit_button.Location = new System.Drawing.Point(58, 291);
+            this.Profit_button.Location = new System.Drawing.Point(291, 459);
             this.Profit_button.Name = "Profit_button";
-            this.Profit_button.Size = new System.Drawing.Size(232, 112);
+            this.Profit_button.Size = new System.Drawing.Size(278, 136);
             this.Profit_button.TabIndex = 16;
             this.Profit_button.Text = "売上管理";
             this.Profit_button.UseVisualStyleBackColor = false;
@@ -203,12 +206,12 @@ namespace SalesManagement_SysDev
             // 
             // HOrder_button
             // 
-            this.HOrder_button.BackColor = System.Drawing.Color.Green;
+            this.HOrder_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
             this.HOrder_button.Font = new System.Drawing.Font("HG創英角ｺﾞｼｯｸUB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.HOrder_button.ForeColor = System.Drawing.Color.White;
-            this.HOrder_button.Location = new System.Drawing.Point(940, 291);
+            this.HOrder_button.Location = new System.Drawing.Point(1581, 459);
             this.HOrder_button.Name = "HOrder_button";
-            this.HOrder_button.Size = new System.Drawing.Size(232, 113);
+            this.HOrder_button.Size = new System.Drawing.Size(278, 136);
             this.HOrder_button.TabIndex = 19;
             this.HOrder_button.Text = "発注管理";
             this.HOrder_button.UseVisualStyleBackColor = false;
@@ -216,12 +219,12 @@ namespace SalesManagement_SysDev
             // 
             // InHouse_button
             // 
-            this.InHouse_button.BackColor = System.Drawing.Color.Green;
+            this.InHouse_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
             this.InHouse_button.Font = new System.Drawing.Font("HG創英角ｺﾞｼｯｸUB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.InHouse_button.ForeColor = System.Drawing.Color.White;
-            this.InHouse_button.Location = new System.Drawing.Point(58, 446);
+            this.InHouse_button.Location = new System.Drawing.Point(291, 710);
             this.InHouse_button.Name = "InHouse_button";
-            this.InHouse_button.Size = new System.Drawing.Size(232, 112);
+            this.InHouse_button.Size = new System.Drawing.Size(278, 136);
             this.InHouse_button.TabIndex = 20;
             this.InHouse_button.Text = "入庫管理";
             this.InHouse_button.UseVisualStyleBackColor = false;
@@ -229,12 +232,12 @@ namespace SalesManagement_SysDev
             // 
             // Stock_button
             // 
-            this.Stock_button.BackColor = System.Drawing.Color.Green;
+            this.Stock_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
             this.Stock_button.Font = new System.Drawing.Font("HG創英角ｺﾞｼｯｸUB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Stock_button.ForeColor = System.Drawing.Color.White;
-            this.Stock_button.Location = new System.Drawing.Point(651, 133);
+            this.Stock_button.Location = new System.Drawing.Point(1150, 230);
             this.Stock_button.Name = "Stock_button";
-            this.Stock_button.Size = new System.Drawing.Size(232, 112);
+            this.Stock_button.Size = new System.Drawing.Size(278, 136);
             this.Stock_button.TabIndex = 14;
             this.Stock_button.Text = "在庫管理";
             this.Stock_button.UseVisualStyleBackColor = false;
@@ -242,12 +245,12 @@ namespace SalesManagement_SysDev
             // 
             // Member_button
             // 
-            this.Member_button.BackColor = System.Drawing.Color.Green;
+            this.Member_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
             this.Member_button.Font = new System.Drawing.Font("HG創英角ｺﾞｼｯｸUB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Member_button.ForeColor = System.Drawing.Color.White;
-            this.Member_button.Location = new System.Drawing.Point(940, 133);
+            this.Member_button.Location = new System.Drawing.Point(1581, 230);
             this.Member_button.Name = "Member_button";
-            this.Member_button.Size = new System.Drawing.Size(232, 112);
+            this.Member_button.Size = new System.Drawing.Size(278, 136);
             this.Member_button.TabIndex = 15;
             this.Member_button.Text = "社員管理";
             this.Member_button.UseVisualStyleBackColor = false;
@@ -257,7 +260,8 @@ namespace SalesManagement_SysDev
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1260, 623);
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.ClientSize = new System.Drawing.Size(1898, 1024);
             this.Controls.Add(this.panel1);
             this.Name = "F_menu";
             this.Text = "F_menu";

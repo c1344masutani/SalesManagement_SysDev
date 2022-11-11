@@ -339,6 +339,7 @@ namespace SalesManagement_SysDev
             this.button_back.TabIndex = 102;
             this.button_back.Text = "戻る";
             this.button_back.UseVisualStyleBackColor = true;
+            this.button_back.Click += new System.EventHandler(this.button_back_Click);
             // 
             // pictureBox1
             // 
