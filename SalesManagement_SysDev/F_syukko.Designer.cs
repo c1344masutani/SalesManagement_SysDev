@@ -29,7 +29,6 @@ namespace SalesManagement_SysDev
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonClear = new System.Windows.Forms.Button();
             this.back_button = new System.Windows.Forms.Button();
@@ -51,29 +50,19 @@ namespace SalesManagement_SysDev
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.dataGridViewDsp = new System.Windows.Forms.DataGridView();
-            this.WaHidden = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.SyHidden = new System.Windows.Forms.TextBox();
+            this.OrID = new System.Windows.Forms.TextBox();
+            this.EmID = new System.Windows.Forms.TextBox();
+            this.ClID = new System.Windows.Forms.TextBox();
+            this.SyID = new System.Windows.Forms.TextBox();
+            this.SoID = new System.Windows.Forms.TextBox();
+            this.SyDate = new System.Windows.Forms.DateTimePicker();
+            this.SyStateFlag = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
-            this.pictureBox1.InitialImage = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(181, 85);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 49;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -335,72 +324,72 @@ namespace SalesManagement_SysDev
             this.dataGridViewDsp.Size = new System.Drawing.Size(1925, 567);
             this.dataGridViewDsp.TabIndex = 90;
             // 
-            // WaHidden
+            // SyHidden
             // 
-            this.WaHidden.Location = new System.Drawing.Point(590, 462);
-            this.WaHidden.Multiline = true;
-            this.WaHidden.Name = "WaHidden";
-            this.WaHidden.Size = new System.Drawing.Size(366, 78);
-            this.WaHidden.TabIndex = 91;
+            this.SyHidden.Location = new System.Drawing.Point(590, 462);
+            this.SyHidden.Multiline = true;
+            this.SyHidden.Name = "SyHidden";
+            this.SyHidden.Size = new System.Drawing.Size(366, 78);
+            this.SyHidden.TabIndex = 91;
             // 
-            // textBox1
+            // OrID
             // 
-            this.textBox1.Location = new System.Drawing.Point(590, 155);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(208, 45);
-            this.textBox1.TabIndex = 92;
+            this.OrID.Location = new System.Drawing.Point(590, 155);
+            this.OrID.Multiline = true;
+            this.OrID.Name = "OrID";
+            this.OrID.Size = new System.Drawing.Size(208, 45);
+            this.OrID.TabIndex = 92;
             // 
-            // textBox2
+            // EmID
             // 
-            this.textBox2.Location = new System.Drawing.Point(590, 258);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(208, 45);
-            this.textBox2.TabIndex = 93;
+            this.EmID.Location = new System.Drawing.Point(590, 258);
+            this.EmID.Multiline = true;
+            this.EmID.Name = "EmID";
+            this.EmID.Size = new System.Drawing.Size(208, 45);
+            this.EmID.TabIndex = 93;
             // 
-            // textBox3
+            // ClID
             // 
-            this.textBox3.Location = new System.Drawing.Point(590, 358);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(208, 45);
-            this.textBox3.TabIndex = 94;
+            this.ClID.Location = new System.Drawing.Point(590, 358);
+            this.ClID.Multiline = true;
+            this.ClID.Name = "ClID";
+            this.ClID.Size = new System.Drawing.Size(208, 45);
+            this.ClID.TabIndex = 94;
             // 
-            // textBox4
+            // SyID
             // 
-            this.textBox4.Location = new System.Drawing.Point(1475, 150);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(208, 45);
-            this.textBox4.TabIndex = 95;
+            this.SyID.Location = new System.Drawing.Point(1475, 150);
+            this.SyID.Multiline = true;
+            this.SyID.Name = "SyID";
+            this.SyID.Size = new System.Drawing.Size(208, 45);
+            this.SyID.TabIndex = 95;
             // 
-            // textBox5
+            // SoID
             // 
-            this.textBox5.Location = new System.Drawing.Point(1475, 363);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(208, 45);
-            this.textBox5.TabIndex = 96;
+            this.SoID.Location = new System.Drawing.Point(1475, 363);
+            this.SoID.Multiline = true;
+            this.SoID.Name = "SoID";
+            this.SoID.Size = new System.Drawing.Size(208, 45);
+            this.SoID.TabIndex = 96;
             // 
-            // dateTimePicker1
+            // SyDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(1475, 274);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(208, 25);
-            this.dateTimePicker1.TabIndex = 97;
+            this.SyDate.Location = new System.Drawing.Point(1475, 274);
+            this.SyDate.Name = "SyDate";
+            this.SyDate.Size = new System.Drawing.Size(208, 25);
+            this.SyDate.TabIndex = 97;
             // 
-            // checkBox1
+            // SyStateFlag
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.checkBox1.Location = new System.Drawing.Point(1151, 476);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(163, 44);
-            this.checkBox1.TabIndex = 98;
-            this.checkBox1.Text = "出庫済";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.SyStateFlag.AutoSize = true;
+            this.SyStateFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.SyStateFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.SyStateFlag.Location = new System.Drawing.Point(1151, 476);
+            this.SyStateFlag.Name = "SyStateFlag";
+            this.SyStateFlag.Size = new System.Drawing.Size(163, 44);
+            this.SyStateFlag.TabIndex = 98;
+            this.SyStateFlag.Text = "出庫済";
+            this.SyStateFlag.UseVisualStyleBackColor = true;
             // 
             // checkBox2
             // 
@@ -414,6 +403,17 @@ namespace SalesManagement_SysDev
             this.checkBox2.Text = "非表示";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
+            this.pictureBox1.InitialImage = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
+            this.pictureBox1.Location = new System.Drawing.Point(28, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(181, 85);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 49;
+            this.pictureBox1.TabStop = false;
+            // 
             // F_syukko
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -421,14 +421,14 @@ namespace SalesManagement_SysDev
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
             this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.WaHidden);
+            this.Controls.Add(this.SyStateFlag);
+            this.Controls.Add(this.SyDate);
+            this.Controls.Add(this.SoID);
+            this.Controls.Add(this.SyID);
+            this.Controls.Add(this.ClID);
+            this.Controls.Add(this.EmID);
+            this.Controls.Add(this.OrID);
+            this.Controls.Add(this.SyHidden);
             this.Controls.Add(this.dataGridViewDsp);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -453,8 +453,8 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.pictureBox1);
             this.Name = "F_syukko";
             this.Text = "F_syukko";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -484,14 +484,14 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridView dataGridViewDsp;
-        private System.Windows.Forms.TextBox WaHidden;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.TextBox SyHidden;
+        private System.Windows.Forms.TextBox OrID;
+        private System.Windows.Forms.TextBox EmID;
+        private System.Windows.Forms.TextBox ClID;
+        private System.Windows.Forms.TextBox SyID;
+        private System.Windows.Forms.TextBox SoID;
+        private System.Windows.Forms.DateTimePicker SyDate;
+        private System.Windows.Forms.CheckBox SyStateFlag;
         private System.Windows.Forms.CheckBox checkBox2;
     }
 }
