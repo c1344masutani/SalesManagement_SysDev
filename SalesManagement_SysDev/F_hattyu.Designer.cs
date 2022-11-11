@@ -322,7 +322,7 @@ namespace SalesManagement_SysDev
             this.Delete_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Delete_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.Delete_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Delete_button.Location = new System.Drawing.Point(1152, 26);
+            this.Delete_button.Location = new System.Drawing.Point(1159, 23);
             this.Delete_button.Name = "Delete_button";
             this.Delete_button.Size = new System.Drawing.Size(141, 50);
             this.Delete_button.TabIndex = 100;
@@ -334,7 +334,7 @@ namespace SalesManagement_SysDev
             this.buttonClear.BackColor = System.Drawing.Color.Transparent;
             this.buttonClear.Font = new System.Drawing.Font("HGS明朝E", 20F);
             this.buttonClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.buttonClear.Location = new System.Drawing.Point(1345, 26);
+            this.buttonClear.Location = new System.Drawing.Point(1354, 23);
             this.buttonClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(305, 50);
