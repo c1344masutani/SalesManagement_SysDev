@@ -1,7 +1,7 @@
 ﻿
 namespace SalesManagement_SysDev
 {
-    partial class F_order_received
+    partial class F_jutyuu
     {
         /// <summary>
         /// Required designer variable.
@@ -383,7 +383,7 @@ namespace SalesManagement_SysDev
             this.label15.TabIndex = 76;
             this.label15.Text = "必須";
             // 
-            // F_order_received
+            // F_jutyuu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -421,7 +421,7 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "F_order_received";
+            this.Name = "F_jutyuu";
             this.Text = "F_order_received";
             this.Load += new System.EventHandler(this.F_order_received_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

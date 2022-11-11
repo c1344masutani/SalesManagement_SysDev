@@ -1,7 +1,7 @@
 ﻿
 namespace SalesManagement_SysDev
 {
-    partial class F_arrival
+    partial class F_tyuumon
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace SalesManagement_SysDev
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "arrival";
+            this.Text = "F_tyuumon";
         }
 
         #endregion

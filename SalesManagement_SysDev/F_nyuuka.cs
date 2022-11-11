@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SalesManagement_SysDev
 {
-    public partial class F_arrival : Form
+    public partial class F_nyuuka : Form
     {
-        public F_arrival()
+        public F_nyuuka()
         {
             InitializeComponent();
         }

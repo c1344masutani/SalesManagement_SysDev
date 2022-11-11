@@ -1,7 +1,7 @@
 ﻿
 namespace SalesManagement_SysDev
 {
-    partial class F_product
+    partial class F_syouhin
     {
         /// <summary>
         /// Required designer variable.

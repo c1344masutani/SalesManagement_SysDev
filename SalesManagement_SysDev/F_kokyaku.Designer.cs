@@ -1,7 +1,7 @@
 ﻿
 namespace SalesManagement_SysDev
 {
-    partial class client
+    partial class F_kokyaku
     {
         /// <summary>
         /// Required designer variable.

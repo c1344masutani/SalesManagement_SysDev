@@ -1,7 +1,7 @@
 ﻿
 namespace SalesManagement_SysDev
 {
-    partial class F_employee
+    partial class F_syain
     {
         /// <summary>
         /// Required designer variable.

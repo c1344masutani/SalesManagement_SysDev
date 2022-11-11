@@ -1,7 +1,7 @@
 ﻿
 namespace SalesManagement_SysDev
 {
-    partial class F_stock
+    partial class F_zaiko
     {
         /// <summary>
         /// Required designer variable.
