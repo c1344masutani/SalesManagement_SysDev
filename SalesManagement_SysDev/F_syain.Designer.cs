@@ -77,6 +77,7 @@ namespace SalesManagement_SysDev
             this.label1.Size = new System.Drawing.Size(138, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "社員ID";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
@@ -161,6 +162,7 @@ namespace SalesManagement_SysDev
             this.label2.Size = new System.Drawing.Size(137, 40);
             this.label2.TabIndex = 1;
             this.label2.Text = "社員名";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label9
             // 
@@ -429,7 +431,7 @@ namespace SalesManagement_SysDev
             this.checkBoxEmFlag.Location = new System.Drawing.Point(1915, 468);
             this.checkBoxEmFlag.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBoxEmFlag.Name = "checkBoxEmFlag";
-            this.checkBoxEmFlag.Size = new System.Drawing.Size(163, 44);
+            this.checkBoxEmFlag.Size = new System.Drawing.Size(139, 38);
             this.checkBoxEmFlag.TabIndex = 49;
             this.checkBoxEmFlag.Text = "非表示";
             this.checkBoxEmFlag.UseVisualStyleBackColor = true;
