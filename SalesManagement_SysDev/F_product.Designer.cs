@@ -66,18 +66,20 @@ namespace SalesManagement_SysDev
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.Search_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonClear
             // 
-            this.buttonClear.BackColor = System.Drawing.Color.White;
-            this.buttonClear.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.buttonClear.Location = new System.Drawing.Point(1353, 23);
+            this.buttonClear.BackColor = System.Drawing.Color.Transparent;
+            this.buttonClear.Font = new System.Drawing.Font("HGS明朝E", 20F);
+            this.buttonClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.buttonClear.Location = new System.Drawing.Point(1228, 24);
             this.buttonClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(321, 59);
+            this.buttonClear.Size = new System.Drawing.Size(305, 55);
             this.buttonClear.TabIndex = 68;
             this.buttonClear.Text = "入力クリア";
             this.buttonClear.UseVisualStyleBackColor = false;
@@ -269,7 +271,7 @@ namespace SalesManagement_SysDev
             this.Regester_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Regester_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Regester_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.Regester_button.Location = new System.Drawing.Point(567, 26);
+            this.Regester_button.Location = new System.Drawing.Point(547, 23);
             this.Regester_button.Margin = new System.Windows.Forms.Padding(2);
             this.Regester_button.Name = "Regester_button";
             this.Regester_button.Size = new System.Drawing.Size(232, 56);
@@ -283,7 +285,7 @@ namespace SalesManagement_SysDev
             this.Update_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Update_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Update_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.Update_button.Location = new System.Drawing.Point(873, 23);
+            this.Update_button.Location = new System.Drawing.Point(825, 23);
             this.Update_button.Margin = new System.Windows.Forms.Padding(2);
             this.Update_button.Name = "Update_button";
             this.Update_button.Size = new System.Drawing.Size(154, 56);
@@ -296,8 +298,8 @@ namespace SalesManagement_SysDev
             // 
             this.Delete_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Delete_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Delete_button.ForeColor = System.Drawing.Color.Red;
-            this.Delete_button.Location = new System.Drawing.Point(1126, 23);
+            this.Delete_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.Delete_button.Location = new System.Drawing.Point(1026, 23);
             this.Delete_button.Margin = new System.Windows.Forms.Padding(2);
             this.Delete_button.Name = "Delete_button";
             this.Delete_button.Size = new System.Drawing.Size(154, 56);
@@ -387,9 +389,9 @@ namespace SalesManagement_SysDev
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button1.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.button1.Location = new System.Drawing.Point(1727, 24);
+            this.button1.Location = new System.Drawing.Point(1777, 23);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 60);
+            this.button1.Size = new System.Drawing.Size(145, 56);
             this.button1.TabIndex = 77;
             this.button1.Text = "戻る";
             this.button1.UseVisualStyleBackColor = false;
@@ -503,12 +505,24 @@ namespace SalesManagement_SysDev
             this.label10.TabIndex = 85;
             this.label10.Text = "必須";
             // 
+            // Search_button
+            // 
+            this.Search_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Search_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.Search_button.Location = new System.Drawing.Point(1580, 24);
+            this.Search_button.Name = "Search_button";
+            this.Search_button.Size = new System.Drawing.Size(141, 55);
+            this.Search_button.TabIndex = 86;
+            this.Search_button.Text = "検索";
+            this.Search_button.UseVisualStyleBackColor = true;
+            // 
             // F_product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.Search_button);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -596,5 +610,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button Search_button;
     }
 }
