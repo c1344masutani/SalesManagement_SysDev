@@ -185,6 +185,9 @@
     <EmbeddedResource Include="F_product.resx">
       <DependentUpon>F_product.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="F_sale.resx">
+      <DependentUpon>F_sale.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_stock.resx">
       <DependentUpon>F_stock.cs</DependentUpon>
     </EmbeddedResource>
