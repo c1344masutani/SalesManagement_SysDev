@@ -206,8 +206,9 @@ namespace SalesManagement_SysDev
             // 
             // button_Clear
             // 
-            this.button_Clear.BackColor = System.Drawing.Color.White;
-            this.button_Clear.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button_Clear.BackColor = System.Drawing.Color.Transparent;
+            this.button_Clear.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button_Clear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.button_Clear.Location = new System.Drawing.Point(1275, 31);
             this.button_Clear.Margin = new System.Windows.Forms.Padding(2);
             this.button_Clear.Name = "button_Clear";
