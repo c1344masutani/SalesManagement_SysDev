@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace SalesManagement_SysDev
 {
     partial class F_syain
@@ -162,7 +164,6 @@ namespace SalesManagement_SysDev
             this.label2.Size = new System.Drawing.Size(137, 40);
             this.label2.TabIndex = 1;
             this.label2.Text = "社員名";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label9
             // 
@@ -521,5 +522,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.DateTimePicker EmHiredate;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.CheckBox checkBoxEmFlag;
+        private EventHandler label1_Click;
     }
 }
