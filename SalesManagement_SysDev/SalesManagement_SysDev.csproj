@@ -173,6 +173,9 @@
     <Compile Include="F_zaiko.Designer.cs">
       <DependentUpon>F_zaiko.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="F_hattyu.resx">
+      <DependentUpon>F_hattyu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_kokyaku.resx">
       <DependentUpon>F_kokyaku.cs</DependentUpon>
     </EmbeddedResource>
