@@ -104,5 +104,10 @@ namespace SalesManagement_SysDev
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

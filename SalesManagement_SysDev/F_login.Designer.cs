@@ -34,6 +34,7 @@
             this.Login_button = new System.Windows.Forms.Button();
             this.PW_textBox = new System.Windows.Forms.TextBox();
             this.ID_textBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label_ps
@@ -111,6 +112,17 @@
             this.ID_textBox.TabIndex = 3;
             this.ID_textBox.TextChanged += new System.EventHandler(this.ID_textBox_TextChanged);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("HGS明朝E", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button1.Location = new System.Drawing.Point(175, 549);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(175, 50);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "新規登録";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // F_Login
             // 
             this.AcceptButton = this.Login_button;
@@ -118,6 +130,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(574, 641);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.ID_textBox);
             this.Controls.Add(this.Login_button);
             this.Controls.Add(this.PwShow);
@@ -141,6 +154,7 @@
         private System.Windows.Forms.Button Login_button;
         private System.Windows.Forms.TextBox PW_textBox;
         private System.Windows.Forms.TextBox ID_textBox;
+        private System.Windows.Forms.Button button1;
     }
 }
 
