@@ -155,7 +155,7 @@ namespace SalesManagement_SysDev
             // SaID_textBox
             // 
             this.SaID_textBox.Location = new System.Drawing.Point(522, 143);
-            this.SaID_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SaID_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.SaID_textBox.Multiline = true;
             this.SaID_textBox.Name = "SaID_textBox";
             this.SaID_textBox.Size = new System.Drawing.Size(206, 52);
@@ -164,7 +164,7 @@ namespace SalesManagement_SysDev
             // ClID_textBox
             // 
             this.ClID_textBox.Location = new System.Drawing.Point(522, 245);
-            this.ClID_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ClID_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.ClID_textBox.Multiline = true;
             this.ClID_textBox.Name = "ClID_textBox";
             this.ClID_textBox.Size = new System.Drawing.Size(206, 52);
@@ -173,7 +173,7 @@ namespace SalesManagement_SysDev
             // SoID_textBox
             // 
             this.SoID_textBox.Location = new System.Drawing.Point(522, 338);
-            this.SoID_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SoID_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.SoID_textBox.Multiline = true;
             this.SoID_textBox.Name = "SoID_textBox";
             this.SoID_textBox.Size = new System.Drawing.Size(205, 51);
@@ -182,7 +182,7 @@ namespace SalesManagement_SysDev
             // EmID_textBox
             // 
             this.EmID_textBox.Location = new System.Drawing.Point(1221, 145);
-            this.EmID_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.EmID_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.EmID_textBox.Multiline = true;
             this.EmID_textBox.Name = "EmID_textBox";
             this.EmID_textBox.Size = new System.Drawing.Size(204, 50);
@@ -191,7 +191,7 @@ namespace SalesManagement_SysDev
             // SaHidden_textBox
             // 
             this.SaHidden_textBox.Location = new System.Drawing.Point(522, 440);
-            this.SaHidden_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SaHidden_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.SaHidden_textBox.Multiline = true;
             this.SaHidden_textBox.Name = "SaHidden_textBox";
             this.SaHidden_textBox.Size = new System.Drawing.Size(203, 48);
@@ -201,7 +201,7 @@ namespace SalesManagement_SysDev
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(125, 522);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -211,7 +211,7 @@ namespace SalesManagement_SysDev
             // SadDate_textBox
             // 
             this.SadDate_textBox.Location = new System.Drawing.Point(1224, 250);
-            this.SadDate_textBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SadDate_textBox.Margin = new System.Windows.Forms.Padding(4);
             this.SadDate_textBox.Multiline = true;
             this.SadDate_textBox.Name = "SadDate_textBox";
             this.SadDate_textBox.Size = new System.Drawing.Size(202, 47);
@@ -223,7 +223,7 @@ namespace SalesManagement_SysDev
             this.SaFlag_checkBox.Font = new System.Drawing.Font("MS UI Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.SaFlag_checkBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
             this.SaFlag_checkBox.Location = new System.Drawing.Point(925, 438);
-            this.SaFlag_checkBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SaFlag_checkBox.Margin = new System.Windows.Forms.Padding(4);
             this.SaFlag_checkBox.Name = "SaFlag_checkBox";
             this.SaFlag_checkBox.Size = new System.Drawing.Size(163, 44);
             this.SaFlag_checkBox.TabIndex = 90;
@@ -285,8 +285,9 @@ namespace SalesManagement_SysDev
             // 
             // buttonClear
             // 
-            this.buttonClear.BackColor = System.Drawing.Color.White;
-            this.buttonClear.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonClear.BackColor = System.Drawing.Color.Transparent;
+            this.buttonClear.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.buttonClear.Location = new System.Drawing.Point(1331, 31);
             this.buttonClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClear.Name = "buttonClear";
@@ -311,7 +312,7 @@ namespace SalesManagement_SysDev
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(1221, 364);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 25);
             this.dateTimePicker1.TabIndex = 97;
@@ -428,7 +429,7 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.SoID);
             this.Controls.Add(this.ClID);
             this.Controls.Add(this.SaID);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "F_uriage";
             this.Text = "earnings";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
