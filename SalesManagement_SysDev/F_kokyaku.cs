@@ -19,14 +19,14 @@ namespace SalesManagement_SysDev
 
         private void Regester_button_Click(object sender, EventArgs e)
         {
-            int flg;
+            int check;
             if (checkBoxClflg.Checked == true)
             {
-                flg = 1;
+                check = 2;
             }
             else
             {
-                flg = 0;
+                check = 0;
             }
             var client = new M_Client
             {
@@ -37,7 +37,7 @@ namespace SalesManagement_SysDev
                 ClPhone = textBoxPhone.Text.Trim(),
                 ClPostal = textBoxPostnumber.Text.Trim(),
                 ClFAX = textBoxFAX.Text.Trim(),
-                ClFlag = flg,
+                ClFlag = check,
                 ClHidden = textBoxHidden.Text.Trim()
 
             };

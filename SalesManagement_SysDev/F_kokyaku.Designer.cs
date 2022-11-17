@@ -72,9 +72,10 @@ namespace SalesManagement_SysDev
             this.Search_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Search_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
             this.Search_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Search_button.Location = new System.Drawing.Point(1540, 31);
+            this.Search_button.Location = new System.Drawing.Point(1232, 26);
+            this.Search_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Search_button.Name = "Search_button";
-            this.Search_button.Size = new System.Drawing.Size(140, 50);
+            this.Search_button.Size = new System.Drawing.Size(112, 42);
             this.Search_button.TabIndex = 46;
             this.Search_button.Text = "検索";
             this.Search_button.UseVisualStyleBackColor = false;
@@ -83,9 +84,10 @@ namespace SalesManagement_SysDev
             // textBoxPhone
             // 
             this.textBoxPhone.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxPhone.Location = new System.Drawing.Point(1194, 140);
+            this.textBoxPhone.Location = new System.Drawing.Point(955, 117);
+            this.textBoxPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(254, 43);
+            this.textBoxPhone.Size = new System.Drawing.Size(204, 37);
             this.textBoxPhone.TabIndex = 45;
             // 
             // label1
@@ -94,9 +96,10 @@ namespace SalesManagement_SysDev
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("HGP明朝E", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.label1.Location = new System.Drawing.Point(313, 27);
+            this.label1.Location = new System.Drawing.Point(250, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(305, 56);
+            this.label1.Size = new System.Drawing.Size(256, 47);
             this.label1.TabIndex = 23;
             this.label1.Text = "顧 客 管 理";
             // 
@@ -105,9 +108,10 @@ namespace SalesManagement_SysDev
             this.Update_button.BackColor = System.Drawing.Color.Gainsboro;
             this.Update_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Update_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.Update_button.Location = new System.Drawing.Point(1018, 31);
+            this.Update_button.Location = new System.Drawing.Point(814, 26);
+            this.Update_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Update_button.Name = "Update_button";
-            this.Update_button.Size = new System.Drawing.Size(141, 50);
+            this.Update_button.Size = new System.Drawing.Size(113, 42);
             this.Update_button.TabIndex = 25;
             this.Update_button.Text = "更新";
             this.Update_button.UseVisualStyleBackColor = false;
@@ -119,9 +123,10 @@ namespace SalesManagement_SysDev
             this.Delete_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Delete_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.Delete_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Delete_button.Location = new System.Drawing.Point(1281, 30);
+            this.Delete_button.Location = new System.Drawing.Point(1025, 25);
+            this.Delete_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Delete_button.Name = "Delete_button";
-            this.Delete_button.Size = new System.Drawing.Size(141, 53);
+            this.Delete_button.Size = new System.Drawing.Size(113, 44);
             this.Delete_button.TabIndex = 24;
             this.Delete_button.Text = "削除";
             this.Delete_button.UseVisualStyleBackColor = false;
@@ -130,17 +135,19 @@ namespace SalesManagement_SysDev
             // textBoxClientID
             // 
             this.textBoxClientID.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxClientID.Location = new System.Drawing.Point(523, 147);
+            this.textBoxClientID.Location = new System.Drawing.Point(418, 122);
+            this.textBoxClientID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxClientID.Name = "textBoxClientID";
-            this.textBoxClientID.Size = new System.Drawing.Size(185, 47);
+            this.textBoxClientID.Size = new System.Drawing.Size(149, 41);
             this.textBoxClientID.TabIndex = 33;
             // 
             // textBoxAddress
             // 
             this.textBoxAddress.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxAddress.Location = new System.Drawing.Point(1194, 309);
+            this.textBoxAddress.Location = new System.Drawing.Point(955, 257);
+            this.textBoxAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(761, 43);
+            this.textBoxAddress.Size = new System.Drawing.Size(610, 37);
             this.textBoxAddress.TabIndex = 36;
             // 
             // Regester_button
@@ -148,9 +155,10 @@ namespace SalesManagement_SysDev
             this.Regester_button.BackColor = System.Drawing.Color.Gainsboro;
             this.Regester_button.Font = new System.Drawing.Font("HGP明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Regester_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.Regester_button.Location = new System.Drawing.Point(716, 30);
+            this.Regester_button.Location = new System.Drawing.Point(573, 25);
+            this.Regester_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Regester_button.Name = "Regester_button";
-            this.Regester_button.Size = new System.Drawing.Size(220, 50);
+            this.Regester_button.Size = new System.Drawing.Size(176, 42);
             this.Regester_button.TabIndex = 26;
             this.Regester_button.Text = "新規追加";
             this.Regester_button.UseVisualStyleBackColor = false;
@@ -159,35 +167,39 @@ namespace SalesManagement_SysDev
             // textBoxSalesOfficeID
             // 
             this.textBoxSalesOfficeID.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxSalesOfficeID.Location = new System.Drawing.Point(523, 227);
+            this.textBoxSalesOfficeID.Location = new System.Drawing.Point(418, 189);
+            this.textBoxSalesOfficeID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSalesOfficeID.Name = "textBoxSalesOfficeID";
-            this.textBoxSalesOfficeID.Size = new System.Drawing.Size(185, 43);
+            this.textBoxSalesOfficeID.Size = new System.Drawing.Size(149, 37);
             this.textBoxSalesOfficeID.TabIndex = 38;
             // 
             // textBoxFAX
             // 
             this.textBoxFAX.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxFAX.Location = new System.Drawing.Point(1681, 133);
+            this.textBoxFAX.Location = new System.Drawing.Point(1345, 111);
+            this.textBoxFAX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxFAX.Name = "textBoxFAX";
-            this.textBoxFAX.Size = new System.Drawing.Size(267, 47);
+            this.textBoxFAX.Size = new System.Drawing.Size(214, 41);
             this.textBoxFAX.TabIndex = 42;
             // 
             // textBoxClientName
             // 
             this.textBoxClientName.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxClientName.Location = new System.Drawing.Point(523, 312);
+            this.textBoxClientName.Location = new System.Drawing.Point(418, 260);
+            this.textBoxClientName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxClientName.Name = "textBoxClientName";
-            this.textBoxClientName.Size = new System.Drawing.Size(274, 43);
+            this.textBoxClientName.Size = new System.Drawing.Size(220, 37);
             this.textBoxClientName.TabIndex = 34;
             // 
             // dataGridViewDsp
             // 
             this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDsp.Location = new System.Drawing.Point(144, 472);
+            this.dataGridViewDsp.Location = new System.Drawing.Point(115, 393);
+            this.dataGridViewDsp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewDsp.Name = "dataGridViewDsp";
             this.dataGridViewDsp.RowHeadersWidth = 62;
             this.dataGridViewDsp.RowTemplate.Height = 27;
-            this.dataGridViewDsp.Size = new System.Drawing.Size(1804, 610);
+            this.dataGridViewDsp.Size = new System.Drawing.Size(1443, 508);
             this.dataGridViewDsp.TabIndex = 44;
             this.dataGridViewDsp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellContentClick);
             // 
@@ -197,9 +209,10 @@ namespace SalesManagement_SysDev
             this.checkBoxClflg.BackColor = System.Drawing.Color.Transparent;
             this.checkBoxClflg.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBoxClflg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.checkBoxClflg.Location = new System.Drawing.Point(1565, 386);
+            this.checkBoxClflg.Location = new System.Drawing.Point(1252, 322);
+            this.checkBoxClflg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBoxClflg.Name = "checkBoxClflg";
-            this.checkBoxClflg.Size = new System.Drawing.Size(163, 44);
+            this.checkBoxClflg.Size = new System.Drawing.Size(139, 38);
             this.checkBoxClflg.TabIndex = 43;
             this.checkBoxClflg.Text = "非表示";
             this.checkBoxClflg.UseVisualStyleBackColor = false;
@@ -207,17 +220,19 @@ namespace SalesManagement_SysDev
             // textBoxPostnumber
             // 
             this.textBoxPostnumber.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxPostnumber.Location = new System.Drawing.Point(1194, 234);
+            this.textBoxPostnumber.Location = new System.Drawing.Point(955, 195);
+            this.textBoxPostnumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxPostnumber.Name = "textBoxPostnumber";
-            this.textBoxPostnumber.Size = new System.Drawing.Size(212, 43);
+            this.textBoxPostnumber.Size = new System.Drawing.Size(170, 37);
             this.textBoxPostnumber.TabIndex = 37;
             // 
             // textBoxHidden
             // 
             this.textBoxHidden.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxHidden.Location = new System.Drawing.Point(523, 390);
+            this.textBoxHidden.Location = new System.Drawing.Point(418, 325);
+            this.textBoxHidden.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxHidden.Name = "textBoxHidden";
-            this.textBoxHidden.Size = new System.Drawing.Size(302, 43);
+            this.textBoxHidden.Size = new System.Drawing.Size(242, 37);
             this.textBoxHidden.TabIndex = 41;
             // 
             // label2
@@ -226,9 +241,10 @@ namespace SalesManagement_SysDev
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.label2.Location = new System.Drawing.Point(234, 150);
+            this.label2.Location = new System.Drawing.Point(187, 125);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 40);
+            this.label2.Size = new System.Drawing.Size(118, 34);
             this.label2.TabIndex = 27;
             this.label2.Text = "顧客ID";
             // 
@@ -238,9 +254,10 @@ namespace SalesManagement_SysDev
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.label6.Location = new System.Drawing.Point(918, 315);
+            this.label6.Location = new System.Drawing.Point(734, 262);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 40);
+            this.label6.Size = new System.Drawing.Size(83, 34);
             this.label6.TabIndex = 31;
             this.label6.Text = "住所";
             // 
@@ -250,9 +267,10 @@ namespace SalesManagement_SysDev
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.label10.Location = new System.Drawing.Point(234, 390);
+            this.label10.Location = new System.Drawing.Point(187, 325);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(217, 40);
+            this.label10.Size = new System.Drawing.Size(185, 34);
             this.label10.TabIndex = 40;
             this.label10.Text = "非表示理由";
             // 
@@ -262,9 +280,10 @@ namespace SalesManagement_SysDev
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.label5.Location = new System.Drawing.Point(918, 234);
+            this.label5.Location = new System.Drawing.Point(734, 195);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(177, 40);
+            this.label5.Size = new System.Drawing.Size(151, 34);
             this.label5.TabIndex = 30;
             this.label5.Text = "郵便番号";
             // 
@@ -274,9 +293,10 @@ namespace SalesManagement_SysDev
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.label4.Location = new System.Drawing.Point(235, 312);
+            this.label4.Location = new System.Drawing.Point(188, 260);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(137, 40);
+            this.label4.Size = new System.Drawing.Size(117, 34);
             this.label4.TabIndex = 29;
             this.label4.Text = "顧客名";
             // 
@@ -286,9 +306,10 @@ namespace SalesManagement_SysDev
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.label3.Location = new System.Drawing.Point(235, 234);
+            this.label3.Location = new System.Drawing.Point(188, 195);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(178, 40);
+            this.label3.Size = new System.Drawing.Size(152, 34);
             this.label3.TabIndex = 28;
             this.label3.Text = "営業所ID";
             // 
@@ -298,9 +319,10 @@ namespace SalesManagement_SysDev
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.label8.Location = new System.Drawing.Point(1533, 140);
+            this.label8.Location = new System.Drawing.Point(1226, 117);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(90, 40);
+            this.label8.Size = new System.Drawing.Size(77, 34);
             this.label8.TabIndex = 39;
             this.label8.Text = "FAX";
             // 
@@ -310,9 +332,10 @@ namespace SalesManagement_SysDev
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.label7.Location = new System.Drawing.Point(918, 147);
+            this.label7.Location = new System.Drawing.Point(734, 122);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(177, 40);
+            this.label7.Size = new System.Drawing.Size(151, 34);
             this.label7.TabIndex = 32;
             this.label7.Text = "電話番号";
             // 
@@ -322,9 +345,10 @@ namespace SalesManagement_SysDev
             this.buttonClear.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.buttonClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.buttonClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonClear.Location = new System.Drawing.Point(745, -195);
+            this.buttonClear.Location = new System.Drawing.Point(596, -162);
+            this.buttonClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(465, 114);
+            this.buttonClear.Size = new System.Drawing.Size(372, 95);
             this.buttonClear.TabIndex = 50;
             this.buttonClear.Text = "入力クリア";
             this.buttonClear.UseVisualStyleBackColor = false;
@@ -333,9 +357,10 @@ namespace SalesManagement_SysDev
             // 
             this.back_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.back_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.back_button.Location = new System.Drawing.Point(1808, 30);
+            this.back_button.Location = new System.Drawing.Point(1446, 25);
+            this.back_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.back_button.Name = "back_button";
-            this.back_button.Size = new System.Drawing.Size(140, 50);
+            this.back_button.Size = new System.Drawing.Size(112, 42);
             this.back_button.TabIndex = 51;
             this.back_button.Text = "戻る";
             this.back_button.UseVisualStyleBackColor = true;
@@ -346,9 +371,10 @@ namespace SalesManagement_SysDev
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label9.Location = new System.Drawing.Point(388, 169);
+            this.label9.Location = new System.Drawing.Point(310, 141);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 18);
+            this.label9.Size = new System.Drawing.Size(37, 15);
             this.label9.TabIndex = 52;
             this.label9.Text = "必須";
             // 
@@ -358,9 +384,10 @@ namespace SalesManagement_SysDev
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label11.Location = new System.Drawing.Point(432, 256);
+            this.label11.Location = new System.Drawing.Point(346, 213);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 18);
+            this.label11.Size = new System.Drawing.Size(37, 15);
             this.label11.TabIndex = 53;
             this.label11.Text = "必須";
             // 
@@ -370,9 +397,10 @@ namespace SalesManagement_SysDev
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label12.Location = new System.Drawing.Point(1115, 165);
+            this.label12.Location = new System.Drawing.Point(892, 137);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(44, 18);
+            this.label12.Size = new System.Drawing.Size(37, 15);
             this.label12.TabIndex = 54;
             this.label12.Text = "必須";
             // 
@@ -382,9 +410,10 @@ namespace SalesManagement_SysDev
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label13.Location = new System.Drawing.Point(1115, 253);
+            this.label13.Location = new System.Drawing.Point(892, 211);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(44, 18);
+            this.label13.Size = new System.Drawing.Size(37, 15);
             this.label13.TabIndex = 55;
             this.label13.Text = "必須";
             // 
@@ -394,9 +423,10 @@ namespace SalesManagement_SysDev
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label14.Location = new System.Drawing.Point(1032, 337);
+            this.label14.Location = new System.Drawing.Point(826, 281);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(44, 18);
+            this.label14.Size = new System.Drawing.Size(37, 15);
             this.label14.TabIndex = 56;
             this.label14.Text = "必須";
             // 
@@ -406,9 +436,10 @@ namespace SalesManagement_SysDev
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label15.Location = new System.Drawing.Point(398, 331);
+            this.label15.Location = new System.Drawing.Point(318, 276);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(44, 18);
+            this.label15.Size = new System.Drawing.Size(37, 15);
             this.label15.TabIndex = 57;
             this.label15.Text = "必須";
             this.label15.Click += new System.EventHandler(this.label15_Click);
@@ -418,9 +449,10 @@ namespace SalesManagement_SysDev
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label16.Location = new System.Drawing.Point(1617, 159);
+            this.label16.Location = new System.Drawing.Point(1294, 132);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(44, 18);
+            this.label16.Size = new System.Drawing.Size(37, 15);
             this.label16.TabIndex = 58;
             this.label16.Text = "必須";
             // 
@@ -428,19 +460,20 @@ namespace SalesManagement_SysDev
             // 
             this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
             this.pictureBox1.InitialImage = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
-            this.pictureBox1.Location = new System.Drawing.Point(31, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(25, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(181, 85);
+            this.pictureBox1.Size = new System.Drawing.Size(145, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 47;
             this.pictureBox1.TabStop = false;
             // 
             // F_kokyaku
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.ClientSize = new System.Drawing.Size(1696, 853);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
@@ -474,6 +507,7 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label7);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "F_kokyaku";
             this.Text = "client";
             this.Load += new System.EventHandler(this.client_Load);
