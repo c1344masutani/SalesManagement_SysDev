@@ -19,7 +19,43 @@ namespace SalesManagement_SysDev
 
         private void Regester_button_Click(object sender, EventArgs e)
         {
+            int check;
+            if (checkBoxPrFlag.Checked == true)
+            {
+                check = 2;
+            }
+            else
+            {
+                check = 0;
+            }
 
+            var product = new M_Product
+            {
+                PrID = int.Parse(textBoxPrID.Text.Trim()),
+                MaID = int.Parse(textBoxMaID.Text.Trim()),
+                PrName = textBoxPrName.Text.Trim(),
+                Price = int.Parse(textBoxPrice.Text.Trim()),
+                PrSafetyStock = int.Parse(textBoxPrSafetyStock.Text.Trim()),
+                ScID = int.Parse(textBoxScID.Text.Trim()),
+                PrModelNumber = textBoxPrModelNumber.Text.Trim(),
+                PrColor = comboBoxColor.SelectedItem.ToString(),
+                PrReleaseDate = PrReleaseDate.Value,
+                PrFlag = check,
+                PrHidden = textBoxHidden.Text.Trim()
+            };
+
+            try
+            {
+                var context = new SalesManagement_DevContext();
+                context.M_Products.Add(product);
+                context.SaveChanges();
+                context.Dispose();
+                MessageBox.Show("登録完了");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
@@ -66,6 +102,11 @@ namespace SalesManagement_SysDev
             frm.ShowDialog();
 
             this.Close();
+        }
+
+        private void PrIDTextBox_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
