@@ -60,6 +60,18 @@ namespace SalesManagement_SysDev
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
+            textBoxPrID.Text = "";
+            textBoxMaID.Text = "";
+            textBoxPrName.Text = "";
+            textBoxPrice.Text = "";
+            textBoxPrSafetyStock.Text = "";
+            textBoxScID.Text = "";
+            textBoxPrModelNumber.Text = "";
+            comboBoxColor.SelectedIndex = -1;
+            PrReleaseDate.Value = System.DateTime.Now;
+            checkBoxPrFlag.Checked = false;
+            textBoxHidden.Text = "";
+
 
         }
 

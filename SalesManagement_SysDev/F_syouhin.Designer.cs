@@ -51,7 +51,7 @@ namespace SalesManagement_SysDev
             this.label1 = new System.Windows.Forms.Label();
             this.PrReleaseDateTextBox = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.PrHiddenTextBox = new System.Windows.Forms.Label();
+            this.PrHidden = new System.Windows.Forms.Label();
             this.textBoxPrModelNumber = new System.Windows.Forms.TextBox();
             this.textBoxHidden = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -337,18 +337,18 @@ namespace SalesManagement_SysDev
             this.label2.Size = new System.Drawing.Size(0, 18);
             this.label2.TabIndex = 71;
             // 
-            // PrHiddenTextBox
+            // PrHidden
             // 
-            this.PrHiddenTextBox.AutoSize = true;
-            this.PrHiddenTextBox.BackColor = System.Drawing.Color.Transparent;
-            this.PrHiddenTextBox.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.PrHiddenTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.PrHiddenTextBox.Location = new System.Drawing.Point(30, 568);
-            this.PrHiddenTextBox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.PrHiddenTextBox.Name = "PrHiddenTextBox";
-            this.PrHiddenTextBox.Size = new System.Drawing.Size(217, 40);
-            this.PrHiddenTextBox.TabIndex = 72;
-            this.PrHiddenTextBox.Text = "非表示理由";
+            this.PrHidden.AutoSize = true;
+            this.PrHidden.BackColor = System.Drawing.Color.Transparent;
+            this.PrHidden.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.PrHidden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.PrHidden.Location = new System.Drawing.Point(30, 568);
+            this.PrHidden.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PrHidden.Name = "PrHidden";
+            this.PrHidden.Size = new System.Drawing.Size(217, 40);
+            this.PrHidden.TabIndex = 72;
+            this.PrHidden.Text = "非表示理由";
             // 
             // textBoxPrModelNumber
             // 
@@ -580,7 +580,7 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxPrModelNumber);
-            this.Controls.Add(this.PrHiddenTextBox);
+            this.Controls.Add(this.PrHidden);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBoxScID);
             this.Controls.Add(this.label1);
@@ -635,7 +635,7 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label PrReleaseDateTextBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label PrHiddenTextBox;
+        private System.Windows.Forms.Label PrHidden;
         private System.Windows.Forms.TextBox textBoxPrModelNumber;
         private System.Windows.Forms.TextBox textBoxHidden;
         private System.Windows.Forms.PictureBox pictureBox1;
