@@ -49,7 +49,7 @@ namespace SalesManagement_SysDev
             this.Update_button = new System.Windows.Forms.Button();
             this.Delete_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.PrReleaseDateTextBox = new System.Windows.Forms.Label();
+            this.LabelPrRelease = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.PrHidden = new System.Windows.Forms.Label();
             this.textBoxPrModelNumber = new System.Windows.Forms.TextBox();
@@ -315,18 +315,18 @@ namespace SalesManagement_SysDev
             this.label1.Text = "商 品 管 理";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // PrReleaseDateTextBox
+            // LabelPrRelease
             // 
-            this.PrReleaseDateTextBox.AutoSize = true;
-            this.PrReleaseDateTextBox.BackColor = System.Drawing.Color.Transparent;
-            this.PrReleaseDateTextBox.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.PrReleaseDateTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.PrReleaseDateTextBox.Location = new System.Drawing.Point(1361, 171);
-            this.PrReleaseDateTextBox.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.PrReleaseDateTextBox.Name = "PrReleaseDateTextBox";
-            this.PrReleaseDateTextBox.Size = new System.Drawing.Size(137, 40);
-            this.PrReleaseDateTextBox.TabIndex = 70;
-            this.PrReleaseDateTextBox.Text = "発売日";
+            this.LabelPrRelease.AutoSize = true;
+            this.LabelPrRelease.BackColor = System.Drawing.Color.Transparent;
+            this.LabelPrRelease.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.LabelPrRelease.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.LabelPrRelease.Location = new System.Drawing.Point(1361, 171);
+            this.LabelPrRelease.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LabelPrRelease.Name = "LabelPrRelease";
+            this.LabelPrRelease.Size = new System.Drawing.Size(137, 40);
+            this.LabelPrRelease.TabIndex = 70;
+            this.LabelPrRelease.Text = "発売日";
             // 
             // label2
             // 
@@ -576,7 +576,7 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.dataGridViewDsp);
             this.Controls.Add(this.textBoxPrID);
             this.Controls.Add(this.textBoxHidden);
-            this.Controls.Add(this.PrReleaseDateTextBox);
+            this.Controls.Add(this.LabelPrRelease);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxPrModelNumber);
@@ -633,7 +633,7 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Button Update_button;
         private System.Windows.Forms.Button Delete_button;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label PrReleaseDateTextBox;
+        private System.Windows.Forms.Label LabelPrRelease;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label PrHidden;
         private System.Windows.Forms.TextBox textBoxPrModelNumber;

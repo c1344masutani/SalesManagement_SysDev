@@ -77,7 +77,40 @@ namespace SalesManagement_SysDev
 
         private void Update_button_Click(object sender, EventArgs e)
         {
+            int check;
+            if (checkBoxPrFlag.Checked == true)
+            {
+                check = 2;
+            }
+            else
+            {
+                check = 0;
+            }
 
+            try
+            {
+                int prid = int.Parse(textBoxPrID.Text);
+                var context = new SalesManagement_DevContext();
+                var product = context.M_Products.Single(x => x.PrID == prid);
+                product.MaID = int.Parse(textBoxMaID.Text.Trim());
+                product.PrName = textBoxPrName.Text.Trim();
+                product.Price = int.Parse(textBoxPrice.Text.Trim());
+                product.PrSafetyStock = int.Parse(textBoxPrSafetyStock.Text.Trim());
+                product.ScID = int.Parse(textBoxScID.Text.Trim());
+                product.PrModelNumber = textBoxPrModelNumber.Text.Trim();
+                product.PrColor = comboBoxColor.SelectedItem.ToString();
+                product.PrReleaseDate = PrReleaseDate.Value;
+                product.PrFlag = check;
+                product.PrHidden = textBoxHidden.Text.Trim();
+                context.SaveChanges();
+                context.Dispose();
+                MessageBox.Show("更新完了");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Delete_button_Click(object sender, EventArgs e)
@@ -87,7 +120,15 @@ namespace SalesManagement_SysDev
 
         private void dataGridViewDsp_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            textBoxPrID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[0].Value.ToString();
+            textBoxPrName.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
+            textBoxMaID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
+            textBoxPrice.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
+            textBoxPrSafetyStock.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
+            textBoxScID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString();
+            textBoxPrModelNumber.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[6].Value.ToString();
+            comboBoxColor.SelectedItem = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[7].Value.ToString();
+            textBoxHidden.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[10].Value.ToString();
         }
 
         private void F_product_Load(object sender, EventArgs e)
