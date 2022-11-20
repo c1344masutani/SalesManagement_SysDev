@@ -120,20 +120,60 @@ namespace SalesManagement_SysDev
 
         private void dataGridViewDsp_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            textBoxPrID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[0].Value.ToString();
-            textBoxPrName.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
-            textBoxMaID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
-            textBoxPrice.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
-            textBoxPrSafetyStock.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
-            textBoxScID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString();
-            textBoxPrModelNumber.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[6].Value.ToString();
-            comboBoxColor.SelectedItem = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[7].Value.ToString();
-            textBoxHidden.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[10].Value.ToString();
+            
         }
 
         private void F_product_Load(object sender, EventArgs e)
         {
+            //列数の指定
+            dataGridViewDsp.ColumnCount = 11;
+            //0番目（左端）の列幅を設定
+            dataGridViewDsp.Columns[0].Width = 70;
+            //0番目（左端）の項目名を設定
+            dataGridViewDsp.Columns[0].HeaderText = "商品ID";
+            dataGridViewDsp.Columns[1].Width = 130;
+            dataGridViewDsp.Columns[1].HeaderText = "商品名";
+            dataGridViewDsp.Columns[2].Width = 70;
+            dataGridViewDsp.Columns[2].HeaderText = "メーカID";
+            dataGridViewDsp.Columns[3].Width = 130;
+            dataGridViewDsp.Columns[3].HeaderText = "価格";
+            dataGridViewDsp.Columns[4].Width = 130;
+            dataGridViewDsp.Columns[4].HeaderText = "安全在庫数";
+            dataGridViewDsp.Columns[5].Width = 70;
+            dataGridViewDsp.Columns[5].HeaderText = "小分類ID";
+            dataGridViewDsp.Columns[6].Width = 130;
+            dataGridViewDsp.Columns[6].HeaderText = "型番";
+            dataGridViewDsp.Columns[7].Width = 130;
+            dataGridViewDsp.Columns[7].HeaderText = "色";
+            dataGridViewDsp.Columns[8].Width = 130;
+            dataGridViewDsp.Columns[8].HeaderText = "発売日";
+            dataGridViewDsp.Columns[9].Width = 70;
+            dataGridViewDsp.Columns[9].HeaderText = "非表示フラグ";
+            dataGridViewDsp.Columns[10].Width = 200;
+            dataGridViewDsp.Columns[10].HeaderText = "非表示理由";
+            //選択モードを行単位
+            dataGridViewDsp.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            //読み取り専用
+            dataGridViewDsp.ReadOnly = true;
+            fncAllSelect();
+        }
 
+        private void fncAllSelect()
+        {
+            dataGridViewDsp.Rows.Clear();
+            try
+            {
+                var context = new SalesManagement_DevContext();
+                foreach (var p in context.M_Products)
+                {
+                    dataGridViewDsp.Rows.Add(p.PrID,p.PrName,p.MaID,p.Price,p.PrSafetyStock,p.ScID,p.PrModelNumber,p.PrColor,p.PrReleaseDate,p.PrFlag,p.PrHidden);
+                }
+                context.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -160,6 +200,28 @@ namespace SalesManagement_SysDev
         private void PrIDTextBox_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridViewDsp_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBoxPrID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[0].Value.ToString();
+            textBoxPrName.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
+            textBoxMaID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
+            textBoxPrice.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
+            textBoxPrSafetyStock.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
+            textBoxScID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString();
+            textBoxPrModelNumber.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[6].Value.ToString();
+            comboBoxColor.SelectedItem = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[7].Value.ToString();
+            PrReleaseDate.Value = DateTime.Parse(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[8].Value.ToString());
+            if (dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[9].Value.ToString() == "0")
+            {
+                checkBoxPrFlag.Checked = false;
+            }
+            else if (dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[9].Value.ToString() == "1")
+            {
+                checkBoxPrFlag.Checked = true;
+            }
+            textBoxHidden.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[10].Value.ToString();
         }
     }
 }
