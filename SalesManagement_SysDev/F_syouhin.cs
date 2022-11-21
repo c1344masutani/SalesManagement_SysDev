@@ -31,7 +31,6 @@ namespace SalesManagement_SysDev
 
             var product = new M_Product
             {
-                PrID = int.Parse(textBoxPrID.Text.Trim()),
                 MaID = int.Parse(textBoxMaID.Text.Trim()),
                 PrName = textBoxPrName.Text.Trim(),
                 Price = int.Parse(textBoxPrice.Text.Trim()),
@@ -50,6 +49,7 @@ namespace SalesManagement_SysDev
                 context.M_Products.Add(product);
                 context.SaveChanges();
                 context.Dispose();
+                fncAllSelect();
                 MessageBox.Show("登録完了");
             }
             catch (Exception ex)
@@ -60,7 +60,7 @@ namespace SalesManagement_SysDev
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            textBoxPrID.Text = "";
+            textBoxPrID.Text = "自動入力";
             textBoxMaID.Text = "";
             textBoxPrName.Text = "";
             textBoxPrice.Text = "";
@@ -104,6 +104,7 @@ namespace SalesManagement_SysDev
                 product.PrHidden = textBoxHidden.Text.Trim();
                 context.SaveChanges();
                 context.Dispose();
+                fncAllSelect();
                 MessageBox.Show("更新完了");
 
             }
@@ -160,6 +161,7 @@ namespace SalesManagement_SysDev
 
         private void fncAllSelect()
         {
+            
             dataGridViewDsp.Rows.Clear();
             try
             {

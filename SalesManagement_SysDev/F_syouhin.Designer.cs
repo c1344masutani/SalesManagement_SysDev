@@ -33,25 +33,25 @@ namespace SalesManagement_SysDev
             this.dataGridViewDsp = new System.Windows.Forms.DataGridView();
             this.checkBoxPrFlag = new System.Windows.Forms.CheckBox();
             this.textBoxScID = new System.Windows.Forms.TextBox();
-            this.PrModelNumberTextBox = new System.Windows.Forms.Label();
-            this.ScIDTextBox = new System.Windows.Forms.Label();
+            this.LabelPrModelNumber = new System.Windows.Forms.Label();
+            this.LabelScID = new System.Windows.Forms.Label();
             this.textBoxPrName = new System.Windows.Forms.TextBox();
             this.textBoxPrSafetyStock = new System.Windows.Forms.TextBox();
             this.textBoxMaID = new System.Windows.Forms.TextBox();
             this.textBoxPrID = new System.Windows.Forms.TextBox();
             this.textBoxPrice = new System.Windows.Forms.TextBox();
-            this.PrSafetyStockTextBox = new System.Windows.Forms.Label();
-            this.PriceTextBox = new System.Windows.Forms.Label();
-            this.PrNameTextBox = new System.Windows.Forms.Label();
-            this.MaIDTextBox = new System.Windows.Forms.Label();
-            this.PrIDTextBox = new System.Windows.Forms.Label();
+            this.LabelPrSafetyStock = new System.Windows.Forms.Label();
+            this.LabelPrice = new System.Windows.Forms.Label();
+            this.LabelPrName = new System.Windows.Forms.Label();
+            this.LabelMaID = new System.Windows.Forms.Label();
+            this.LabelPrID = new System.Windows.Forms.Label();
             this.Regester_button = new System.Windows.Forms.Button();
             this.Update_button = new System.Windows.Forms.Button();
             this.Delete_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.LabelPrRelease = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.PrHidden = new System.Windows.Forms.Label();
+            this.LabelPrHidden = new System.Windows.Forms.Label();
             this.textBoxPrModelNumber = new System.Windows.Forms.TextBox();
             this.textBoxHidden = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -65,7 +65,7 @@ namespace SalesManagement_SysDev
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.Search_button = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
+            this.Labelcolor = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.comboBoxColor = new System.Windows.Forms.ComboBox();
             this.PrReleaseDate = new System.Windows.Forms.DateTimePicker();
@@ -123,31 +123,31 @@ namespace SalesManagement_SysDev
             this.textBoxScID.Size = new System.Drawing.Size(206, 51);
             this.textBoxScID.TabIndex = 65;
             // 
-            // PrModelNumberTextBox
+            // LabelPrModelNumber
             // 
-            this.PrModelNumberTextBox.AutoSize = true;
-            this.PrModelNumberTextBox.BackColor = System.Drawing.Color.Transparent;
-            this.PrModelNumberTextBox.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.PrModelNumberTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.PrModelNumberTextBox.Location = new System.Drawing.Point(833, 374);
-            this.PrModelNumberTextBox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.PrModelNumberTextBox.Name = "PrModelNumberTextBox";
-            this.PrModelNumberTextBox.Size = new System.Drawing.Size(97, 40);
-            this.PrModelNumberTextBox.TabIndex = 63;
-            this.PrModelNumberTextBox.Text = "型番";
+            this.LabelPrModelNumber.AutoSize = true;
+            this.LabelPrModelNumber.BackColor = System.Drawing.Color.Transparent;
+            this.LabelPrModelNumber.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.LabelPrModelNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.LabelPrModelNumber.Location = new System.Drawing.Point(833, 374);
+            this.LabelPrModelNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelPrModelNumber.Name = "LabelPrModelNumber";
+            this.LabelPrModelNumber.Size = new System.Drawing.Size(97, 40);
+            this.LabelPrModelNumber.TabIndex = 63;
+            this.LabelPrModelNumber.Text = "型番";
             // 
-            // ScIDTextBox
+            // LabelScID
             // 
-            this.ScIDTextBox.AutoSize = true;
-            this.ScIDTextBox.BackColor = System.Drawing.Color.Transparent;
-            this.ScIDTextBox.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.ScIDTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.ScIDTextBox.Location = new System.Drawing.Point(752, 275);
-            this.ScIDTextBox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ScIDTextBox.Name = "ScIDTextBox";
-            this.ScIDTextBox.Size = new System.Drawing.Size(178, 40);
-            this.ScIDTextBox.TabIndex = 62;
-            this.ScIDTextBox.Text = "小分類ID";
+            this.LabelScID.AutoSize = true;
+            this.LabelScID.BackColor = System.Drawing.Color.Transparent;
+            this.LabelScID.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.LabelScID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.LabelScID.Location = new System.Drawing.Point(752, 275);
+            this.LabelScID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelScID.Name = "LabelScID";
+            this.LabelScID.Size = new System.Drawing.Size(178, 40);
+            this.LabelScID.TabIndex = 62;
+            this.LabelScID.Text = "小分類ID";
             // 
             // textBoxPrName
             // 
@@ -182,8 +182,10 @@ namespace SalesManagement_SysDev
             this.textBoxPrID.Location = new System.Drawing.Point(315, 171);
             this.textBoxPrID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrID.Name = "textBoxPrID";
+            this.textBoxPrID.ReadOnly = true;
             this.textBoxPrID.Size = new System.Drawing.Size(206, 51);
             this.textBoxPrID.TabIndex = 57;
+            this.textBoxPrID.Text = "自動入力";
             // 
             // textBoxPrice
             // 
@@ -194,71 +196,71 @@ namespace SalesManagement_SysDev
             this.textBoxPrice.Size = new System.Drawing.Size(206, 51);
             this.textBoxPrice.TabIndex = 56;
             // 
-            // PrSafetyStockTextBox
+            // LabelPrSafetyStock
             // 
-            this.PrSafetyStockTextBox.AutoSize = true;
-            this.PrSafetyStockTextBox.BackColor = System.Drawing.Color.Transparent;
-            this.PrSafetyStockTextBox.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.PrSafetyStockTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.PrSafetyStockTextBox.Location = new System.Drawing.Point(713, 175);
-            this.PrSafetyStockTextBox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.PrSafetyStockTextBox.Name = "PrSafetyStockTextBox";
-            this.PrSafetyStockTextBox.Size = new System.Drawing.Size(217, 40);
-            this.PrSafetyStockTextBox.TabIndex = 55;
-            this.PrSafetyStockTextBox.Text = "安全在庫数";
+            this.LabelPrSafetyStock.AutoSize = true;
+            this.LabelPrSafetyStock.BackColor = System.Drawing.Color.Transparent;
+            this.LabelPrSafetyStock.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.LabelPrSafetyStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.LabelPrSafetyStock.Location = new System.Drawing.Point(713, 175);
+            this.LabelPrSafetyStock.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelPrSafetyStock.Name = "LabelPrSafetyStock";
+            this.LabelPrSafetyStock.Size = new System.Drawing.Size(217, 40);
+            this.LabelPrSafetyStock.TabIndex = 55;
+            this.LabelPrSafetyStock.Text = "安全在庫数";
             // 
-            // PriceTextBox
+            // LabelPrice
             // 
-            this.PriceTextBox.AutoSize = true;
-            this.PriceTextBox.BackColor = System.Drawing.Color.Transparent;
-            this.PriceTextBox.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.PriceTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.PriceTextBox.Location = new System.Drawing.Point(150, 473);
-            this.PriceTextBox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.PriceTextBox.Name = "PriceTextBox";
-            this.PriceTextBox.Size = new System.Drawing.Size(97, 40);
-            this.PriceTextBox.TabIndex = 53;
-            this.PriceTextBox.Text = "価格";
+            this.LabelPrice.AutoSize = true;
+            this.LabelPrice.BackColor = System.Drawing.Color.Transparent;
+            this.LabelPrice.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.LabelPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.LabelPrice.Location = new System.Drawing.Point(150, 473);
+            this.LabelPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelPrice.Name = "LabelPrice";
+            this.LabelPrice.Size = new System.Drawing.Size(97, 40);
+            this.LabelPrice.TabIndex = 53;
+            this.LabelPrice.Text = "価格";
             // 
-            // PrNameTextBox
+            // LabelPrName
             // 
-            this.PrNameTextBox.AutoSize = true;
-            this.PrNameTextBox.BackColor = System.Drawing.Color.Transparent;
-            this.PrNameTextBox.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.PrNameTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.PrNameTextBox.Location = new System.Drawing.Point(110, 275);
-            this.PrNameTextBox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.PrNameTextBox.Name = "PrNameTextBox";
-            this.PrNameTextBox.Size = new System.Drawing.Size(137, 40);
-            this.PrNameTextBox.TabIndex = 52;
-            this.PrNameTextBox.Text = "商品名";
+            this.LabelPrName.AutoSize = true;
+            this.LabelPrName.BackColor = System.Drawing.Color.Transparent;
+            this.LabelPrName.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.LabelPrName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.LabelPrName.Location = new System.Drawing.Point(110, 275);
+            this.LabelPrName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelPrName.Name = "LabelPrName";
+            this.LabelPrName.Size = new System.Drawing.Size(137, 40);
+            this.LabelPrName.TabIndex = 52;
+            this.LabelPrName.Text = "商品名";
             // 
-            // MaIDTextBox
+            // LabelMaID
             // 
-            this.MaIDTextBox.AutoSize = true;
-            this.MaIDTextBox.BackColor = System.Drawing.Color.Transparent;
-            this.MaIDTextBox.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.MaIDTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.MaIDTextBox.Location = new System.Drawing.Point(69, 374);
-            this.MaIDTextBox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.MaIDTextBox.Name = "MaIDTextBox";
-            this.MaIDTextBox.Size = new System.Drawing.Size(178, 40);
-            this.MaIDTextBox.TabIndex = 51;
-            this.MaIDTextBox.Text = "メーカID";
+            this.LabelMaID.AutoSize = true;
+            this.LabelMaID.BackColor = System.Drawing.Color.Transparent;
+            this.LabelMaID.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.LabelMaID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.LabelMaID.Location = new System.Drawing.Point(69, 374);
+            this.LabelMaID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelMaID.Name = "LabelMaID";
+            this.LabelMaID.Size = new System.Drawing.Size(178, 40);
+            this.LabelMaID.TabIndex = 51;
+            this.LabelMaID.Text = "メーカID";
             // 
-            // PrIDTextBox
+            // LabelPrID
             // 
-            this.PrIDTextBox.AutoSize = true;
-            this.PrIDTextBox.BackColor = System.Drawing.Color.Transparent;
-            this.PrIDTextBox.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.PrIDTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.PrIDTextBox.Location = new System.Drawing.Point(109, 178);
-            this.PrIDTextBox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.PrIDTextBox.Name = "PrIDTextBox";
-            this.PrIDTextBox.Size = new System.Drawing.Size(138, 40);
-            this.PrIDTextBox.TabIndex = 50;
-            this.PrIDTextBox.Text = "商品ID";
-            this.PrIDTextBox.Click += new System.EventHandler(this.PrIDTextBox_Click);
+            this.LabelPrID.AutoSize = true;
+            this.LabelPrID.BackColor = System.Drawing.Color.Transparent;
+            this.LabelPrID.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.LabelPrID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.LabelPrID.Location = new System.Drawing.Point(109, 178);
+            this.LabelPrID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelPrID.Name = "LabelPrID";
+            this.LabelPrID.Size = new System.Drawing.Size(138, 40);
+            this.LabelPrID.TabIndex = 50;
+            this.LabelPrID.Text = "商品ID";
+            this.LabelPrID.Click += new System.EventHandler(this.PrIDTextBox_Click);
             // 
             // Regester_button
             // 
@@ -338,18 +340,18 @@ namespace SalesManagement_SysDev
             this.label2.Size = new System.Drawing.Size(0, 18);
             this.label2.TabIndex = 71;
             // 
-            // PrHidden
+            // LabelPrHidden
             // 
-            this.PrHidden.AutoSize = true;
-            this.PrHidden.BackColor = System.Drawing.Color.Transparent;
-            this.PrHidden.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.PrHidden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.PrHidden.Location = new System.Drawing.Point(30, 568);
-            this.PrHidden.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.PrHidden.Name = "PrHidden";
-            this.PrHidden.Size = new System.Drawing.Size(217, 40);
-            this.PrHidden.TabIndex = 72;
-            this.PrHidden.Text = "非表示理由";
+            this.LabelPrHidden.AutoSize = true;
+            this.LabelPrHidden.BackColor = System.Drawing.Color.Transparent;
+            this.LabelPrHidden.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.LabelPrHidden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.LabelPrHidden.Location = new System.Drawing.Point(30, 568);
+            this.LabelPrHidden.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LabelPrHidden.Name = "LabelPrHidden";
+            this.LabelPrHidden.Size = new System.Drawing.Size(217, 40);
+            this.LabelPrHidden.TabIndex = 72;
+            this.LabelPrHidden.Text = "非表示理由";
             // 
             // textBoxPrModelNumber
             // 
@@ -502,18 +504,18 @@ namespace SalesManagement_SysDev
             this.Search_button.Text = "検索";
             this.Search_button.UseVisualStyleBackColor = true;
             // 
-            // label11
+            // Labelcolor
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.label11.Location = new System.Drawing.Point(873, 461);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(57, 40);
-            this.label11.TabIndex = 87;
-            this.label11.Text = "色";
+            this.Labelcolor.AutoSize = true;
+            this.Labelcolor.BackColor = System.Drawing.Color.Transparent;
+            this.Labelcolor.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Labelcolor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.Labelcolor.Location = new System.Drawing.Point(873, 461);
+            this.Labelcolor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Labelcolor.Name = "Labelcolor";
+            this.Labelcolor.Size = new System.Drawing.Size(57, 40);
+            this.Labelcolor.TabIndex = 87;
+            this.Labelcolor.Text = "色";
             // 
             // label12
             // 
@@ -564,7 +566,7 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.PrReleaseDate);
             this.Controls.Add(this.comboBoxColor);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.Labelcolor);
             this.Controls.Add(this.Search_button);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -581,7 +583,7 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxPrModelNumber);
-            this.Controls.Add(this.PrHidden);
+            this.Controls.Add(this.LabelPrHidden);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBoxScID);
             this.Controls.Add(this.label1);
@@ -589,18 +591,18 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.textBoxPrSafetyStock);
             this.Controls.Add(this.checkBoxPrFlag);
             this.Controls.Add(this.Update_button);
-            this.Controls.Add(this.PrModelNumberTextBox);
+            this.Controls.Add(this.LabelPrModelNumber);
             this.Controls.Add(this.buttonClear);
-            this.Controls.Add(this.ScIDTextBox);
+            this.Controls.Add(this.LabelScID);
             this.Controls.Add(this.Delete_button);
-            this.Controls.Add(this.PrIDTextBox);
-            this.Controls.Add(this.PrSafetyStockTextBox);
+            this.Controls.Add(this.LabelPrID);
+            this.Controls.Add(this.LabelPrSafetyStock);
             this.Controls.Add(this.textBoxMaID);
-            this.Controls.Add(this.MaIDTextBox);
+            this.Controls.Add(this.LabelMaID);
             this.Controls.Add(this.textBoxPrice);
             this.Controls.Add(this.textBoxPrName);
-            this.Controls.Add(this.PrNameTextBox);
-            this.Controls.Add(this.PriceTextBox);
+            this.Controls.Add(this.LabelPrName);
+            this.Controls.Add(this.LabelPrice);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "F_syouhin";
             this.Text = "product";
@@ -618,25 +620,25 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.DataGridView dataGridViewDsp;
         private System.Windows.Forms.CheckBox checkBoxPrFlag;
         private System.Windows.Forms.TextBox textBoxScID;
-        private System.Windows.Forms.Label PrModelNumberTextBox;
-        private System.Windows.Forms.Label ScIDTextBox;
+        private System.Windows.Forms.Label LabelPrModelNumber;
+        private System.Windows.Forms.Label LabelScID;
         private System.Windows.Forms.TextBox textBoxPrName;
         private System.Windows.Forms.TextBox textBoxPrSafetyStock;
         private System.Windows.Forms.TextBox textBoxMaID;
         private System.Windows.Forms.TextBox textBoxPrID;
         private System.Windows.Forms.TextBox textBoxPrice;
-        private System.Windows.Forms.Label PrSafetyStockTextBox;
-        private System.Windows.Forms.Label PriceTextBox;
-        private System.Windows.Forms.Label PrNameTextBox;
-        private System.Windows.Forms.Label MaIDTextBox;
-        private System.Windows.Forms.Label PrIDTextBox;
+        private System.Windows.Forms.Label LabelPrSafetyStock;
+        private System.Windows.Forms.Label LabelPrice;
+        private System.Windows.Forms.Label LabelPrName;
+        private System.Windows.Forms.Label LabelMaID;
+        private System.Windows.Forms.Label LabelPrID;
         private System.Windows.Forms.Button Regester_button;
         private System.Windows.Forms.Button Update_button;
         private System.Windows.Forms.Button Delete_button;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label LabelPrRelease;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label PrHidden;
+        private System.Windows.Forms.Label LabelPrHidden;
         private System.Windows.Forms.TextBox textBoxPrModelNumber;
         private System.Windows.Forms.TextBox textBoxHidden;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -650,7 +652,7 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button Search_button;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label Labelcolor;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox comboBoxColor;
         private System.Windows.Forms.DateTimePicker PrReleaseDate;
