@@ -95,7 +95,7 @@ namespace SalesManagement_SysDev
             this.dataGridViewDsp.Name = "dataGridViewDsp";
             this.dataGridViewDsp.RowHeadersWidth = 62;
             this.dataGridViewDsp.RowTemplate.Height = 27;
-            this.dataGridViewDsp.Size = new System.Drawing.Size(1809, 311);
+            this.dataGridViewDsp.Size = new System.Drawing.Size(1900, 315);
             this.dataGridViewDsp.TabIndex = 67;
             this.dataGridViewDsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellClick);
             this.dataGridViewDsp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellContentClick);
@@ -503,6 +503,7 @@ namespace SalesManagement_SysDev
             this.Search_button.TabIndex = 86;
             this.Search_button.Text = "検索";
             this.Search_button.UseVisualStyleBackColor = true;
+            this.Search_button.Click += new System.EventHandler(this.Search_button_Click);
             // 
             // Labelcolor
             // 

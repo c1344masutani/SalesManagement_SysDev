@@ -116,7 +116,21 @@ namespace SalesManagement_SysDev
 
         private void Delete_button_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                int prid = int.Parse(textBoxPrID.Text);
+                var context = new SalesManagement_DevContext();
+                var product = context.M_Products.Single(x => x.PrID == prid);
+                context.M_Products.Remove(product);
+                context.SaveChanges();
+                context.Dispose();
+                fncAllSelect();
+                MessageBox.Show("削除完了");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void dataGridViewDsp_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -136,21 +150,21 @@ namespace SalesManagement_SysDev
             dataGridViewDsp.Columns[1].HeaderText = "商品名";
             dataGridViewDsp.Columns[2].Width = 70;
             dataGridViewDsp.Columns[2].HeaderText = "メーカID";
-            dataGridViewDsp.Columns[3].Width = 130;
+            dataGridViewDsp.Columns[3].Width = 70;
             dataGridViewDsp.Columns[3].HeaderText = "価格";
-            dataGridViewDsp.Columns[4].Width = 130;
+            dataGridViewDsp.Columns[4].Width = 70;
             dataGridViewDsp.Columns[4].HeaderText = "安全在庫数";
             dataGridViewDsp.Columns[5].Width = 70;
             dataGridViewDsp.Columns[5].HeaderText = "小分類ID";
-            dataGridViewDsp.Columns[6].Width = 130;
+            dataGridViewDsp.Columns[6].Width = 70;
             dataGridViewDsp.Columns[6].HeaderText = "型番";
-            dataGridViewDsp.Columns[7].Width = 130;
+            dataGridViewDsp.Columns[7].Width = 70;
             dataGridViewDsp.Columns[7].HeaderText = "色";
             dataGridViewDsp.Columns[8].Width = 130;
             dataGridViewDsp.Columns[8].HeaderText = "発売日";
             dataGridViewDsp.Columns[9].Width = 70;
             dataGridViewDsp.Columns[9].HeaderText = "非表示フラグ";
-            dataGridViewDsp.Columns[10].Width = 200;
+            dataGridViewDsp.Columns[10].Width = 130;
             dataGridViewDsp.Columns[10].HeaderText = "非表示理由";
             //選択モードを行単位
             dataGridViewDsp.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -219,11 +233,28 @@ namespace SalesManagement_SysDev
             {
                 checkBoxPrFlag.Checked = false;
             }
-            else if (dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[9].Value.ToString() == "1")
+            else if (dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[9].Value.ToString() == "2")
             {
                 checkBoxPrFlag.Checked = true;
             }
             textBoxHidden.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[10].Value.ToString();
+        }
+
+        private void Search_button_Click(object sender, EventArgs e)
+        {
+            dataGridViewDsp.Rows.Clear();
+            int prid = int.Parse(textBoxPrID.Text);
+            try
+            {
+                var context = new SalesManagement_DevContext();
+                var product = context.M_Products.Where(x => x.PrID == prid).ToArray();
+                dataGridViewDsp.Rows.Add(product[0].PrID, product[0].PrName, product[0].MaID, product[0].Price, product[0].PrSafetyStock, product[0].ScID, product[0].PrModelNumber, product[0].PrColor, product[0].PrReleaseDate, product[0].PrFlag,product[0].PrHidden);
+                context.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

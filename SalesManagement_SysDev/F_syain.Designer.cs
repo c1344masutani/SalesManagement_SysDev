@@ -40,15 +40,15 @@ namespace SalesManagement_SysDev
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.EmID = new System.Windows.Forms.TextBox();
-            this.EmName = new System.Windows.Forms.TextBox();
-            this.SoID = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxEmID = new System.Windows.Forms.TextBox();
+            this.textBoxEmName = new System.Windows.Forms.TextBox();
+            this.textBoxSoID = new System.Windows.Forms.TextBox();
+            this.textBoxhidden = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.EmPhone = new System.Windows.Forms.TextBox();
-            this.EmPasseWord = new System.Windows.Forms.TextBox();
+            this.textBoxEmPhone = new System.Windows.Forms.TextBox();
+            this.textBoxEmPassWord = new System.Windows.Forms.TextBox();
             this.dataGridViewDsp = new System.Windows.Forms.DataGridView();
-            this.PoID = new System.Windows.Forms.TextBox();
+            this.textBoxPoID = new System.Windows.Forms.TextBox();
             this.Regester_button = new System.Windows.Forms.Button();
             this.Update_button = new System.Windows.Forms.Button();
             this.Search_button = new System.Windows.Forms.Button();
@@ -61,7 +61,7 @@ namespace SalesManagement_SysDev
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.back_button = new System.Windows.Forms.Button();
-            this.EmHiredate = new System.Windows.Forms.DateTimePicker();
+            this.datetimeEmHiredate = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.checkBoxEmFlag = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
@@ -79,7 +79,6 @@ namespace SalesManagement_SysDev
             this.label1.Size = new System.Drawing.Size(138, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "社員ID";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
@@ -122,7 +121,7 @@ namespace SalesManagement_SysDev
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label6.Location = new System.Drawing.Point(918, 390);
+            this.label6.Location = new System.Drawing.Point(238, 381);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(217, 40);
@@ -146,7 +145,7 @@ namespace SalesManagement_SysDev
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label8.Location = new System.Drawing.Point(234, 390);
+            this.label8.Location = new System.Drawing.Point(1232, 399);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(217, 40);
@@ -177,41 +176,41 @@ namespace SalesManagement_SysDev
             this.label9.TabIndex = 8;
             this.label9.Text = "社 員 管 理";
             // 
-            // EmID
+            // textBoxEmID
             // 
-            this.EmID.Location = new System.Drawing.Point(522, 143);
-            this.EmID.Margin = new System.Windows.Forms.Padding(2);
-            this.EmID.Multiline = true;
-            this.EmID.Name = "EmID";
-            this.EmID.Size = new System.Drawing.Size(185, 47);
-            this.EmID.TabIndex = 9;
+            this.textBoxEmID.Location = new System.Drawing.Point(542, 146);
+            this.textBoxEmID.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxEmID.Multiline = true;
+            this.textBoxEmID.Name = "textBoxEmID";
+            this.textBoxEmID.Size = new System.Drawing.Size(185, 47);
+            this.textBoxEmID.TabIndex = 9;
             // 
-            // EmName
+            // textBoxEmName
             // 
-            this.EmName.Location = new System.Drawing.Point(522, 227);
-            this.EmName.Margin = new System.Windows.Forms.Padding(2);
-            this.EmName.Multiline = true;
-            this.EmName.Name = "EmName";
-            this.EmName.Size = new System.Drawing.Size(185, 47);
-            this.EmName.TabIndex = 10;
+            this.textBoxEmName.Location = new System.Drawing.Point(542, 234);
+            this.textBoxEmName.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxEmName.Multiline = true;
+            this.textBoxEmName.Name = "textBoxEmName";
+            this.textBoxEmName.Size = new System.Drawing.Size(185, 47);
+            this.textBoxEmName.TabIndex = 10;
             // 
-            // SoID
+            // textBoxSoID
             // 
-            this.SoID.Location = new System.Drawing.Point(522, 305);
-            this.SoID.Margin = new System.Windows.Forms.Padding(2);
-            this.SoID.Multiline = true;
-            this.SoID.Name = "SoID";
-            this.SoID.Size = new System.Drawing.Size(274, 47);
-            this.SoID.TabIndex = 11;
+            this.textBoxSoID.Location = new System.Drawing.Point(542, 302);
+            this.textBoxSoID.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxSoID.Multiline = true;
+            this.textBoxSoID.Name = "textBoxSoID";
+            this.textBoxSoID.Size = new System.Drawing.Size(274, 47);
+            this.textBoxSoID.TabIndex = 11;
             // 
-            // textBox4
+            // textBoxhidden
             // 
-            this.textBox4.Location = new System.Drawing.Point(522, 390);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(302, 45);
-            this.textBox4.TabIndex = 12;
+            this.textBoxhidden.Location = new System.Drawing.Point(1482, 395);
+            this.textBoxhidden.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxhidden.Multiline = true;
+            this.textBoxhidden.Name = "textBoxhidden";
+            this.textBoxhidden.Size = new System.Drawing.Size(302, 45);
+            this.textBoxhidden.TabIndex = 12;
             // 
             // textBox5
             // 
@@ -221,23 +220,23 @@ namespace SalesManagement_SysDev
             this.textBox5.Size = new System.Drawing.Size(0, 25);
             this.textBox5.TabIndex = 13;
             // 
-            // EmPhone
+            // textBoxEmPhone
             // 
-            this.EmPhone.Location = new System.Drawing.Point(1222, 314);
-            this.EmPhone.Margin = new System.Windows.Forms.Padding(2);
-            this.EmPhone.Multiline = true;
-            this.EmPhone.Name = "EmPhone";
-            this.EmPhone.Size = new System.Drawing.Size(254, 45);
-            this.EmPhone.TabIndex = 15;
+            this.textBoxEmPhone.Location = new System.Drawing.Point(1222, 314);
+            this.textBoxEmPhone.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxEmPhone.Multiline = true;
+            this.textBoxEmPhone.Name = "textBoxEmPhone";
+            this.textBoxEmPhone.Size = new System.Drawing.Size(254, 45);
+            this.textBoxEmPhone.TabIndex = 15;
             // 
-            // EmPasseWord
+            // textBoxEmPassWord
             // 
-            this.EmPasseWord.Location = new System.Drawing.Point(1222, 390);
-            this.EmPasseWord.Margin = new System.Windows.Forms.Padding(2);
-            this.EmPasseWord.Multiline = true;
-            this.EmPasseWord.Name = "EmPasseWord";
-            this.EmPasseWord.Size = new System.Drawing.Size(254, 45);
-            this.EmPasseWord.TabIndex = 16;
+            this.textBoxEmPassWord.Location = new System.Drawing.Point(542, 381);
+            this.textBoxEmPassWord.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxEmPassWord.Multiline = true;
+            this.textBoxEmPassWord.Name = "textBoxEmPassWord";
+            this.textBoxEmPassWord.Size = new System.Drawing.Size(254, 45);
+            this.textBoxEmPassWord.TabIndex = 16;
             // 
             // dataGridViewDsp
             // 
@@ -249,15 +248,16 @@ namespace SalesManagement_SysDev
             this.dataGridViewDsp.RowTemplate.Height = 27;
             this.dataGridViewDsp.Size = new System.Drawing.Size(1804, 576);
             this.dataGridViewDsp.TabIndex = 17;
+            this.dataGridViewDsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellClick);
             // 
-            // PoID
+            // textBoxPoID
             // 
-            this.PoID.Location = new System.Drawing.Point(1222, 137);
-            this.PoID.Margin = new System.Windows.Forms.Padding(2);
-            this.PoID.Multiline = true;
-            this.PoID.Name = "PoID";
-            this.PoID.Size = new System.Drawing.Size(274, 45);
-            this.PoID.TabIndex = 18;
+            this.textBoxPoID.Location = new System.Drawing.Point(1222, 137);
+            this.textBoxPoID.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxPoID.Multiline = true;
+            this.textBoxPoID.Name = "textBoxPoID";
+            this.textBoxPoID.Size = new System.Drawing.Size(274, 45);
+            this.textBoxPoID.TabIndex = 18;
             // 
             // Regester_button
             // 
@@ -270,6 +270,7 @@ namespace SalesManagement_SysDev
             this.Regester_button.TabIndex = 19;
             this.Regester_button.Text = "新規追加";
             this.Regester_button.UseVisualStyleBackColor = true;
+            this.Regester_button.Click += new System.EventHandler(this.Regester_button_Click);
             // 
             // Update_button
             // 
@@ -282,6 +283,7 @@ namespace SalesManagement_SysDev
             this.Update_button.TabIndex = 20;
             this.Update_button.Text = "更新";
             this.Update_button.UseVisualStyleBackColor = true;
+            this.Update_button.Click += new System.EventHandler(this.Update_button_Click);
             // 
             // Search_button
             // 
@@ -384,7 +386,7 @@ namespace SalesManagement_SysDev
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label16.Location = new System.Drawing.Point(1141, 412);
+            this.label16.Location = new System.Drawing.Point(461, 403);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(44, 18);
@@ -404,13 +406,13 @@ namespace SalesManagement_SysDev
             this.back_button.UseVisualStyleBackColor = true;
             this.back_button.Click += new System.EventHandler(this.back_button_Click);
             // 
-            // EmHiredate
+            // datetimeEmHiredate
             // 
-            this.EmHiredate.Location = new System.Drawing.Point(1222, 246);
-            this.EmHiredate.Margin = new System.Windows.Forms.Padding(2);
-            this.EmHiredate.Name = "EmHiredate";
-            this.EmHiredate.Size = new System.Drawing.Size(200, 25);
-            this.EmHiredate.TabIndex = 31;
+            this.datetimeEmHiredate.Location = new System.Drawing.Point(1222, 246);
+            this.datetimeEmHiredate.Margin = new System.Windows.Forms.Padding(2);
+            this.datetimeEmHiredate.Name = "datetimeEmHiredate";
+            this.datetimeEmHiredate.Size = new System.Drawing.Size(254, 25);
+            this.datetimeEmHiredate.TabIndex = 31;
             // 
             // pictureBox1
             // 
@@ -429,10 +431,10 @@ namespace SalesManagement_SysDev
             this.checkBoxEmFlag.AutoSize = true;
             this.checkBoxEmFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBoxEmFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.checkBoxEmFlag.Location = new System.Drawing.Point(1915, 468);
-            this.checkBoxEmFlag.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBoxEmFlag.Location = new System.Drawing.Point(925, 399);
+            this.checkBoxEmFlag.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxEmFlag.Name = "checkBoxEmFlag";
-            this.checkBoxEmFlag.Size = new System.Drawing.Size(139, 38);
+            this.checkBoxEmFlag.Size = new System.Drawing.Size(163, 44);
             this.checkBoxEmFlag.TabIndex = 49;
             this.checkBoxEmFlag.Text = "非表示";
             this.checkBoxEmFlag.UseVisualStyleBackColor = true;
@@ -445,7 +447,7 @@ namespace SalesManagement_SysDev
             this.ClientSize = new System.Drawing.Size(1924, 1050);
             this.Controls.Add(this.checkBoxEmFlag);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.EmHiredate);
+            this.Controls.Add(this.datetimeEmHiredate);
             this.Controls.Add(this.back_button);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -458,15 +460,15 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.Search_button);
             this.Controls.Add(this.Update_button);
             this.Controls.Add(this.Regester_button);
-            this.Controls.Add(this.PoID);
+            this.Controls.Add(this.textBoxPoID);
             this.Controls.Add(this.dataGridViewDsp);
-            this.Controls.Add(this.EmPasseWord);
-            this.Controls.Add(this.EmPhone);
+            this.Controls.Add(this.textBoxEmPassWord);
+            this.Controls.Add(this.textBoxEmPhone);
             this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.SoID);
-            this.Controls.Add(this.EmName);
-            this.Controls.Add(this.EmID);
+            this.Controls.Add(this.textBoxhidden);
+            this.Controls.Add(this.textBoxSoID);
+            this.Controls.Add(this.textBoxEmName);
+            this.Controls.Add(this.textBoxEmID);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -498,15 +500,15 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox EmID;
-        private System.Windows.Forms.TextBox EmName;
-        private System.Windows.Forms.TextBox SoID;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxEmID;
+        private System.Windows.Forms.TextBox textBoxEmName;
+        private System.Windows.Forms.TextBox textBoxSoID;
+        private System.Windows.Forms.TextBox textBoxhidden;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox EmPhone;
-        private System.Windows.Forms.TextBox EmPasseWord;
+        private System.Windows.Forms.TextBox textBoxEmPhone;
+        private System.Windows.Forms.TextBox textBoxEmPassWord;
         private System.Windows.Forms.DataGridView dataGridViewDsp;
-        private System.Windows.Forms.TextBox PoID;
+        private System.Windows.Forms.TextBox textBoxPoID;
         private System.Windows.Forms.Button Regester_button;
         private System.Windows.Forms.Button Update_button;
         private System.Windows.Forms.Button Search_button;
@@ -519,7 +521,7 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button back_button;
-        private System.Windows.Forms.DateTimePicker EmHiredate;
+        private System.Windows.Forms.DateTimePicker datetimeEmHiredate;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.CheckBox checkBoxEmFlag;
         private EventHandler label1_Click;
