@@ -149,7 +149,65 @@ namespace SalesManagement_SysDev
             {
                 check = 0;
             }
+            try
+            {
+                int emid = int.Parse(textBoxEmID.Text);
+                var context = new SalesManagement_DevContext();
+                var employees = context.M_Employees.Single(x => x.EmID == emid);
+                employees.EmName = textBoxEmName.Text.Trim();
+                employees.SoID = int.Parse(textBoxSoID.Text.Trim());
+                employees.PoID = int.Parse(textBoxPoID.Text.Trim());
+                employees.EmHiredate = datetimeEmHiredate.Value;
+                employees.EmPhone = textBoxEmPhone.Text.Trim();
+                employees.EmPassword = textBoxEmPassWord.Text.Trim();
+                employees.EmFlag = check;
+                employees.EmHidden = textBoxhidden.Text.Trim();
+                context.SaveChanges();
+                context.Dispose();
+                fncAllSelect();
+                MessageBox.Show("更新完了");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
+        }
+
+        private void Delete_button_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int emid = int.Parse(textBoxEmID.Text);
+                var context = new SalesManagement_DevContext();
+                var employees = context.M_Employees.Single(x => x.EmID == emid);
+                context.M_Employees.Remove(employees);
+                context.SaveChanges();
+                context.Dispose();
+                fncAllSelect();
+                MessageBox.Show("削除完了");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Search_button_Click(object sender, EventArgs e)
+        {
+            dataGridViewDsp.Rows.Clear();
+            int emid = int.Parse(textBoxEmID.Text);
+            try
+            {
+                var context = new SalesManagement_DevContext();
+                var employees = context.M_Employees.Where(x => x.EmID == emid).ToArray();
+                dataGridViewDsp.Rows.Add(employees[0].EmID, employees[0].EmName, employees[0].SoID, employees[0].PoID, employees[0].EmHiredate, employees[0].EmPhone, employees[0].EmPassword, employees[0].EmFlag, employees[0].EmHidden);
+                context.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

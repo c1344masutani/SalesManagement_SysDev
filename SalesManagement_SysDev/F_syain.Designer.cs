@@ -296,6 +296,7 @@ namespace SalesManagement_SysDev
             this.Search_button.TabIndex = 21;
             this.Search_button.Text = "検索";
             this.Search_button.UseVisualStyleBackColor = true;
+            this.Search_button.Click += new System.EventHandler(this.Search_button_Click);
             // 
             // Delete_button
             // 
@@ -308,6 +309,7 @@ namespace SalesManagement_SysDev
             this.Delete_button.TabIndex = 22;
             this.Delete_button.Text = "削除";
             this.Delete_button.UseVisualStyleBackColor = true;
+            this.Delete_button.Click += new System.EventHandler(this.Delete_button_Click);
             // 
             // label10
             // 
