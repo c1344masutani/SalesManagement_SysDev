@@ -30,12 +30,7 @@ namespace SalesManagement_SysDev
 
         private void button_Search_Click(object sender, EventArgs e)
         {
-            dataGridViewDsp.Rows.Clear();
-            int stid = int.Parse(textBoxStID.Text);
-            string prname = textBoxPrName.Text;
-            int prid = int.Parse(textBoxPrID.Text);
-            int price = int.Parse(textBoxPrice.Text);
-            int stqu = int.Parse(textBoxStQuantity.Text);
+            
 
 
 
