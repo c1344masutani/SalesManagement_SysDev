@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbAccess\StockDataAccess.cs" />
     <Compile Include="F_kokyaku.cs">
       <SubType>Form</SubType>
     </Compile>

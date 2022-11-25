@@ -36,16 +36,18 @@ namespace SalesManagement_SysDev
             this.textBoxStID = new System.Windows.Forms.TextBox();
             this.textBoxPrID = new System.Windows.Forms.TextBox();
             this.textBoxStQuantity = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewDsp = new System.Windows.Forms.DataGridView();
             this.button_Search = new System.Windows.Forms.Button();
             this.button_Update = new System.Windows.Forms.Button();
             this.button_back = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.checkBox_StFlag = new System.Windows.Forms.CheckBox();
             this.button_Clear = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBoxPrName = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxPrice = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,7 +78,7 @@ namespace SalesManagement_SysDev
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("HGS明朝E", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label3.Location = new System.Drawing.Point(151, 279);
+            this.label3.Location = new System.Drawing.Point(151, 251);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 36);
             this.label3.TabIndex = 2;
@@ -87,7 +89,7 @@ namespace SalesManagement_SysDev
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label4.Location = new System.Drawing.Point(662, 175);
+            this.label4.Location = new System.Drawing.Point(692, 251);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 40);
             this.label4.TabIndex = 3;
@@ -103,7 +105,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxPrID
             // 
-            this.textBoxPrID.Location = new System.Drawing.Point(352, 279);
+            this.textBoxPrID.Location = new System.Drawing.Point(352, 240);
             this.textBoxPrID.Multiline = true;
             this.textBoxPrID.Name = "textBoxPrID";
             this.textBoxPrID.Size = new System.Drawing.Size(206, 51);
@@ -111,41 +113,21 @@ namespace SalesManagement_SysDev
             // 
             // textBoxStQuantity
             // 
-            this.textBoxStQuantity.Location = new System.Drawing.Point(854, 175);
+            this.textBoxStQuantity.Location = new System.Drawing.Point(864, 240);
             this.textBoxStQuantity.Multiline = true;
             this.textBoxStQuantity.Name = "textBoxStQuantity";
             this.textBoxStQuantity.Size = new System.Drawing.Size(206, 51);
             this.textBoxStQuantity.TabIndex = 6;
             // 
-            // label5
+            // dataGridViewDsp
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(302, 197);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 18);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "必須";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(302, 299);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 18);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "必須";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(157, 394);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(1700, 550);
-            this.dataGridView1.TabIndex = 10;
+            this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDsp.Location = new System.Drawing.Point(157, 394);
+            this.dataGridViewDsp.Name = "dataGridViewDsp";
+            this.dataGridViewDsp.RowHeadersWidth = 62;
+            this.dataGridViewDsp.RowTemplate.Height = 27;
+            this.dataGridViewDsp.Size = new System.Drawing.Size(1700, 550);
+            this.dataGridViewDsp.TabIndex = 10;
             // 
             // button_Search
             // 
@@ -157,6 +139,7 @@ namespace SalesManagement_SysDev
             this.button_Search.TabIndex = 11;
             this.button_Search.Text = "検索";
             this.button_Search.UseVisualStyleBackColor = true;
+            this.button_Search.Click += new System.EventHandler(this.button_Search_Click);
             // 
             // button_Update
             // 
@@ -197,7 +180,7 @@ namespace SalesManagement_SysDev
             this.checkBox_StFlag.AutoSize = true;
             this.checkBox_StFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBox_StFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.checkBox_StFlag.Location = new System.Drawing.Point(669, 279);
+            this.checkBox_StFlag.Location = new System.Drawing.Point(682, 321);
             this.checkBox_StFlag.Name = "checkBox_StFlag";
             this.checkBox_StFlag.Size = new System.Drawing.Size(163, 44);
             this.checkBox_StFlag.TabIndex = 50;
@@ -217,21 +200,61 @@ namespace SalesManagement_SysDev
             this.button_Clear.Text = "入力クリア";
             this.button_Clear.UseVisualStyleBackColor = false;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.label7.Location = new System.Drawing.Point(151, 325);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(137, 40);
+            this.label7.TabIndex = 70;
+            this.label7.Text = "商品名";
+            // 
+            // textBoxPrName
+            // 
+            this.textBoxPrName.Location = new System.Drawing.Point(352, 314);
+            this.textBoxPrName.Multiline = true;
+            this.textBoxPrName.Name = "textBoxPrName";
+            this.textBoxPrName.Size = new System.Drawing.Size(206, 51);
+            this.textBoxPrName.TabIndex = 71;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.label5.Location = new System.Drawing.Point(692, 175);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(97, 40);
+            this.label5.TabIndex = 72;
+            this.label5.Text = "値段";
+            // 
+            // textBoxPrice
+            // 
+            this.textBoxPrice.Location = new System.Drawing.Point(864, 164);
+            this.textBoxPrice.Multiline = true;
+            this.textBoxPrice.Name = "textBoxPrice";
+            this.textBoxPrice.Size = new System.Drawing.Size(206, 51);
+            this.textBoxPrice.TabIndex = 73;
+            // 
             // F_zaiko
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.textBoxPrice);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBoxPrName);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.button_Clear);
             this.Controls.Add(this.checkBox_StFlag);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button_back);
             this.Controls.Add(this.button_Update);
             this.Controls.Add(this.button_Search);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.dataGridViewDsp);
             this.Controls.Add(this.textBoxStQuantity);
             this.Controls.Add(this.textBoxPrID);
             this.Controls.Add(this.textBoxStID);
@@ -241,7 +264,8 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.label1);
             this.Name = "F_zaiko";
             this.Text = "stock";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.F_zaiko_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -257,14 +281,16 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.TextBox textBoxStID;
         private System.Windows.Forms.TextBox textBoxPrID;
         private System.Windows.Forms.TextBox textBoxStQuantity;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewDsp;
         private System.Windows.Forms.Button button_Search;
         private System.Windows.Forms.Button button_Update;
         private System.Windows.Forms.Button button_back;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.CheckBox checkBox_StFlag;
         private System.Windows.Forms.Button button_Clear;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBoxPrName;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBoxPrice;
     }
 }

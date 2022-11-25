@@ -27,5 +27,70 @@ namespace SalesManagement_SysDev
 
             this.Close();
         }
+
+        private void button_Search_Click(object sender, EventArgs e)
+        {
+            dataGridViewDsp.Rows.Clear();
+            int stid = int.Parse(textBoxStID.Text);
+            string prname = textBoxPrName.Text;
+            int prid = int.Parse(textBoxPrID.Text);
+            int price = int.Parse(textBoxPrice.Text);
+            int stqu = int.Parse(textBoxStQuantity.Text);
+
+
+
+        }
+
+        private void fncAllSelect()
+        {
+            dataGridViewDsp.Rows.Clear();
+            try
+            {
+                var context = new SalesManagement_DevContext();
+                var tb = from t1 in context.T_Stocks
+                         join t2 in context.M_Products
+                         on t1.PrID equals t2.PrID
+                         select new
+                         {
+                             t1.StID,
+                             t1.PrID,
+                             t2.PrName,
+                             t2.Price,
+                             t1.StQuantity
+                         };
+                foreach (var p in tb)
+                {
+                    dataGridViewDsp.Rows.Add(p.StID,p.PrID,p.PrName,p.Price,p.StQuantity);
+                }
+                context.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+            private void F_zaiko_Load(object sender, EventArgs e)
+        {
+            dataGridViewDsp.ColumnCount = 5;
+            //0番目（左端）の列幅を設定
+            dataGridViewDsp.Columns[0].Width = 70;
+            //0番目（左端）の項目名を設定
+            dataGridViewDsp.Columns[0].HeaderText = "在庫ID";
+            dataGridViewDsp.Columns[1].Width = 70;
+            dataGridViewDsp.Columns[1].HeaderText = "商品ID";
+            dataGridViewDsp.Columns[2].Width = 130;
+            dataGridViewDsp.Columns[2].HeaderText = "商品名";
+            dataGridViewDsp.Columns[3].Width = 70;
+            dataGridViewDsp.Columns[3].HeaderText = "値段";
+            dataGridViewDsp.Columns[4].Width = 70;
+            dataGridViewDsp.Columns[4].HeaderText = "在庫数";
+            //選択モードを行単位
+            dataGridViewDsp.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            //読み取り専用
+            dataGridViewDsp.ReadOnly = true;
+            //全データ表示
+            fncAllSelect();
+        }
     }
 }
