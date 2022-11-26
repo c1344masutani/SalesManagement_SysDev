@@ -30,7 +30,63 @@ namespace SalesManagement_SysDev
 
         private void button_Search_Click(object sender, EventArgs e)
         {
-            
+            dataGridViewDsp.Rows.Clear();
+            int? stid = null;
+            int? prid = null;
+            string prname = string.Empty;
+            int? price = null;
+            int? stquantity = null;
+            if (!String.IsNullOrEmpty(textBoxStID.Text))
+            {
+                stid = int.Parse(textBoxStID.Text);
+            }
+            if (!String.IsNullOrEmpty(textBoxPrID.Text))
+            {
+                prid = int.Parse(textBoxPrID.Text);
+            }
+            if (!String.IsNullOrEmpty(textBoxPrName.Text))
+            {
+                prname = textBoxPrName.Text;
+            }
+            if (!String.IsNullOrEmpty(textBoxPrice.Text))
+            {
+                price = int.Parse(textBoxPrice.Text);
+            }
+            if (!String.IsNullOrEmpty(textBoxStQuantity.Text))
+            {
+                stquantity = int.Parse(textBoxStQuantity.Text);
+            }
+
+            try
+            {
+                var context = new SalesManagement_DevContext();
+                var tb = from t1 in context.T_Stocks
+                         join t2 in context.M_Products
+                         on t1.PrID equals t2.PrID
+                         where t1.StID.ToString().Contains(stid.ToString()) ||
+                               t1.PrID.ToString().Contains(prid.ToString()) ||
+                               t2.PrName.Contains(prname) ||
+                               t2.Price.ToString().Contains(price.ToString()) ||
+                               t1.StQuantity.ToString().Contains(stquantity.ToString())
+                         select new
+                         {
+                             t1.StID,
+                             t1.PrID,
+                             t2.PrName,
+                             t2.Price,
+                             t1.StQuantity
+                         };
+                foreach (var p in tb)
+                {
+                    dataGridViewDsp.Rows.Add(p.StID, p.PrID, p.PrName, p.Price, p.StQuantity);
+                }
+                context.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
 
 
 
