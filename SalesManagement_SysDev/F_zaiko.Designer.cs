@@ -121,6 +121,7 @@ namespace SalesManagement_SysDev
             // 
             // dataGridViewDsp
             // 
+            this.dataGridViewDsp.AllowUserToAddRows = false;
             this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDsp.Location = new System.Drawing.Point(157, 394);
             this.dataGridViewDsp.Name = "dataGridViewDsp";
@@ -128,6 +129,7 @@ namespace SalesManagement_SysDev
             this.dataGridViewDsp.RowTemplate.Height = 27;
             this.dataGridViewDsp.Size = new System.Drawing.Size(1700, 550);
             this.dataGridViewDsp.TabIndex = 10;
+            this.dataGridViewDsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellClick);
             // 
             // button_Search
             // 
@@ -151,6 +153,7 @@ namespace SalesManagement_SysDev
             this.button_Update.TabIndex = 12;
             this.button_Update.Text = "更新";
             this.button_Update.UseVisualStyleBackColor = true;
+            this.button_Update.Click += new System.EventHandler(this.button_Update_Click);
             // 
             // button_back
             // 

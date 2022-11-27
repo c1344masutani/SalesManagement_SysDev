@@ -143,5 +143,35 @@ namespace SalesManagement_SysDev
             //全データ表示
             fncAllSelect();
         }
+
+        private void button_Update_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int stid = int.Parse(textBoxStID.Text);
+                var context = new SalesManagement_DevContext();
+                var stock = context.T_Stocks.Single(x => x.StID == stid);
+                stock.StQuantity = int.Parse(textBoxStQuantity.Text.Trim());
+                context.SaveChanges();
+                context.Dispose();
+                fncAllSelect();
+                MessageBox.Show("更新完了");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+        }
+
+        private void dataGridViewDsp_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBoxStID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[0].Value.ToString();
+            textBoxPrID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
+            textBoxPrName.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
+            textBoxPrice.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
+            textBoxStQuantity.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
+        }
     }
 }
