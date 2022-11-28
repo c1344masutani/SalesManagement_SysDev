@@ -135,7 +135,7 @@ namespace SalesManagement_SysDev
             catch (Exception ex)
             {
                 // 該当データなし時は、例外が発生する
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
             }
 
 
