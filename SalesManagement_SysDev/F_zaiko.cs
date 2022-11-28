@@ -107,23 +107,33 @@ namespace SalesManagement_SysDev
                              t1.PrID,
                              t2.PrName,
                              t2.Price,
-                             t1.StQuantity
+                             t1.StQuantity,
+                             t1.StFlag
                          };
                 foreach (var p in tb)
                 {
                     dataGridViewDsp.Rows.Add(p.StID,p.PrID,p.PrName,p.Price,p.StQuantity);
                 }
+
+                
+                
+
+
                 context.Dispose();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            
+
+
         }
 
             private void F_zaiko_Load(object sender, EventArgs e)
         {
-            dataGridViewDsp.ColumnCount = 5;
+            dataGridViewDsp.ColumnCount = 6;
             //0番目（左端）の列幅を設定
             dataGridViewDsp.Columns[0].Width = 70;
             //0番目（左端）の項目名を設定
@@ -136,6 +146,8 @@ namespace SalesManagement_SysDev
             dataGridViewDsp.Columns[3].HeaderText = "値段";
             dataGridViewDsp.Columns[4].Width = 70;
             dataGridViewDsp.Columns[4].HeaderText = "在庫数";
+            dataGridViewDsp.Columns[5].Width = 70;
+            dataGridViewDsp.Columns[5].HeaderText = "非表示フラグ";
             //選択モードを行単位
             dataGridViewDsp.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             //読み取り専用
@@ -146,12 +158,23 @@ namespace SalesManagement_SysDev
 
         private void button_Update_Click(object sender, EventArgs e)
         {
+            int flg;
+            if(checkBox_StFlag.Checked == true)
+            {
+                flg = 2;
+            }
+            else
+            {
+                flg = 0;
+            }
+
             try
             {
                 int stid = int.Parse(textBoxStID.Text);
                 var context = new SalesManagement_DevContext();
                 var stock = context.T_Stocks.Single(x => x.StID == stid);
                 stock.StQuantity = int.Parse(textBoxStQuantity.Text.Trim());
+                stock.StFlag = flg;
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
@@ -161,6 +184,8 @@ namespace SalesManagement_SysDev
             {
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
 
 
         }
