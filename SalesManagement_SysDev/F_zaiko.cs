@@ -74,11 +74,12 @@ namespace SalesManagement_SysDev
                              t1.PrID,
                              t2.PrName,
                              t2.Price,
-                             t1.StQuantity
+                             t1.StQuantity,
+                             t1.StFlag
                          };
                 foreach (var p in tb)
                 {
-                    dataGridViewDsp.Rows.Add(p.StID, p.PrID, p.PrName, p.Price, p.StQuantity);
+                    dataGridViewDsp.Rows.Add(p.StID, p.PrID, p.PrName, p.Price, p.StQuantity,p.StFlag);
                 }
                 context.Dispose();
             }
@@ -112,12 +113,10 @@ namespace SalesManagement_SysDev
                          };
                 foreach (var p in tb)
                 {
-                    dataGridViewDsp.Rows.Add(p.StID,p.PrID,p.PrName,p.Price,p.StQuantity);
+                    dataGridViewDsp.Rows.Add(p.StID,p.PrID,p.PrName,p.Price,p.StQuantity,p.StFlag);
                 }
 
                 
-                
-
 
                 context.Dispose();
             }
@@ -126,12 +125,24 @@ namespace SalesManagement_SysDev
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            
+
+
+            try
+            {
+                DataGridViewRow row = dataGridViewDsp.Rows.Cast<DataGridViewRow>().First(r => r.Cells[5].Value.ToString() == "2");
+                row.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                // 該当データなし時は、例外が発生する
+                MessageBox.Show(ex.Message);
+            }
+
 
 
         }
 
-            private void F_zaiko_Load(object sender, EventArgs e)
+        private void F_zaiko_Load(object sender, EventArgs e)
         {
             dataGridViewDsp.ColumnCount = 6;
             //0番目（左端）の列幅を設定
@@ -185,7 +196,7 @@ namespace SalesManagement_SysDev
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-
+            
 
 
         }
