@@ -62,7 +62,7 @@ namespace SalesManagement_SysDev
             int flg;
             if (checkBoxClflg.Checked == true)
             {
-                flg = 1;
+                flg = 2;
             }
             else
             {
@@ -126,11 +126,27 @@ namespace SalesManagement_SysDev
             {
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            try
+            {
+                DataGridViewRow row = dataGridViewDsp.Rows.Cast<DataGridViewRow>().First(r => r.Cells[7].Value.ToString() == "2");
+                row.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                // 該当データなし時は、例外が発生する
+                //MessageBox.Show(ex.Message);
+            }
         }
 
         private void Search_button_Click(object sender, EventArgs e)
         {
             dataGridViewDsp.Rows.Clear();
+            if(textBoxClientID.Text == "" || textBoxClientID.Text == null)
+            {
+                fncAllSelect();
+                return;
+            }
             int clid = int.Parse(textBoxClientID.Text);
             try
             {
@@ -204,15 +220,15 @@ namespace SalesManagement_SysDev
             textBoxClientID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[0].Value.ToString();
             textBoxSalesOfficeID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
             textBoxClientName.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
-            textBoxPhone.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
-            textBoxAddress.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
+            textBoxAddress.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
+            textBoxPhone.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
             textBoxPostnumber.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString();
             textBoxFAX.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[6].Value.ToString();
             if (dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[7].Value.ToString() == "0")
             {
                 checkBoxClflg.Checked = false;
             }
-            else if (dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[7].Value.ToString() == "1")
+            else if (dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[7].Value.ToString() == "2")
             {
                 checkBoxClflg.Checked = true;
             }
