@@ -27,5 +27,10 @@ namespace SalesManagement_SysDev
 
             this.Close();
         }
+
+        private void SyStateFlag_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
