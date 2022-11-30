@@ -41,7 +41,7 @@ namespace SalesManagement_SysDev
             this.SoID_textBox = new System.Windows.Forms.TextBox();
             this.EmID_textBox = new System.Windows.Forms.TextBox();
             this.SaHidden_textBox = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewDsp = new System.Windows.Forms.DataGridView();
             this.SadDate_textBox = new System.Windows.Forms.TextBox();
             this.SaFlag_checkBox = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,7 +49,6 @@ namespace SalesManagement_SysDev
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Search_button = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
-            this.Disp_button = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,7 +56,7 @@ namespace SalesManagement_SysDev
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -197,16 +196,16 @@ namespace SalesManagement_SysDev
             this.SaHidden_textBox.Size = new System.Drawing.Size(203, 48);
             this.SaHidden_textBox.TabIndex = 86;
             // 
-            // dataGridView1
+            // dataGridViewDsp
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(125, 522);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(2238, 703);
-            this.dataGridView1.TabIndex = 88;
+            this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDsp.Location = new System.Drawing.Point(125, 522);
+            this.dataGridViewDsp.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewDsp.Name = "dataGridViewDsp";
+            this.dataGridViewDsp.RowHeadersWidth = 51;
+            this.dataGridViewDsp.RowTemplate.Height = 24;
+            this.dataGridViewDsp.Size = new System.Drawing.Size(2238, 703);
+            this.dataGridViewDsp.TabIndex = 88;
             // 
             // SadDate_textBox
             // 
@@ -275,7 +274,7 @@ namespace SalesManagement_SysDev
             this.Search_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Search_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Search_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.Search_button.Location = new System.Drawing.Point(1018, 31);
+            this.Search_button.Location = new System.Drawing.Point(880, 26);
             this.Search_button.Margin = new System.Windows.Forms.Padding(2);
             this.Search_button.Name = "Search_button";
             this.Search_button.Size = new System.Drawing.Size(154, 56);
@@ -295,19 +294,6 @@ namespace SalesManagement_SysDev
             this.buttonClear.TabIndex = 93;
             this.buttonClear.Text = "入力クリア";
             this.buttonClear.UseVisualStyleBackColor = false;
-            // 
-            // Disp_button
-            // 
-            this.Disp_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Disp_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Disp_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.Disp_button.Location = new System.Drawing.Point(716, 30);
-            this.Disp_button.Margin = new System.Windows.Forms.Padding(2);
-            this.Disp_button.Name = "Disp_button";
-            this.Disp_button.Size = new System.Drawing.Size(204, 56);
-            this.Disp_button.TabIndex = 96;
-            this.Disp_button.Text = "一覧表示";
-            this.Disp_button.UseVisualStyleBackColor = false;
             // 
             // dateTimePicker1
             // 
@@ -408,7 +394,6 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.Disp_button);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Search_button);
@@ -416,7 +401,7 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SaFlag_checkBox);
             this.Controls.Add(this.SadDate_textBox);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewDsp);
             this.Controls.Add(this.SaHidden_textBox);
             this.Controls.Add(this.EmID_textBox);
             this.Controls.Add(this.SoID_textBox);
@@ -432,7 +417,8 @@ namespace SalesManagement_SysDev
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "F_uriage";
             this.Text = "earnings";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.F_uriage_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -453,7 +439,7 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.TextBox SoID_textBox;
         private System.Windows.Forms.TextBox EmID_textBox;
         private System.Windows.Forms.TextBox SaHidden_textBox;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewDsp;
         private System.Windows.Forms.TextBox SadDate_textBox;
         private System.Windows.Forms.CheckBox SaFlag_checkBox;
         private System.Windows.Forms.Label label1;
@@ -461,7 +447,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Search_button;
         private System.Windows.Forms.Button buttonClear;
-        private System.Windows.Forms.Button Disp_button;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

@@ -38,7 +38,7 @@ namespace SalesManagement_SysDev
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewDsp = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.Regester_button = new System.Windows.Forms.Button();
             this.Update_button = new System.Windows.Forms.Button();
@@ -61,7 +61,7 @@ namespace SalesManagement_SysDev
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -163,15 +163,15 @@ namespace SalesManagement_SysDev
             this.label9.TabIndex = 52;
             this.label9.Text = "顧客担当者名";
             // 
-            // dataGridView1
+            // dataGridViewDsp
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(131, 553);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(1821, 513);
-            this.dataGridView1.TabIndex = 53;
+            this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDsp.Location = new System.Drawing.Point(131, 553);
+            this.dataGridViewDsp.Name = "dataGridViewDsp";
+            this.dataGridViewDsp.RowHeadersWidth = 62;
+            this.dataGridViewDsp.RowTemplate.Height = 27;
+            this.dataGridViewDsp.Size = new System.Drawing.Size(1821, 513);
+            this.dataGridViewDsp.TabIndex = 53;
             // 
             // label10
             // 
@@ -193,6 +193,7 @@ namespace SalesManagement_SysDev
             this.Regester_button.TabIndex = 55;
             this.Regester_button.Text = "新規追加";
             this.Regester_button.UseVisualStyleBackColor = true;
+            this.Regester_button.Click += new System.EventHandler(this.Regester_button_Click);
             // 
             // Update_button
             // 
@@ -411,7 +412,7 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.Update_button);
             this.Controls.Add(this.Regester_button);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewDsp);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -426,7 +427,7 @@ namespace SalesManagement_SysDev
             this.Text = "F_order_received";
             this.Load += new System.EventHandler(this.F_order_received_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -443,7 +444,7 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewDsp;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button Regester_button;
         private System.Windows.Forms.Button Update_button;
