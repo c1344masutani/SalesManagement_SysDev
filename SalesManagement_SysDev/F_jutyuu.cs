@@ -58,7 +58,7 @@ namespace SalesManagement_SysDev
                 var context = new SalesManagement_DevContext();
                 foreach (var p in context.T_Orders)
                 {
-                    dataGridViewDsp.Rows.Add(p.OrID,p.SoID,p,EmID,p.ClID,p.ClCharge,p.OrDate,p.OrStateFlag,p.OrFlag,p.OrHidden);
+                    dataGridViewDsp.Rows.Add(p.OrID,p.SoID,p.EmID,p.ClID,p.ClCharge,p.OrDate,p.OrStateFlag,p.OrFlag,p.OrHidden);
                 }
                 context.Dispose();
             }
@@ -67,16 +67,9 @@ namespace SalesManagement_SysDev
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            try
-            {
-                DataGridViewRow row = dataGridViewDsp.Rows.Cast<DataGridViewRow>().First(r => r.Cells[7].Value.ToString() == "2");
-                row.Visible = false;
-            }
-            catch (Exception ex)
-            {
-                // 該当データなし時は、例外が発生する
-                //MessageBox.Show(ex.Message);
-            }
+            
+            
+
         }
 
         private void back_button_Click(object sender, EventArgs e)
@@ -92,7 +85,173 @@ namespace SalesManagement_SysDev
 
         private void Regester_button_Click(object sender, EventArgs e)
         {
+            int checkOr;
+            if (checkBoxOrFlag.Checked == true)
+            {
+                checkOr = 2;
+            }
+            else
+            {
+                checkOr = 0;
+            }
 
+            int checkOrState;
+            if(checkBoxOrStateFlag.Checked == true)
+            {
+                checkOrState = 2;
+            }
+            else
+            {
+                checkOrState = 0;
+            }
+
+            var context = new SalesManagement_DevContext();
+
+            //受注テーブルにデータをセット
+            var order = new T_Order
+            {
+
+                SoID = int.Parse(textBoxSoID.Text.Trim()),
+                EmID = int.Parse(textBoxEmID.Text.Trim()),
+                ClID = int.Parse(textBoxClID.Text.Trim()),
+                ClCharge = textBoxClCharge.Text.Trim(),
+                OrDate = datetimepickerOrDate.Value,
+                OrFlag = checkOr,
+                OrStateFlag = checkOrState,
+                OrHidden = textBoxOrHidden.Text.Trim()
+            };
+
+            //受注テーブルに登録
+            try
+            {
+                context.T_Orders.Add(order);
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            //商品テーブルから商品情報取得
+            int prid = int.Parse(textBoxPrID.Text.Trim());
+            
+            var product = context.M_Products.Single(x => x.PrID == prid);
+            
+            //受注詳細テーブルにデータをセット
+            var orderdetail = new T_OrderDetail
+            {
+                OrID = order.OrID,
+                PrID = product.PrID,
+                OrQuantity = int.Parse(numericUpDownOrQuantity.Value.ToString()),
+                OrTotalPrice = product.Price * int.Parse(numericUpDownOrQuantity.Value.ToString())
+            };
+
+            //受注詳細テーブルに登録
+            try
+            {
+                context.T_OrderDetails.Add(orderdetail);
+                context.SaveChanges();
+                context.Dispose();
+                fncAllSelect();
+                MessageBox.Show("登録完了");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+        }
+
+        private void Update_button_Click(object sender, EventArgs e)
+        {
+            int checkOr;
+            if (checkBoxOrFlag.Checked == true)
+            {
+                checkOr = 2;
+            }
+            else
+            {
+                checkOr = 0;
+            }
+
+            int checkOrState;
+            if (checkBoxOrStateFlag.Checked == true)
+            {
+                checkOrState = 2;
+            }
+            else
+            {
+                checkOrState = 0;
+            }
+
+            try
+            {
+                int orid = int.Parse(textBoxOrID.Text.Trim());
+                var context = new SalesManagement_DevContext();
+                //受注テーブル
+                var order = context.T_Orders.Single(x => x.OrID == orid);
+                order.SoID = int.Parse(textBoxSoID.Text.Trim());
+                order.EmID = int.Parse(textBoxEmID.Text.Trim());
+                order.ClID = int.Parse(textBoxClID.Text.Trim());
+                order.ClCharge = textBoxClCharge.Text.Trim();
+                order.OrDate = datetimepickerOrDate.Value;
+                order.OrStateFlag = checkOrState;
+                order.OrFlag = checkOr;
+                order.OrHidden = textBoxOrHidden.Text;
+
+                //受注詳細テーブル
+                var orderdetail = context.T_OrderDetails.Single(x => x.OrID == orid);
+                //商品テーブルから商品情報取得
+                int prid = int.Parse(textBoxPrID.Text.Trim());
+                var product = context.M_Products.Single(x => x.PrID == prid);
+                orderdetail.PrID = int.Parse(textBoxPrID.Text.Trim());
+                orderdetail.OrQuantity = int.Parse(numericUpDownOrQuantity.Value.ToString());
+                orderdetail.OrTotalPrice = product.Price * int.Parse(numericUpDownOrQuantity.Value.ToString());
+                context.SaveChanges();
+                context.Dispose();
+                fncAllSelect();
+                MessageBox.Show("更新完了");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void dataGridViewDsp_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBoxOrID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[0].Value.ToString();
+            textBoxSoID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
+            textBoxEmID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
+            textBoxClID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
+            textBoxClCharge.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
+            datetimepickerOrDate.Value = DateTime.Parse(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString());
+            textBoxOrHidden.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[8].Value.ToString();
+        }
+
+        private void Search_button_Click(object sender, EventArgs e)
+        {
+            dataGridViewDsp.Rows.Clear();
+            if(textBoxOrID.Text == "" || textBoxOrID.Text == null)
+            {
+                fncAllSelect();
+                return;
+            }
+            int orid = int.Parse(textBoxOrID.Text);
+            try
+            {
+                var context = new SalesManagement_DevContext();
+                var order = context.T_Orders.Where(x => x.OrID == orid).ToArray();
+                dataGridViewDsp.Rows.Add(order[0].OrID, order[0].SoID, order[0].EmID, order[0].ClID, order[0].ClCharge, order[0].OrDate, order[0].OrStateFlag, order[0].OrFlag, order[0].OrHidden);
+                context.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

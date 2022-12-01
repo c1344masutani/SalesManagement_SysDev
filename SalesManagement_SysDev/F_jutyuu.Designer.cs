@@ -42,26 +42,31 @@ namespace SalesManagement_SysDev
             this.label10 = new System.Windows.Forms.Label();
             this.Regester_button = new System.Windows.Forms.Button();
             this.Update_button = new System.Windows.Forms.Button();
-            this.Delete_button = new System.Windows.Forms.Button();
             this.Search_button = new System.Windows.Forms.Button();
             this.back_button = new System.Windows.Forms.Button();
-            this.OrID = new System.Windows.Forms.TextBox();
-            this.SoID = new System.Windows.Forms.TextBox();
-            this.EmID = new System.Windows.Forms.TextBox();
-            this.OrHidden = new System.Windows.Forms.TextBox();
-            this.ClID = new System.Windows.Forms.TextBox();
-            this.ClCharge = new System.Windows.Forms.TextBox();
-            this.OrDate = new System.Windows.Forms.DateTimePicker();
-            this.OrStateFlag = new System.Windows.Forms.CheckBox();
-            this.OrFlag = new System.Windows.Forms.CheckBox();
+            this.textBoxOrID = new System.Windows.Forms.TextBox();
+            this.textBoxSoID = new System.Windows.Forms.TextBox();
+            this.textBoxEmID = new System.Windows.Forms.TextBox();
+            this.textBoxOrHidden = new System.Windows.Forms.TextBox();
+            this.textBoxClID = new System.Windows.Forms.TextBox();
+            this.textBoxClCharge = new System.Windows.Forms.TextBox();
+            this.datetimepickerOrDate = new System.Windows.Forms.DateTimePicker();
+            this.checkBoxOrStateFlag = new System.Windows.Forms.CheckBox();
+            this.checkBoxOrFlag = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBoxPrID = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.numericUpDownOrQuantity = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOrQuantity)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -135,7 +140,7 @@ namespace SalesManagement_SysDev
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label7.Location = new System.Drawing.Point(1401, 185);
+            this.label7.Location = new System.Drawing.Point(1402, 269);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(217, 40);
             this.label7.TabIndex = 50;
@@ -157,7 +162,7 @@ namespace SalesManagement_SysDev
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label9.Location = new System.Drawing.Point(817, 271);
+            this.label9.Location = new System.Drawing.Point(817, 349);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(257, 40);
             this.label9.TabIndex = 52;
@@ -172,6 +177,7 @@ namespace SalesManagement_SysDev
             this.dataGridViewDsp.RowTemplate.Height = 27;
             this.dataGridViewDsp.Size = new System.Drawing.Size(1821, 513);
             this.dataGridViewDsp.TabIndex = 53;
+            this.dataGridViewDsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellClick);
             // 
             // label10
             // 
@@ -205,28 +211,19 @@ namespace SalesManagement_SysDev
             this.Update_button.TabIndex = 56;
             this.Update_button.Text = "更新";
             this.Update_button.UseVisualStyleBackColor = true;
-            // 
-            // Delete_button
-            // 
-            this.Delete_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Delete_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.Delete_button.Location = new System.Drawing.Point(1325, 31);
-            this.Delete_button.Name = "Delete_button";
-            this.Delete_button.Size = new System.Drawing.Size(141, 50);
-            this.Delete_button.TabIndex = 57;
-            this.Delete_button.Text = "削除";
-            this.Delete_button.UseVisualStyleBackColor = true;
+            this.Update_button.Click += new System.EventHandler(this.Update_button_Click);
             // 
             // Search_button
             // 
             this.Search_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Search_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.Search_button.Location = new System.Drawing.Point(1579, 31);
+            this.Search_button.Location = new System.Drawing.Point(1336, 31);
             this.Search_button.Name = "Search_button";
             this.Search_button.Size = new System.Drawing.Size(141, 50);
             this.Search_button.TabIndex = 58;
             this.Search_button.Text = "検索";
             this.Search_button.UseVisualStyleBackColor = true;
+            this.Search_button.Click += new System.EventHandler(this.Search_button_Click);
             // 
             // back_button
             // 
@@ -240,84 +237,84 @@ namespace SalesManagement_SysDev
             this.back_button.UseVisualStyleBackColor = true;
             this.back_button.Click += new System.EventHandler(this.back_button_Click);
             // 
-            // OrID
+            // textBoxOrID
             // 
-            this.OrID.Location = new System.Drawing.Point(539, 187);
-            this.OrID.Multiline = true;
-            this.OrID.Name = "OrID";
-            this.OrID.Size = new System.Drawing.Size(178, 39);
-            this.OrID.TabIndex = 60;
+            this.textBoxOrID.Location = new System.Drawing.Point(539, 187);
+            this.textBoxOrID.Multiline = true;
+            this.textBoxOrID.Name = "textBoxOrID";
+            this.textBoxOrID.Size = new System.Drawing.Size(178, 39);
+            this.textBoxOrID.TabIndex = 60;
             // 
-            // SoID
+            // textBoxSoID
             // 
-            this.SoID.Location = new System.Drawing.Point(539, 270);
-            this.SoID.Multiline = true;
-            this.SoID.Name = "SoID";
-            this.SoID.Size = new System.Drawing.Size(178, 39);
-            this.SoID.TabIndex = 61;
+            this.textBoxSoID.Location = new System.Drawing.Point(539, 270);
+            this.textBoxSoID.Multiline = true;
+            this.textBoxSoID.Name = "textBoxSoID";
+            this.textBoxSoID.Size = new System.Drawing.Size(178, 39);
+            this.textBoxSoID.TabIndex = 61;
             // 
-            // EmID
+            // textBoxEmID
             // 
-            this.EmID.Location = new System.Drawing.Point(539, 353);
-            this.EmID.Multiline = true;
-            this.EmID.Name = "EmID";
-            this.EmID.Size = new System.Drawing.Size(178, 39);
-            this.EmID.TabIndex = 62;
+            this.textBoxEmID.Location = new System.Drawing.Point(539, 353);
+            this.textBoxEmID.Multiline = true;
+            this.textBoxEmID.Name = "textBoxEmID";
+            this.textBoxEmID.Size = new System.Drawing.Size(178, 39);
+            this.textBoxEmID.TabIndex = 62;
             // 
-            // OrHidden
+            // textBoxOrHidden
             // 
-            this.OrHidden.Location = new System.Drawing.Point(539, 442);
-            this.OrHidden.Multiline = true;
-            this.OrHidden.Name = "OrHidden";
-            this.OrHidden.Size = new System.Drawing.Size(447, 87);
-            this.OrHidden.TabIndex = 63;
+            this.textBoxOrHidden.Location = new System.Drawing.Point(539, 442);
+            this.textBoxOrHidden.Multiline = true;
+            this.textBoxOrHidden.Name = "textBoxOrHidden";
+            this.textBoxOrHidden.Size = new System.Drawing.Size(447, 87);
+            this.textBoxOrHidden.TabIndex = 63;
             // 
-            // ClID
+            // textBoxClID
             // 
-            this.ClID.Location = new System.Drawing.Point(1173, 187);
-            this.ClID.Multiline = true;
-            this.ClID.Name = "ClID";
-            this.ClID.Size = new System.Drawing.Size(178, 39);
-            this.ClID.TabIndex = 64;
+            this.textBoxClID.Location = new System.Drawing.Point(1173, 187);
+            this.textBoxClID.Multiline = true;
+            this.textBoxClID.Name = "textBoxClID";
+            this.textBoxClID.Size = new System.Drawing.Size(178, 39);
+            this.textBoxClID.TabIndex = 64;
             // 
-            // ClCharge
+            // textBoxClCharge
             // 
-            this.ClCharge.Location = new System.Drawing.Point(1173, 270);
-            this.ClCharge.Multiline = true;
-            this.ClCharge.Name = "ClCharge";
-            this.ClCharge.Size = new System.Drawing.Size(178, 39);
-            this.ClCharge.TabIndex = 65;
+            this.textBoxClCharge.Location = new System.Drawing.Point(1173, 350);
+            this.textBoxClCharge.Multiline = true;
+            this.textBoxClCharge.Name = "textBoxClCharge";
+            this.textBoxClCharge.Size = new System.Drawing.Size(178, 39);
+            this.textBoxClCharge.TabIndex = 65;
             // 
-            // OrDate
+            // datetimepickerOrDate
             // 
-            this.OrDate.Location = new System.Drawing.Point(1705, 201);
-            this.OrDate.Name = "OrDate";
-            this.OrDate.Size = new System.Drawing.Size(200, 25);
-            this.OrDate.TabIndex = 68;
+            this.datetimepickerOrDate.Location = new System.Drawing.Point(1706, 285);
+            this.datetimepickerOrDate.Name = "datetimepickerOrDate";
+            this.datetimepickerOrDate.Size = new System.Drawing.Size(200, 25);
+            this.datetimepickerOrDate.TabIndex = 68;
             // 
-            // OrStateFlag
+            // checkBoxOrStateFlag
             // 
-            this.OrStateFlag.AutoSize = true;
-            this.OrStateFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.OrStateFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.OrStateFlag.Location = new System.Drawing.Point(1274, 485);
-            this.OrStateFlag.Name = "OrStateFlag";
-            this.OrStateFlag.Size = new System.Drawing.Size(203, 44);
-            this.OrStateFlag.TabIndex = 69;
-            this.OrStateFlag.Text = "受注確定";
-            this.OrStateFlag.UseVisualStyleBackColor = true;
+            this.checkBoxOrStateFlag.AutoSize = true;
+            this.checkBoxOrStateFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.checkBoxOrStateFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.checkBoxOrStateFlag.Location = new System.Drawing.Point(1274, 485);
+            this.checkBoxOrStateFlag.Name = "checkBoxOrStateFlag";
+            this.checkBoxOrStateFlag.Size = new System.Drawing.Size(203, 44);
+            this.checkBoxOrStateFlag.TabIndex = 69;
+            this.checkBoxOrStateFlag.Text = "受注確定";
+            this.checkBoxOrStateFlag.UseVisualStyleBackColor = true;
             // 
-            // OrFlag
+            // checkBoxOrFlag
             // 
-            this.OrFlag.AutoSize = true;
-            this.OrFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.OrFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.OrFlag.Location = new System.Drawing.Point(1588, 485);
-            this.OrFlag.Name = "OrFlag";
-            this.OrFlag.Size = new System.Drawing.Size(163, 44);
-            this.OrFlag.TabIndex = 70;
-            this.OrFlag.Text = "非表示";
-            this.OrFlag.UseVisualStyleBackColor = true;
+            this.checkBoxOrFlag.AutoSize = true;
+            this.checkBoxOrFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.checkBoxOrFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.checkBoxOrFlag.Location = new System.Drawing.Point(1588, 485);
+            this.checkBoxOrFlag.Name = "checkBoxOrFlag";
+            this.checkBoxOrFlag.Size = new System.Drawing.Size(163, 44);
+            this.checkBoxOrFlag.TabIndex = 70;
+            this.checkBoxOrFlag.Text = "非表示";
+            this.checkBoxOrFlag.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -368,7 +365,7 @@ namespace SalesManagement_SysDev
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label14.Location = new System.Drawing.Point(1641, 204);
+            this.label14.Location = new System.Drawing.Point(1642, 288);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(44, 18);
             this.label14.TabIndex = 75;
@@ -379,11 +376,60 @@ namespace SalesManagement_SysDev
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label15.Location = new System.Drawing.Point(1098, 291);
+            this.label15.Location = new System.Drawing.Point(1090, 371);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(44, 18);
             this.label15.TabIndex = 76;
             this.label15.Text = "必須";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.label16.Location = new System.Drawing.Point(817, 274);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(138, 40);
+            this.label16.TabIndex = 77;
+            this.label16.Text = "商品ID";
+            // 
+            // textBoxPrID
+            // 
+            this.textBoxPrID.Location = new System.Drawing.Point(1173, 270);
+            this.textBoxPrID.Multiline = true;
+            this.textBoxPrID.Name = "textBoxPrID";
+            this.textBoxPrID.Size = new System.Drawing.Size(178, 39);
+            this.textBoxPrID.TabIndex = 78;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.label17.Location = new System.Drawing.Point(973, 296);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(44, 18);
+            this.label17.TabIndex = 79;
+            this.label17.Text = "必須";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.label18.Location = new System.Drawing.Point(1402, 189);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(97, 40);
+            this.label18.TabIndex = 80;
+            this.label18.Text = "数量";
+            // 
+            // numericUpDownOrQuantity
+            // 
+            this.numericUpDownOrQuantity.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.numericUpDownOrQuantity.Location = new System.Drawing.Point(1566, 189);
+            this.numericUpDownOrQuantity.Name = "numericUpDownOrQuantity";
+            this.numericUpDownOrQuantity.Size = new System.Drawing.Size(120, 39);
+            this.numericUpDownOrQuantity.TabIndex = 81;
             // 
             // F_jutyuu
             // 
@@ -391,24 +437,28 @@ namespace SalesManagement_SysDev
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.numericUpDownOrQuantity);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.textBoxPrID);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.OrFlag);
-            this.Controls.Add(this.OrStateFlag);
-            this.Controls.Add(this.OrDate);
-            this.Controls.Add(this.ClCharge);
-            this.Controls.Add(this.ClID);
-            this.Controls.Add(this.OrHidden);
-            this.Controls.Add(this.EmID);
-            this.Controls.Add(this.SoID);
-            this.Controls.Add(this.OrID);
+            this.Controls.Add(this.checkBoxOrFlag);
+            this.Controls.Add(this.checkBoxOrStateFlag);
+            this.Controls.Add(this.datetimepickerOrDate);
+            this.Controls.Add(this.textBoxClCharge);
+            this.Controls.Add(this.textBoxClID);
+            this.Controls.Add(this.textBoxOrHidden);
+            this.Controls.Add(this.textBoxEmID);
+            this.Controls.Add(this.textBoxSoID);
+            this.Controls.Add(this.textBoxOrID);
             this.Controls.Add(this.back_button);
             this.Controls.Add(this.Search_button);
-            this.Controls.Add(this.Delete_button);
             this.Controls.Add(this.Update_button);
             this.Controls.Add(this.Regester_button);
             this.Controls.Add(this.label10);
@@ -428,6 +478,7 @@ namespace SalesManagement_SysDev
             this.Load += new System.EventHandler(this.F_order_received_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOrQuantity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -448,23 +499,27 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button Regester_button;
         private System.Windows.Forms.Button Update_button;
-        private System.Windows.Forms.Button Delete_button;
         private System.Windows.Forms.Button Search_button;
         private System.Windows.Forms.Button back_button;
-        private System.Windows.Forms.TextBox OrID;
-        private System.Windows.Forms.TextBox SoID;
-        private System.Windows.Forms.TextBox EmID;
-        private System.Windows.Forms.TextBox OrHidden;
-        private System.Windows.Forms.TextBox ClID;
-        private System.Windows.Forms.TextBox ClCharge;
-        private System.Windows.Forms.DateTimePicker OrDate;
-        private System.Windows.Forms.CheckBox OrStateFlag;
-        private System.Windows.Forms.CheckBox OrFlag;
+        private System.Windows.Forms.TextBox textBoxOrID;
+        private System.Windows.Forms.TextBox textBoxSoID;
+        private System.Windows.Forms.TextBox textBoxEmID;
+        private System.Windows.Forms.TextBox textBoxOrHidden;
+        private System.Windows.Forms.TextBox textBoxClID;
+        private System.Windows.Forms.TextBox textBoxClCharge;
+        private System.Windows.Forms.DateTimePicker datetimepickerOrDate;
+        private System.Windows.Forms.CheckBox checkBoxOrStateFlag;
+        private System.Windows.Forms.CheckBox checkBoxOrFlag;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox textBoxPrID;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.NumericUpDown numericUpDownOrQuantity;
     }
 }
