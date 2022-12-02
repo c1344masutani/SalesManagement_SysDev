@@ -34,24 +34,23 @@ namespace SalesManagement_SysDev
             this.EmID = new System.Windows.Forms.Label();
             this.ChID = new System.Windows.Forms.Label();
             this.Search_button = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonBack = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Disp_button = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.OrID = new System.Windows.Forms.Label();
             this.ChDate = new System.Windows.Forms.Label();
-            this.ChID_textBox = new System.Windows.Forms.TextBox();
-            this.SoID_textBox = new System.Windows.Forms.TextBox();
-            this.EmID_textBox = new System.Windows.Forms.TextBox();
-            this.ChHidden_textBox = new System.Windows.Forms.TextBox();
-            this.OrID_textBox = new System.Windows.Forms.TextBox();
+            this.textBoxChid = new System.Windows.Forms.TextBox();
+            this.textBoxSoid = new System.Windows.Forms.TextBox();
+            this.textBoxEmid = new System.Windows.Forms.TextBox();
+            this.textBoxChHidden = new System.Windows.Forms.TextBox();
+            this.textBoxOrid = new System.Windows.Forms.TextBox();
             this.SoID = new System.Windows.Forms.Label();
-            this.ClID_textBox = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.textBoxCliid = new System.Windows.Forms.TextBox();
+            this.dateTimePickerChdate = new System.Windows.Forms.DateTimePicker();
+            this.dataGridViewDsp = new System.Windows.Forms.DataGridView();
+            this.checkBoxChStateflg = new System.Windows.Forms.CheckBox();
+            this.checkBoxChflg = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,7 +58,7 @@ namespace SalesManagement_SysDev
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             this.SuspendLayout();
             // 
             // ChHidden
@@ -118,27 +117,28 @@ namespace SalesManagement_SysDev
             // 
             this.Search_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Search_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.Search_button.Location = new System.Drawing.Point(1580, 24);
+            this.Search_button.Location = new System.Drawing.Point(972, 24);
             this.Search_button.Margin = new System.Windows.Forms.Padding(2);
             this.Search_button.Name = "Search_button";
             this.Search_button.Size = new System.Drawing.Size(141, 55);
             this.Search_button.TabIndex = 92;
             this.Search_button.Text = "検索";
             this.Search_button.UseVisualStyleBackColor = true;
+            this.Search_button.Click += new System.EventHandler(this.Search_button_Click);
             // 
-            // button1
+            // buttonBack
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button1.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.button1.Location = new System.Drawing.Point(1778, 23);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 56);
-            this.button1.TabIndex = 91;
-            this.button1.Text = "戻る";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonBack.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.buttonBack.Location = new System.Drawing.Point(1778, 23);
+            this.buttonBack.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(145, 56);
+            this.buttonBack.TabIndex = 91;
+            this.buttonBack.Text = "戻る";
+            this.buttonBack.UseVisualStyleBackColor = false;
+            this.buttonBack.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -166,19 +166,6 @@ namespace SalesManagement_SysDev
             this.label1.TabIndex = 87;
             this.label1.Text = "注 文 管 理";
             // 
-            // Disp_button
-            // 
-            this.Disp_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Disp_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Disp_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.Disp_button.Location = new System.Drawing.Point(825, 23);
-            this.Disp_button.Margin = new System.Windows.Forms.Padding(2);
-            this.Disp_button.Name = "Disp_button";
-            this.Disp_button.Size = new System.Drawing.Size(219, 56);
-            this.Disp_button.TabIndex = 88;
-            this.Disp_button.Text = "一覧表示";
-            this.Disp_button.UseVisualStyleBackColor = false;
-            // 
             // buttonClear
             // 
             this.buttonClear.BackColor = System.Drawing.Color.Transparent;
@@ -191,6 +178,7 @@ namespace SalesManagement_SysDev
             this.buttonClear.TabIndex = 89;
             this.buttonClear.Text = "入力クリア";
             this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // OrID
             // 
@@ -218,51 +206,52 @@ namespace SalesManagement_SysDev
             this.ChDate.TabIndex = 94;
             this.ChDate.Text = "注文年月日";
             // 
-            // ChID_textBox
+            // textBoxChid
             // 
-            this.ChID_textBox.Location = new System.Drawing.Point(404, 164);
-            this.ChID_textBox.Margin = new System.Windows.Forms.Padding(4);
-            this.ChID_textBox.Multiline = true;
-            this.ChID_textBox.Name = "ChID_textBox";
-            this.ChID_textBox.Size = new System.Drawing.Size(206, 51);
-            this.ChID_textBox.TabIndex = 96;
+            this.textBoxChid.Location = new System.Drawing.Point(404, 164);
+            this.textBoxChid.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxChid.Multiline = true;
+            this.textBoxChid.Name = "textBoxChid";
+            this.textBoxChid.ReadOnly = true;
+            this.textBoxChid.Size = new System.Drawing.Size(206, 51);
+            this.textBoxChid.TabIndex = 96;
             // 
-            // SoID_textBox
+            // textBoxSoid
             // 
-            this.SoID_textBox.Location = new System.Drawing.Point(404, 250);
-            this.SoID_textBox.Margin = new System.Windows.Forms.Padding(4);
-            this.SoID_textBox.Multiline = true;
-            this.SoID_textBox.Name = "SoID_textBox";
-            this.SoID_textBox.Size = new System.Drawing.Size(206, 51);
-            this.SoID_textBox.TabIndex = 97;
+            this.textBoxSoid.Location = new System.Drawing.Point(404, 250);
+            this.textBoxSoid.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSoid.Multiline = true;
+            this.textBoxSoid.Name = "textBoxSoid";
+            this.textBoxSoid.Size = new System.Drawing.Size(206, 51);
+            this.textBoxSoid.TabIndex = 97;
             // 
-            // EmID_textBox
+            // textBoxEmid
             // 
-            this.EmID_textBox.Location = new System.Drawing.Point(404, 329);
-            this.EmID_textBox.Margin = new System.Windows.Forms.Padding(4);
-            this.EmID_textBox.Multiline = true;
-            this.EmID_textBox.Name = "EmID_textBox";
-            this.EmID_textBox.Size = new System.Drawing.Size(206, 52);
-            this.EmID_textBox.TabIndex = 98;
+            this.textBoxEmid.Location = new System.Drawing.Point(404, 329);
+            this.textBoxEmid.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxEmid.Multiline = true;
+            this.textBoxEmid.Name = "textBoxEmid";
+            this.textBoxEmid.Size = new System.Drawing.Size(206, 52);
+            this.textBoxEmid.TabIndex = 98;
             // 
-            // ChHidden_textBox
+            // textBoxChHidden
             // 
-            this.ChHidden_textBox.Location = new System.Drawing.Point(404, 536);
-            this.ChHidden_textBox.Margin = new System.Windows.Forms.Padding(4);
-            this.ChHidden_textBox.Multiline = true;
-            this.ChHidden_textBox.Name = "ChHidden_textBox";
-            this.ChHidden_textBox.Size = new System.Drawing.Size(206, 51);
-            this.ChHidden_textBox.TabIndex = 99;
+            this.textBoxChHidden.Location = new System.Drawing.Point(404, 536);
+            this.textBoxChHidden.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxChHidden.Multiline = true;
+            this.textBoxChHidden.Name = "textBoxChHidden";
+            this.textBoxChHidden.Size = new System.Drawing.Size(206, 51);
+            this.textBoxChHidden.TabIndex = 99;
             // 
-            // OrID_textBox
+            // textBoxOrid
             // 
-            this.OrID_textBox.Location = new System.Drawing.Point(1170, 175);
-            this.OrID_textBox.Margin = new System.Windows.Forms.Padding(4);
-            this.OrID_textBox.Multiline = true;
-            this.OrID_textBox.Name = "OrID_textBox";
-            this.OrID_textBox.Size = new System.Drawing.Size(206, 51);
-            this.OrID_textBox.TabIndex = 101;
-            this.OrID_textBox.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.textBoxOrid.Location = new System.Drawing.Point(1170, 175);
+            this.textBoxOrid.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxOrid.Multiline = true;
+            this.textBoxOrid.Name = "textBoxOrid";
+            this.textBoxOrid.Size = new System.Drawing.Size(206, 51);
+            this.textBoxOrid.TabIndex = 101;
+            this.textBoxOrid.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // SoID
             // 
@@ -277,59 +266,61 @@ namespace SalesManagement_SysDev
             this.SoID.TabIndex = 102;
             this.SoID.Text = "営業所ID";
             // 
-            // ClID_textBox
+            // textBoxCliid
             // 
-            this.ClID_textBox.Location = new System.Drawing.Point(404, 421);
-            this.ClID_textBox.Margin = new System.Windows.Forms.Padding(4);
-            this.ClID_textBox.Multiline = true;
-            this.ClID_textBox.Name = "ClID_textBox";
-            this.ClID_textBox.Size = new System.Drawing.Size(206, 52);
-            this.ClID_textBox.TabIndex = 103;
+            this.textBoxCliid.Location = new System.Drawing.Point(404, 421);
+            this.textBoxCliid.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxCliid.Multiline = true;
+            this.textBoxCliid.Name = "textBoxCliid";
+            this.textBoxCliid.Size = new System.Drawing.Size(206, 52);
+            this.textBoxCliid.TabIndex = 103;
             // 
-            // dateTimePicker1
+            // dateTimePickerChdate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(1170, 260);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(206, 25);
-            this.dateTimePicker1.TabIndex = 104;
+            this.dateTimePickerChdate.Location = new System.Drawing.Point(1170, 260);
+            this.dateTimePickerChdate.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePickerChdate.Name = "dateTimePickerChdate";
+            this.dateTimePickerChdate.Size = new System.Drawing.Size(206, 25);
+            this.dateTimePickerChdate.TabIndex = 104;
             // 
-            // dataGridView1
+            // dataGridViewDsp
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(99, 628);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(2251, 598);
-            this.dataGridView1.TabIndex = 105;
+            this.dataGridViewDsp.AllowUserToAddRows = false;
+            this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDsp.Location = new System.Drawing.Point(99, 628);
+            this.dataGridViewDsp.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewDsp.Name = "dataGridViewDsp";
+            this.dataGridViewDsp.RowHeadersWidth = 51;
+            this.dataGridViewDsp.RowTemplate.Height = 24;
+            this.dataGridViewDsp.Size = new System.Drawing.Size(2251, 598);
+            this.dataGridViewDsp.TabIndex = 105;
+            this.dataGridViewDsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellClick);
             // 
-            // checkBox1
+            // checkBoxChStateflg
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.checkBox1.Location = new System.Drawing.Point(889, 421);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(185, 40);
-            this.checkBox1.TabIndex = 106;
-            this.checkBox1.Text = "注文確定";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBoxChStateflg.AutoSize = true;
+            this.checkBoxChStateflg.Font = new System.Drawing.Font("HGS明朝E", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.checkBoxChStateflg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.checkBoxChStateflg.Location = new System.Drawing.Point(889, 421);
+            this.checkBoxChStateflg.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBoxChStateflg.Name = "checkBoxChStateflg";
+            this.checkBoxChStateflg.Size = new System.Drawing.Size(185, 40);
+            this.checkBoxChStateflg.TabIndex = 106;
+            this.checkBoxChStateflg.Text = "注文確定";
+            this.checkBoxChStateflg.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // checkBoxChflg
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.checkBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.checkBox2.Location = new System.Drawing.Point(891, 347);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(149, 40);
-            this.checkBox2.TabIndex = 107;
-            this.checkBox2.Text = "非表示";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBoxChflg.AutoSize = true;
+            this.checkBoxChflg.Font = new System.Drawing.Font("HGS明朝E", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.checkBoxChflg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.checkBoxChflg.Location = new System.Drawing.Point(891, 347);
+            this.checkBoxChflg.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBoxChflg.Name = "checkBoxChflg";
+            this.checkBoxChflg.Size = new System.Drawing.Size(149, 40);
+            this.checkBoxChflg.TabIndex = 107;
+            this.checkBoxChflg.Text = "非表示";
+            this.checkBoxChflg.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
@@ -415,24 +406,23 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.ClID_textBox);
+            this.Controls.Add(this.checkBoxChflg);
+            this.Controls.Add(this.checkBoxChStateflg);
+            this.Controls.Add(this.dataGridViewDsp);
+            this.Controls.Add(this.dateTimePickerChdate);
+            this.Controls.Add(this.textBoxCliid);
             this.Controls.Add(this.SoID);
-            this.Controls.Add(this.OrID_textBox);
-            this.Controls.Add(this.ChHidden_textBox);
-            this.Controls.Add(this.EmID_textBox);
-            this.Controls.Add(this.SoID_textBox);
-            this.Controls.Add(this.ChID_textBox);
+            this.Controls.Add(this.textBoxOrid);
+            this.Controls.Add(this.textBoxChHidden);
+            this.Controls.Add(this.textBoxEmid);
+            this.Controls.Add(this.textBoxSoid);
+            this.Controls.Add(this.textBoxChid);
             this.Controls.Add(this.ChDate);
             this.Controls.Add(this.OrID);
             this.Controls.Add(this.Search_button);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Disp_button);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.ChHidden);
             this.Controls.Add(this.ClID);
@@ -441,8 +431,9 @@ namespace SalesManagement_SysDev
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "F_tyuumon";
             this.Text = "F_tyuumon";
+            this.Load += new System.EventHandler(this.F_tyuumon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -455,24 +446,23 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label EmID;
         private System.Windows.Forms.Label ChID;
         private System.Windows.Forms.Button Search_button;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button Disp_button;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Label OrID;
         private System.Windows.Forms.Label ChDate;
-        private System.Windows.Forms.TextBox ChID_textBox;
-        private System.Windows.Forms.TextBox SoID_textBox;
-        private System.Windows.Forms.TextBox EmID_textBox;
-        private System.Windows.Forms.TextBox ChHidden_textBox;
-        private System.Windows.Forms.TextBox OrID_textBox;
+        private System.Windows.Forms.TextBox textBoxChid;
+        private System.Windows.Forms.TextBox textBoxSoid;
+        private System.Windows.Forms.TextBox textBoxEmid;
+        private System.Windows.Forms.TextBox textBoxChHidden;
+        private System.Windows.Forms.TextBox textBoxOrid;
         private System.Windows.Forms.Label SoID;
-        private System.Windows.Forms.TextBox ClID_textBox;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.TextBox textBoxCliid;
+        private System.Windows.Forms.DateTimePicker dateTimePickerChdate;
+        private System.Windows.Forms.DataGridView dataGridViewDsp;
+        private System.Windows.Forms.CheckBox checkBoxChStateflg;
+        private System.Windows.Forms.CheckBox checkBoxChflg;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
