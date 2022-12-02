@@ -243,6 +243,7 @@ namespace SalesManagement_SysDev
             this.textBoxOrID.Location = new System.Drawing.Point(539, 187);
             this.textBoxOrID.Multiline = true;
             this.textBoxOrID.Name = "textBoxOrID";
+            this.textBoxOrID.ReadOnly = true;
             this.textBoxOrID.Size = new System.Drawing.Size(178, 39);
             this.textBoxOrID.TabIndex = 60;
             // 

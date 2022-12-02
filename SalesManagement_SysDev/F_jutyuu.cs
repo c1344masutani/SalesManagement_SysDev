@@ -68,7 +68,17 @@ namespace SalesManagement_SysDev
             }
 
 
-            
+            //非表示機能
+            try
+            {
+                DataGridViewRow row = dataGridViewDsp.Rows.Cast<DataGridViewRow>().First(r => r.Cells[7].Value.ToString() == "2");
+                row.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                // 該当データなし時は、例外が発生する
+                //MessageBox.Show(ex.Message);
+            }
 
         }
 
@@ -98,7 +108,7 @@ namespace SalesManagement_SysDev
             int checkOrState;
             if(checkBoxOrStateFlag.Checked == true)
             {
-                checkOrState = 2;
+                checkOrState = 1;
             }
             else
             {
@@ -179,17 +189,18 @@ namespace SalesManagement_SysDev
             int checkOrState;
             if (checkBoxOrStateFlag.Checked == true)
             {
-                checkOrState = 2;
+                checkOrState = 1;
             }
             else
             {
                 checkOrState = 0;
             }
 
+            var context = new SalesManagement_DevContext();
+            int orid = int.Parse(textBoxOrID.Text.Trim());
             try
             {
-                int orid = int.Parse(textBoxOrID.Text.Trim());
-                var context = new SalesManagement_DevContext();
+                
                 //受注テーブル
                 var order = context.T_Orders.Single(x => x.OrID == orid);
                 order.SoID = int.Parse(textBoxSoID.Text.Trim());
@@ -209,7 +220,41 @@ namespace SalesManagement_SysDev
                 orderdetail.PrID = int.Parse(textBoxPrID.Text.Trim());
                 orderdetail.OrQuantity = int.Parse(numericUpDownOrQuantity.Value.ToString());
                 orderdetail.OrTotalPrice = product.Price * int.Parse(numericUpDownOrQuantity.Value.ToString());
+
                 context.SaveChanges();
+
+                //注文テーブル 注文状態フラグが1の時
+                if (order.OrStateFlag == 1)
+                {
+                    var chuumon = new T_Chumon
+                    {
+                        SoID = order.SoID,
+                        EmID = order.EmID,
+                        ClID = order.ClID,
+                        OrID = order.OrID,
+                        ChDate = order.OrDate,
+                        ChStateFlag = 0,
+                        ChFlag = 0,
+                        ChHidden = ""
+                    };
+
+                    context.T_Chumons.Add(chuumon);
+                    context.SaveChanges();
+
+                    var chuumondetail = new T_ChumonDetail
+                    {
+                        ChID = chuumon.ChID,
+                        PrID = orderdetail.PrID,
+                        ChQuantity = orderdetail.OrQuantity
+                    };
+
+                    context.T_ChumonDetails.Add(chuumondetail);
+                    context.SaveChanges();
+                }
+                
+                
+                
+
                 context.Dispose();
                 fncAllSelect();
                 MessageBox.Show("更新完了");
@@ -218,6 +263,10 @@ namespace SalesManagement_SysDev
             {
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            
+
+
 
         }
 
