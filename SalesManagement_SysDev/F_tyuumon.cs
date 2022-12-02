@@ -100,6 +100,8 @@ namespace SalesManagement_SysDev
             }
         }
 
+        
+
         private void Search_button_Click(object sender, EventArgs e)
         {
             dataGridViewDsp.Rows.Clear();
@@ -145,6 +147,113 @@ namespace SalesManagement_SysDev
             checkBoxChflg.Checked = false;
             textBoxChHidden.Text = "";
             fncAllSelect();
+        }
+
+        private void buttonConfirm_Click(object sender, EventArgs e)
+        {
+            var context = new SalesManagement_DevContext();
+            int chid = int.Parse(textBoxChid.Text);
+            int flg;
+            if (checkBoxChStateflg.Checked == true)
+            {
+                flg = 1;
+            }
+            else
+            {
+                flg = 0;
+            }
+
+            try
+            {
+                //注文テーブルの確定フラグを１に
+                var chumon = context.T_Chumons.Single(x => x.ChID == chid);
+                chumon.ChStateFlag = flg;
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            //在庫数を減らす
+            try
+            {
+                //注文詳細の商品IDを取得
+                var chumondetail = context.T_ChumonDetails.Single(x => x.ChID == chid);
+                var stock = context.T_Stocks.Single(x => x.PrID == chumondetail.PrID);
+                //在庫数から注文数を引く
+                stock.StQuantity = stock.StQuantity - chumondetail.ChQuantity;
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            //出庫テーブル・出庫詳細テーブルにデータを追加
+            try
+            {
+                var chumon = context.T_Chumons.Single(x => x.ChID == chid);
+                var chumondetail = context.T_ChumonDetails.Single(x => x.ChID == chid);
+                //出庫テーブルに追加
+                var syukko = new T_Syukko
+                {
+                    EmID = chumon.EmID,
+                    ClID = chumon.ClID,
+                    SoID = chumon.SoID,
+                    OrID = chumon.OrID,
+                    SyDate = chumon.ChDate,
+                    SyStateFlag = 0,
+                    SyFlag = 0,
+                    SyHidden = ""
+                };
+                context.T_Syukkos.Add(syukko);
+                context.SaveChanges();
+
+                var syukkodetail = new T_SyukkoDetail
+                {
+                    SyID = syukko.SyID,
+                    PrID = chumondetail.PrID,
+                    SyQuantity = chumondetail.ChQuantity
+                };
+                context.T_SyukkoDetails.Add(syukkodetail);
+                context.SaveChanges();
+                MessageBox.Show("注文を確定しました");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            context.Dispose();
+        }
+
+        private void buttonHidden_Click(object sender, EventArgs e)
+        {
+            int flg;
+            if (checkBoxChflg.Checked == true)
+            {
+                flg = 2;
+            }
+            else
+            {
+                flg = 0;
+            }
+
+            try
+            {
+                int chid = int.Parse(textBoxChid.Text);
+                var context = new SalesManagement_DevContext();
+                var chumon = context.T_Chumons.Single(x => x.ChID == chid);
+                chumon.ChFlag = flg;
+                context.SaveChanges();
+                context.Dispose();
+                fncAllSelect();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
