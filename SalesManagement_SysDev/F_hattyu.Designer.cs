@@ -36,26 +36,24 @@ namespace SalesManagement_SysDev
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox_HaID = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.checkBox_WaWarehouseFlag = new System.Windows.Forms.CheckBox();
-            this.checkBox_haFlag2 = new System.Windows.Forms.CheckBox();
-            this.textBox_NaID = new System.Windows.Forms.TextBox();
-            this.textBox_EmID = new System.Windows.Forms.TextBox();
-            this.textBox_HaHidden = new System.Windows.Forms.TextBox();
-            this.checkBox_HaFlag = new System.Windows.Forms.CheckBox();
-            this.dateTimePicker_HaDate = new System.Windows.Forms.DateTimePicker();
+            this.textBoxHaID = new System.Windows.Forms.TextBox();
+            this.dataGridViewDsp = new System.Windows.Forms.DataGridView();
+            this.checkBoxWaWarehouseFlag = new System.Windows.Forms.CheckBox();
+            this.checkBoxHaFlag = new System.Windows.Forms.CheckBox();
+            this.textBoxMaID = new System.Windows.Forms.TextBox();
+            this.textBoxEmID = new System.Windows.Forms.TextBox();
+            this.textBoxHaHidden = new System.Windows.Forms.TextBox();
+            this.dateTimePickerHaDate = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.button_touroku = new System.Windows.Forms.Button();
             this.button_koushin = new System.Windows.Forms.Button();
             this.button_kensaku = new System.Windows.Forms.Button();
-            this.Delete_button = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.button_back = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,90 +147,81 @@ namespace SalesManagement_SysDev
             this.label6.TabIndex = 84;
             this.label6.Text = "必須";
             // 
-            // textBox_HaID
+            // textBoxHaID
             // 
-            this.textBox_HaID.Location = new System.Drawing.Point(315, 164);
-            this.textBox_HaID.Multiline = true;
-            this.textBox_HaID.Name = "textBox_HaID";
-            this.textBox_HaID.Size = new System.Drawing.Size(206, 51);
-            this.textBox_HaID.TabIndex = 85;
+            this.textBoxHaID.Location = new System.Drawing.Point(315, 164);
+            this.textBoxHaID.Multiline = true;
+            this.textBoxHaID.Name = "textBoxHaID";
+            this.textBoxHaID.ReadOnly = true;
+            this.textBoxHaID.Size = new System.Drawing.Size(206, 51);
+            this.textBoxHaID.TabIndex = 85;
             // 
-            // dataGridView1
+            // dataGridViewDsp
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(36, 458);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(1804, 610);
-            this.dataGridView1.TabIndex = 86;
+            this.dataGridViewDsp.AllowUserToAddRows = false;
+            this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDsp.Location = new System.Drawing.Point(36, 458);
+            this.dataGridViewDsp.Name = "dataGridViewDsp";
+            this.dataGridViewDsp.RowHeadersWidth = 62;
+            this.dataGridViewDsp.RowTemplate.Height = 27;
+            this.dataGridViewDsp.Size = new System.Drawing.Size(1804, 610);
+            this.dataGridViewDsp.TabIndex = 86;
+            this.dataGridViewDsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellClick);
             // 
-            // checkBox_WaWarehouseFlag
+            // checkBoxWaWarehouseFlag
             // 
-            this.checkBox_WaWarehouseFlag.AutoSize = true;
-            this.checkBox_WaWarehouseFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.checkBox_WaWarehouseFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.checkBox_WaWarehouseFlag.Location = new System.Drawing.Point(720, 374);
-            this.checkBox_WaWarehouseFlag.Name = "checkBox_WaWarehouseFlag";
-            this.checkBox_WaWarehouseFlag.Size = new System.Drawing.Size(163, 44);
-            this.checkBox_WaWarehouseFlag.TabIndex = 87;
-            this.checkBox_WaWarehouseFlag.Text = "入庫済";
-            this.checkBox_WaWarehouseFlag.UseVisualStyleBackColor = true;
+            this.checkBoxWaWarehouseFlag.AutoSize = true;
+            this.checkBoxWaWarehouseFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.checkBoxWaWarehouseFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.checkBoxWaWarehouseFlag.Location = new System.Drawing.Point(720, 374);
+            this.checkBoxWaWarehouseFlag.Name = "checkBoxWaWarehouseFlag";
+            this.checkBoxWaWarehouseFlag.Size = new System.Drawing.Size(163, 44);
+            this.checkBoxWaWarehouseFlag.TabIndex = 87;
+            this.checkBoxWaWarehouseFlag.Text = "入庫済";
+            this.checkBoxWaWarehouseFlag.UseVisualStyleBackColor = true;
             // 
-            // checkBox_haFlag2
+            // checkBoxHaFlag
             // 
-            this.checkBox_haFlag2.AutoSize = true;
-            this.checkBox_haFlag2.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.checkBox_haFlag2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.checkBox_haFlag2.Location = new System.Drawing.Point(1182, 374);
-            this.checkBox_haFlag2.Name = "checkBox_haFlag2";
-            this.checkBox_haFlag2.Size = new System.Drawing.Size(163, 44);
-            this.checkBox_haFlag2.TabIndex = 88;
-            this.checkBox_haFlag2.Text = "非表示";
-            this.checkBox_haFlag2.UseVisualStyleBackColor = true;
+            this.checkBoxHaFlag.AutoSize = true;
+            this.checkBoxHaFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.checkBoxHaFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.checkBoxHaFlag.Location = new System.Drawing.Point(924, 373);
+            this.checkBoxHaFlag.Name = "checkBoxHaFlag";
+            this.checkBoxHaFlag.Size = new System.Drawing.Size(163, 44);
+            this.checkBoxHaFlag.TabIndex = 88;
+            this.checkBoxHaFlag.Text = "非表示";
+            this.checkBoxHaFlag.UseVisualStyleBackColor = true;
             // 
-            // textBox_NaID
+            // textBoxMaID
             // 
-            this.textBox_NaID.Location = new System.Drawing.Point(315, 265);
-            this.textBox_NaID.Multiline = true;
-            this.textBox_NaID.Name = "textBox_NaID";
-            this.textBox_NaID.Size = new System.Drawing.Size(206, 51);
-            this.textBox_NaID.TabIndex = 89;
+            this.textBoxMaID.Location = new System.Drawing.Point(315, 265);
+            this.textBoxMaID.Multiline = true;
+            this.textBoxMaID.Name = "textBoxMaID";
+            this.textBoxMaID.Size = new System.Drawing.Size(206, 51);
+            this.textBoxMaID.TabIndex = 89;
             // 
-            // textBox_EmID
+            // textBoxEmID
             // 
-            this.textBox_EmID.Location = new System.Drawing.Point(315, 363);
-            this.textBox_EmID.Multiline = true;
-            this.textBox_EmID.Name = "textBox_EmID";
-            this.textBox_EmID.Size = new System.Drawing.Size(206, 51);
-            this.textBox_EmID.TabIndex = 90;
+            this.textBoxEmID.Location = new System.Drawing.Point(315, 363);
+            this.textBoxEmID.Multiline = true;
+            this.textBoxEmID.Name = "textBoxEmID";
+            this.textBoxEmID.Size = new System.Drawing.Size(206, 51);
+            this.textBoxEmID.TabIndex = 90;
             // 
-            // textBox_HaHidden
+            // textBoxHaHidden
             // 
-            this.textBox_HaHidden.Location = new System.Drawing.Point(1028, 265);
-            this.textBox_HaHidden.Multiline = true;
-            this.textBox_HaHidden.Name = "textBox_HaHidden";
-            this.textBox_HaHidden.Size = new System.Drawing.Size(206, 51);
-            this.textBox_HaHidden.TabIndex = 91;
+            this.textBoxHaHidden.Location = new System.Drawing.Point(1028, 265);
+            this.textBoxHaHidden.Multiline = true;
+            this.textBoxHaHidden.Name = "textBoxHaHidden";
+            this.textBoxHaHidden.Size = new System.Drawing.Size(206, 51);
+            this.textBoxHaHidden.TabIndex = 91;
             // 
-            // checkBox_HaFlag
+            // dateTimePickerHaDate
             // 
-            this.checkBox_HaFlag.AutoSize = true;
-            this.checkBox_HaFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.checkBox_HaFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.checkBox_HaFlag.Location = new System.Drawing.Point(934, 374);
-            this.checkBox_HaFlag.Name = "checkBox_HaFlag";
-            this.checkBox_HaFlag.Size = new System.Drawing.Size(203, 44);
-            this.checkBox_HaFlag.TabIndex = 92;
-            this.checkBox_HaFlag.Text = "発注管理";
-            this.checkBox_HaFlag.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker_HaDate
-            // 
-            this.dateTimePicker_HaDate.Location = new System.Drawing.Point(1034, 190);
-            this.dateTimePicker_HaDate.Name = "dateTimePicker_HaDate";
-            this.dateTimePicker_HaDate.Size = new System.Drawing.Size(200, 25);
-            this.dateTimePicker_HaDate.TabIndex = 93;
+            this.dateTimePickerHaDate.Location = new System.Drawing.Point(1034, 190);
+            this.dateTimePickerHaDate.Name = "dateTimePickerHaDate";
+            this.dateTimePickerHaDate.Size = new System.Drawing.Size(200, 25);
+            this.dateTimePickerHaDate.TabIndex = 93;
             // 
             // label7
             // 
@@ -280,6 +269,7 @@ namespace SalesManagement_SysDev
             this.button_touroku.TabIndex = 97;
             this.button_touroku.Text = "登録";
             this.button_touroku.UseVisualStyleBackColor = true;
+            this.button_touroku.Click += new System.EventHandler(this.button_touroku_Click);
             // 
             // button_koushin
             // 
@@ -291,6 +281,7 @@ namespace SalesManagement_SysDev
             this.button_koushin.TabIndex = 98;
             this.button_koushin.Text = "更新";
             this.button_koushin.UseVisualStyleBackColor = true;
+            this.button_koushin.Click += new System.EventHandler(this.button_koushin_Click);
             // 
             // button_kensaku
             // 
@@ -302,19 +293,7 @@ namespace SalesManagement_SysDev
             this.button_kensaku.TabIndex = 99;
             this.button_kensaku.Text = "検索";
             this.button_kensaku.UseVisualStyleBackColor = true;
-            // 
-            // Delete_button
-            // 
-            this.Delete_button.BackColor = System.Drawing.Color.Gainsboro;
-            this.Delete_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Delete_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.Delete_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Delete_button.Location = new System.Drawing.Point(1159, 23);
-            this.Delete_button.Name = "Delete_button";
-            this.Delete_button.Size = new System.Drawing.Size(141, 50);
-            this.Delete_button.TabIndex = 100;
-            this.Delete_button.Text = "削除";
-            this.Delete_button.UseVisualStyleBackColor = false;
+            this.button_kensaku.Click += new System.EventHandler(this.button_kensaku_Click);
             // 
             // buttonClear
             // 
@@ -328,6 +307,7 @@ namespace SalesManagement_SysDev
             this.buttonClear.TabIndex = 101;
             this.buttonClear.Text = "入力クリア";
             this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // button_back
             // 
@@ -362,22 +342,20 @@ namespace SalesManagement_SysDev
             this.ClientSize = new System.Drawing.Size(1898, 1024);
             this.Controls.Add(this.button_back);
             this.Controls.Add(this.buttonClear);
-            this.Controls.Add(this.Delete_button);
             this.Controls.Add(this.button_kensaku);
             this.Controls.Add(this.button_koushin);
             this.Controls.Add(this.button_touroku);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dateTimePicker_HaDate);
-            this.Controls.Add(this.checkBox_HaFlag);
-            this.Controls.Add(this.textBox_HaHidden);
-            this.Controls.Add(this.textBox_EmID);
-            this.Controls.Add(this.textBox_NaID);
-            this.Controls.Add(this.checkBox_haFlag2);
-            this.Controls.Add(this.checkBox_WaWarehouseFlag);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox_HaID);
+            this.Controls.Add(this.dateTimePickerHaDate);
+            this.Controls.Add(this.textBoxHaHidden);
+            this.Controls.Add(this.textBoxEmID);
+            this.Controls.Add(this.textBoxMaID);
+            this.Controls.Add(this.checkBoxHaFlag);
+            this.Controls.Add(this.checkBoxWaWarehouseFlag);
+            this.Controls.Add(this.dataGridViewDsp);
+            this.Controls.Add(this.textBoxHaID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -388,7 +366,8 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.pictureBox1);
             this.Name = "F_hattyu";
             this.Text = "F_order";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.F_hattyu_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -405,22 +384,20 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox_HaID;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.CheckBox checkBox_WaWarehouseFlag;
-        private System.Windows.Forms.CheckBox checkBox_haFlag2;
-        private System.Windows.Forms.TextBox textBox_NaID;
-        private System.Windows.Forms.TextBox textBox_EmID;
-        private System.Windows.Forms.TextBox textBox_HaHidden;
-        private System.Windows.Forms.CheckBox checkBox_HaFlag;
-        private System.Windows.Forms.DateTimePicker dateTimePicker_HaDate;
+        private System.Windows.Forms.TextBox textBoxHaID;
+        private System.Windows.Forms.DataGridView dataGridViewDsp;
+        private System.Windows.Forms.CheckBox checkBoxWaWarehouseFlag;
+        private System.Windows.Forms.CheckBox checkBoxHaFlag;
+        private System.Windows.Forms.TextBox textBoxMaID;
+        private System.Windows.Forms.TextBox textBoxEmID;
+        private System.Windows.Forms.TextBox textBoxHaHidden;
+        private System.Windows.Forms.DateTimePicker dateTimePickerHaDate;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button_touroku;
         private System.Windows.Forms.Button button_koushin;
         private System.Windows.Forms.Button button_kensaku;
-        private System.Windows.Forms.Button Delete_button;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Button button_back;
     }
