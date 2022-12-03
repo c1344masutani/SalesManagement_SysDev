@@ -31,10 +31,8 @@ namespace SalesManagement_SysDev
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Regester_button = new System.Windows.Forms.Button();
             this.Update_button = new System.Windows.Forms.Button();
             this.Delete_button = new System.Windows.Forms.Button();
-            this.Search_button = new System.Windows.Forms.Button();
             this.back_button = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.PriceTextBox = new System.Windows.Forms.Label();
@@ -43,13 +41,13 @@ namespace SalesManagement_SysDev
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridViewDsp = new System.Windows.Forms.DataGridView();
-            this.WaSheifFlag = new System.Windows.Forms.CheckBox();
-            this.WaFlag = new System.Windows.Forms.CheckBox();
-            this.WaID = new System.Windows.Forms.TextBox();
-            this.HaID = new System.Windows.Forms.TextBox();
-            this.WaHidden = new System.Windows.Forms.TextBox();
-            this.EmID = new System.Windows.Forms.TextBox();
-            this.WaDate = new System.Windows.Forms.DateTimePicker();
+            this.checkBoxWaSheifFlag = new System.Windows.Forms.CheckBox();
+            this.checkBoxWaFlag = new System.Windows.Forms.CheckBox();
+            this.textBoxWaID = new System.Windows.Forms.TextBox();
+            this.textBoxHaID = new System.Windows.Forms.TextBox();
+            this.textBoxWaHidden = new System.Windows.Forms.TextBox();
+            this.textBoxEmID = new System.Windows.Forms.TextBox();
+            this.dateTimePickerWaDate = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -82,18 +80,6 @@ namespace SalesManagement_SysDev
             this.label1.TabIndex = 49;
             this.label1.Text = "入 庫 管 理";
             // 
-            // Regester_button
-            // 
-            this.Regester_button.BackColor = System.Drawing.Color.Gainsboro;
-            this.Regester_button.Font = new System.Drawing.Font("HGP明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Regester_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.Regester_button.Location = new System.Drawing.Point(628, 37);
-            this.Regester_button.Name = "Regester_button";
-            this.Regester_button.Size = new System.Drawing.Size(220, 50);
-            this.Regester_button.TabIndex = 50;
-            this.Regester_button.Text = "新規追加";
-            this.Regester_button.UseVisualStyleBackColor = false;
-            // 
             // Update_button
             // 
             this.Update_button.BackColor = System.Drawing.Color.Gainsboro;
@@ -105,6 +91,7 @@ namespace SalesManagement_SysDev
             this.Update_button.TabIndex = 51;
             this.Update_button.Text = "更新";
             this.Update_button.UseVisualStyleBackColor = false;
+            this.Update_button.Click += new System.EventHandler(this.Update_button_Click);
             // 
             // Delete_button
             // 
@@ -118,19 +105,6 @@ namespace SalesManagement_SysDev
             this.Delete_button.TabIndex = 52;
             this.Delete_button.Text = "削除";
             this.Delete_button.UseVisualStyleBackColor = false;
-            // 
-            // Search_button
-            // 
-            this.Search_button.BackColor = System.Drawing.Color.Gainsboro;
-            this.Search_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Search_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.Search_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Search_button.Location = new System.Drawing.Point(1596, 36);
-            this.Search_button.Name = "Search_button";
-            this.Search_button.Size = new System.Drawing.Size(140, 50);
-            this.Search_button.TabIndex = 53;
-            this.Search_button.Text = "検索";
-            this.Search_button.UseVisualStyleBackColor = false;
             // 
             // back_button
             // 
@@ -224,6 +198,7 @@ namespace SalesManagement_SysDev
             // 
             // dataGridViewDsp
             // 
+            this.dataGridViewDsp.AllowUserToAddRows = false;
             this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDsp.Location = new System.Drawing.Point(102, 493);
             this.dataGridViewDsp.Margin = new System.Windows.Forms.Padding(2);
@@ -232,69 +207,73 @@ namespace SalesManagement_SysDev
             this.dataGridViewDsp.RowTemplate.Height = 27;
             this.dataGridViewDsp.Size = new System.Drawing.Size(1925, 567);
             this.dataGridViewDsp.TabIndex = 75;
+            this.dataGridViewDsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellClick);
             // 
-            // WaSheifFlag
+            // checkBoxWaSheifFlag
             // 
-            this.WaSheifFlag.AutoSize = true;
-            this.WaSheifFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.WaSheifFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.WaSheifFlag.Location = new System.Drawing.Point(1251, 394);
-            this.WaSheifFlag.Name = "WaSheifFlag";
-            this.WaSheifFlag.Size = new System.Drawing.Size(163, 44);
-            this.WaSheifFlag.TabIndex = 76;
-            this.WaSheifFlag.Text = "入庫済";
-            this.WaSheifFlag.UseVisualStyleBackColor = true;
+            this.checkBoxWaSheifFlag.AutoSize = true;
+            this.checkBoxWaSheifFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.checkBoxWaSheifFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.checkBoxWaSheifFlag.Location = new System.Drawing.Point(1251, 394);
+            this.checkBoxWaSheifFlag.Name = "checkBoxWaSheifFlag";
+            this.checkBoxWaSheifFlag.Size = new System.Drawing.Size(163, 44);
+            this.checkBoxWaSheifFlag.TabIndex = 76;
+            this.checkBoxWaSheifFlag.Text = "入庫済";
+            this.checkBoxWaSheifFlag.UseVisualStyleBackColor = true;
             // 
-            // WaFlag
+            // checkBoxWaFlag
             // 
-            this.WaFlag.AutoSize = true;
-            this.WaFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.WaFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.WaFlag.Location = new System.Drawing.Point(1573, 394);
-            this.WaFlag.Name = "WaFlag";
-            this.WaFlag.Size = new System.Drawing.Size(163, 44);
-            this.WaFlag.TabIndex = 77;
-            this.WaFlag.Text = "非表示";
-            this.WaFlag.UseVisualStyleBackColor = true;
+            this.checkBoxWaFlag.AutoSize = true;
+            this.checkBoxWaFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.checkBoxWaFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.checkBoxWaFlag.Location = new System.Drawing.Point(1573, 394);
+            this.checkBoxWaFlag.Name = "checkBoxWaFlag";
+            this.checkBoxWaFlag.Size = new System.Drawing.Size(163, 44);
+            this.checkBoxWaFlag.TabIndex = 77;
+            this.checkBoxWaFlag.Text = "非表示";
+            this.checkBoxWaFlag.UseVisualStyleBackColor = true;
             // 
-            // WaID
+            // textBoxWaID
             // 
-            this.WaID.Location = new System.Drawing.Point(763, 167);
-            this.WaID.Multiline = true;
-            this.WaID.Name = "WaID";
-            this.WaID.Size = new System.Drawing.Size(259, 40);
-            this.WaID.TabIndex = 78;
+            this.textBoxWaID.Location = new System.Drawing.Point(763, 167);
+            this.textBoxWaID.Multiline = true;
+            this.textBoxWaID.Name = "textBoxWaID";
+            this.textBoxWaID.ReadOnly = true;
+            this.textBoxWaID.Size = new System.Drawing.Size(259, 40);
+            this.textBoxWaID.TabIndex = 78;
             // 
-            // HaID
+            // textBoxHaID
             // 
-            this.HaID.Location = new System.Drawing.Point(763, 279);
-            this.HaID.Multiline = true;
-            this.HaID.Name = "HaID";
-            this.HaID.Size = new System.Drawing.Size(259, 40);
-            this.HaID.TabIndex = 79;
+            this.textBoxHaID.Location = new System.Drawing.Point(763, 279);
+            this.textBoxHaID.Multiline = true;
+            this.textBoxHaID.Name = "textBoxHaID";
+            this.textBoxHaID.ReadOnly = true;
+            this.textBoxHaID.Size = new System.Drawing.Size(259, 40);
+            this.textBoxHaID.TabIndex = 79;
             // 
-            // WaHidden
+            // textBoxWaHidden
             // 
-            this.WaHidden.Location = new System.Drawing.Point(763, 394);
-            this.WaHidden.Multiline = true;
-            this.WaHidden.Name = "WaHidden";
-            this.WaHidden.Size = new System.Drawing.Size(366, 78);
-            this.WaHidden.TabIndex = 80;
+            this.textBoxWaHidden.Location = new System.Drawing.Point(763, 394);
+            this.textBoxWaHidden.Multiline = true;
+            this.textBoxWaHidden.Name = "textBoxWaHidden";
+            this.textBoxWaHidden.Size = new System.Drawing.Size(366, 78);
+            this.textBoxWaHidden.TabIndex = 80;
             // 
-            // EmID
+            // textBoxEmID
             // 
-            this.EmID.Location = new System.Drawing.Point(1596, 167);
-            this.EmID.Multiline = true;
-            this.EmID.Name = "EmID";
-            this.EmID.Size = new System.Drawing.Size(259, 40);
-            this.EmID.TabIndex = 81;
+            this.textBoxEmID.Location = new System.Drawing.Point(1596, 167);
+            this.textBoxEmID.Multiline = true;
+            this.textBoxEmID.Name = "textBoxEmID";
+            this.textBoxEmID.ReadOnly = true;
+            this.textBoxEmID.Size = new System.Drawing.Size(259, 40);
+            this.textBoxEmID.TabIndex = 81;
             // 
-            // WaDate
+            // dateTimePickerWaDate
             // 
-            this.WaDate.Location = new System.Drawing.Point(1596, 294);
-            this.WaDate.Name = "WaDate";
-            this.WaDate.Size = new System.Drawing.Size(259, 25);
-            this.WaDate.TabIndex = 82;
+            this.dateTimePickerWaDate.Location = new System.Drawing.Point(1596, 294);
+            this.dateTimePickerWaDate.Name = "dateTimePickerWaDate";
+            this.dateTimePickerWaDate.Size = new System.Drawing.Size(259, 25);
+            this.dateTimePickerWaDate.TabIndex = 82;
             // 
             // label11
             // 
@@ -367,13 +346,13 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.WaDate);
-            this.Controls.Add(this.EmID);
-            this.Controls.Add(this.WaHidden);
-            this.Controls.Add(this.HaID);
-            this.Controls.Add(this.WaID);
-            this.Controls.Add(this.WaFlag);
-            this.Controls.Add(this.WaSheifFlag);
+            this.Controls.Add(this.dateTimePickerWaDate);
+            this.Controls.Add(this.textBoxEmID);
+            this.Controls.Add(this.textBoxWaHidden);
+            this.Controls.Add(this.textBoxHaID);
+            this.Controls.Add(this.textBoxWaID);
+            this.Controls.Add(this.checkBoxWaFlag);
+            this.Controls.Add(this.checkBoxWaSheifFlag);
             this.Controls.Add(this.dataGridViewDsp);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -382,14 +361,13 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.PriceTextBox);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.back_button);
-            this.Controls.Add(this.Search_button);
             this.Controls.Add(this.Delete_button);
             this.Controls.Add(this.Update_button);
-            this.Controls.Add(this.Regester_button);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "F_nyuuko";
             this.Text = "F_warehousing";
+            this.Load += new System.EventHandler(this.F_nyuuko_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).EndInit();
             this.ResumeLayout(false);
@@ -401,10 +379,8 @@ namespace SalesManagement_SysDev
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button Regester_button;
         private System.Windows.Forms.Button Update_button;
         private System.Windows.Forms.Button Delete_button;
-        private System.Windows.Forms.Button Search_button;
         private System.Windows.Forms.Button back_button;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Label PriceTextBox;
@@ -413,13 +389,13 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGridViewDsp;
-        private System.Windows.Forms.CheckBox WaSheifFlag;
-        private System.Windows.Forms.CheckBox WaFlag;
-        private System.Windows.Forms.TextBox WaID;
-        private System.Windows.Forms.TextBox HaID;
-        private System.Windows.Forms.TextBox WaHidden;
-        private System.Windows.Forms.TextBox EmID;
-        private System.Windows.Forms.DateTimePicker WaDate;
+        private System.Windows.Forms.CheckBox checkBoxWaSheifFlag;
+        private System.Windows.Forms.CheckBox checkBoxWaFlag;
+        private System.Windows.Forms.TextBox textBoxWaID;
+        private System.Windows.Forms.TextBox textBoxHaID;
+        private System.Windows.Forms.TextBox textBoxWaHidden;
+        private System.Windows.Forms.TextBox textBoxEmID;
+        private System.Windows.Forms.DateTimePicker dateTimePickerWaDate;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
