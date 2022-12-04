@@ -36,20 +36,20 @@ namespace SalesManagement_SysDev
             this.ClID = new System.Windows.Forms.Label();
             this.SaID = new System.Windows.Forms.Label();
             this.SadDate = new System.Windows.Forms.Label();
-            this.SaID_textBox = new System.Windows.Forms.TextBox();
-            this.ClID_textBox = new System.Windows.Forms.TextBox();
-            this.SoID_textBox = new System.Windows.Forms.TextBox();
-            this.EmID_textBox = new System.Windows.Forms.TextBox();
-            this.SaHidden_textBox = new System.Windows.Forms.TextBox();
+            this.textBoxSaID = new System.Windows.Forms.TextBox();
+            this.textBoxClID = new System.Windows.Forms.TextBox();
+            this.textBoxSoID = new System.Windows.Forms.TextBox();
+            this.textBoxEmID = new System.Windows.Forms.TextBox();
+            this.textBoxSaHidden = new System.Windows.Forms.TextBox();
             this.dataGridViewDsp = new System.Windows.Forms.DataGridView();
-            this.SadDate_textBox = new System.Windows.Forms.TextBox();
-            this.SaFlag_checkBox = new System.Windows.Forms.CheckBox();
+            this.textBoxChID = new System.Windows.Forms.TextBox();
+            this.checkBoxSaFlag = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Search_button = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerSaDate = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -151,53 +151,54 @@ namespace SalesManagement_SysDev
             this.SadDate.TabIndex = 79;
             this.SadDate.Text = "売上日時";
             // 
-            // SaID_textBox
+            // textBoxSaID
             // 
-            this.SaID_textBox.Location = new System.Drawing.Point(522, 143);
-            this.SaID_textBox.Margin = new System.Windows.Forms.Padding(4);
-            this.SaID_textBox.Multiline = true;
-            this.SaID_textBox.Name = "SaID_textBox";
-            this.SaID_textBox.Size = new System.Drawing.Size(206, 52);
-            this.SaID_textBox.TabIndex = 82;
+            this.textBoxSaID.Location = new System.Drawing.Point(522, 143);
+            this.textBoxSaID.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSaID.Multiline = true;
+            this.textBoxSaID.Name = "textBoxSaID";
+            this.textBoxSaID.Size = new System.Drawing.Size(206, 52);
+            this.textBoxSaID.TabIndex = 82;
             // 
-            // ClID_textBox
+            // textBoxClID
             // 
-            this.ClID_textBox.Location = new System.Drawing.Point(522, 245);
-            this.ClID_textBox.Margin = new System.Windows.Forms.Padding(4);
-            this.ClID_textBox.Multiline = true;
-            this.ClID_textBox.Name = "ClID_textBox";
-            this.ClID_textBox.Size = new System.Drawing.Size(206, 52);
-            this.ClID_textBox.TabIndex = 83;
+            this.textBoxClID.Location = new System.Drawing.Point(522, 245);
+            this.textBoxClID.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxClID.Multiline = true;
+            this.textBoxClID.Name = "textBoxClID";
+            this.textBoxClID.Size = new System.Drawing.Size(206, 52);
+            this.textBoxClID.TabIndex = 83;
             // 
-            // SoID_textBox
+            // textBoxSoID
             // 
-            this.SoID_textBox.Location = new System.Drawing.Point(522, 338);
-            this.SoID_textBox.Margin = new System.Windows.Forms.Padding(4);
-            this.SoID_textBox.Multiline = true;
-            this.SoID_textBox.Name = "SoID_textBox";
-            this.SoID_textBox.Size = new System.Drawing.Size(205, 51);
-            this.SoID_textBox.TabIndex = 84;
+            this.textBoxSoID.Location = new System.Drawing.Point(522, 338);
+            this.textBoxSoID.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSoID.Multiline = true;
+            this.textBoxSoID.Name = "textBoxSoID";
+            this.textBoxSoID.Size = new System.Drawing.Size(205, 51);
+            this.textBoxSoID.TabIndex = 84;
             // 
-            // EmID_textBox
+            // textBoxEmID
             // 
-            this.EmID_textBox.Location = new System.Drawing.Point(1221, 145);
-            this.EmID_textBox.Margin = new System.Windows.Forms.Padding(4);
-            this.EmID_textBox.Multiline = true;
-            this.EmID_textBox.Name = "EmID_textBox";
-            this.EmID_textBox.Size = new System.Drawing.Size(204, 50);
-            this.EmID_textBox.TabIndex = 85;
+            this.textBoxEmID.Location = new System.Drawing.Point(1221, 145);
+            this.textBoxEmID.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxEmID.Multiline = true;
+            this.textBoxEmID.Name = "textBoxEmID";
+            this.textBoxEmID.Size = new System.Drawing.Size(204, 50);
+            this.textBoxEmID.TabIndex = 85;
             // 
-            // SaHidden_textBox
+            // textBoxSaHidden
             // 
-            this.SaHidden_textBox.Location = new System.Drawing.Point(522, 440);
-            this.SaHidden_textBox.Margin = new System.Windows.Forms.Padding(4);
-            this.SaHidden_textBox.Multiline = true;
-            this.SaHidden_textBox.Name = "SaHidden_textBox";
-            this.SaHidden_textBox.Size = new System.Drawing.Size(203, 48);
-            this.SaHidden_textBox.TabIndex = 86;
+            this.textBoxSaHidden.Location = new System.Drawing.Point(522, 440);
+            this.textBoxSaHidden.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSaHidden.Multiline = true;
+            this.textBoxSaHidden.Name = "textBoxSaHidden";
+            this.textBoxSaHidden.Size = new System.Drawing.Size(203, 48);
+            this.textBoxSaHidden.TabIndex = 86;
             // 
             // dataGridViewDsp
             // 
+            this.dataGridViewDsp.AllowUserToAddRows = false;
             this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDsp.Location = new System.Drawing.Point(125, 522);
             this.dataGridViewDsp.Margin = new System.Windows.Forms.Padding(4);
@@ -206,28 +207,29 @@ namespace SalesManagement_SysDev
             this.dataGridViewDsp.RowTemplate.Height = 24;
             this.dataGridViewDsp.Size = new System.Drawing.Size(2238, 703);
             this.dataGridViewDsp.TabIndex = 88;
+            this.dataGridViewDsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellClick);
             // 
-            // SadDate_textBox
+            // textBoxChID
             // 
-            this.SadDate_textBox.Location = new System.Drawing.Point(1224, 250);
-            this.SadDate_textBox.Margin = new System.Windows.Forms.Padding(4);
-            this.SadDate_textBox.Multiline = true;
-            this.SadDate_textBox.Name = "SadDate_textBox";
-            this.SadDate_textBox.Size = new System.Drawing.Size(202, 47);
-            this.SadDate_textBox.TabIndex = 89;
+            this.textBoxChID.Location = new System.Drawing.Point(1224, 250);
+            this.textBoxChID.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxChID.Multiline = true;
+            this.textBoxChID.Name = "textBoxChID";
+            this.textBoxChID.Size = new System.Drawing.Size(202, 47);
+            this.textBoxChID.TabIndex = 89;
             // 
-            // SaFlag_checkBox
+            // checkBoxSaFlag
             // 
-            this.SaFlag_checkBox.AutoSize = true;
-            this.SaFlag_checkBox.Font = new System.Drawing.Font("MS UI Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.SaFlag_checkBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.SaFlag_checkBox.Location = new System.Drawing.Point(925, 438);
-            this.SaFlag_checkBox.Margin = new System.Windows.Forms.Padding(4);
-            this.SaFlag_checkBox.Name = "SaFlag_checkBox";
-            this.SaFlag_checkBox.Size = new System.Drawing.Size(163, 44);
-            this.SaFlag_checkBox.TabIndex = 90;
-            this.SaFlag_checkBox.Text = "非表示";
-            this.SaFlag_checkBox.UseVisualStyleBackColor = true;
+            this.checkBoxSaFlag.AutoSize = true;
+            this.checkBoxSaFlag.Font = new System.Drawing.Font("MS UI Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.checkBoxSaFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.checkBoxSaFlag.Location = new System.Drawing.Point(925, 438);
+            this.checkBoxSaFlag.Margin = new System.Windows.Forms.Padding(4);
+            this.checkBoxSaFlag.Name = "checkBoxSaFlag";
+            this.checkBoxSaFlag.Size = new System.Drawing.Size(163, 44);
+            this.checkBoxSaFlag.TabIndex = 90;
+            this.checkBoxSaFlag.Text = "非表示";
+            this.checkBoxSaFlag.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -281,6 +283,7 @@ namespace SalesManagement_SysDev
             this.Search_button.TabIndex = 92;
             this.Search_button.Text = "検索";
             this.Search_button.UseVisualStyleBackColor = false;
+            this.Search_button.Click += new System.EventHandler(this.Search_button_Click);
             // 
             // buttonClear
             // 
@@ -294,14 +297,15 @@ namespace SalesManagement_SysDev
             this.buttonClear.TabIndex = 93;
             this.buttonClear.Text = "入力クリア";
             this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
-            // dateTimePicker1
+            // dateTimePickerSaDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(1221, 364);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 25);
-            this.dateTimePicker1.TabIndex = 97;
+            this.dateTimePickerSaDate.Location = new System.Drawing.Point(1221, 364);
+            this.dateTimePickerSaDate.Margin = new System.Windows.Forms.Padding(4);
+            this.dateTimePickerSaDate.Name = "dateTimePickerSaDate";
+            this.dateTimePickerSaDate.Size = new System.Drawing.Size(200, 25);
+            this.dateTimePickerSaDate.TabIndex = 97;
             // 
             // label3
             // 
@@ -393,20 +397,20 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePickerSaDate);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Search_button);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.SaFlag_checkBox);
-            this.Controls.Add(this.SadDate_textBox);
+            this.Controls.Add(this.checkBoxSaFlag);
+            this.Controls.Add(this.textBoxChID);
             this.Controls.Add(this.dataGridViewDsp);
-            this.Controls.Add(this.SaHidden_textBox);
-            this.Controls.Add(this.EmID_textBox);
-            this.Controls.Add(this.SoID_textBox);
-            this.Controls.Add(this.ClID_textBox);
-            this.Controls.Add(this.SaID_textBox);
+            this.Controls.Add(this.textBoxSaHidden);
+            this.Controls.Add(this.textBoxEmID);
+            this.Controls.Add(this.textBoxSoID);
+            this.Controls.Add(this.textBoxClID);
+            this.Controls.Add(this.textBoxSaID);
             this.Controls.Add(this.SadDate);
             this.Controls.Add(this.SaHidden);
             this.Controls.Add(this.EmID);
@@ -434,20 +438,20 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label ClID;
         private System.Windows.Forms.Label SaID;
         private System.Windows.Forms.Label SadDate;
-        private System.Windows.Forms.TextBox SaID_textBox;
-        private System.Windows.Forms.TextBox ClID_textBox;
-        private System.Windows.Forms.TextBox SoID_textBox;
-        private System.Windows.Forms.TextBox EmID_textBox;
-        private System.Windows.Forms.TextBox SaHidden_textBox;
+        private System.Windows.Forms.TextBox textBoxSaID;
+        private System.Windows.Forms.TextBox textBoxClID;
+        private System.Windows.Forms.TextBox textBoxSoID;
+        private System.Windows.Forms.TextBox textBoxEmID;
+        private System.Windows.Forms.TextBox textBoxSaHidden;
         private System.Windows.Forms.DataGridView dataGridViewDsp;
-        private System.Windows.Forms.TextBox SadDate_textBox;
-        private System.Windows.Forms.CheckBox SaFlag_checkBox;
+        private System.Windows.Forms.TextBox textBoxChID;
+        private System.Windows.Forms.CheckBox checkBoxSaFlag;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Search_button;
         private System.Windows.Forms.Button buttonClear;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerSaDate;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;

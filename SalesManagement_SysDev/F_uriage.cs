@@ -61,10 +61,77 @@ namespace SalesManagement_SysDev
         private void fncAllSelect()
         {
             dataGridViewDsp.Rows.Clear();
-            
+            try
+            {
+                var context = new SalesManagement_DevContext();
+                foreach (var p in context.T_Sale)
+                {
+                    dataGridViewDsp.Rows.Add(p.SaID,p.ClID,p.SoID,p.EmID,p.ChID,p.SaDate,p.SaFlag,p.SaHidden);
+                }
+                context.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            //非表示機能
+            try
+            {
+                DataGridViewRow row = dataGridViewDsp.Rows.Cast<DataGridViewRow>().First(r => r.Cells[6].Value.ToString() == "2");
+                row.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                // 該当データなし時は、例外が発生する
+                //MessageBox.Show(ex.Message);
+            }
 
 
         }
 
+        private void Search_button_Click(object sender, EventArgs e)
+        {
+            dataGridViewDsp.Rows.Clear();
+            if (textBoxSaID.Text == "" || textBoxSaID.Text == null)
+            {
+                fncAllSelect();
+                return;
+            }
+
+            int said = int.Parse(textBoxSaID.Text);
+            try
+            {
+                var context = new SalesManagement_DevContext();
+                var sale = context.T_Sale.Where(x => x.SaID == said).ToArray();
+                dataGridViewDsp.Rows.Add(sale[0].SaID, sale[0].ClID, sale[0].SoID, sale[0].EmID, sale[0].ChID, sale[0].SaDate, sale[0].SaFlag, sale[0].SaHidden);
+                context.Dispose();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dataGridViewDsp_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBoxSaID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[0].Value.ToString();
+            textBoxClID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
+            textBoxSoID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
+            textBoxEmID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
+            textBoxChID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
+            dateTimePickerSaDate.Value = DateTime.Parse(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString());
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBoxSaID.Text = "";
+            textBoxClID.Text = "";
+            textBoxSoID.Text = "";
+            textBoxEmID.Text = "";
+            textBoxChID.Text = "";
+            dateTimePickerSaDate.Value = DateTime.Today;
+        }
     }
 }
