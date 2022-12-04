@@ -36,21 +36,23 @@ namespace SalesManagement_SysDev
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.checkBox_ArStateFlag = new System.Windows.Forms.CheckBox();
-            this.checkBox_ArHidden = new System.Windows.Forms.CheckBox();
+            this.checkBoxArStateFlag = new System.Windows.Forms.CheckBox();
+            this.checkBoxArHidden = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
             this.dataGridViewDsp = new System.Windows.Forms.DataGridView();
-            this.textBox_ArID = new System.Windows.Forms.TextBox();
-            this.textBox_SoID = new System.Windows.Forms.TextBox();
-            this.textBox_EmID = new System.Windows.Forms.TextBox();
-            this.textBoxCLID = new System.Windows.Forms.TextBox();
-            this.textBox_OrID = new System.Windows.Forms.TextBox();
-            this.textBox_ArHidden = new System.Windows.Forms.TextBox();
-            this.button_kensaku = new System.Windows.Forms.Button();
+            this.textBoxArID = new System.Windows.Forms.TextBox();
+            this.textBoxSoID = new System.Windows.Forms.TextBox();
+            this.textBoxEmID = new System.Windows.Forms.TextBox();
+            this.textBoxClID = new System.Windows.Forms.TextBox();
+            this.textBoxOrID = new System.Windows.Forms.TextBox();
+            this.textBoxArHidden = new System.Windows.Forms.TextBox();
+            this.buttonSearch = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.button_back = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.Ardate_dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerArdate = new System.Windows.Forms.DateTimePicker();
+            this.buttonConfirm = new System.Windows.Forms.Button();
+            this.buttonHidden = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             this.SuspendLayout();
@@ -146,29 +148,29 @@ namespace SalesManagement_SysDev
             this.label5.TabIndex = 84;
             this.label5.Text = "入 荷 管 理";
             // 
-            // checkBox_ArStateFlag
+            // checkBoxArStateFlag
             // 
-            this.checkBox_ArStateFlag.AutoSize = true;
-            this.checkBox_ArStateFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.checkBox_ArStateFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.checkBox_ArStateFlag.Location = new System.Drawing.Point(720, 371);
-            this.checkBox_ArStateFlag.Name = "checkBox_ArStateFlag";
-            this.checkBox_ArStateFlag.Size = new System.Drawing.Size(163, 44);
-            this.checkBox_ArStateFlag.TabIndex = 85;
-            this.checkBox_ArStateFlag.Text = "入荷済";
-            this.checkBox_ArStateFlag.UseVisualStyleBackColor = true;
+            this.checkBoxArStateFlag.AutoSize = true;
+            this.checkBoxArStateFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.checkBoxArStateFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.checkBoxArStateFlag.Location = new System.Drawing.Point(720, 371);
+            this.checkBoxArStateFlag.Name = "checkBoxArStateFlag";
+            this.checkBoxArStateFlag.Size = new System.Drawing.Size(163, 44);
+            this.checkBoxArStateFlag.TabIndex = 85;
+            this.checkBoxArStateFlag.Text = "入荷済";
+            this.checkBoxArStateFlag.UseVisualStyleBackColor = true;
             // 
-            // checkBox_ArHidden
+            // checkBoxArHidden
             // 
-            this.checkBox_ArHidden.AutoSize = true;
-            this.checkBox_ArHidden.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.checkBox_ArHidden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.checkBox_ArHidden.Location = new System.Drawing.Point(988, 372);
-            this.checkBox_ArHidden.Name = "checkBox_ArHidden";
-            this.checkBox_ArHidden.Size = new System.Drawing.Size(163, 44);
-            this.checkBox_ArHidden.TabIndex = 86;
-            this.checkBox_ArHidden.Text = "非表示";
-            this.checkBox_ArHidden.UseVisualStyleBackColor = true;
+            this.checkBoxArHidden.AutoSize = true;
+            this.checkBoxArHidden.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.checkBoxArHidden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.checkBoxArHidden.Location = new System.Drawing.Point(988, 372);
+            this.checkBoxArHidden.Name = "checkBoxArHidden";
+            this.checkBoxArHidden.Size = new System.Drawing.Size(163, 44);
+            this.checkBoxArHidden.TabIndex = 86;
+            this.checkBoxArHidden.Text = "非表示";
+            this.checkBoxArHidden.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
@@ -185,6 +187,7 @@ namespace SalesManagement_SysDev
             // 
             // dataGridViewDsp
             // 
+            this.dataGridViewDsp.AllowUserToAddRows = false;
             this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDsp.Location = new System.Drawing.Point(116, 458);
             this.dataGridViewDsp.Name = "dataGridViewDsp";
@@ -192,65 +195,68 @@ namespace SalesManagement_SysDev
             this.dataGridViewDsp.RowTemplate.Height = 27;
             this.dataGridViewDsp.Size = new System.Drawing.Size(1804, 610);
             this.dataGridViewDsp.TabIndex = 93;
+            this.dataGridViewDsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellClick);
             // 
-            // textBox_ArID
+            // textBoxArID
             // 
-            this.textBox_ArID.Location = new System.Drawing.Point(362, 164);
-            this.textBox_ArID.Multiline = true;
-            this.textBox_ArID.Name = "textBox_ArID";
-            this.textBox_ArID.Size = new System.Drawing.Size(206, 51);
-            this.textBox_ArID.TabIndex = 94;
+            this.textBoxArID.Location = new System.Drawing.Point(362, 164);
+            this.textBoxArID.Multiline = true;
+            this.textBoxArID.Name = "textBoxArID";
+            this.textBoxArID.ReadOnly = true;
+            this.textBoxArID.Size = new System.Drawing.Size(206, 51);
+            this.textBoxArID.TabIndex = 94;
             // 
-            // textBox_SoID
+            // textBoxSoID
             // 
-            this.textBox_SoID.Location = new System.Drawing.Point(362, 267);
-            this.textBox_SoID.Multiline = true;
-            this.textBox_SoID.Name = "textBox_SoID";
-            this.textBox_SoID.Size = new System.Drawing.Size(206, 51);
-            this.textBox_SoID.TabIndex = 95;
+            this.textBoxSoID.Location = new System.Drawing.Point(362, 267);
+            this.textBoxSoID.Multiline = true;
+            this.textBoxSoID.Name = "textBoxSoID";
+            this.textBoxSoID.Size = new System.Drawing.Size(206, 51);
+            this.textBoxSoID.TabIndex = 95;
             // 
-            // textBox_EmID
+            // textBoxEmID
             // 
-            this.textBox_EmID.Location = new System.Drawing.Point(362, 364);
-            this.textBox_EmID.Multiline = true;
-            this.textBox_EmID.Name = "textBox_EmID";
-            this.textBox_EmID.Size = new System.Drawing.Size(206, 51);
-            this.textBox_EmID.TabIndex = 96;
+            this.textBoxEmID.Location = new System.Drawing.Point(362, 364);
+            this.textBoxEmID.Multiline = true;
+            this.textBoxEmID.Name = "textBoxEmID";
+            this.textBoxEmID.Size = new System.Drawing.Size(206, 51);
+            this.textBoxEmID.TabIndex = 96;
             // 
-            // textBoxCLID
+            // textBoxClID
             // 
-            this.textBoxCLID.Location = new System.Drawing.Point(988, 164);
-            this.textBoxCLID.Multiline = true;
-            this.textBoxCLID.Name = "textBoxCLID";
-            this.textBoxCLID.Size = new System.Drawing.Size(206, 51);
-            this.textBoxCLID.TabIndex = 97;
+            this.textBoxClID.Location = new System.Drawing.Point(988, 164);
+            this.textBoxClID.Multiline = true;
+            this.textBoxClID.Name = "textBoxClID";
+            this.textBoxClID.Size = new System.Drawing.Size(206, 51);
+            this.textBoxClID.TabIndex = 97;
             // 
-            // textBox_OrID
+            // textBoxOrID
             // 
-            this.textBox_OrID.Location = new System.Drawing.Point(988, 267);
-            this.textBox_OrID.Multiline = true;
-            this.textBox_OrID.Name = "textBox_OrID";
-            this.textBox_OrID.Size = new System.Drawing.Size(206, 51);
-            this.textBox_OrID.TabIndex = 98;
+            this.textBoxOrID.Location = new System.Drawing.Point(988, 267);
+            this.textBoxOrID.Multiline = true;
+            this.textBoxOrID.Name = "textBoxOrID";
+            this.textBoxOrID.Size = new System.Drawing.Size(206, 51);
+            this.textBoxOrID.TabIndex = 98;
             // 
-            // textBox_ArHidden
+            // textBoxArHidden
             // 
-            this.textBox_ArHidden.Location = new System.Drawing.Point(1243, 331);
-            this.textBox_ArHidden.Multiline = true;
-            this.textBox_ArHidden.Name = "textBox_ArHidden";
-            this.textBox_ArHidden.Size = new System.Drawing.Size(560, 84);
-            this.textBox_ArHidden.TabIndex = 99;
+            this.textBoxArHidden.Location = new System.Drawing.Point(1243, 331);
+            this.textBoxArHidden.Multiline = true;
+            this.textBoxArHidden.Name = "textBoxArHidden";
+            this.textBoxArHidden.Size = new System.Drawing.Size(560, 84);
+            this.textBoxArHidden.TabIndex = 99;
             // 
-            // button_kensaku
+            // buttonSearch
             // 
-            this.button_kensaku.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button_kensaku.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.button_kensaku.Location = new System.Drawing.Point(684, 26);
-            this.button_kensaku.Name = "button_kensaku";
-            this.button_kensaku.Size = new System.Drawing.Size(167, 50);
-            this.button_kensaku.TabIndex = 101;
-            this.button_kensaku.Text = "検索";
-            this.button_kensaku.UseVisualStyleBackColor = true;
+            this.buttonSearch.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.buttonSearch.Location = new System.Drawing.Point(684, 26);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(167, 50);
+            this.buttonSearch.TabIndex = 101;
+            this.buttonSearch.Text = "検索";
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // buttonClear
             // 
@@ -291,13 +297,39 @@ namespace SalesManagement_SysDev
             this.label6.TabIndex = 105;
             this.label6.Text = "入荷年月日";
             // 
-            // Ardate_dateTimePicker
+            // dateTimePickerArdate
             // 
-            this.Ardate_dateTimePicker.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Ardate_dateTimePicker.Location = new System.Drawing.Point(1487, 176);
-            this.Ardate_dateTimePicker.Name = "Ardate_dateTimePicker";
-            this.Ardate_dateTimePicker.Size = new System.Drawing.Size(316, 39);
-            this.Ardate_dateTimePicker.TabIndex = 106;
+            this.dateTimePickerArdate.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.dateTimePickerArdate.Location = new System.Drawing.Point(1487, 176);
+            this.dateTimePickerArdate.Name = "dateTimePickerArdate";
+            this.dateTimePickerArdate.Size = new System.Drawing.Size(316, 39);
+            this.dateTimePickerArdate.TabIndex = 106;
+            // 
+            // buttonConfirm
+            // 
+            this.buttonConfirm.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonConfirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.buttonConfirm.Location = new System.Drawing.Point(889, 27);
+            this.buttonConfirm.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonConfirm.Name = "buttonConfirm";
+            this.buttonConfirm.Size = new System.Drawing.Size(220, 55);
+            this.buttonConfirm.TabIndex = 116;
+            this.buttonConfirm.Text = "入荷確定";
+            this.buttonConfirm.UseVisualStyleBackColor = true;
+            this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click);
+            // 
+            // buttonHidden
+            // 
+            this.buttonHidden.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonHidden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.buttonHidden.Location = new System.Drawing.Point(1149, 24);
+            this.buttonHidden.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonHidden.Name = "buttonHidden";
+            this.buttonHidden.Size = new System.Drawing.Size(171, 55);
+            this.buttonHidden.TabIndex = 117;
+            this.buttonHidden.Text = "非表示";
+            this.buttonHidden.UseVisualStyleBackColor = true;
+            this.buttonHidden.Click += new System.EventHandler(this.buttonHidden_Click);
             // 
             // F_nyuuka
             // 
@@ -305,21 +337,23 @@ namespace SalesManagement_SysDev
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
-            this.Controls.Add(this.Ardate_dateTimePicker);
+            this.Controls.Add(this.buttonHidden);
+            this.Controls.Add(this.buttonConfirm);
+            this.Controls.Add(this.dateTimePickerArdate);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button_back);
             this.Controls.Add(this.buttonClear);
-            this.Controls.Add(this.button_kensaku);
-            this.Controls.Add(this.textBox_ArHidden);
-            this.Controls.Add(this.textBox_OrID);
-            this.Controls.Add(this.textBoxCLID);
-            this.Controls.Add(this.textBox_EmID);
-            this.Controls.Add(this.textBox_SoID);
-            this.Controls.Add(this.textBox_ArID);
+            this.Controls.Add(this.buttonSearch);
+            this.Controls.Add(this.textBoxArHidden);
+            this.Controls.Add(this.textBoxOrID);
+            this.Controls.Add(this.textBoxClID);
+            this.Controls.Add(this.textBoxEmID);
+            this.Controls.Add(this.textBoxSoID);
+            this.Controls.Add(this.textBoxArID);
             this.Controls.Add(this.dataGridViewDsp);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.checkBox_ArHidden);
-            this.Controls.Add(this.checkBox_ArStateFlag);
+            this.Controls.Add(this.checkBoxArHidden);
+            this.Controls.Add(this.checkBoxArStateFlag);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -346,20 +380,22 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox checkBox_ArStateFlag;
-        private System.Windows.Forms.CheckBox checkBox_ArHidden;
+        private System.Windows.Forms.CheckBox checkBoxArStateFlag;
+        private System.Windows.Forms.CheckBox checkBoxArHidden;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dataGridViewDsp;
-        private System.Windows.Forms.TextBox textBox_ArID;
-        private System.Windows.Forms.TextBox textBox_SoID;
-        private System.Windows.Forms.TextBox textBox_EmID;
-        private System.Windows.Forms.TextBox textBoxCLID;
-        private System.Windows.Forms.TextBox textBox_OrID;
-        private System.Windows.Forms.TextBox textBox_ArHidden;
-        private System.Windows.Forms.Button button_kensaku;
+        private System.Windows.Forms.TextBox textBoxArID;
+        private System.Windows.Forms.TextBox textBoxSoID;
+        private System.Windows.Forms.TextBox textBoxEmID;
+        private System.Windows.Forms.TextBox textBoxClID;
+        private System.Windows.Forms.TextBox textBoxOrID;
+        private System.Windows.Forms.TextBox textBoxArHidden;
+        private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Button button_back;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker Ardate_dateTimePicker;
+        private System.Windows.Forms.DateTimePicker dateTimePickerArdate;
+        private System.Windows.Forms.Button buttonConfirm;
+        private System.Windows.Forms.Button buttonHidden;
     }
 }
