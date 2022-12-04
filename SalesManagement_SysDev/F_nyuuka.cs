@@ -60,7 +60,13 @@ namespace SalesManagement_SysDev
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
-
+            textBoxArID.Text = "";
+            textBoxSoID.Text = "";
+            textBoxEmID.Text = "";
+            textBoxClID.Text = "";
+            textBoxOrID.Text = "";
+            dateTimePickerArdate.Value = DateTime.Today;
+            textBoxArHidden.Text = "";
         }
 
         private void F_nyuuka_Load(object sender, EventArgs e)
