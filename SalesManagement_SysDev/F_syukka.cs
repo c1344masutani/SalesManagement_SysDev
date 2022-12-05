@@ -135,7 +135,8 @@ namespace SalesManagement_SysDev
             {
                 var shipment = context.T_Shipments.Single(x => x.ShID == shid);
                 var shipmentdetail = context.T_ShipmentDetails.Single(x => x.ShID == shid);
-                var chumon = context.T_ChumonDetails.Single(x => x.PrID == shipmentdetail.PrID);
+                var chumon = context.T_Chumons.Single(x => x.OrID == shipment.OrID);
+                var chumondetail = context.T_ChumonDetails.Single(x => x.ChID == chumon.ChID);
                 var product = context.M_Products.Single(x => x.PrID == shipmentdetail.PrID);
 
                 //売上テーブルに追加
@@ -156,9 +157,9 @@ namespace SalesManagement_SysDev
                 var salementdetail = new T_SaleDetail
                 {
                     SaID = sale.SaID,
-                    PrID = chumon.PrID,
-                    SaQuantity = chumon.ChQuantity,
-                    SaPrTotalPrice = product.Price * chumon.ChQuantity
+                    PrID = chumondetail.PrID,
+                    SaQuantity = chumondetail.ChQuantity,
+                    SaPrTotalPrice = product.Price * chumondetail.ChQuantity
                 };
                 context.T_ShipmentDetails.Add(shipmentdetail);
                 context.SaveChanges();
