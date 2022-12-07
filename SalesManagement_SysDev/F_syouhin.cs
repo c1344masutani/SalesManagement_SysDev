@@ -12,9 +12,31 @@ namespace SalesManagement_SysDev
 {
     public partial class F_syouhin : Form
     {
+
+        //データベース商品メーカテーブルアクセス用クラスのインスタンス化
+        MakerDataAccess makerDataAccess = new MakerDataAccess();
+        ProductDataAccess productDataAccess = new ProductDataAccess();
+
+        //コンボボックス用の商品メーカデータ
+        private static List<M_Maker> Maker;
+        //データグリッドビュー用の商品データ
+        private static List<M_Product> Product;
+
         public F_syouhin()
         {
             InitializeComponent();
+        }
+
+        private void SetFormComboBox()
+        {
+            //メーカコンボボックス
+            Maker = makerDataAccess.GetMakerDspData();
+            comboBoxMaker.DataSource = Maker;
+            comboBoxMaker.DisplayMember = "MaName";
+            comboBoxMaker.ValueMember = "MaID";
+            // 商品メーカコンボボックスを読み取り専用
+            comboBoxMaker.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxMaker.SelectedIndex = -1;
         }
 
         private void Regester_button_Click(object sender, EventArgs e)
@@ -31,7 +53,7 @@ namespace SalesManagement_SysDev
 
             var product = new M_Product
             {
-                MaID = int.Parse(textBoxMaID.Text.Trim()),
+                MaID = int.Parse(comboBoxMaker.SelectedValue.ToString()),
                 PrName = textBoxPrName.Text.Trim(),
                 Price = int.Parse(textBoxPrice.Text.Trim()),
                 PrSafetyStock = int.Parse(textBoxPrSafetyStock.Text.Trim()),
@@ -60,8 +82,8 @@ namespace SalesManagement_SysDev
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            textBoxPrID.Text = "自動入力";
-            textBoxMaID.Text = "";
+            textBoxPrID.Text = "";
+            comboBoxMaker.SelectedIndex = -1;
             textBoxPrName.Text = "";
             textBoxPrice.Text = "";
             textBoxPrSafetyStock.Text = "";
@@ -92,7 +114,7 @@ namespace SalesManagement_SysDev
                 int prid = int.Parse(textBoxPrID.Text);
                 var context = new SalesManagement_DevContext();
                 var product = context.M_Products.Single(x => x.PrID == prid);
-                product.MaID = int.Parse(textBoxMaID.Text.Trim());
+                product.MaID = int.Parse(comboBoxMaker.SelectedValue.ToString());
                 product.PrName = textBoxPrName.Text.Trim();
                 product.Price = int.Parse(textBoxPrice.Text.Trim());
                 product.PrSafetyStock = int.Parse(textBoxPrSafetyStock.Text.Trim());
@@ -171,6 +193,7 @@ namespace SalesManagement_SysDev
             //読み取り専用
             dataGridViewDsp.ReadOnly = true;
             fncAllSelect();
+            SetFormComboBox();
         }
 
         private void fncAllSelect()
@@ -222,7 +245,7 @@ namespace SalesManagement_SysDev
         {
             textBoxPrID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[0].Value.ToString();
             textBoxPrName.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
-            textBoxMaID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
+            comboBoxMaker.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
             textBoxPrice.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
             textBoxPrSafetyStock.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
             textBoxScID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString();
@@ -243,12 +266,17 @@ namespace SalesManagement_SysDev
         private void Search_button_Click(object sender, EventArgs e)
         {
             dataGridViewDsp.Rows.Clear();
+            if (String.IsNullOrEmpty(textBoxPrID.Text))
+            {
+                fncAllSelect();
+                return;
+            }
             int prid = int.Parse(textBoxPrID.Text);
             try
             {
                 var context = new SalesManagement_DevContext();
                 var product = context.M_Products.Where(x => x.PrID == prid).ToArray();
-                dataGridViewDsp.Rows.Add(product[0].PrID, product[0].PrName, product[0].MaID, product[0].Price, product[0].PrSafetyStock, product[0].ScID, product[0].PrModelNumber, product[0].PrColor, product[0].PrReleaseDate, product[0].PrFlag,product[0].PrHidden);
+                dataGridViewDsp.Rows.Add(product[0].PrID, product[0].PrName, product[0].MaID, product[0].Price, product[0].PrSafetyStock, product[0].ScID, product[0].PrModelNumber, product[0].PrColor, product[0].PrReleaseDate, product[0].PrFlag, product[0].PrHidden);
                 context.Dispose();
             }
             catch (Exception ex)

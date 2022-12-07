@@ -37,7 +37,6 @@ namespace SalesManagement_SysDev
             this.LabelScID = new System.Windows.Forms.Label();
             this.textBoxPrName = new System.Windows.Forms.TextBox();
             this.textBoxPrSafetyStock = new System.Windows.Forms.TextBox();
-            this.textBoxMaID = new System.Windows.Forms.TextBox();
             this.textBoxPrID = new System.Windows.Forms.TextBox();
             this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.LabelPrSafetyStock = new System.Windows.Forms.Label();
@@ -69,6 +68,7 @@ namespace SalesManagement_SysDev
             this.label12 = new System.Windows.Forms.Label();
             this.comboBoxColor = new System.Windows.Forms.ComboBox();
             this.PrReleaseDate = new System.Windows.Forms.DateTimePicker();
+            this.comboBoxMaker = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -167,15 +167,6 @@ namespace SalesManagement_SysDev
             this.textBoxPrSafetyStock.Size = new System.Drawing.Size(206, 51);
             this.textBoxPrSafetyStock.TabIndex = 60;
             // 
-            // textBoxMaID
-            // 
-            this.textBoxMaID.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxMaID.Location = new System.Drawing.Point(315, 374);
-            this.textBoxMaID.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxMaID.Name = "textBoxMaID";
-            this.textBoxMaID.Size = new System.Drawing.Size(206, 51);
-            this.textBoxMaID.TabIndex = 58;
-            // 
             // textBoxPrID
             // 
             this.textBoxPrID.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -185,7 +176,6 @@ namespace SalesManagement_SysDev
             this.textBoxPrID.ReadOnly = true;
             this.textBoxPrID.Size = new System.Drawing.Size(206, 51);
             this.textBoxPrID.TabIndex = 57;
-            this.textBoxPrID.Text = "自動入力";
             // 
             // textBoxPrice
             // 
@@ -558,12 +548,21 @@ namespace SalesManagement_SysDev
             this.PrReleaseDate.Size = new System.Drawing.Size(286, 47);
             this.PrReleaseDate.TabIndex = 90;
             // 
+            // comboBoxMaker
+            // 
+            this.comboBoxMaker.FormattingEnabled = true;
+            this.comboBoxMaker.Location = new System.Drawing.Point(340, 385);
+            this.comboBoxMaker.Name = "comboBoxMaker";
+            this.comboBoxMaker.Size = new System.Drawing.Size(121, 26);
+            this.comboBoxMaker.TabIndex = 91;
+            // 
             // F_syouhin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.comboBoxMaker);
             this.Controls.Add(this.PrReleaseDate);
             this.Controls.Add(this.comboBoxColor);
             this.Controls.Add(this.label12);
@@ -598,7 +597,6 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.Delete_button);
             this.Controls.Add(this.LabelPrID);
             this.Controls.Add(this.LabelPrSafetyStock);
-            this.Controls.Add(this.textBoxMaID);
             this.Controls.Add(this.LabelMaID);
             this.Controls.Add(this.textBoxPrice);
             this.Controls.Add(this.textBoxPrName);
@@ -625,7 +623,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label LabelScID;
         private System.Windows.Forms.TextBox textBoxPrName;
         private System.Windows.Forms.TextBox textBoxPrSafetyStock;
-        private System.Windows.Forms.TextBox textBoxMaID;
         private System.Windows.Forms.TextBox textBoxPrID;
         private System.Windows.Forms.TextBox textBoxPrice;
         private System.Windows.Forms.Label LabelPrSafetyStock;
@@ -657,5 +654,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox comboBoxColor;
         private System.Windows.Forms.DateTimePicker PrReleaseDate;
+        private System.Windows.Forms.ComboBox comboBoxMaker;
     }
 }
