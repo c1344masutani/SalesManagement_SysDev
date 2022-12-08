@@ -89,6 +89,24 @@ namespace SalesManagement_SysDev
 
         private void Update_button_Click(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(textBoxHaID.Text.Trim()))
+                if (textBoxHaID.TextLength > 6)
+                {
+                    MessageBox.Show("発注IDは6文字以下です");
+                    return;
+                }
+            if (!string.IsNullOrEmpty(textBoxEmID.Text.Trim()))
+                if (textBoxEmID.TextLength > 6)
+                {
+                    MessageBox.Show("入庫管理社員IDは6文字以下です");
+                    return;
+                }
+            if (!string.IsNullOrEmpty(textBoxWaHidden.Text.Trim()))
+                if (textBoxWaHidden.TextLength > 200)
+                {
+                    MessageBox.Show("非表示理由は200文字以下です");
+                    return;
+                }
             int checkWa;
             if (checkBoxWaFlag.Checked == true)
             {
