@@ -13,6 +13,9 @@ namespace SalesManagement_SysDev
 {
     public partial class F_Login : Form
     {
+        //入力形式チェック用クラスのインスタンス化
+        DataInputFormCheck dataInputFormCheck = new DataInputFormCheck();
+
         public F_Login()
         {
             InitializeComponent();

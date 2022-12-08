@@ -12,6 +12,8 @@ namespace SalesManagement_SysDev
 {
     public partial class F_syouhin : Form
     {
+        //入力形式チェック用クラスのインスタンス化
+        DataInputFormCheck dataInputFormCheck = new DataInputFormCheck();
 
         //データベース商品メーカテーブルアクセス用クラスのインスタンス化
         MakerDataAccess makerDataAccess = new MakerDataAccess();

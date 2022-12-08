@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\DataInputFormCheck.cs" />
     <Compile Include="DbAccess\MakerDataAccess.cs" />
     <Compile Include="DbAccess\ProductDataAccess.cs" />
     <Compile Include="DbAccess\StockDataAccess.cs" />
