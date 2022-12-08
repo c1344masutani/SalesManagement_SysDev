@@ -151,6 +151,52 @@ namespace SalesManagement_SysDev
 
         private void buttonConfirm_Click(object sender, EventArgs e)
         {
+
+            if (!String.IsNullOrEmpty(textBoxSoid.Text.Trim()))
+            {
+                if (textBoxSoid.TextLength > 2)
+                {
+                    MessageBox.Show("営業所IDは2文字以下です");
+                    return;
+                }
+            }
+
+            if (!String.IsNullOrEmpty(textBoxEmid.Text.Trim()))
+            {
+                if (textBoxEmid.TextLength > 6)
+                {
+                    MessageBox.Show("社員IDは6文字以下です");
+                    return;
+                }
+            }
+
+            if (!String.IsNullOrEmpty(textBoxCliid.Text.Trim()))
+            {
+                if (textBoxCliid.TextLength > 6)
+                {
+                    MessageBox.Show("顧客IDは6文字以下です");
+                    return;
+                }
+            }
+
+            if (!String.IsNullOrEmpty(textBoxOrid.Text.Trim()))
+            {
+                if (textBoxOrid.TextLength > 6)
+                {
+                    MessageBox.Show("受注IDは6文字以下です");
+                    return;
+                }
+            }
+
+            if (!String.IsNullOrEmpty(textBoxChHidden.Text.Trim()))
+            {
+                if (textBoxChHidden.TextLength > 200)
+                {
+                    MessageBox.Show("非表示理由は200文字以下です");
+                    return;
+                }
+            }
+
             var context = new SalesManagement_DevContext();
             int chid = int.Parse(textBoxChid.Text);
             int flg;
