@@ -80,6 +80,42 @@ namespace SalesManagement_SysDev
 
         private void Regester_button_Click(object sender, EventArgs e)
         {
+            if(!string.IsNullOrEmpty(textBoxEmName.Text.Trim()))
+                if(textBoxEmName.TextLength > 50)
+                {
+                    MessageBox.Show("社員名は50文字以下です");
+                    return;
+                }
+            if(!string.IsNullOrEmpty(textBoxSoID.Text.Trim()))
+                if(textBoxSoID.TextLength > 2)
+                {
+                    MessageBox.Show("営業所IDは2文字以下です");
+                    return;
+                }
+            if(!string.IsNullOrEmpty(textBoxPoID.Text.Trim()))
+                if(textBoxPoID.TextLength > 2)
+                {
+                    MessageBox.Show("役職IDは2文字以下です");
+                    return;
+                }
+            if(!string.IsNullOrEmpty(textBoxEmPassWord.Text.Trim()))
+                if(textBoxEmPassWord.TextLength > 10)
+                {
+                    MessageBox.Show("パスワードは10文字以下です");
+                    return;
+                }
+            if(!string.IsNullOrEmpty(textBoxEmPhone.Text.Trim()))
+                if(textBoxEmPhone.TextLength >13)
+                {
+                    MessageBox.Show("電話番号は13文字以下です");
+                    return;
+                }
+            if(!string.IsNullOrEmpty(textBoxhidden.Text.Trim()))
+                if(textBoxhidden.TextLength > 200)
+                {
+                    MessageBox.Show("非表示理由は200文字以下です");
+                    return;
+                }
             int check;
             if (checkBoxEmFlag.Checked == true)
             {
