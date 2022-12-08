@@ -89,6 +89,34 @@ namespace SalesManagement_SysDev
 
         private void button_touroku_Click(object sender, EventArgs e)
         {
+
+            if (!String.IsNullOrEmpty(textBoxMaID.Text.Trim()))
+            {
+                if (textBoxMaID.TextLength > 4)
+                {
+                    MessageBox.Show("メーカーは4文字以下です");
+                    return;
+                }
+            }
+
+            if (!String.IsNullOrEmpty(textBoxEmID.Text.Trim()))
+            {
+                if (textBoxEmID.TextLength > 6)
+                {
+                    MessageBox.Show("発注社員IDは6文字以下です");
+                    return;
+                }
+            }
+
+            if (!String.IsNullOrEmpty(textBoxHaHidden.Text.Trim()))
+            {
+                if (textBoxHaHidden.TextLength > 200)
+                {
+                    MessageBox.Show("非表示理由は200文字以下です");
+                    return;
+                }
+            }
+
             int check;
             if(checkBoxHaFlag.Checked == true)
             {
