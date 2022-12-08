@@ -169,6 +169,24 @@ namespace SalesManagement_SysDev
 
         private void button_Update_Click(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(textBoxPrID.Text.Trim()))
+                if (textBoxPrID.TextLength > 6)
+                {
+                    MessageBox.Show("商品IDは6文字以下です");
+                    return;
+                }
+            if (!string.IsNullOrEmpty(textBoxStQuantity.Text.Trim()))
+                if (textBoxStQuantity.TextLength > 4)
+                {
+                    MessageBox.Show("在庫数は4文字以下です");
+                    return;
+                }
+            if (!string.IsNullOrEmpty(textBoxPrName.Text.Trim()))
+                if (textBoxPrName.TextLength > 50)
+                {
+                    MessageBox.Show("商品名は50文字以下です");
+                    return;
+                }
             int flg;
             if(checkBox_StFlag.Checked == true)
             {
