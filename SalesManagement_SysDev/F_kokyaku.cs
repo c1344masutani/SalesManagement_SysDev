@@ -19,6 +19,70 @@ namespace SalesManagement_SysDev
 
         private void Regester_button_Click(object sender, EventArgs e)
         {
+
+            if (!String.IsNullOrEmpty(textBoxAddress.Text.Trim()))
+            {
+                if (textBoxAddress.TextLength > 50)
+                {
+                    MessageBox.Show("住所は50文字以下です");
+                    return;
+                }
+            }
+
+            if (!String.IsNullOrEmpty(textBoxSalesOfficeID.Text.Trim()))
+            {
+                if(textBoxSalesOfficeID.TextLength > 2)
+                {
+                    MessageBox.Show("営業所IDは2文字以下です");
+                    return;
+                }
+            }
+
+            if (!String.IsNullOrEmpty(textBoxClientName.Text.Trim()))
+            {
+                if (textBoxClientName.TextLength > 50)
+                {
+                    MessageBox.Show("顧客名は50文字以下です");
+                    return;
+                }
+            }
+
+            if (!String.IsNullOrEmpty(textBoxAddress.Text.Trim()))
+            {
+                if (textBoxAddress.TextLength > 50)
+                {
+                    MessageBox.Show("住所は50文字以下です");
+                    return;
+                }
+            }
+
+            if (!String.IsNullOrEmpty(textBoxPhone.Text.Trim()))
+            {
+                if (textBoxPhone.TextLength > 13)
+                {
+                    MessageBox.Show("電話番号は13文字以下です");
+                    return;
+                }
+            }
+
+            if (!String.IsNullOrEmpty(textBoxPostnumber.Text.Trim()))
+            {
+                if (textBoxPostnumber.TextLength > 7)
+                {
+                    MessageBox.Show("郵便番号は7文字以下です");
+                    return;
+                }
+            }
+
+            if (!String.IsNullOrEmpty(textBoxHidden.Text.Trim()))
+            {
+                if (textBoxHidden.TextLength > 200)
+                {
+                    MessageBox.Show("非表示理由は200文字以下です");
+                    return;
+                }
+            }
+
             int check;
             if (checkBoxClflg.Checked == true)
             {
