@@ -214,6 +214,42 @@ namespace SalesManagement_SysDev
 
         private void Delete_button_Click(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(textBoxPrName.Text.Trim()))
+                if (textBoxPrName.TextLength > 50)
+                {
+                    MessageBox.Show("商品名は50文字以下です");
+                    return;
+                }
+            if (!string.IsNullOrEmpty(textBoxPrice.Text.Trim()))
+                if (textBoxPrice.TextLength > 9)
+                {
+                    MessageBox.Show("価格は9文字以下です");
+                    return;
+                }
+            if (!string.IsNullOrEmpty(textBoxPrSafetyStock.Text.Trim()))
+                if (textBoxPrSafetyStock.TextLength > 4)
+                {
+                    MessageBox.Show("安全在庫数は4文字以下です");
+                    return;
+                }
+            if (!string.IsNullOrEmpty(textBoxScID.Text.Trim()))
+                if (textBoxScID.TextLength > 2)
+                {
+                    MessageBox.Show("小分類IDは2文字以下です");
+                    return;
+                }
+            if (!string.IsNullOrEmpty(textBoxPrModelNumber.Text.Trim()))
+                if (textBoxPrModelNumber.TextLength > 20)
+                {
+                    MessageBox.Show("型番は20文字以下です");
+                    return;
+                }
+            if (!string.IsNullOrEmpty(textBoxHidden.Text.Trim()))
+                if (textBoxHidden.TextLength > 200)
+                {
+                    MessageBox.Show("非表示理由は200文字以下です");
+                    return;
+                }
             try
             {
                 int prid = int.Parse(textBoxPrID.Text);
@@ -341,6 +377,42 @@ namespace SalesManagement_SysDev
 
         private void Search_button_Click(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(textBoxPrName.Text.Trim()))
+                if (textBoxPrName.TextLength > 50)
+                {
+                    MessageBox.Show("商品名は50文字以下です");
+                    return;
+                }
+            if (!string.IsNullOrEmpty(textBoxPrice.Text.Trim()))
+                if (textBoxPrice.TextLength > 9)
+                {
+                    MessageBox.Show("価格は9文字以下です");
+                    return;
+                }
+            if (!string.IsNullOrEmpty(textBoxPrSafetyStock.Text.Trim()))
+                if (textBoxPrSafetyStock.TextLength > 4)
+                {
+                    MessageBox.Show("安全在庫数は4文字以下です");
+                    return;
+                }
+            if (!string.IsNullOrEmpty(textBoxScID.Text.Trim()))
+                if (textBoxScID.TextLength > 2)
+                {
+                    MessageBox.Show("小分類IDは2文字以下です");
+                    return;
+                }
+            if (!string.IsNullOrEmpty(textBoxPrModelNumber.Text.Trim()))
+                if (textBoxPrModelNumber.TextLength > 20)
+                {
+                    MessageBox.Show("型番は20文字以下です");
+                    return;
+                }
+            if (!string.IsNullOrEmpty(textBoxHidden.Text.Trim()))
+                if (textBoxHidden.TextLength > 200)
+                {
+                    MessageBox.Show("非表示理由は200文字以下です");
+                    return;
+                }
             dataGridViewDsp.Rows.Clear();
             if (String.IsNullOrEmpty(textBoxPrID.Text))
             {
