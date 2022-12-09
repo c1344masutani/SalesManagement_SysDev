@@ -83,42 +83,83 @@ namespace SalesManagement_SysDev
 
         private void Regester_button_Click(object sender, EventArgs e)
         {
-            if(!string.IsNullOrEmpty(textBoxEmName.Text.Trim()))
-                if(textBoxEmName.TextLength > 50)
+            if (!string.IsNullOrEmpty(textBoxEmName.Text.Trim()))
+            {
+
+                if (textBoxEmName.TextLength > 50)
                 {
                     MessageBox.Show("社員名は50文字以下です");
+                    textBoxEmName.Focus();
                     return;
                 }
-            if(!string.IsNullOrEmpty(textBoxSoID.Text.Trim()))
-                if(textBoxSoID.TextLength > 2)
+            }
+
+            if (!string.IsNullOrEmpty(textBoxSoID.Text.Trim()))
+            {
+                if (!dataInputFormCheck.CheckNumeric(textBoxSoID.Text.Trim()))
+                {
+                    MessageBox.Show("M5027");
+                    textBoxSoID.Focus();
+                    return;
+                }
+
+                if (textBoxSoID.TextLength > 2)
                 {
                     MessageBox.Show("営業所IDは2文字以下です");
+                    textBoxSoID.Focus();
                     return;
                 }
-            if(!string.IsNullOrEmpty(textBoxPoID.Text.Trim()))
-                if(textBoxPoID.TextLength > 2)
+            }
+
+            if (!string.IsNullOrEmpty(textBoxPoID.Text.Trim()))
+            {
+
+
+                if (!dataInputFormCheck.CheckNumeric(textBoxPoID.Text.Trim()))
+                {
+                    MessageBox.Show("M5027");
+                    textBoxPoID.Focus();
+                    return;
+                }
+
+                if (textBoxPoID.TextLength > 2)
                 {
                     MessageBox.Show("役職IDは2文字以下です");
+                    textBoxPoID.Focus();
                     return;
                 }
+            }
+               
             if(!string.IsNullOrEmpty(textBoxEmPassWord.Text.Trim()))
-                if(textBoxEmPassWord.TextLength > 10)
+            {
+                if (textBoxEmPassWord.TextLength > 10)
                 {
                     MessageBox.Show("パスワードは10文字以下です");
+                    textBoxEmPassWord.Focus();
                     return;
                 }
-            if(!string.IsNullOrEmpty(textBoxEmPhone.Text.Trim()))
-                if(textBoxEmPhone.TextLength >13)
+            }
+
+            if (!string.IsNullOrEmpty(textBoxEmPhone.Text.Trim()))
+            {
+                if (textBoxEmPhone.TextLength > 13)
                 {
                     MessageBox.Show("電話番号は13文字以下です");
+                    textBoxEmPhone.Focus();
                     return;
                 }
+            }
+                
             if(!string.IsNullOrEmpty(textBoxhidden.Text.Trim()))
-                if(textBoxhidden.TextLength > 200)
+            {
+                if (textBoxhidden.TextLength > 200)
                 {
                     MessageBox.Show("非表示理由は200文字以下です");
+                    textBoxhidden.Focus();
                     return;
                 }
+            }
+                
             int check;
             if (checkBoxEmFlag.Checked == true)
             {
@@ -272,6 +313,84 @@ namespace SalesManagement_SysDev
 
         private void Search_button_Click(object sender, EventArgs e)
         {
+
+            if (!string.IsNullOrEmpty(textBoxEmName.Text.Trim()))
+            {
+
+                if (textBoxEmName.TextLength > 50)
+                {
+                    MessageBox.Show("社員名は50文字以下です");
+                    textBoxEmName.Focus();
+                    return;
+                }
+            }
+
+            if (!string.IsNullOrEmpty(textBoxSoID.Text.Trim()))
+            {
+                if (!dataInputFormCheck.CheckNumeric(textBoxSoID.Text.Trim()))
+                {
+                    MessageBox.Show("M5027");
+                    textBoxSoID.Focus();
+                    return;
+                }
+
+                if (textBoxSoID.TextLength > 2)
+                {
+                    MessageBox.Show("営業所IDは2文字以下です");
+                    textBoxSoID.Focus();
+                    return;
+                }
+            }
+
+            if (!string.IsNullOrEmpty(textBoxPoID.Text.Trim()))
+            {
+
+
+                if (!dataInputFormCheck.CheckNumeric(textBoxPoID.Text.Trim()))
+                {
+                    MessageBox.Show("M5027");
+                    textBoxPoID.Focus();
+                    return;
+                }
+
+                if (textBoxPoID.TextLength > 2)
+                {
+                    MessageBox.Show("役職IDは2文字以下です");
+                    textBoxPoID.Focus();
+                    return;
+                }
+            }
+
+            if (!string.IsNullOrEmpty(textBoxEmPassWord.Text.Trim()))
+            {
+                if (textBoxEmPassWord.TextLength > 10)
+                {
+                    MessageBox.Show("パスワードは10文字以下です");
+                    textBoxEmPassWord.Focus();
+                    return;
+                }
+            }
+
+            if (!string.IsNullOrEmpty(textBoxEmPhone.Text.Trim()))
+            {
+                if (textBoxEmPhone.TextLength > 13)
+                {
+                    MessageBox.Show("電話番号は13文字以下です");
+                    textBoxEmPhone.Focus();
+                    return;
+                }
+            }
+
+            if (!string.IsNullOrEmpty(textBoxhidden.Text.Trim()))
+            {
+                if (textBoxhidden.TextLength > 200)
+                {
+                    MessageBox.Show("非表示理由は200文字以下です");
+                    textBoxhidden.Focus();
+                    return;
+                }
+            }
+
             dataGridViewDsp.Rows.Clear();
             int emid = int.Parse(textBoxEmID.Text);
             try
