@@ -225,6 +225,52 @@ namespace SalesManagement_SysDev
 
         private void Update_button_Click(object sender, EventArgs e)
         {
+
+            if (!String.IsNullOrEmpty(textBoxSoID.Text.Trim()))
+            {
+                if (textBoxSoID.TextLength > 2)
+                {
+                    MessageBox.Show("営業所IDは2文字以下です");
+                    return;
+                }
+            }
+
+            if (!String.IsNullOrEmpty(textBoxEmID.Text.Trim()))
+            {
+                if (textBoxEmID.TextLength > 6)
+                {
+                    MessageBox.Show("社員IDは6文字以下です");
+                    return;
+                }
+            }
+
+            if (!String.IsNullOrEmpty(textBoxClID.Text.Trim()))
+            {
+                if (textBoxClID.TextLength > 6)
+                {
+                    MessageBox.Show("顧客IDは6文字以下です");
+                    return;
+                }
+            }
+
+            if (!String.IsNullOrEmpty(textBoxClCharge.Text.Trim()))
+            {
+                if (textBoxClCharge.TextLength > 50)
+                {
+                    MessageBox.Show("顧客担当者名は50文字以下です");
+                    return;
+                }
+            }
+
+            if (!String.IsNullOrEmpty(textBoxOrHidden.Text.Trim()))
+            {
+                if (textBoxOrHidden.TextLength > 200)
+                {
+                    MessageBox.Show("非表示理由は200文字以下です");
+                    return;
+                }
+            }
+
             int checkOr;
             if (checkBoxOrFlag.Checked == true)
             {

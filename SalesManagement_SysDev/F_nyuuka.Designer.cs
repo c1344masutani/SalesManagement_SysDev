@@ -250,7 +250,7 @@ namespace SalesManagement_SysDev
             // 
             this.buttonSearch.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.buttonSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.buttonSearch.Location = new System.Drawing.Point(684, 26);
+            this.buttonSearch.Location = new System.Drawing.Point(684, 32);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(167, 50);
             this.buttonSearch.TabIndex = 101;
