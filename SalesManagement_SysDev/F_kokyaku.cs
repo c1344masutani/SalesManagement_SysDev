@@ -14,10 +14,24 @@ namespace SalesManagement_SysDev
     {
         //入力形式チェック用クラスのインスタンス化
         DataInputFormCheck dataInputFormCheck = new DataInputFormCheck();
+        SalesOfficeDataAccess salesOfficeDataAccess = new SalesOfficeDataAccess();
 
+
+        //コンボボックス用
+        private static List<M_SalesOffice> SalesOffices;
         public F_kokyaku()
         {
             InitializeComponent();
+        }
+
+        private void SetFormComboBox()
+        {
+            SalesOffices = salesOfficeDataAccess.GetSalesOfficeDspData();
+            comboBoxSalesOffice.DataSource = SalesOffices;
+            comboBoxSalesOffice.DisplayMember = "SoName";
+            comboBoxSalesOffice.ValueMember = "SoID";
+            comboBoxSalesOffice.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxSalesOffice.SelectedIndex = -1;
         }
 
         private void Regester_button_Click(object sender, EventArgs e)
@@ -25,6 +39,8 @@ namespace SalesManagement_SysDev
 
             if (!String.IsNullOrEmpty(textBoxSalesOfficeID.Text.Trim()))
             {
+
+
 
                 if (!dataInputFormCheck.CheckNumeric(textBoxSalesOfficeID.Text.Trim()))
                 {

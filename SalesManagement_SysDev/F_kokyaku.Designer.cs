@@ -62,6 +62,7 @@ namespace SalesManagement_SysDev
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBoxSalesOffice = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -470,12 +471,21 @@ namespace SalesManagement_SysDev
             this.pictureBox1.TabIndex = 47;
             this.pictureBox1.TabStop = false;
             // 
+            // comboBoxSalesOffice
+            // 
+            this.comboBoxSalesOffice.FormattingEnabled = true;
+            this.comboBoxSalesOffice.Location = new System.Drawing.Point(760, 234);
+            this.comboBoxSalesOffice.Name = "comboBoxSalesOffice";
+            this.comboBoxSalesOffice.Size = new System.Drawing.Size(121, 26);
+            this.comboBoxSalesOffice.TabIndex = 59;
+            // 
             // F_kokyaku
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1924, 1024);
+            this.Controls.Add(this.comboBoxSalesOffice);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
@@ -555,5 +565,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox comboBoxSalesOffice;
     }
 }
