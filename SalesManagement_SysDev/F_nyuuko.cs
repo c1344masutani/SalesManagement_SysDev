@@ -93,23 +93,41 @@ namespace SalesManagement_SysDev
         private void Update_button_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(textBoxHaID.Text.Trim()))
+            {
+                if (!dataInputFormCheck.CheckNumeric(textBoxHaID.Text.Trim()))
+                {
+                    MessageBox.Show("発注IDは数値です");
+                    textBoxHaID.Focus();
+                    return;
+                }
                 if (textBoxHaID.TextLength > 6)
                 {
                     MessageBox.Show("発注IDは6文字以下です");
                     return;
                 }
+            }
             if (!string.IsNullOrEmpty(textBoxEmID.Text.Trim()))
+            {
+                if (!dataInputFormCheck.CheckNumeric(textBoxEmID.Text.Trim()))
+                {
+                    MessageBox.Show("入庫管理社員IDは数値です");
+                    textBoxEmID.Focus();
+                    return;
+                }
                 if (textBoxEmID.TextLength > 6)
                 {
                     MessageBox.Show("入庫管理社員IDは6文字以下です");
                     return;
                 }
+            }
             if (!string.IsNullOrEmpty(textBoxWaHidden.Text.Trim()))
+            {
                 if (textBoxWaHidden.TextLength > 200)
                 {
                     MessageBox.Show("非表示理由は200文字以下です");
                     return;
                 }
+            }
             int checkWa;
             if (checkBoxWaFlag.Checked == true)
             {
@@ -159,6 +177,11 @@ namespace SalesManagement_SysDev
         }
 
         private void Delete_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
         {
 
         }
