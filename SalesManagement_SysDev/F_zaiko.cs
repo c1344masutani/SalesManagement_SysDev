@@ -37,18 +37,42 @@ namespace SalesManagement_SysDev
             if (!string.IsNullOrEmpty(textBoxPrID.Text.Trim()))
                 if (textBoxPrID.TextLength > 6)
                 {
+
+                    if (!dataInputFormCheck.CheckNumeric(textBoxPrID.Text.Trim()))
+                    {
+                        MessageBox.Show("M5027");
+                        textBoxPrID.Focus();
+                        return;
+                    }
+
                     MessageBox.Show("商品IDは6文字以下です");
                     return;
                 }
             if (!string.IsNullOrEmpty(textBoxStQuantity.Text.Trim()))
                 if (textBoxStQuantity.TextLength > 4)
                 {
+
+                    if (!dataInputFormCheck.CheckNumeric(textBoxStQuantity.Text.Trim()))
+                    {
+                        MessageBox.Show("M5027");
+                        textBoxStQuantity.Focus();
+                        return;
+                    }
+
                     MessageBox.Show("在庫数は4文字以下です");
                     return;
                 }
             if (!string.IsNullOrEmpty(textBoxPrName.Text.Trim()))
                 if (textBoxPrName.TextLength > 50)
                 {
+
+                    if (!dataInputFormCheck.CheckNumeric(textBoxPrName.Text.Trim()))
+                    {
+                        MessageBox.Show("M5027");
+                        textBoxPrName.Focus();
+                        return;
+                    }
+
                     MessageBox.Show("商品名は50文字以下です");
                     return;
                 }
