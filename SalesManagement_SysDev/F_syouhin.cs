@@ -137,6 +137,7 @@ namespace SalesManagement_SysDev
 
         private void Update_button_Click(object sender, EventArgs e)
         {
+
             if (!string.IsNullOrEmpty(textBoxPrName.Text.Trim()))
                 if (textBoxPrName.TextLength > 50)
                 {
@@ -173,6 +174,7 @@ namespace SalesManagement_SysDev
                     MessageBox.Show("非表示理由は200文字以下です");
                     return;
                 }
+
             int check;
             if (checkBoxPrFlag.Checked == true)
             {
