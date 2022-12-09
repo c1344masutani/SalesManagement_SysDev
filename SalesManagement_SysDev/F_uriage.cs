@@ -181,5 +181,34 @@ namespace SalesManagement_SysDev
             textBoxChID.Text = "";
             dateTimePickerSaDate.Value = DateTime.Today;
         }
+
+        private void buttonHidden_Click(object sender, EventArgs e)
+        {
+            int flg;
+            if(checkBoxSaFlag.Checked == true)
+            {
+                flg = 2;
+            }
+            else
+            {
+                flg = 1;
+            }
+
+            try
+            {
+                int said = int.Parse(textBoxSaID.Text);
+                var context = new SalesManagement_DevContext();
+                var sale = context.T_Sale.Single(x => x.SaID == said);
+                sale.SaFlag = flg;
+                context.SaveChanges();
+                context.Dispose();
+                MessageBox.Show("非表示にしました");
+                fncAllSelect();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
