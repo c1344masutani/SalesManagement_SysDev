@@ -203,36 +203,72 @@ namespace SalesManagement_SysDev
 
             if (!String.IsNullOrEmpty(textBoxSoid.Text.Trim()))
             {
+
+                if (!dataInputFormCheck.CheckNumeric(textBoxSoid.Text.Trim()))
+                {
+                    MessageBox.Show("M5027");
+                    textBoxSoid.Focus();
+                    return;
+                }
+
                 if (textBoxSoid.TextLength > 2)
                 {
                     MessageBox.Show("営業所IDは2文字以下です");
+                    textBoxSoid.Focus();
                     return;
                 }
             }
 
             if (!String.IsNullOrEmpty(textBoxEmid.Text.Trim()))
             {
+
+                if (!dataInputFormCheck.CheckNumeric(textBoxEmid.Text.Trim()))
+                {
+                    MessageBox.Show("M5027");
+                    textBoxEmid.Focus();
+                    return;
+                }
+
                 if (textBoxEmid.TextLength > 6)
                 {
                     MessageBox.Show("社員IDは6文字以下です");
+                    textBoxEmid.Focus();
                     return;
                 }
             }
 
             if (!String.IsNullOrEmpty(textBoxCliid.Text.Trim()))
             {
+
+                if (!dataInputFormCheck.CheckNumeric(textBoxCliid.Text.Trim()))
+                {
+                    MessageBox.Show("M5027");
+                    textBoxCliid.Focus();
+                    return;
+                }
+
                 if (textBoxCliid.TextLength > 6)
                 {
                     MessageBox.Show("顧客IDは6文字以下です");
+                    textBoxCliid.Focus();
                     return;
                 }
             }
 
             if (!String.IsNullOrEmpty(textBoxOrid.Text.Trim()))
             {
+
+                if (!dataInputFormCheck.CheckNumeric(textBoxOrid.Text.Trim()))
+                {
+                    MessageBox.Show("M5027");
+                    textBoxOrid.Focus();
+                    return;
+                }
+
                 if (textBoxOrid.TextLength > 6)
                 {
                     MessageBox.Show("受注IDは6文字以下です");
+                    textBoxOrid.Focus();
                     return;
                 }
             }
@@ -242,6 +278,7 @@ namespace SalesManagement_SysDev
                 if (textBoxChHidden.TextLength > 200)
                 {
                     MessageBox.Show("非表示理由は200文字以下です");
+                    textBoxChHidden.Focus();
                     return;
                 }
             }
