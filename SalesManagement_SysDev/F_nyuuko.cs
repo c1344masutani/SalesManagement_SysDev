@@ -157,5 +157,10 @@ namespace SalesManagement_SysDev
             dateTimePickerWaDate.Value = DateTime.Parse(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString());
 
         }
+
+        private void Delete_button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -32,7 +32,6 @@ namespace SalesManagement_SysDev
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Update_button = new System.Windows.Forms.Button();
-            this.Delete_button = new System.Windows.Forms.Button();
             this.back_button = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.PriceTextBox = new System.Windows.Forms.Label();
@@ -92,19 +91,6 @@ namespace SalesManagement_SysDev
             this.Update_button.Text = "更新";
             this.Update_button.UseVisualStyleBackColor = false;
             this.Update_button.Click += new System.EventHandler(this.Update_button_Click);
-            // 
-            // Delete_button
-            // 
-            this.Delete_button.BackColor = System.Drawing.Color.Gainsboro;
-            this.Delete_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Delete_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.Delete_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Delete_button.Location = new System.Drawing.Point(1091, 35);
-            this.Delete_button.Name = "Delete_button";
-            this.Delete_button.Size = new System.Drawing.Size(141, 53);
-            this.Delete_button.TabIndex = 52;
-            this.Delete_button.Text = "削除";
-            this.Delete_button.UseVisualStyleBackColor = false;
             // 
             // back_button
             // 
@@ -361,7 +347,6 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.PriceTextBox);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.back_button);
-            this.Controls.Add(this.Delete_button);
             this.Controls.Add(this.Update_button);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -380,7 +365,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Update_button;
-        private System.Windows.Forms.Button Delete_button;
         private System.Windows.Forms.Button back_button;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Label PriceTextBox;
