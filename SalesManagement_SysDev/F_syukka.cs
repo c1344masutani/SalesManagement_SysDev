@@ -289,7 +289,7 @@ namespace SalesManagement_SysDev
                     SoID = shipment.SoID,
                     EmID = shipment.EmID,
                     ChID = chumon.ChID,
-                    SaDate = DateTime.Parse(shipment.ShFinishDate.ToString()),
+                    SaDate = DateTime.Today,
                     SaFlag = 0,
                     SaHidden = ""
                 };

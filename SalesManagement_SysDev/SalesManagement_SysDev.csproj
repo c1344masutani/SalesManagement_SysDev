@@ -62,6 +62,7 @@
     <Compile Include="Common\DataInputFormCheck.cs" />
     <Compile Include="DbAccess\MakerDataAccess.cs" />
     <Compile Include="DbAccess\ProductDataAccess.cs" />
+    <Compile Include="DbAccess\SalesOfficeDataAccess.cs" />
     <Compile Include="DbAccess\StockDataAccess.cs" />
     <Compile Include="F_kokyaku.cs">
       <SubType>Form</SubType>
