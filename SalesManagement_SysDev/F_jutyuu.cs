@@ -101,36 +101,72 @@ namespace SalesManagement_SysDev
 
             if (!String.IsNullOrEmpty(textBoxSoID.Text.Trim()))
             {
+
+                if (!dataInputFormCheck.CheckNumeric(textBoxSoID.Text.Trim()))
+                {
+                    MessageBox.Show("M5027");
+                    textBoxSoID.Focus();
+                    return;
+                }
+
                 if (textBoxSoID.TextLength > 2)
                 {
                     MessageBox.Show("営業所IDは2文字以下です");
+                    textBoxSoID.Focus();
                     return;
                 }
             }
 
             if (!String.IsNullOrEmpty(textBoxEmID.Text.Trim()))
             {
+
+                if (!dataInputFormCheck.CheckNumeric(textBoxEmID.Text.Trim()))
+                {
+                    MessageBox.Show("M5027");
+                    textBoxEmID.Focus();
+                    return;
+                }
+
                 if (textBoxEmID.TextLength > 6)
                 {
                     MessageBox.Show("社員IDは6文字以下です");
+                    textBoxEmID.Focus();
                     return;
                 }
             }
 
             if (!String.IsNullOrEmpty(textBoxClID.Text.Trim()))
             {
+
+                if (!dataInputFormCheck.CheckNumeric(textBoxClID.Text.Trim()))
+                {
+                    MessageBox.Show("M5027");
+                    textBoxClID.Focus();
+                    return;
+                }
+
                 if (textBoxClID.TextLength > 6)
                 {
                     MessageBox.Show("顧客IDは6文字以下です");
+                    textBoxClID.Focus();
                     return;
                 }
             }
 
             if (!String.IsNullOrEmpty(textBoxClCharge.Text.Trim()))
             {
+
+                if (!dataInputFormCheck.CheckNumeric(textBoxClCharge.Text.Trim()))
+                {
+                    MessageBox.Show("M5027");
+                    textBoxClCharge.Focus();
+                    return;
+                }
+
                 if (textBoxClCharge.TextLength > 50)
                 {
                     MessageBox.Show("顧客担当者名は50文字以下です");
+                    textBoxClCharge.Focus();
                     return;
                 }
             }
@@ -140,6 +176,7 @@ namespace SalesManagement_SysDev
                 if (textBoxOrHidden.TextLength > 200)
                 {
                     MessageBox.Show("非表示理由は200文字以下です");
+                    textBoxOrHidden.Focus();
                     return;
                 }
             }
@@ -378,6 +415,90 @@ namespace SalesManagement_SysDev
 
         private void Search_button_Click(object sender, EventArgs e)
         {
+
+
+            if (!String.IsNullOrEmpty(textBoxSoID.Text.Trim()))
+            {
+
+                if (!dataInputFormCheck.CheckNumeric(textBoxSoID.Text.Trim()))
+                {
+                    MessageBox.Show("M5027");
+                    textBoxSoID.Focus();
+                    return;
+                }
+
+                if (textBoxSoID.TextLength > 2)
+                {
+                    MessageBox.Show("営業所IDは2文字以下です");
+                    textBoxSoID.Focus();
+                    return;
+                }
+            }
+
+            if (!String.IsNullOrEmpty(textBoxEmID.Text.Trim()))
+            {
+
+                if (!dataInputFormCheck.CheckNumeric(textBoxEmID.Text.Trim()))
+                {
+                    MessageBox.Show("M5027");
+                    textBoxEmID.Focus();
+                    return;
+                }
+
+                if (textBoxEmID.TextLength > 6)
+                {
+                    MessageBox.Show("社員IDは6文字以下です");
+                    textBoxEmID.Focus();
+                    return;
+                }
+            }
+
+            if (!String.IsNullOrEmpty(textBoxClID.Text.Trim()))
+            {
+
+                if (!dataInputFormCheck.CheckNumeric(textBoxClID.Text.Trim()))
+                {
+                    MessageBox.Show("M5027");
+                    textBoxClID.Focus();
+                    return;
+                }
+
+                if (textBoxClID.TextLength > 6)
+                {
+                    MessageBox.Show("顧客IDは6文字以下です");
+                    textBoxClID.Focus();
+                    return;
+                }
+            }
+
+            if (!String.IsNullOrEmpty(textBoxClCharge.Text.Trim()))
+            {
+
+                if (!dataInputFormCheck.CheckNumeric(textBoxClCharge.Text.Trim()))
+                {
+                    MessageBox.Show("M5027");
+                    textBoxClCharge.Focus();
+                    return;
+                }
+
+                if (textBoxClCharge.TextLength > 50)
+                {
+                    MessageBox.Show("顧客担当者名は50文字以下です");
+                    textBoxClCharge.Focus();
+                    return;
+                }
+            }
+
+            if (!String.IsNullOrEmpty(textBoxOrHidden.Text.Trim()))
+            {
+                if (textBoxOrHidden.TextLength > 200)
+                {
+                    MessageBox.Show("非表示理由は200文字以下です");
+                    textBoxOrHidden.Focus();
+                    return;
+                }
+            }
+
             dataGridViewDsp.Rows.Clear();
             if(textBoxOrID.Text == "" || textBoxOrID.Text == null)
             {

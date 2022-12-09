@@ -98,6 +98,12 @@ namespace SalesManagement_SysDev
 
             if (!String.IsNullOrEmpty(textBoxEmID.Text.Trim()))
             {
+                if (!dataInputFormCheck.CheckNumeric(textBoxEmID.Text.Trim()))
+                {
+                    MessageBox.Show("社員IDは数値です");
+                    textBoxEmID.Focus();
+                    return;
+                }
                 if (textBoxEmID.TextLength > 6)
                 {
                     MessageBox.Show("社員IDは6文字以下です");
@@ -107,6 +113,12 @@ namespace SalesManagement_SysDev
 
             if (!String.IsNullOrEmpty(textBoxClID.Text.Trim()))
             {
+                if (!dataInputFormCheck.CheckNumeric(textBoxClID.Text.Trim()))
+                {
+                    MessageBox.Show("顧客IDは数値です");
+                    textBoxClID.Focus();
+                    return;
+                }
                 if (textBoxClID.TextLength > 6)
                 {
                     MessageBox.Show("顧客IDは6文字以下です");
@@ -116,6 +128,12 @@ namespace SalesManagement_SysDev
 
             if (!String.IsNullOrEmpty(textBoxSoID.Text.Trim()))
             {
+                if (!dataInputFormCheck.CheckNumeric(textBoxClID.Text.Trim()))
+                {
+                    MessageBox.Show("営業所IDは数値です");
+                    textBoxClID.Focus();
+                    return;
+                }
                 if (textBoxSoID.TextLength > 2)
                 {
                     MessageBox.Show("営業所IDは2文字以下です");
@@ -125,6 +143,12 @@ namespace SalesManagement_SysDev
 
             if (!String.IsNullOrEmpty(textBoxOrID.Text.Trim()))
             {
+                if (!dataInputFormCheck.CheckNumeric(textBoxOrID.Text.Trim()))
+                {
+                    MessageBox.Show("受注IDは数値です");
+                    textBoxOrID.Focus();
+                    return;
+                }
                 if (textBoxOrID.TextLength > 6)
                 {
                     MessageBox.Show("受注IDは6文字以下です");

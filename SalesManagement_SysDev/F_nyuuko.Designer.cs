@@ -116,6 +116,7 @@ namespace SalesManagement_SysDev
             this.buttonClear.TabIndex = 69;
             this.buttonClear.Text = "入力クリア";
             this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // PriceTextBox
             // 
