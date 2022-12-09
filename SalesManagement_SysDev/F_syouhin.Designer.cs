@@ -550,10 +550,11 @@ namespace SalesManagement_SysDev
             // 
             // comboBoxMaker
             // 
+            this.comboBoxMaker.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.comboBoxMaker.FormattingEnabled = true;
-            this.comboBoxMaker.Location = new System.Drawing.Point(340, 385);
+            this.comboBoxMaker.Location = new System.Drawing.Point(315, 377);
             this.comboBoxMaker.Name = "comboBoxMaker";
-            this.comboBoxMaker.Size = new System.Drawing.Size(121, 26);
+            this.comboBoxMaker.Size = new System.Drawing.Size(206, 41);
             this.comboBoxMaker.TabIndex = 91;
             // 
             // F_syouhin

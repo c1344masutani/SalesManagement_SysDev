@@ -14,10 +14,40 @@ namespace SalesManagement_SysDev
     {
         //入力形式チェック用クラスのインスタンス化
         DataInputFormCheck dataInputFormCheck = new DataInputFormCheck();
+        //メーカテーブルアクセス用クラスのインスタンス化
+        MakerDataAccess makerDataAccess = new MakerDataAccess();
+        //社員テーブルアクセス用クラスのインスタンス化
+        EmployeeDataAccess employeeDataAccess = new EmployeeDataAccess();
+
+        //コンボボックス用のメーカデータ
+        private static List<M_Maker> Maker;
+        //コンボボックス用の社員データ
+        private static List<M_Employee> Employee;
 
         public F_hattyu()
         {
             InitializeComponent();
+        }
+
+        private void SetFormComboBox()
+        {
+            //メーカコンボボックス
+            Maker = makerDataAccess.GetMakerDspData();
+            comboBoxMaker.DataSource = Maker;
+            comboBoxMaker.DisplayMember = "MaName";
+            comboBoxMaker.ValueMember = "MaID";
+            // 商品メーカコンボボックスを読み取り専用
+            comboBoxMaker.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxMaker.SelectedIndex = -1;
+
+            //社員コンボボックス
+            Employee = employeeDataAccess.GetEmployeeDspData();
+            comboBoxEmployee.DataSource = Employee;
+            comboBoxEmployee.DisplayMember = "EmName";
+            comboBoxEmployee.ValueMember = "EmID";
+            //社員コンボボックスを読み取り専用
+            comboBoxEmployee.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxEmployee.SelectedIndex = -1;
         }
 
         private void button_back_Click(object sender, EventArgs e)
@@ -58,6 +88,7 @@ namespace SalesManagement_SysDev
             dataGridViewDsp.ReadOnly = true;
 
             fncAllSelect();
+            SetFormComboBox();
         }
 
         private void fncAllSelect()
@@ -93,36 +124,6 @@ namespace SalesManagement_SysDev
         private void button_touroku_Click(object sender, EventArgs e)
         {
 
-            if (!String.IsNullOrEmpty(textBoxMaID.Text.Trim()))
-            { 
-                if (!dataInputFormCheck.CheckNumeric(textBoxMaID.Text.Trim()))
-                {
-                    MessageBox.Show("メーカは数値です");
-                    textBoxMaID.Focus();
-                    return;
-                }
-            
-                if (textBoxMaID.TextLength > 4)
-                {
-                    MessageBox.Show("メーカーは4文字以下です");
-                    return;
-                }
-            }
-
-            if (!String.IsNullOrEmpty(textBoxEmID.Text.Trim()))
-            {
-                if (!dataInputFormCheck.CheckNumeric(textBoxEmID.Text.Trim()))
-                {
-                    MessageBox.Show("発注社員IDは数値です");
-                    textBoxEmID.Focus();
-                    return;
-                }
-                if (textBoxEmID.TextLength > 6)
-                {
-                    MessageBox.Show("発注社員IDは6文字以下です");
-                    return;
-                }
-            }
 
             if (!String.IsNullOrEmpty(textBoxHaHidden.Text.Trim()))
             {
@@ -155,8 +156,8 @@ namespace SalesManagement_SysDev
 
             var hattyu = new T_Hattyu
             {
-                MaID = int.Parse(textBoxMaID.Text),
-                EmID = int.Parse(textBoxEmID.Text),
+                MaID = int.Parse(comboBoxMaker.SelectedValue.ToString()),
+                EmID = int.Parse(comboBoxEmployee.SelectedValue.ToString()),
                 HaDate = dateTimePickerHaDate.Value,
                 WaWarehouseFlag = check_nyuko,
                 HaFlag = check,
@@ -182,8 +183,8 @@ namespace SalesManagement_SysDev
         private void dataGridViewDsp_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             textBoxHaID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[0].Value.ToString();
-            textBoxMaID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
-            textBoxEmID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
+            comboBoxMaker.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
+            comboBoxEmployee.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
             dateTimePickerHaDate.Value = DateTime.Parse(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString());
             if(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString() == "1")
             {
@@ -198,36 +199,9 @@ namespace SalesManagement_SysDev
 
         private void button_koushin_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(textBoxMaID.Text.Trim()))
-            {
-                if (!dataInputFormCheck.CheckNumeric(textBoxMaID.Text.Trim()))
-                {
-                    MessageBox.Show("メーカは数値です");
-                    textBoxMaID.Focus();
-                    return;
-                }
+            
 
-                if (textBoxMaID.TextLength > 4)
-                {
-                    MessageBox.Show("メーカーは4文字以下です");
-                    return;
-                }
-            }
-
-            if (!String.IsNullOrEmpty(textBoxEmID.Text.Trim()))
-            {
-                if (!dataInputFormCheck.CheckNumeric(textBoxEmID.Text.Trim()))
-                {
-                    MessageBox.Show("発注社員IDは数値です");
-                    textBoxEmID.Focus();
-                    return;
-                }
-                if (textBoxEmID.TextLength > 6)
-                {
-                    MessageBox.Show("発注社員IDは6文字以下です");
-                    return;
-                }
-            }
+            
 
             if (!String.IsNullOrEmpty(textBoxHaHidden.Text.Trim()))
             {
@@ -262,8 +236,8 @@ namespace SalesManagement_SysDev
                 int haid = int.Parse(textBoxHaID.Text);
                 var context = new SalesManagement_DevContext();
                 var hattyu = context.T_Hattyus.Single(x => x.HaID == haid);
-                hattyu.MaID = int.Parse(textBoxMaID.Text);
-                hattyu.EmID = int.Parse(textBoxEmID.Text);
+                hattyu.MaID = int.Parse(comboBoxMaker.SelectedValue.ToString());
+                hattyu.EmID = int.Parse(comboBoxEmployee.SelectedValue.ToString());
                 hattyu.HaDate = dateTimePickerHaDate.Value;
                 hattyu.WaWarehouseFlag = check_nyuko;
                 hattyu.HaFlag = check;
@@ -307,36 +281,6 @@ namespace SalesManagement_SysDev
 
         private void button_kensaku_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(textBoxMaID.Text.Trim()))
-            {
-                if (!dataInputFormCheck.CheckNumeric(textBoxMaID.Text.Trim()))
-                {
-                    MessageBox.Show("メーカは数値です");
-                    textBoxMaID.Focus();
-                    return;
-                }
-
-                if (textBoxMaID.TextLength > 4)
-                {
-                    MessageBox.Show("メーカーは4文字以下です");
-                    return;
-                }
-            }
-
-            if (!String.IsNullOrEmpty(textBoxEmID.Text.Trim()))
-            {
-                if (!dataInputFormCheck.CheckNumeric(textBoxEmID.Text.Trim()))
-                {
-                    MessageBox.Show("発注社員IDは数値です");
-                    textBoxEmID.Focus();
-                    return;
-                }
-                if (textBoxEmID.TextLength > 6)
-                {
-                    MessageBox.Show("発注社員IDは6文字以下です");
-                    return;
-                }
-            }
 
             if (!String.IsNullOrEmpty(textBoxHaHidden.Text.Trim()))
             {
@@ -369,8 +313,8 @@ namespace SalesManagement_SysDev
         private void buttonClear_Click(object sender, EventArgs e)
         {
             textBoxHaID.Text = "";
-            textBoxMaID.Text = "";
-            textBoxEmID.Text = "";
+            comboBoxMaker.SelectedIndex = -1;
+            comboBoxEmployee.SelectedIndex = -1;
             dateTimePickerHaDate.Value = DateTime.Today;
             textBoxHaHidden.Text = "";
             checkBoxWaWarehouseFlag.Checked = false;

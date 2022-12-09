@@ -40,8 +40,6 @@ namespace SalesManagement_SysDev
             this.dataGridViewDsp = new System.Windows.Forms.DataGridView();
             this.checkBoxWaWarehouseFlag = new System.Windows.Forms.CheckBox();
             this.checkBoxHaFlag = new System.Windows.Forms.CheckBox();
-            this.textBoxMaID = new System.Windows.Forms.TextBox();
-            this.textBoxEmID = new System.Windows.Forms.TextBox();
             this.textBoxHaHidden = new System.Windows.Forms.TextBox();
             this.dateTimePickerHaDate = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
@@ -53,6 +51,8 @@ namespace SalesManagement_SysDev
             this.buttonClear = new System.Windows.Forms.Button();
             this.button_back = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBoxMaker = new System.Windows.Forms.ComboBox();
+            this.comboBoxEmployee = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -92,9 +92,9 @@ namespace SalesManagement_SysDev
             this.label2.Location = new System.Drawing.Point(69, 276);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(178, 40);
+            this.label2.Size = new System.Drawing.Size(177, 40);
             this.label2.TabIndex = 80;
-            this.label2.Text = "メーカID";
+            this.label2.Text = "メーカ名";
             // 
             // label3
             // 
@@ -131,9 +131,9 @@ namespace SalesManagement_SysDev
             this.label5.Location = new System.Drawing.Point(29, 374);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(218, 40);
+            this.label5.Size = new System.Drawing.Size(217, 40);
             this.label5.TabIndex = 83;
-            this.label5.Text = "発注社員ID";
+            this.label5.Text = "発注社員名";
             // 
             // label6
             // 
@@ -191,22 +191,6 @@ namespace SalesManagement_SysDev
             this.checkBoxHaFlag.TabIndex = 88;
             this.checkBoxHaFlag.Text = "非表示";
             this.checkBoxHaFlag.UseVisualStyleBackColor = true;
-            // 
-            // textBoxMaID
-            // 
-            this.textBoxMaID.Location = new System.Drawing.Point(315, 265);
-            this.textBoxMaID.Multiline = true;
-            this.textBoxMaID.Name = "textBoxMaID";
-            this.textBoxMaID.Size = new System.Drawing.Size(206, 51);
-            this.textBoxMaID.TabIndex = 89;
-            // 
-            // textBoxEmID
-            // 
-            this.textBoxEmID.Location = new System.Drawing.Point(315, 363);
-            this.textBoxEmID.Multiline = true;
-            this.textBoxEmID.Name = "textBoxEmID";
-            this.textBoxEmID.Size = new System.Drawing.Size(206, 51);
-            this.textBoxEmID.TabIndex = 90;
             // 
             // textBoxHaHidden
             // 
@@ -334,12 +318,32 @@ namespace SalesManagement_SysDev
             this.pictureBox1.TabIndex = 77;
             this.pictureBox1.TabStop = false;
             // 
+            // comboBoxMaker
+            // 
+            this.comboBoxMaker.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.comboBoxMaker.FormattingEnabled = true;
+            this.comboBoxMaker.Location = new System.Drawing.Point(315, 279);
+            this.comboBoxMaker.Name = "comboBoxMaker";
+            this.comboBoxMaker.Size = new System.Drawing.Size(206, 41);
+            this.comboBoxMaker.TabIndex = 103;
+            // 
+            // comboBoxEmployee
+            // 
+            this.comboBoxEmployee.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.comboBoxEmployee.FormattingEnabled = true;
+            this.comboBoxEmployee.Location = new System.Drawing.Point(315, 378);
+            this.comboBoxEmployee.Name = "comboBoxEmployee";
+            this.comboBoxEmployee.Size = new System.Drawing.Size(206, 41);
+            this.comboBoxEmployee.TabIndex = 104;
+            // 
             // F_hattyu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.comboBoxEmployee);
+            this.Controls.Add(this.comboBoxMaker);
             this.Controls.Add(this.button_back);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.button_kensaku);
@@ -350,8 +354,6 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dateTimePickerHaDate);
             this.Controls.Add(this.textBoxHaHidden);
-            this.Controls.Add(this.textBoxEmID);
-            this.Controls.Add(this.textBoxMaID);
             this.Controls.Add(this.checkBoxHaFlag);
             this.Controls.Add(this.checkBoxWaWarehouseFlag);
             this.Controls.Add(this.dataGridViewDsp);
@@ -388,8 +390,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.DataGridView dataGridViewDsp;
         private System.Windows.Forms.CheckBox checkBoxWaWarehouseFlag;
         private System.Windows.Forms.CheckBox checkBoxHaFlag;
-        private System.Windows.Forms.TextBox textBoxMaID;
-        private System.Windows.Forms.TextBox textBoxEmID;
         private System.Windows.Forms.TextBox textBoxHaHidden;
         private System.Windows.Forms.DateTimePicker dateTimePickerHaDate;
         private System.Windows.Forms.Label label7;
@@ -400,5 +400,7 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Button button_kensaku;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Button button_back;
+        private System.Windows.Forms.ComboBox comboBoxMaker;
+        private System.Windows.Forms.ComboBox comboBoxEmployee;
     }
 }
