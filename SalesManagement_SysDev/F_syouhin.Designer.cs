@@ -234,9 +234,9 @@ namespace SalesManagement_SysDev
             this.LabelMaID.Location = new System.Drawing.Point(69, 374);
             this.LabelMaID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabelMaID.Name = "LabelMaID";
-            this.LabelMaID.Size = new System.Drawing.Size(178, 40);
+            this.LabelMaID.Size = new System.Drawing.Size(177, 40);
             this.LabelMaID.TabIndex = 51;
-            this.LabelMaID.Text = "メーカID";
+            this.LabelMaID.Text = "メーカ名";
             // 
             // LabelPrID
             // 

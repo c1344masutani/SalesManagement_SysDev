@@ -37,25 +37,6 @@ namespace SalesManagement_SysDev
         private void Regester_button_Click(object sender, EventArgs e)
         {
 
-            if (!String.IsNullOrEmpty(textBoxSalesOfficeID.Text.Trim()))
-            {
-
-
-
-                if (!dataInputFormCheck.CheckNumeric(textBoxSalesOfficeID.Text.Trim()))
-                {
-                    MessageBox.Show("M5027");
-                    textBoxSalesOfficeID.Focus();
-                    return;
-                }
-
-                if(textBoxSalesOfficeID.TextLength > 2)
-                {
-                    MessageBox.Show("営業所IDは2文字以下です");
-                    textBoxSalesOfficeID.Focus();
-                    return;
-                }
-            }
 
             if (!String.IsNullOrEmpty(textBoxClientName.Text.Trim()))
             {
@@ -119,7 +100,7 @@ namespace SalesManagement_SysDev
             var client = new M_Client
             {
 
-                SoID = int.Parse(textBoxSalesOfficeID.Text.Trim()),
+                SoID = int.Parse(comboBoxSalesOffice.SelectedValue.ToString()),
                 ClName = textBoxClientName.Text.Trim(),
                 ClAddress = textBoxAddress.Text.Trim(),
                 ClPhone = textBoxPhone.Text.Trim(),
@@ -161,7 +142,7 @@ namespace SalesManagement_SysDev
                 int clid = int.Parse(textBoxClientID.Text);
                 var context = new SalesManagement_DevContext();
                 var client = context.M_Clients.Single(x => x.ClID == clid);
-                client.SoID = int.Parse(textBoxSalesOfficeID.Text.Trim());
+                client.SoID = int.Parse(comboBoxSalesOffice.SelectedValue.ToString());
                 client.ClName = textBoxClientName.Text.Trim();
                 client.ClAddress = textBoxAddress.Text.Trim();
                 client.ClPhone = textBoxPhone.Text.Trim();
@@ -251,12 +232,6 @@ namespace SalesManagement_SysDev
             }
         }
 
-        private void dataGridViewDsp_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-
-        }
-
         private void client_Load(object sender, EventArgs e)
         {
             //列数の指定
@@ -287,6 +262,7 @@ namespace SalesManagement_SysDev
             dataGridViewDsp.ReadOnly = true;
             //全データ表示
             fncAllSelect();
+            SetFormComboBox();
         }
 
         private void label15_Click(object sender, EventArgs e)
@@ -308,7 +284,7 @@ namespace SalesManagement_SysDev
         private void dataGridViewDsp_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             textBoxClientID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[0].Value.ToString();
-            textBoxSalesOfficeID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
+            comboBoxSalesOffice.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
             textBoxClientName.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
             textBoxAddress.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
             textBoxPhone.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();

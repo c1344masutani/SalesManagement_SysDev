@@ -37,7 +37,6 @@ namespace SalesManagement_SysDev
             this.textBoxClientID = new System.Windows.Forms.TextBox();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.Regester_button = new System.Windows.Forms.Button();
-            this.textBoxSalesOfficeID = new System.Windows.Forms.TextBox();
             this.textBoxFAX = new System.Windows.Forms.TextBox();
             this.textBoxClientName = new System.Windows.Forms.TextBox();
             this.dataGridViewDsp = new System.Windows.Forms.DataGridView();
@@ -139,6 +138,7 @@ namespace SalesManagement_SysDev
             this.textBoxClientID.Location = new System.Drawing.Point(522, 146);
             this.textBoxClientID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxClientID.Name = "textBoxClientID";
+            this.textBoxClientID.ReadOnly = true;
             this.textBoxClientID.Size = new System.Drawing.Size(185, 47);
             this.textBoxClientID.TabIndex = 33;
             // 
@@ -164,15 +164,6 @@ namespace SalesManagement_SysDev
             this.Regester_button.Text = "新規追加";
             this.Regester_button.UseVisualStyleBackColor = false;
             this.Regester_button.Click += new System.EventHandler(this.Regester_button_Click);
-            // 
-            // textBoxSalesOfficeID
-            // 
-            this.textBoxSalesOfficeID.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxSalesOfficeID.Location = new System.Drawing.Point(522, 227);
-            this.textBoxSalesOfficeID.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxSalesOfficeID.Name = "textBoxSalesOfficeID";
-            this.textBoxSalesOfficeID.Size = new System.Drawing.Size(185, 43);
-            this.textBoxSalesOfficeID.TabIndex = 38;
             // 
             // textBoxFAX
             // 
@@ -204,7 +195,6 @@ namespace SalesManagement_SysDev
             this.dataGridViewDsp.Size = new System.Drawing.Size(1804, 610);
             this.dataGridViewDsp.TabIndex = 44;
             this.dataGridViewDsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellClick);
-            this.dataGridViewDsp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellContentClick);
             // 
             // checkBoxClflg
             // 
@@ -312,9 +302,9 @@ namespace SalesManagement_SysDev
             this.label3.Location = new System.Drawing.Point(235, 234);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(178, 40);
+            this.label3.Size = new System.Drawing.Size(177, 40);
             this.label3.TabIndex = 28;
-            this.label3.Text = "営業所ID";
+            this.label3.Text = "営業所名";
             // 
             // label8
             // 
@@ -473,10 +463,11 @@ namespace SalesManagement_SysDev
             // 
             // comboBoxSalesOffice
             // 
+            this.comboBoxSalesOffice.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.comboBoxSalesOffice.FormattingEnabled = true;
-            this.comboBoxSalesOffice.Location = new System.Drawing.Point(760, 234);
+            this.comboBoxSalesOffice.Location = new System.Drawing.Point(522, 237);
             this.comboBoxSalesOffice.Name = "comboBoxSalesOffice";
-            this.comboBoxSalesOffice.Size = new System.Drawing.Size(121, 26);
+            this.comboBoxSalesOffice.Size = new System.Drawing.Size(185, 41);
             this.comboBoxSalesOffice.TabIndex = 59;
             // 
             // F_kokyaku
@@ -497,7 +488,6 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.dataGridViewDsp);
             this.Controls.Add(this.textBoxClientID);
             this.Controls.Add(this.textBoxPhone);
-            this.Controls.Add(this.textBoxSalesOfficeID);
             this.Controls.Add(this.textBoxAddress);
             this.Controls.Add(this.textBoxClientName);
             this.Controls.Add(this.pictureBox1);
@@ -541,7 +531,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.TextBox textBoxClientID;
         private System.Windows.Forms.TextBox textBoxAddress;
         private System.Windows.Forms.Button Regester_button;
-        private System.Windows.Forms.TextBox textBoxSalesOfficeID;
         private System.Windows.Forms.TextBox textBoxFAX;
         private System.Windows.Forms.TextBox textBoxClientName;
         private System.Windows.Forms.DataGridView dataGridViewDsp;
