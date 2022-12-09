@@ -34,6 +34,14 @@ namespace SalesManagement_SysDev
 
             if (!String.IsNullOrEmpty(textBoxSalesOfficeID.Text.Trim()))
             {
+
+                if (!dataInputFormCheck.CheckNumeric(textBoxSalesOfficeID.Text.Trim()))
+                {
+                    MessageBox.Show("M5027");
+                    textBoxSalesOfficeID.Focus();
+                    return;
+                }
+
                 if(textBoxSalesOfficeID.TextLength > 2)
                 {
                     MessageBox.Show("営業所IDは2文字以下です");
