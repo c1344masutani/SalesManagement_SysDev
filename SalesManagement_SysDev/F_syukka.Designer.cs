@@ -199,10 +199,10 @@ namespace SalesManagement_SysDev
             // checkBoxShStateFlag
             // 
             this.checkBoxShStateFlag.AutoSize = true;
-            this.checkBoxShStateFlag.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.checkBoxShStateFlag.Font = new System.Drawing.Font("HGS明朝E", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBoxShStateFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
             this.checkBoxShStateFlag.Location = new System.Drawing.Point(925, 354);
-            this.checkBoxShStateFlag.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBoxShStateFlag.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxShStateFlag.Name = "checkBoxShStateFlag";
             this.checkBoxShStateFlag.Size = new System.Drawing.Size(185, 40);
             this.checkBoxShStateFlag.TabIndex = 62;
@@ -212,10 +212,10 @@ namespace SalesManagement_SysDev
             // checkBoxShFlag
             // 
             this.checkBoxShFlag.AutoSize = true;
-            this.checkBoxShFlag.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.checkBoxShFlag.Font = new System.Drawing.Font("HGS明朝E", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBoxShFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
             this.checkBoxShFlag.Location = new System.Drawing.Point(1222, 354);
-            this.checkBoxShFlag.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBoxShFlag.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxShFlag.Name = "checkBoxShFlag";
             this.checkBoxShFlag.Size = new System.Drawing.Size(149, 40);
             this.checkBoxShFlag.TabIndex = 63;
@@ -279,7 +279,7 @@ namespace SalesManagement_SysDev
             // dateTimePickerShFinishDate
             // 
             this.dateTimePickerShFinishDate.Location = new System.Drawing.Point(1300, 425);
-            this.dateTimePickerShFinishDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePickerShFinishDate.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePickerShFinishDate.Name = "dateTimePickerShFinishDate";
             this.dateTimePickerShFinishDate.Size = new System.Drawing.Size(185, 25);
             this.dateTimePickerShFinishDate.TabIndex = 70;
@@ -289,7 +289,7 @@ namespace SalesManagement_SysDev
             this.dataGridViewDsp.AllowUserToAddRows = false;
             this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDsp.Location = new System.Drawing.Point(192, 492);
-            this.dataGridViewDsp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewDsp.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewDsp.Name = "dataGridViewDsp";
             this.dataGridViewDsp.RowHeadersWidth = 51;
             this.dataGridViewDsp.RowTemplate.Height = 24;
