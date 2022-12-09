@@ -94,7 +94,14 @@ namespace SalesManagement_SysDev
         {
 
             if (!String.IsNullOrEmpty(textBoxMaID.Text.Trim()))
-            {
+            { 
+                if (!dataInputFormCheck.CheckNumeric(textBoxMaID.Text.Trim()))
+                {
+                    MessageBox.Show("メーカは数値です");
+                    textBoxMaID.Focus();
+                    return;
+                }
+            
                 if (textBoxMaID.TextLength > 4)
                 {
                     MessageBox.Show("メーカーは4文字以下です");
@@ -104,6 +111,12 @@ namespace SalesManagement_SysDev
 
             if (!String.IsNullOrEmpty(textBoxEmID.Text.Trim()))
             {
+                if (!dataInputFormCheck.CheckNumeric(textBoxEmID.Text.Trim()))
+                {
+                    MessageBox.Show("発注社員IDは数値です");
+                    textBoxEmID.Focus();
+                    return;
+                }
                 if (textBoxEmID.TextLength > 6)
                 {
                     MessageBox.Show("発注社員IDは6文字以下です");
@@ -187,6 +200,13 @@ namespace SalesManagement_SysDev
         {
             if (!String.IsNullOrEmpty(textBoxMaID.Text.Trim()))
             {
+                if (!dataInputFormCheck.CheckNumeric(textBoxMaID.Text.Trim()))
+                {
+                    MessageBox.Show("メーカは数値です");
+                    textBoxMaID.Focus();
+                    return;
+                }
+
                 if (textBoxMaID.TextLength > 4)
                 {
                     MessageBox.Show("メーカーは4文字以下です");
@@ -196,6 +216,12 @@ namespace SalesManagement_SysDev
 
             if (!String.IsNullOrEmpty(textBoxEmID.Text.Trim()))
             {
+                if (!dataInputFormCheck.CheckNumeric(textBoxEmID.Text.Trim()))
+                {
+                    MessageBox.Show("発注社員IDは数値です");
+                    textBoxEmID.Focus();
+                    return;
+                }
                 if (textBoxEmID.TextLength > 6)
                 {
                     MessageBox.Show("発注社員IDは6文字以下です");
@@ -283,6 +309,13 @@ namespace SalesManagement_SysDev
         {
             if (!String.IsNullOrEmpty(textBoxMaID.Text.Trim()))
             {
+                if (!dataInputFormCheck.CheckNumeric(textBoxMaID.Text.Trim()))
+                {
+                    MessageBox.Show("メーカは数値です");
+                    textBoxMaID.Focus();
+                    return;
+                }
+
                 if (textBoxMaID.TextLength > 4)
                 {
                     MessageBox.Show("メーカーは4文字以下です");
@@ -292,6 +325,12 @@ namespace SalesManagement_SysDev
 
             if (!String.IsNullOrEmpty(textBoxEmID.Text.Trim()))
             {
+                if (!dataInputFormCheck.CheckNumeric(textBoxEmID.Text.Trim()))
+                {
+                    MessageBox.Show("発注社員IDは数値です");
+                    textBoxEmID.Focus();
+                    return;
+                }
                 if (textBoxEmID.TextLength > 6)
                 {
                     MessageBox.Show("発注社員IDは6文字以下です");

@@ -44,51 +44,55 @@ namespace SalesManagement_SysDev
         private void Regester_button_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(textBoxPrName.Text.Trim()))
-                if(textBoxPrName.TextLength > 50)
+            {
+                if (textBoxPrName.TextLength > 50)
                 {
                     MessageBox.Show("商品名は50文字以下です");
                     return;
                 }
-
-            if(!string.IsNullOrEmpty(textBoxPrice.Text.Trim()))
-                if(!dataInputFormCheck.CheckNumeric(textBoxPrice.Text.Trim()))
+            }
+            if (!string.IsNullOrEmpty(textBoxPrice.Text.Trim()))
+            {
+                if (!dataInputFormCheck.CheckNumeric(textBoxPrice.Text.Trim()))
                 {
                     MessageBox.Show("価格は数値です");
                     textBoxPrice.Focus();
                     return;
                 }
-                if(textBoxPrice.TextLength > 9)
+                if (textBoxPrice.TextLength > 9)
                 {
                     MessageBox.Show("価格は9文字以下です");
                     return;
                 }
-
+            }
             if (!string.IsNullOrEmpty(textBoxPrSafetyStock.Text.Trim()))
+            {
                 if (!dataInputFormCheck.CheckNumeric(textBoxPrSafetyStock.Text.Trim()))
                 {
                     MessageBox.Show("安全在庫数は数値です");
                     textBoxPrSafetyStock.Focus();
                     return;
                 }
-            if (textBoxPrSafetyStock.TextLength > 4)
+                if (textBoxPrSafetyStock.TextLength > 4)
                 {
                     MessageBox.Show("安全在庫数は4文字以下です");
                     return;
                 }
-
+            }
             if (!string.IsNullOrEmpty(textBoxScID.Text.Trim()))
+            {
                 if (!dataInputFormCheck.CheckNumeric(textBoxScID.Text.Trim()))
                 {
                     MessageBox.Show("小分類IDは数値です");
                     textBoxScID.Focus();
                     return;
                 }
-            if (textBoxScID.TextLength > 2)
+                if (textBoxScID.TextLength > 2)
                 {
                     MessageBox.Show("小分類IDは2文字以下です");
                     return;
                 }
-
+            }
             if (!string.IsNullOrEmpty(textBoxPrModelNumber.Text.Trim()))
                 if (textBoxPrModelNumber.TextLength > 20)
                 {
@@ -160,37 +164,63 @@ namespace SalesManagement_SysDev
 
         private void Update_button_Click(object sender, EventArgs e)
         {
-
             if (!string.IsNullOrEmpty(textBoxPrName.Text.Trim()))
+            {
                 if (textBoxPrName.TextLength > 50)
                 {
                     MessageBox.Show("商品名は50文字以下です");
                     return;
                 }
+            }
             if (!string.IsNullOrEmpty(textBoxPrice.Text.Trim()))
+            {
+                if (!dataInputFormCheck.CheckNumeric(textBoxPrice.Text.Trim()))
+                {
+                    MessageBox.Show("価格は数値です");
+                    textBoxPrice.Focus();
+                    return;
+                }
                 if (textBoxPrice.TextLength > 9)
                 {
                     MessageBox.Show("価格は9文字以下です");
                     return;
                 }
+            }
             if (!string.IsNullOrEmpty(textBoxPrSafetyStock.Text.Trim()))
+            {
+                if (!dataInputFormCheck.CheckNumeric(textBoxPrSafetyStock.Text.Trim()))
+                {
+                    MessageBox.Show("安全在庫数は数値です");
+                    textBoxPrSafetyStock.Focus();
+                    return;
+                }
                 if (textBoxPrSafetyStock.TextLength > 4)
                 {
                     MessageBox.Show("安全在庫数は4文字以下です");
                     return;
                 }
+            }
             if (!string.IsNullOrEmpty(textBoxScID.Text.Trim()))
+            {
+                if (!dataInputFormCheck.CheckNumeric(textBoxScID.Text.Trim()))
+                {
+                    MessageBox.Show("小分類IDは数値です");
+                    textBoxScID.Focus();
+                    return;
+                }
                 if (textBoxScID.TextLength > 2)
                 {
                     MessageBox.Show("小分類IDは2文字以下です");
                     return;
                 }
+            }
             if (!string.IsNullOrEmpty(textBoxPrModelNumber.Text.Trim()))
                 if (textBoxPrModelNumber.TextLength > 20)
                 {
                     MessageBox.Show("型番は20文字以下です");
                     return;
                 }
+
             if (!string.IsNullOrEmpty(textBoxHidden.Text.Trim()))
                 if (textBoxHidden.TextLength > 200)
                 {
@@ -401,35 +431,62 @@ namespace SalesManagement_SysDev
         private void Search_button_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(textBoxPrName.Text.Trim()))
+            {
                 if (textBoxPrName.TextLength > 50)
                 {
                     MessageBox.Show("商品名は50文字以下です");
                     return;
                 }
+            }
             if (!string.IsNullOrEmpty(textBoxPrice.Text.Trim()))
+            {
+                if (!dataInputFormCheck.CheckNumeric(textBoxPrice.Text.Trim()))
+                {
+                    MessageBox.Show("価格は数値です");
+                    textBoxPrice.Focus();
+                    return;
+                }
                 if (textBoxPrice.TextLength > 9)
                 {
                     MessageBox.Show("価格は9文字以下です");
                     return;
                 }
+            }
             if (!string.IsNullOrEmpty(textBoxPrSafetyStock.Text.Trim()))
+            {
+                if (!dataInputFormCheck.CheckNumeric(textBoxPrSafetyStock.Text.Trim()))
+                {
+                    MessageBox.Show("安全在庫数は数値です");
+                    textBoxPrSafetyStock.Focus();
+                    return;
+                }
                 if (textBoxPrSafetyStock.TextLength > 4)
                 {
                     MessageBox.Show("安全在庫数は4文字以下です");
                     return;
                 }
+            }
             if (!string.IsNullOrEmpty(textBoxScID.Text.Trim()))
+            {
+                if (!dataInputFormCheck.CheckNumeric(textBoxScID.Text.Trim()))
+                {
+                    MessageBox.Show("小分類IDは数値です");
+                    textBoxScID.Focus();
+                    return;
+                }
                 if (textBoxScID.TextLength > 2)
                 {
                     MessageBox.Show("小分類IDは2文字以下です");
                     return;
                 }
+            }
             if (!string.IsNullOrEmpty(textBoxPrModelNumber.Text.Trim()))
                 if (textBoxPrModelNumber.TextLength > 20)
                 {
                     MessageBox.Show("型番は20文字以下です");
                     return;
                 }
+
             if (!string.IsNullOrEmpty(textBoxHidden.Text.Trim()))
                 if (textBoxHidden.TextLength > 200)
                 {
