@@ -163,5 +163,20 @@ namespace SalesManagement_SysDev
         {
 
         }
+
+        private void buttonLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result =  MessageBox.Show("ログアウトしてよろしいですか？", "ログアウト確認", MessageBoxButtons.OKCancel);
+            if(result == System.Windows.Forms.DialogResult.OK)
+            {
+                //アプリケーションを終了する
+                Application.Exit();
+            }
+            else if(result == System.Windows.Forms.DialogResult.Cancel)
+            {
+                return;
+            }
+            
+        }
     }
 }

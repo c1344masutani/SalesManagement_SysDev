@@ -44,6 +44,7 @@ namespace SalesManagement_SysDev
             this.InHouse_button = new System.Windows.Forms.Button();
             this.Stock_button = new System.Windows.Forms.Button();
             this.Member_button = new System.Windows.Forms.Button();
+            this.buttonLogout = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +52,7 @@ namespace SalesManagement_SysDev
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.panel1.Controls.Add(this.buttonLogout);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.Customer_button);
@@ -256,6 +258,20 @@ namespace SalesManagement_SysDev
             this.Member_button.UseVisualStyleBackColor = false;
             this.Member_button.Click += new System.EventHandler(this.Member_button_Click);
             // 
+            // buttonLogout
+            // 
+            this.buttonLogout.BackColor = System.Drawing.Color.Transparent;
+            this.buttonLogout.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.buttonLogout.Location = new System.Drawing.Point(1538, 84);
+            this.buttonLogout.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonLogout.Name = "buttonLogout";
+            this.buttonLogout.Size = new System.Drawing.Size(321, 59);
+            this.buttonLogout.TabIndex = 94;
+            this.buttonLogout.Text = "ログアウト";
+            this.buttonLogout.UseVisualStyleBackColor = false;
+            this.buttonLogout.Click += new System.EventHandler(this.buttonLogout_Click);
+            // 
             // F_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -289,5 +305,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Button InHouse_button;
         private System.Windows.Forms.Button Stock_button;
         private System.Windows.Forms.Button Member_button;
+        private System.Windows.Forms.Button buttonLogout;
     }
 }
