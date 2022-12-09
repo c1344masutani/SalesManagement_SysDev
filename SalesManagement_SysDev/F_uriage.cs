@@ -191,7 +191,7 @@ namespace SalesManagement_SysDev
             }
             else
             {
-                flg = 1;
+                flg = 0;
             }
 
             try
