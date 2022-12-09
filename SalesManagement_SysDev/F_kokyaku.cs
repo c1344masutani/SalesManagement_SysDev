@@ -23,15 +23,6 @@ namespace SalesManagement_SysDev
         private void Regester_button_Click(object sender, EventArgs e)
         {
 
-            if (!String.IsNullOrEmpty(textBoxAddress.Text.Trim()))
-            {
-                if (textBoxAddress.TextLength > 50)
-                {
-                    MessageBox.Show("住所は50文字以下です");
-                    return;
-                }
-            }
-
             if (!String.IsNullOrEmpty(textBoxSalesOfficeID.Text.Trim()))
             {
 
@@ -45,6 +36,7 @@ namespace SalesManagement_SysDev
                 if(textBoxSalesOfficeID.TextLength > 2)
                 {
                     MessageBox.Show("営業所IDは2文字以下です");
+                    textBoxSalesOfficeID.Focus();
                     return;
                 }
             }
@@ -54,6 +46,7 @@ namespace SalesManagement_SysDev
                 if (textBoxClientName.TextLength > 50)
                 {
                     MessageBox.Show("顧客名は50文字以下です");
+                    textBoxClientName.Focus();
                     return;
                 }
             }
@@ -63,6 +56,7 @@ namespace SalesManagement_SysDev
                 if (textBoxAddress.TextLength > 50)
                 {
                     MessageBox.Show("住所は50文字以下です");
+                    textBoxAddress.Focus();
                     return;
                 }
             }
@@ -72,6 +66,7 @@ namespace SalesManagement_SysDev
                 if (textBoxPhone.TextLength > 13)
                 {
                     MessageBox.Show("電話番号は13文字以下です");
+                    textBoxPhone.Focus();
                     return;
                 }
             }
@@ -81,6 +76,7 @@ namespace SalesManagement_SysDev
                 if (textBoxPostnumber.TextLength > 7)
                 {
                     MessageBox.Show("郵便番号は7文字以下です");
+                    textBoxPostnumber.Focus();
                     return;
                 }
             }
@@ -90,6 +86,7 @@ namespace SalesManagement_SysDev
                 if (textBoxHidden.TextLength > 200)
                 {
                     MessageBox.Show("非表示理由は200文字以下です");
+                    textBoxHidden.Focus();
                     return;
                 }
             }
