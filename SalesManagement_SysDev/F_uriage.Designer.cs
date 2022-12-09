@@ -391,10 +391,10 @@ namespace SalesManagement_SysDev
             this.buttonHidden.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.buttonHidden.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.buttonHidden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.buttonHidden.Location = new System.Drawing.Point(1098, 26);
+            this.buttonHidden.Location = new System.Drawing.Point(1073, 26);
             this.buttonHidden.Margin = new System.Windows.Forms.Padding(2);
             this.buttonHidden.Name = "buttonHidden";
-            this.buttonHidden.Size = new System.Drawing.Size(154, 56);
+            this.buttonHidden.Size = new System.Drawing.Size(179, 56);
             this.buttonHidden.TabIndex = 104;
             this.buttonHidden.Text = "非表示";
             this.buttonHidden.UseVisualStyleBackColor = false;
