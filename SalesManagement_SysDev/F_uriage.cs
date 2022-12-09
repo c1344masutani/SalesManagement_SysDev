@@ -98,36 +98,72 @@ namespace SalesManagement_SysDev
 
             if (!String.IsNullOrEmpty(textBoxClID.Text.Trim()))
             {
+
+                if (!dataInputFormCheck.CheckNumeric(textBoxClID.Text.Trim()))
+                {
+                    MessageBox.Show("M5027");
+                    textBoxClID.Focus();
+                    return;
+                }
+
                 if (textBoxClID.TextLength > 4)
                 {
                     MessageBox.Show("顧客IDは4文字以下です");
+                    textBoxClID.Focus();
                     return;
                 }
             }
 
             if (!String.IsNullOrEmpty(textBoxSoID.Text.Trim()))
             {
+
+                if (!dataInputFormCheck.CheckNumeric(textBoxSoID.Text.Trim()))
+                {
+                    MessageBox.Show("M5027");
+                    textBoxSoID.Focus();
+                    return;
+                }
+
                 if (textBoxSoID.TextLength > 2)
                 {
                     MessageBox.Show("営業所IDは2文字以下です");
+                    textBoxSoID.Focus();
                     return;
                 }
             }
 
             if (!String.IsNullOrEmpty(textBoxEmID.Text.Trim()))
             {
+
+                if (!dataInputFormCheck.CheckNumeric(textBoxEmID.Text.Trim()))
+                {
+                    MessageBox.Show("M5027");
+                    textBoxEmID.Focus();
+                    return;
+                }
+
                 if (textBoxEmID.TextLength > 6)
                 {
                     MessageBox.Show("受注社員IDは6文字以下です");
+                    textBoxEmID.Focus();
                     return;
                 }
             }
 
             if (!String.IsNullOrEmpty(textBoxChID.Text.Trim()))
             {
+
+                if (!dataInputFormCheck.CheckNumeric(textBoxChID.Text.Trim()))
+                {
+                    MessageBox.Show("M5027");
+                    textBoxChID.Focus();
+                    return;
+                }
+
                 if (textBoxChID.TextLength > 6)
                 {
                     MessageBox.Show("受注IDは6文字以下です");
+                    textBoxChID.Focus();
                     return;
                 }
             }
@@ -137,6 +173,7 @@ namespace SalesManagement_SysDev
                 if (textBoxSaHidden.TextLength > 200)
                 {
                     MessageBox.Show("非表示理由は200文字以下です");
+                    textBoxChID.Focus();
                     return;
                 }
             }
@@ -180,6 +217,35 @@ namespace SalesManagement_SysDev
             textBoxEmID.Text = "";
             textBoxChID.Text = "";
             dateTimePickerSaDate.Value = DateTime.Today;
+        }
+
+        private void buttonHidden_Click(object sender, EventArgs e)
+        {
+            int flg;
+            if(checkBoxSaFlag.Checked == true)
+            {
+                flg = 2;
+            }
+            else
+            {
+                flg = 0;
+            }
+
+            try
+            {
+                int said = int.Parse(textBoxSaID.Text);
+                var context = new SalesManagement_DevContext();
+                var sale = context.T_Sale.Single(x => x.SaID == said);
+                sale.SaFlag = flg;
+                context.SaveChanges();
+                context.Dispose();
+                MessageBox.Show("非表示にしました");
+                fncAllSelect();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

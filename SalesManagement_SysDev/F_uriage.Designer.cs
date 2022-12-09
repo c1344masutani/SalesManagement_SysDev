@@ -56,6 +56,7 @@ namespace SalesManagement_SysDev
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.buttonHidden = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -385,12 +386,27 @@ namespace SalesManagement_SysDev
             this.label7.TabIndex = 103;
             this.label7.Text = "必須";
             // 
+            // buttonHidden
+            // 
+            this.buttonHidden.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonHidden.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonHidden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.buttonHidden.Location = new System.Drawing.Point(1098, 26);
+            this.buttonHidden.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonHidden.Name = "buttonHidden";
+            this.buttonHidden.Size = new System.Drawing.Size(154, 56);
+            this.buttonHidden.TabIndex = 104;
+            this.buttonHidden.Text = "非表示";
+            this.buttonHidden.UseVisualStyleBackColor = false;
+            this.buttonHidden.Click += new System.EventHandler(this.buttonHidden_Click);
+            // 
             // F_uriage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1924, 1050);
+            this.Controls.Add(this.buttonHidden);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -458,5 +474,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button buttonHidden;
     }
 }
