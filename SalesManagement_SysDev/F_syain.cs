@@ -53,13 +53,32 @@ namespace SalesManagement_SysDev
         {
 
             dataGridViewDsp.Rows.Clear();
+
             try
             {
                 var context = new SalesManagement_DevContext();
-                foreach (var p in context.M_Employees)
+                var tb = from t1 in context.M_Employees
+                         join t2 in context.M_SalesOffices
+                         on t1.SoID equals t2.SoID
+                         join t3 in context.M_Positions
+                         on t1.PoID equals t3.PoID
+                         select new
+                         {
+                             t1.EmID,
+                             t1.EmName,
+                             t2.SoName,
+                             t3.PoName,
+                             t1.EmHiredate,
+                             t1.EmPhone,
+                             t1.EmPassword,
+                             t1.EmFlag,
+                             t1.EmHidden
+                         };
+                foreach(var p in tb)
                 {
-                    dataGridViewDsp.Rows.Add(p.EmID, p.EmName, p.SoID, p.PoID, p.EmHiredate, p.EmPhone, p.EmPassword, p.EmFlag, p.EmHidden);
+                    dataGridViewDsp.Rows.Add(p.EmID, p.EmName, p.SoName, p.PoName, p.EmHiredate, p.EmPhone, p.EmPassword, p.EmFlag, p.EmHidden);
                 }
+
                 context.Dispose();
             }
             catch (Exception ex)
