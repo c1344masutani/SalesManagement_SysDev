@@ -154,7 +154,7 @@ namespace SalesManagement_SysDev
             //非表示機能
             try
             {
-                DataGridViewRow row = dataGridViewDsp.Rows.Cast<DataGridViewRow>().First(r => r.Cells[7].Value.ToString() == "2");
+                DataGridViewRow row = dataGridViewDsp.Rows.Cast<DataGridViewRow>().First(r => r.Cells[8].Value.ToString() == "2");
                 row.Visible = false;
             }
             catch (Exception ex)
