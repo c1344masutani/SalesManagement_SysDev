@@ -47,7 +47,6 @@ namespace SalesManagement_SysDev
             this.textBoxEmPhone = new System.Windows.Forms.TextBox();
             this.textBoxEmPassWord = new System.Windows.Forms.TextBox();
             this.dataGridViewDsp = new System.Windows.Forms.DataGridView();
-            this.textBoxPoID = new System.Windows.Forms.TextBox();
             this.Regester_button = new System.Windows.Forms.Button();
             this.Update_button = new System.Windows.Forms.Button();
             this.Search_button = new System.Windows.Forms.Button();
@@ -64,6 +63,7 @@ namespace SalesManagement_SysDev
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.checkBoxEmFlag = new System.Windows.Forms.CheckBox();
             this.comboBoxSalesOffice = new System.Windows.Forms.ComboBox();
+            this.comboBoxPosition = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -100,9 +100,9 @@ namespace SalesManagement_SysDev
             this.label4.Location = new System.Drawing.Point(918, 146);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 40);
+            this.label4.Size = new System.Drawing.Size(137, 40);
             this.label4.TabIndex = 3;
-            this.label4.Text = "役職ID";
+            this.label4.Text = "役職名";
             // 
             // label5
             // 
@@ -240,15 +240,6 @@ namespace SalesManagement_SysDev
             this.dataGridViewDsp.Size = new System.Drawing.Size(1804, 576);
             this.dataGridViewDsp.TabIndex = 17;
             this.dataGridViewDsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellClick);
-            // 
-            // textBoxPoID
-            // 
-            this.textBoxPoID.Location = new System.Drawing.Point(1222, 137);
-            this.textBoxPoID.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxPoID.Multiline = true;
-            this.textBoxPoID.Name = "textBoxPoID";
-            this.textBoxPoID.Size = new System.Drawing.Size(274, 45);
-            this.textBoxPoID.TabIndex = 18;
             // 
             // Regester_button
             // 
@@ -441,12 +432,22 @@ namespace SalesManagement_SysDev
             this.comboBoxSalesOffice.Size = new System.Drawing.Size(185, 41);
             this.comboBoxSalesOffice.TabIndex = 50;
             // 
+            // comboBoxPosition
+            // 
+            this.comboBoxPosition.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.comboBoxPosition.FormattingEnabled = true;
+            this.comboBoxPosition.Location = new System.Drawing.Point(1222, 152);
+            this.comboBoxPosition.Name = "comboBoxPosition";
+            this.comboBoxPosition.Size = new System.Drawing.Size(254, 41);
+            this.comboBoxPosition.TabIndex = 51;
+            // 
             // F_syain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1924, 1050);
+            this.Controls.Add(this.comboBoxPosition);
             this.Controls.Add(this.comboBoxSalesOffice);
             this.Controls.Add(this.checkBoxEmFlag);
             this.Controls.Add(this.pictureBox1);
@@ -463,7 +464,6 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.Search_button);
             this.Controls.Add(this.Update_button);
             this.Controls.Add(this.Regester_button);
-            this.Controls.Add(this.textBoxPoID);
             this.Controls.Add(this.dataGridViewDsp);
             this.Controls.Add(this.textBoxEmPassWord);
             this.Controls.Add(this.textBoxEmPhone);
@@ -509,7 +509,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.TextBox textBoxEmPhone;
         private System.Windows.Forms.TextBox textBoxEmPassWord;
         private System.Windows.Forms.DataGridView dataGridViewDsp;
-        private System.Windows.Forms.TextBox textBoxPoID;
         private System.Windows.Forms.Button Regester_button;
         private System.Windows.Forms.Button Update_button;
         private System.Windows.Forms.Button Search_button;
@@ -527,5 +526,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.CheckBox checkBoxEmFlag;
         private EventHandler label1_Click;
         private System.Windows.Forms.ComboBox comboBoxSalesOffice;
+        private System.Windows.Forms.ComboBox comboBoxPosition;
     }
 }

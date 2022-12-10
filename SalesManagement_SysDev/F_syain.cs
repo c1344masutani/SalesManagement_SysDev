@@ -16,9 +16,10 @@ namespace SalesManagement_SysDev
         DataInputFormCheck dataInputFormCheck = new DataInputFormCheck();
         //コンボボックス用
         SalesOfficeDataAccess salesOfficeDataAccess = new SalesOfficeDataAccess();
-
+        PositionDataAccess positionDataAccess = new PositionDataAccess();
         //コンボボックス用のデータ
         private static List<M_SalesOffice> SalesOffice;
+        private static List<M_Position> Position;
 
 
 
@@ -37,6 +38,15 @@ namespace SalesManagement_SysDev
             //読み取り専用
             comboBoxSalesOffice.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxSalesOffice.SelectedIndex = -1;
+
+            //役職コンボボックス
+            Position = positionDataAccess.GetPositionDspData();
+            comboBoxPosition.DataSource = Position;
+            comboBoxPosition.DisplayMember = "PoName";
+            comboBoxPosition.ValueMember = "PoID";
+            //読み取り専用
+            comboBoxPosition.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxPosition.SelectedIndex = -1;
         }
 
         private void fncAllSelect()
@@ -116,24 +126,6 @@ namespace SalesManagement_SysDev
 
             
 
-            if (!string.IsNullOrEmpty(textBoxPoID.Text.Trim()))
-            {
-
-
-                if (!dataInputFormCheck.CheckNumeric(textBoxPoID.Text.Trim()))
-                {
-                    MessageBox.Show("M5027");
-                    textBoxPoID.Focus();
-                    return;
-                }
-
-                if (textBoxPoID.TextLength > 2)
-                {
-                    MessageBox.Show("役職IDは2文字以下です");
-                    textBoxPoID.Focus();
-                    return;
-                }
-            }
                
             if(!string.IsNullOrEmpty(textBoxEmPassWord.Text.Trim()))
             {
@@ -179,7 +171,7 @@ namespace SalesManagement_SysDev
             {
                 EmName = textBoxEmName.Text.Trim(),
                 SoID = int.Parse(comboBoxSalesOffice.SelectedValue.ToString()),
-                PoID = int.Parse(textBoxPoID.Text.Trim()),
+                PoID = int.Parse(comboBoxPosition.SelectedValue.ToString()),
                 EmHiredate = datetimeEmHiredate.Value,
                 EmPhone = textBoxEmPhone.Text.Trim(),
                 EmPassword = textBoxEmPassWord.Text.Trim(),
@@ -208,7 +200,7 @@ namespace SalesManagement_SysDev
             textBoxEmID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[0].Value.ToString();
             textBoxEmName.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
             comboBoxSalesOffice.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
-            textBoxPoID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
+            comboBoxPosition.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
             datetimeEmHiredate.Value = DateTime.Parse(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString());
             textBoxEmPhone.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString();
             textBoxEmPassWord.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[6].Value.ToString();
@@ -233,12 +225,7 @@ namespace SalesManagement_SysDev
                     return;
                 }
             
-            if (!string.IsNullOrEmpty(textBoxPoID.Text.Trim()))
-                if (textBoxPoID.TextLength > 2)
-                {
-                    MessageBox.Show("役職IDは2文字以下です");
-                    return;
-                }
+            
             if (!string.IsNullOrEmpty(textBoxEmPassWord.Text.Trim()))
                 if (textBoxEmPassWord.TextLength > 10)
                 {
@@ -274,7 +261,7 @@ namespace SalesManagement_SysDev
                 var employees = context.M_Employees.Single(x => x.EmID == emid);
                 employees.EmName = textBoxEmName.Text.Trim();
                 employees.SoID = int.Parse(comboBoxSalesOffice.SelectedValue.ToString());
-                employees.PoID = int.Parse(textBoxPoID.Text.Trim());
+                employees.PoID = int.Parse(comboBoxPosition.SelectedValue.ToString());
                 employees.EmHiredate = datetimeEmHiredate.Value;
                 employees.EmPhone = textBoxEmPhone.Text.Trim();
                 employees.EmPassword = textBoxEmPassWord.Text.Trim();
@@ -327,24 +314,7 @@ namespace SalesManagement_SysDev
 
             
 
-            if (!string.IsNullOrEmpty(textBoxPoID.Text.Trim()))
-            {
-
-
-                if (!dataInputFormCheck.CheckNumeric(textBoxPoID.Text.Trim()))
-                {
-                    MessageBox.Show("M5027");
-                    textBoxPoID.Focus();
-                    return;
-                }
-
-                if (textBoxPoID.TextLength > 2)
-                {
-                    MessageBox.Show("役職IDは2文字以下です");
-                    textBoxPoID.Focus();
-                    return;
-                }
-            }
+            
 
             if (!string.IsNullOrEmpty(textBoxEmPassWord.Text.Trim()))
             {

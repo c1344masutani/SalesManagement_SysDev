@@ -63,6 +63,7 @@
     <Compile Include="DbAccess\ClientDataAccess.cs" />
     <Compile Include="DbAccess\EmployeeDataAccess.cs" />
     <Compile Include="DbAccess\MakerDataAccess.cs" />
+    <Compile Include="DbAccess\PositionDataAccess.cs" />
     <Compile Include="DbAccess\ProductDataAccess.cs" />
     <Compile Include="DbAccess\SalesOfficeDataAccess.cs" />
     <Compile Include="DbAccess\StockDataAccess.cs" />
