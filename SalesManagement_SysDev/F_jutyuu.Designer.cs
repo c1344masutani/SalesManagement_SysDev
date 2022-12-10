@@ -45,10 +45,7 @@ namespace SalesManagement_SysDev
             this.Search_button = new System.Windows.Forms.Button();
             this.back_button = new System.Windows.Forms.Button();
             this.textBoxOrID = new System.Windows.Forms.TextBox();
-            this.textBoxSoID = new System.Windows.Forms.TextBox();
-            this.textBoxEmID = new System.Windows.Forms.TextBox();
             this.textBoxOrHidden = new System.Windows.Forms.TextBox();
-            this.textBoxClID = new System.Windows.Forms.TextBox();
             this.textBoxClCharge = new System.Windows.Forms.TextBox();
             this.datetimepickerOrDate = new System.Windows.Forms.DateTimePicker();
             this.checkBoxOrStateFlag = new System.Windows.Forms.CheckBox();
@@ -60,10 +57,14 @@ namespace SalesManagement_SysDev
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBoxPrID = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.numericUpDownOrQuantity = new System.Windows.Forms.NumericUpDown();
+            this.comboBoxSalesOffice = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxEmployee = new System.Windows.Forms.ComboBox();
+            this.comboBoxClient = new System.Windows.Forms.ComboBox();
+            this.comboBoxProduct = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOrQuantity)).BeginInit();
@@ -98,9 +99,9 @@ namespace SalesManagement_SysDev
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
             this.label3.Location = new System.Drawing.Point(238, 270);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(178, 40);
+            this.label3.Size = new System.Drawing.Size(177, 40);
             this.label3.TabIndex = 2;
-            this.label3.Text = "営業所ID";
+            this.label3.Text = "営業所名";
             // 
             // label4
             // 
@@ -109,9 +110,9 @@ namespace SalesManagement_SysDev
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
             this.label4.Location = new System.Drawing.Point(817, 185);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 40);
+            this.label4.Size = new System.Drawing.Size(137, 40);
             this.label4.TabIndex = 3;
-            this.label4.Text = "顧客ID";
+            this.label4.Text = "顧客名";
             // 
             // label5
             // 
@@ -120,9 +121,9 @@ namespace SalesManagement_SysDev
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
             this.label5.Location = new System.Drawing.Point(238, 352);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(138, 40);
+            this.label5.Size = new System.Drawing.Size(137, 40);
             this.label5.TabIndex = 3;
-            this.label5.Text = "社員ID";
+            this.label5.Text = "社員名";
             // 
             // pictureBox1
             // 
@@ -247,22 +248,6 @@ namespace SalesManagement_SysDev
             this.textBoxOrID.Size = new System.Drawing.Size(178, 39);
             this.textBoxOrID.TabIndex = 60;
             // 
-            // textBoxSoID
-            // 
-            this.textBoxSoID.Location = new System.Drawing.Point(539, 270);
-            this.textBoxSoID.Multiline = true;
-            this.textBoxSoID.Name = "textBoxSoID";
-            this.textBoxSoID.Size = new System.Drawing.Size(178, 39);
-            this.textBoxSoID.TabIndex = 61;
-            // 
-            // textBoxEmID
-            // 
-            this.textBoxEmID.Location = new System.Drawing.Point(539, 353);
-            this.textBoxEmID.Multiline = true;
-            this.textBoxEmID.Name = "textBoxEmID";
-            this.textBoxEmID.Size = new System.Drawing.Size(178, 39);
-            this.textBoxEmID.TabIndex = 62;
-            // 
             // textBoxOrHidden
             // 
             this.textBoxOrHidden.Location = new System.Drawing.Point(539, 442);
@@ -270,14 +255,6 @@ namespace SalesManagement_SysDev
             this.textBoxOrHidden.Name = "textBoxOrHidden";
             this.textBoxOrHidden.Size = new System.Drawing.Size(447, 87);
             this.textBoxOrHidden.TabIndex = 63;
-            // 
-            // textBoxClID
-            // 
-            this.textBoxClID.Location = new System.Drawing.Point(1173, 187);
-            this.textBoxClID.Multiline = true;
-            this.textBoxClID.Name = "textBoxClID";
-            this.textBoxClID.Size = new System.Drawing.Size(178, 39);
-            this.textBoxClID.TabIndex = 64;
             // 
             // textBoxClCharge
             // 
@@ -391,17 +368,9 @@ namespace SalesManagement_SysDev
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
             this.label16.Location = new System.Drawing.Point(817, 274);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(138, 40);
+            this.label16.Size = new System.Drawing.Size(137, 40);
             this.label16.TabIndex = 77;
-            this.label16.Text = "商品ID";
-            // 
-            // textBoxPrID
-            // 
-            this.textBoxPrID.Location = new System.Drawing.Point(1173, 270);
-            this.textBoxPrID.Multiline = true;
-            this.textBoxPrID.Name = "textBoxPrID";
-            this.textBoxPrID.Size = new System.Drawing.Size(178, 39);
-            this.textBoxPrID.TabIndex = 78;
+            this.label16.Text = "商品名";
             // 
             // label17
             // 
@@ -433,16 +402,64 @@ namespace SalesManagement_SysDev
             this.numericUpDownOrQuantity.Size = new System.Drawing.Size(120, 39);
             this.numericUpDownOrQuantity.TabIndex = 81;
             // 
+            // comboBoxSalesOffice
+            // 
+            this.comboBoxSalesOffice.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.comboBoxSalesOffice.FormattingEnabled = true;
+            this.comboBoxSalesOffice.Location = new System.Drawing.Point(539, 268);
+            this.comboBoxSalesOffice.Name = "comboBoxSalesOffice";
+            this.comboBoxSalesOffice.Size = new System.Drawing.Size(178, 41);
+            this.comboBoxSalesOffice.TabIndex = 82;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(0, 0);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 26);
+            this.comboBox1.TabIndex = 83;
+            // 
+            // comboBoxEmployee
+            // 
+            this.comboBoxEmployee.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.comboBoxEmployee.FormattingEnabled = true;
+            this.comboBoxEmployee.Location = new System.Drawing.Point(539, 355);
+            this.comboBoxEmployee.Name = "comboBoxEmployee";
+            this.comboBoxEmployee.Size = new System.Drawing.Size(178, 41);
+            this.comboBoxEmployee.TabIndex = 84;
+            // 
+            // comboBoxClient
+            // 
+            this.comboBoxClient.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.comboBoxClient.FormattingEnabled = true;
+            this.comboBoxClient.Location = new System.Drawing.Point(1173, 186);
+            this.comboBoxClient.Name = "comboBoxClient";
+            this.comboBoxClient.Size = new System.Drawing.Size(178, 41);
+            this.comboBoxClient.TabIndex = 85;
+            // 
+            // comboBoxProduct
+            // 
+            this.comboBoxProduct.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.comboBoxProduct.FormattingEnabled = true;
+            this.comboBoxProduct.Location = new System.Drawing.Point(1173, 272);
+            this.comboBoxProduct.Name = "comboBoxProduct";
+            this.comboBoxProduct.Size = new System.Drawing.Size(178, 41);
+            this.comboBoxProduct.TabIndex = 86;
+            // 
             // F_jutyuu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.comboBoxProduct);
+            this.Controls.Add(this.comboBoxClient);
+            this.Controls.Add(this.comboBoxEmployee);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxSalesOffice);
             this.Controls.Add(this.numericUpDownOrQuantity);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBoxPrID);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
@@ -454,10 +471,7 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.checkBoxOrStateFlag);
             this.Controls.Add(this.datetimepickerOrDate);
             this.Controls.Add(this.textBoxClCharge);
-            this.Controls.Add(this.textBoxClID);
             this.Controls.Add(this.textBoxOrHidden);
-            this.Controls.Add(this.textBoxEmID);
-            this.Controls.Add(this.textBoxSoID);
             this.Controls.Add(this.textBoxOrID);
             this.Controls.Add(this.back_button);
             this.Controls.Add(this.Search_button);
@@ -504,10 +518,7 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Button Search_button;
         private System.Windows.Forms.Button back_button;
         private System.Windows.Forms.TextBox textBoxOrID;
-        private System.Windows.Forms.TextBox textBoxSoID;
-        private System.Windows.Forms.TextBox textBoxEmID;
         private System.Windows.Forms.TextBox textBoxOrHidden;
-        private System.Windows.Forms.TextBox textBoxClID;
         private System.Windows.Forms.TextBox textBoxClCharge;
         private System.Windows.Forms.DateTimePicker datetimepickerOrDate;
         private System.Windows.Forms.CheckBox checkBoxOrStateFlag;
@@ -519,9 +530,13 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBoxPrID;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.NumericUpDown numericUpDownOrQuantity;
+        private System.Windows.Forms.ComboBox comboBoxSalesOffice;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxEmployee;
+        private System.Windows.Forms.ComboBox comboBoxClient;
+        private System.Windows.Forms.ComboBox comboBoxProduct;
     }
 }

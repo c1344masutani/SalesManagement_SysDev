@@ -9,6 +9,26 @@ namespace SalesManagement_SysDev
 {
     class ProductDataAccess
     {
+
+        //コンボボックス用
+        public List<M_Product> GetProductDspData()
+        {
+            List<M_Product> product = new List<M_Product>();
+            try
+            {
+                var context = new SalesManagement_DevContext();
+                product = context.M_Products.Where(x => x.PrFlag == 0).ToList();
+                context.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "例外エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return product;
+
+        }
+
+        //検索用
         public List<M_ProductDsp> GetProductData(M_ProductDsp selectCondition)
         {
             List<M_ProductDsp> product = new List<M_ProductDsp>();

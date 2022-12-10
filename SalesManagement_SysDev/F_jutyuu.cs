@@ -14,42 +14,97 @@ namespace SalesManagement_SysDev
     {
         //入力形式チェック用クラスのインスタンス化
         DataInputFormCheck dataInputFormCheck = new DataInputFormCheck();
+        //コンボボックス用
+        SalesOfficeDataAccess salesOfficeDataAccess = new SalesOfficeDataAccess();
+        EmployeeDataAccess employeeDataAccess = new EmployeeDataAccess();
+        ClientDataAccess clientDataAccess = new ClientDataAccess();
+        ProductDataAccess productDataAccess = new ProductDataAccess();
+
+        //コンボボックス用のデータ
+        private static List<M_SalesOffice> SalesOffice;
+        private static List<M_Employee> Employee;
+        private static List<M_Client> Client;
+        private static List<M_Product> Product;
+
 
         public F_jutyuu()
         {
             InitializeComponent();
         }
 
+        private void SetFormComboBox()
+        {
+            //営業所コンボボックス
+            SalesOffice = salesOfficeDataAccess.GetSalesOfficeDspData();
+            comboBoxSalesOffice.DataSource = SalesOffice;
+            comboBoxSalesOffice.DisplayMember = "SoName";
+            comboBoxSalesOffice.ValueMember = "SoID";
+            //読み取り専用
+            comboBoxSalesOffice.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxSalesOffice.SelectedIndex = -1;
+
+            //社員コンボボックス
+            Employee = employeeDataAccess.GetEmployeeDspData();
+            comboBoxEmployee.DataSource = Employee;
+            comboBoxEmployee.DisplayMember = "EmName";
+            comboBoxEmployee.ValueMember = "EmID";
+            //社員コンボボックスを読み取り専用
+            comboBoxEmployee.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxEmployee.SelectedIndex = -1;
+
+            //顧客コンボボックス
+            Client = clientDataAccess.GetClientDspData();
+            comboBoxClient.DataSource = Client;
+            comboBoxClient.DisplayMember = "ClName";
+            comboBoxClient.ValueMember = "ClID";
+            //読み取り専用
+            comboBoxClient.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxClient.SelectedIndex = -1;
+
+            //商品コンボボックス
+            Product = productDataAccess.GetProductDspData();
+            comboBoxProduct.DataSource = Product;
+            comboBoxProduct.DisplayMember = "PrName";
+            comboBoxProduct.ValueMember = "PrID";
+            //読み取り専用
+            comboBoxProduct.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxProduct.SelectedIndex = -1;
+        }
+
+
         private void F_order_received_Load(object sender, EventArgs e)
         {
             //列数の指定
-            dataGridViewDsp.ColumnCount = 9;
+            dataGridViewDsp.ColumnCount = 10;
             //0番目（左端）の列幅を設定
             dataGridViewDsp.Columns[0].Width = 70;
             //0番目（左端）の項目名を設定
             dataGridViewDsp.Columns[0].HeaderText = "受注ID";
-            dataGridViewDsp.Columns[1].Width = 70;
-            dataGridViewDsp.Columns[1].HeaderText = "営業所ID";
-            dataGridViewDsp.Columns[2].Width = 70;
-            dataGridViewDsp.Columns[2].HeaderText = "社員ID";
-            dataGridViewDsp.Columns[3].Width = 70;
-            dataGridViewDsp.Columns[3].HeaderText = "顧客ID";
+            dataGridViewDsp.Columns[1].Width = 130;
+            dataGridViewDsp.Columns[1].HeaderText = "営業所名";
+            dataGridViewDsp.Columns[2].Width = 130;
+            dataGridViewDsp.Columns[2].HeaderText = "社員名";
+            dataGridViewDsp.Columns[3].Width = 130;
+            dataGridViewDsp.Columns[3].HeaderText = "顧客名";
             dataGridViewDsp.Columns[4].Width = 130;
-            dataGridViewDsp.Columns[4].HeaderText = "顧客担当者名";
+            dataGridViewDsp.Columns[4].HeaderText = "商品名";
             dataGridViewDsp.Columns[5].Width = 130;
-            dataGridViewDsp.Columns[5].HeaderText = "受注年月日";
-            dataGridViewDsp.Columns[6].Width = 70;
-            dataGridViewDsp.Columns[6].HeaderText = "受注確定フラグ";
+            dataGridViewDsp.Columns[5].HeaderText = "顧客担当者名";
+            dataGridViewDsp.Columns[6].Width = 130;
+            dataGridViewDsp.Columns[6].HeaderText = "受注年月日";
             dataGridViewDsp.Columns[7].Width = 70;
-            dataGridViewDsp.Columns[7].HeaderText = "非表示フラグ";
-            dataGridViewDsp.Columns[8].Width = 200;
-            dataGridViewDsp.Columns[8].HeaderText = "非表示理由";
+            dataGridViewDsp.Columns[7].HeaderText = "受注確定フラグ";
+            dataGridViewDsp.Columns[8].Width = 70;
+            dataGridViewDsp.Columns[8].HeaderText = "非表示フラグ";
+            dataGridViewDsp.Columns[9].Width = 200;
+            dataGridViewDsp.Columns[9].HeaderText = "非表示理由";
             //選択モードを行単位
             dataGridViewDsp.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             //読み取り専用
             dataGridViewDsp.ReadOnly = true;
 
             fncAllSelect();
+            SetFormComboBox();
         }
 
 
@@ -59,11 +114,36 @@ namespace SalesManagement_SysDev
             try
             {
                 var context = new SalesManagement_DevContext();
-                foreach (var p in context.T_Orders)
+                var tb = from t1 in context.T_Orders
+                         join t2 in context.M_SalesOffices
+                         on t1.SoID equals t2.SoID
+                         join t3 in context.M_Employees
+                         on t1.EmID equals t3.EmID
+                         join t4 in context.M_Clients
+                         on t1.ClID equals t4.ClID
+                         join t5 in context.T_OrderDetails
+                         on t1.OrID equals t5.OrID
+                         join t6 in context.M_Products
+                         on t5.PrID equals t6.PrID
+                         select new
+                         {
+                             t1.OrID,
+                             t2.SoName,
+                             t3.EmName,
+                             t4.ClName,
+                             t6.PrName,
+                             t1.ClCharge,
+                             t1.OrDate,
+                             t1.OrStateFlag,
+                             t1.OrFlag,
+                             t1.OrHidden
+                         };
+                foreach(var p in tb)
                 {
-                    dataGridViewDsp.Rows.Add(p.OrID,p.SoID,p.EmID,p.ClID,p.ClCharge,p.OrDate,p.OrStateFlag,p.OrFlag,p.OrHidden);
+                    dataGridViewDsp.Rows.Add(p.OrID,p.SoName,p.EmName,p.ClName,p.PrName,p.ClCharge,p.OrDate,p.OrStateFlag,p.OrFlag,p.OrHidden);
                 }
-                context.Dispose();
+
+                context.Dispose();         
             }
             catch (Exception ex)
             {
@@ -99,69 +179,8 @@ namespace SalesManagement_SysDev
         private void Regester_button_Click(object sender, EventArgs e)
         {
 
-            if (!String.IsNullOrEmpty(textBoxSoID.Text.Trim()))
-            {
-
-                if (!dataInputFormCheck.CheckNumeric(textBoxSoID.Text.Trim()))
-                {
-                    MessageBox.Show("M5027");
-                    textBoxSoID.Focus();
-                    return;
-                }
-
-                if (textBoxSoID.TextLength > 2)
-                {
-                    MessageBox.Show("営業所IDは2文字以下です");
-                    textBoxSoID.Focus();
-                    return;
-                }
-            }
-
-            if (!String.IsNullOrEmpty(textBoxEmID.Text.Trim()))
-            {
-
-                if (!dataInputFormCheck.CheckNumeric(textBoxEmID.Text.Trim()))
-                {
-                    MessageBox.Show("M5027");
-                    textBoxEmID.Focus();
-                    return;
-                }
-
-                if (textBoxEmID.TextLength > 6)
-                {
-                    MessageBox.Show("社員IDは6文字以下です");
-                    textBoxEmID.Focus();
-                    return;
-                }
-            }
-
-            if (!String.IsNullOrEmpty(textBoxClID.Text.Trim()))
-            {
-
-                if (!dataInputFormCheck.CheckNumeric(textBoxClID.Text.Trim()))
-                {
-                    MessageBox.Show("M5027");
-                    textBoxClID.Focus();
-                    return;
-                }
-
-                if (textBoxClID.TextLength > 6)
-                {
-                    MessageBox.Show("顧客IDは6文字以下です");
-                    textBoxClID.Focus();
-                    return;
-                }
-            }
-
             if (!String.IsNullOrEmpty(textBoxClCharge.Text.Trim()))
             {
-
-                if (!dataInputFormCheck.CheckNumeric(textBoxClCharge.Text.Trim()))
-                {
-                    MessageBox.Show("M5027");
-                    textBoxClCharge.Focus();
-                    return;
-                }
 
                 if (textBoxClCharge.TextLength > 50)
                 {
@@ -207,9 +226,9 @@ namespace SalesManagement_SysDev
             var order = new T_Order
             {
 
-                SoID = int.Parse(textBoxSoID.Text.Trim()),
-                EmID = int.Parse(textBoxEmID.Text.Trim()),
-                ClID = int.Parse(textBoxClID.Text.Trim()),
+                SoID = int.Parse(comboBoxSalesOffice.SelectedValue.ToString()),
+                EmID = int.Parse(comboBoxEmployee.SelectedValue.ToString()),
+                ClID = int.Parse(comboBoxClient.SelectedValue.ToString()),
                 ClCharge = textBoxClCharge.Text.Trim(),
                 OrDate = datetimepickerOrDate.Value,
                 OrFlag = checkOr,
@@ -229,7 +248,7 @@ namespace SalesManagement_SysDev
             }
 
             //商品テーブルから商品情報取得
-            int prid = int.Parse(textBoxPrID.Text.Trim());
+            int prid = int.Parse(comboBoxProduct.SelectedValue.ToString());
             
             var product = context.M_Products.Single(x => x.PrID == prid);
             
@@ -263,32 +282,7 @@ namespace SalesManagement_SysDev
         private void Update_button_Click(object sender, EventArgs e)
         {
 
-            if (!String.IsNullOrEmpty(textBoxSoID.Text.Trim()))
-            {
-                if (textBoxSoID.TextLength > 2)
-                {
-                    MessageBox.Show("営業所IDは2文字以下です");
-                    return;
-                }
-            }
-
-            if (!String.IsNullOrEmpty(textBoxEmID.Text.Trim()))
-            {
-                if (textBoxEmID.TextLength > 6)
-                {
-                    MessageBox.Show("社員IDは6文字以下です");
-                    return;
-                }
-            }
-
-            if (!String.IsNullOrEmpty(textBoxClID.Text.Trim()))
-            {
-                if (textBoxClID.TextLength > 6)
-                {
-                    MessageBox.Show("顧客IDは6文字以下です");
-                    return;
-                }
-            }
+            
 
             if (!String.IsNullOrEmpty(textBoxClCharge.Text.Trim()))
             {
@@ -335,9 +329,9 @@ namespace SalesManagement_SysDev
                 
                 //受注テーブル
                 var order = context.T_Orders.Single(x => x.OrID == orid);
-                order.SoID = int.Parse(textBoxSoID.Text.Trim());
-                order.EmID = int.Parse(textBoxEmID.Text.Trim());
-                order.ClID = int.Parse(textBoxClID.Text.Trim());
+                order.SoID = int.Parse(comboBoxSalesOffice.SelectedValue.ToString());
+                order.EmID = int.Parse(comboBoxEmployee.SelectedValue.ToString());
+                order.ClID = int.Parse(comboBoxClient.SelectedValue.ToString());
                 order.ClCharge = textBoxClCharge.Text.Trim();
                 order.OrDate = datetimepickerOrDate.Value;
                 order.OrStateFlag = checkOrState;
@@ -347,9 +341,9 @@ namespace SalesManagement_SysDev
                 //受注詳細テーブル
                 var orderdetail = context.T_OrderDetails.Single(x => x.OrID == orid);
                 //商品テーブルから商品情報取得
-                int prid = int.Parse(textBoxPrID.Text.Trim());
+                int prid = int.Parse(comboBoxProduct.SelectedValue.ToString());
                 var product = context.M_Products.Single(x => x.PrID == prid);
-                orderdetail.PrID = int.Parse(textBoxPrID.Text.Trim());
+                orderdetail.PrID = prid;
                 orderdetail.OrQuantity = int.Parse(numericUpDownOrQuantity.Value.ToString());
                 orderdetail.OrTotalPrice = product.Price * int.Parse(numericUpDownOrQuantity.Value.ToString());
 
@@ -405,71 +399,20 @@ namespace SalesManagement_SysDev
         private void dataGridViewDsp_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             textBoxOrID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[0].Value.ToString();
-            textBoxSoID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
-            textBoxEmID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
-            textBoxClID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
-            textBoxClCharge.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
-            datetimepickerOrDate.Value = DateTime.Parse(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString());
-            textBoxOrHidden.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[8].Value.ToString();
+            comboBoxSalesOffice.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
+            comboBoxEmployee.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
+            comboBoxClient.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
+            comboBoxProduct.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
+            textBoxClCharge.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString();
+            datetimepickerOrDate.Value = DateTime.Parse(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[6].Value.ToString());
+            textBoxOrHidden.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[9].Value.ToString();
         }
 
         private void Search_button_Click(object sender, EventArgs e)
         {
 
 
-            if (!String.IsNullOrEmpty(textBoxSoID.Text.Trim()))
-            {
-
-                if (!dataInputFormCheck.CheckNumeric(textBoxSoID.Text.Trim()))
-                {
-                    MessageBox.Show("M5027");
-                    textBoxSoID.Focus();
-                    return;
-                }
-
-                if (textBoxSoID.TextLength > 2)
-                {
-                    MessageBox.Show("営業所IDは2文字以下です");
-                    textBoxSoID.Focus();
-                    return;
-                }
-            }
-
-            if (!String.IsNullOrEmpty(textBoxEmID.Text.Trim()))
-            {
-
-                if (!dataInputFormCheck.CheckNumeric(textBoxEmID.Text.Trim()))
-                {
-                    MessageBox.Show("M5027");
-                    textBoxEmID.Focus();
-                    return;
-                }
-
-                if (textBoxEmID.TextLength > 6)
-                {
-                    MessageBox.Show("社員IDは6文字以下です");
-                    textBoxEmID.Focus();
-                    return;
-                }
-            }
-
-            if (!String.IsNullOrEmpty(textBoxClID.Text.Trim()))
-            {
-
-                if (!dataInputFormCheck.CheckNumeric(textBoxClID.Text.Trim()))
-                {
-                    MessageBox.Show("M5027");
-                    textBoxClID.Focus();
-                    return;
-                }
-
-                if (textBoxClID.TextLength > 6)
-                {
-                    MessageBox.Show("顧客IDは6文字以下です");
-                    textBoxClID.Focus();
-                    return;
-                }
-            }
+            
 
             if (!String.IsNullOrEmpty(textBoxClCharge.Text.Trim()))
             {
