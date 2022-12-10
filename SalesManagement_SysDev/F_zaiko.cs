@@ -83,18 +83,18 @@ namespace SalesManagement_SysDev
             
 
             dataGridViewDsp.Rows.Clear();
-            int? stid = null;
-            int? prid = null;
+            string stid = string.Empty;
+            string prid = string.Empty;
             string prname = string.Empty;
-            int? price = null;
-            int? stquantity = null;
+            string price = string.Empty;
+            string stquantity = string.Empty;
             if (!String.IsNullOrEmpty(textBoxStID.Text))
             {
-                stid = int.Parse(textBoxStID.Text);
+                stid = textBoxStID.Text;
             }
             if (!String.IsNullOrEmpty(textBoxPrID.Text))
             {
-                prid = int.Parse(textBoxPrID.Text);
+                prid = textBoxPrID.Text;
             }
             if (!String.IsNullOrEmpty(textBoxPrName.Text))
             {
@@ -102,11 +102,11 @@ namespace SalesManagement_SysDev
             }
             if (!String.IsNullOrEmpty(textBoxPrice.Text))
             {
-                price = int.Parse(textBoxPrice.Text);
+                price = textBoxPrice.Text;
             }
             if (!String.IsNullOrEmpty(textBoxStQuantity.Text))
             {
-                stquantity = int.Parse(textBoxStQuantity.Text);
+                stquantity = textBoxStQuantity.Text;
             }
 
             try
@@ -115,11 +115,11 @@ namespace SalesManagement_SysDev
                 var tb = from t1 in context.T_Stocks
                          join t2 in context.M_Products
                          on t1.PrID equals t2.PrID
-                         where t1.StID.ToString().Contains(stid.ToString()) ||
-                               t1.PrID.ToString().Contains(prid.ToString()) ||
-                               t2.PrName.Contains(prname) ||
-                               t2.Price.ToString().Contains(price.ToString()) ||
-                               t1.StQuantity.ToString().Contains(stquantity.ToString())
+                         where t1.StID.ToString().Contains(stid) &&
+                               t1.PrID.ToString().Contains(prid) &&
+                               t2.PrName.Contains(prname) &&
+                               t2.Price.ToString().Contains(price) &&
+                               t1.StQuantity.ToString().Contains(stquantity)
                          select new
                          {
                              t1.StID,

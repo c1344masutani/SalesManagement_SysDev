@@ -42,7 +42,6 @@ namespace SalesManagement_SysDev
             this.label9 = new System.Windows.Forms.Label();
             this.textBoxEmID = new System.Windows.Forms.TextBox();
             this.textBoxEmName = new System.Windows.Forms.TextBox();
-            this.textBoxSoID = new System.Windows.Forms.TextBox();
             this.textBoxhidden = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBoxEmPhone = new System.Windows.Forms.TextBox();
@@ -64,6 +63,7 @@ namespace SalesManagement_SysDev
             this.datetimeEmHiredate = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.checkBoxEmFlag = new System.Windows.Forms.CheckBox();
+            this.comboBoxSalesOffice = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -88,9 +88,9 @@ namespace SalesManagement_SysDev
             this.label3.Location = new System.Drawing.Point(235, 312);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(178, 40);
+            this.label3.Size = new System.Drawing.Size(177, 40);
             this.label3.TabIndex = 2;
-            this.label3.Text = "営業所ID";
+            this.label3.Text = "営業所名";
             // 
             // label4
             // 
@@ -193,15 +193,6 @@ namespace SalesManagement_SysDev
             this.textBoxEmName.Name = "textBoxEmName";
             this.textBoxEmName.Size = new System.Drawing.Size(185, 47);
             this.textBoxEmName.TabIndex = 10;
-            // 
-            // textBoxSoID
-            // 
-            this.textBoxSoID.Location = new System.Drawing.Point(542, 302);
-            this.textBoxSoID.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxSoID.Multiline = true;
-            this.textBoxSoID.Name = "textBoxSoID";
-            this.textBoxSoID.Size = new System.Drawing.Size(274, 47);
-            this.textBoxSoID.TabIndex = 11;
             // 
             // textBoxhidden
             // 
@@ -441,12 +432,22 @@ namespace SalesManagement_SysDev
             this.checkBoxEmFlag.Text = "非表示";
             this.checkBoxEmFlag.UseVisualStyleBackColor = true;
             // 
+            // comboBoxSalesOffice
+            // 
+            this.comboBoxSalesOffice.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.comboBoxSalesOffice.FormattingEnabled = true;
+            this.comboBoxSalesOffice.Location = new System.Drawing.Point(542, 314);
+            this.comboBoxSalesOffice.Name = "comboBoxSalesOffice";
+            this.comboBoxSalesOffice.Size = new System.Drawing.Size(185, 41);
+            this.comboBoxSalesOffice.TabIndex = 50;
+            // 
             // F_syain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1924, 1050);
+            this.Controls.Add(this.comboBoxSalesOffice);
             this.Controls.Add(this.checkBoxEmFlag);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.datetimeEmHiredate);
@@ -468,7 +469,6 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.textBoxEmPhone);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBoxhidden);
-            this.Controls.Add(this.textBoxSoID);
             this.Controls.Add(this.textBoxEmName);
             this.Controls.Add(this.textBoxEmID);
             this.Controls.Add(this.label9);
@@ -504,7 +504,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBoxEmID;
         private System.Windows.Forms.TextBox textBoxEmName;
-        private System.Windows.Forms.TextBox textBoxSoID;
         private System.Windows.Forms.TextBox textBoxhidden;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBoxEmPhone;
@@ -527,5 +526,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.CheckBox checkBoxEmFlag;
         private EventHandler label1_Click;
+        private System.Windows.Forms.ComboBox comboBoxSalesOffice;
     }
 }
