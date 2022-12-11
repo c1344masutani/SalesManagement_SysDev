@@ -15,10 +15,52 @@ namespace SalesManagement_SysDev
         //入力形式チェック用クラスのインスタンス化
         DataInputFormCheck dataInputFormCheck = new DataInputFormCheck();
 
+        //コンボボックス用
+        SalesOfficeDataAccess salesOfficeDataAccess = new SalesOfficeDataAccess();
+        EmployeeDataAccess employeeDataAccess = new EmployeeDataAccess();
+        ClientDataAccess clientDataAccess = new ClientDataAccess();
+
+        //コンボボックス用のデータ
+        private static List<M_SalesOffice> SalesOffice;
+        private static List<M_Employee> Employee;
+        private static List<M_Client> Client;
+
         public F_uriage()
         {
             InitializeComponent();
         }
+
+        private void SetFormComboBox()
+        {
+            //営業所コンボボックス
+            SalesOffice = salesOfficeDataAccess.GetSalesOfficeDspData();
+            comboBoxSalesOffice.DataSource = SalesOffice;
+            comboBoxSalesOffice.DisplayMember = "SoName";
+            comboBoxSalesOffice.ValueMember = "SoID";
+            //読み取り専用
+            comboBoxSalesOffice.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxSalesOffice.SelectedIndex = -1;
+
+            //社員コンボボックス
+            Employee = employeeDataAccess.GetEmployeeDspData();
+            comboBoxEmployee.DataSource = Employee;
+            comboBoxEmployee.DisplayMember = "EmName";
+            comboBoxEmployee.ValueMember = "EmID";
+            //社員コンボボックスを読み取り専用
+            comboBoxEmployee.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxEmployee.SelectedIndex = -1;
+
+            //顧客コンボボックス
+            Client = clientDataAccess.GetClientDspData();
+            comboBoxClient.DataSource = Client;
+            comboBoxClient.DisplayMember = "ClName";
+            comboBoxClient.ValueMember = "ClID";
+            //読み取り専用
+            comboBoxClient.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxClient.SelectedIndex = -1;
+
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -39,11 +81,11 @@ namespace SalesManagement_SysDev
             //0番目（左端）の項目名を設定
             dataGridViewDsp.Columns[0].HeaderText = "売上ID";
             dataGridViewDsp.Columns[1].Width = 70;
-            dataGridViewDsp.Columns[1].HeaderText = "顧客ID";
+            dataGridViewDsp.Columns[1].HeaderText = "顧客名";
             dataGridViewDsp.Columns[2].Width = 70;
-            dataGridViewDsp.Columns[2].HeaderText = "営業所ID";
+            dataGridViewDsp.Columns[2].HeaderText = "営業所名";
             dataGridViewDsp.Columns[3].Width = 70;
-            dataGridViewDsp.Columns[3].HeaderText = "受注社員ID";
+            dataGridViewDsp.Columns[3].HeaderText = "受注社員名";
             dataGridViewDsp.Columns[4].Width = 70;
             dataGridViewDsp.Columns[4].HeaderText = "受注ID";
             dataGridViewDsp.Columns[5].Width = 130;
@@ -58,6 +100,7 @@ namespace SalesManagement_SysDev
             dataGridViewDsp.ReadOnly = true;
             //全データ表示
             fncAllSelect();
+            SetFormComboBox();
         }
 
 
@@ -67,10 +110,29 @@ namespace SalesManagement_SysDev
             try
             {
                 var context = new SalesManagement_DevContext();
-                foreach (var p in context.T_Sale)
+                var tb = from t1 in context.T_Sale
+                         join t2 in context.M_Clients
+                         on t1.ClID equals t2.ClID
+                         join t3 in context.M_SalesOffices
+                         on t1.SoID equals t3.SoID
+                         join t4 in context.M_Employees
+                         on t1.EmID equals t4.EmID
+                         select new
+                         {
+                             t1.SaID,
+                             t2.ClName,
+                             t3.SoName,
+                             t4.EmName,
+                             t1.ChID,
+                             t1.SaDate,
+                             t1.SaFlag,
+                             t1.SaHidden
+                         };
+                foreach(var p in tb)
                 {
-                    dataGridViewDsp.Rows.Add(p.SaID,p.ClID,p.SoID,p.EmID,p.ChID,p.SaDate,p.SaFlag,p.SaHidden);
+                    dataGridViewDsp.Rows.Add(p.SaID, p.ClName, p.SoName, p.EmName, p.ChID, p.SaDate, p.SaFlag, p.SaHidden);
                 }
+
                 context.Dispose();
             }
             catch (Exception ex)
@@ -95,108 +157,71 @@ namespace SalesManagement_SysDev
 
         private void Search_button_Click(object sender, EventArgs e)
         {
-
-            if (!String.IsNullOrEmpty(textBoxClID.Text.Trim()))
+            dataGridViewDsp.Rows.Clear();
+            string said = string.Empty;
+            string clid = string.Empty;
+            string soid = string.Empty;
+            string emid = string.Empty;
+            string chid = string.Empty;
+            if (!String.IsNullOrEmpty(textBoxSaID.Text.Trim()))
             {
-
-                if (!dataInputFormCheck.CheckNumeric(textBoxClID.Text.Trim()))
-                {
-                    MessageBox.Show("M5027");
-                    textBoxClID.Focus();
-                    return;
-                }
-
-                if (textBoxClID.TextLength > 4)
-                {
-                    MessageBox.Show("顧客IDは4文字以下です");
-                    textBoxClID.Focus();
-                    return;
-                }
+                said = textBoxSaID.Text;
             }
-
-            if (!String.IsNullOrEmpty(textBoxSoID.Text.Trim()))
+            if(comboBoxClient.SelectedIndex != -1)
             {
-
-                if (!dataInputFormCheck.CheckNumeric(textBoxSoID.Text.Trim()))
-                {
-                    MessageBox.Show("M5027");
-                    textBoxSoID.Focus();
-                    return;
-                }
-
-                if (textBoxSoID.TextLength > 2)
-                {
-                    MessageBox.Show("営業所IDは2文字以下です");
-                    textBoxSoID.Focus();
-                    return;
-                }
+                clid = comboBoxClient.SelectedValue.ToString();
             }
-
-            if (!String.IsNullOrEmpty(textBoxEmID.Text.Trim()))
+            if(comboBoxSalesOffice.SelectedIndex != -1)
             {
-
-                if (!dataInputFormCheck.CheckNumeric(textBoxEmID.Text.Trim()))
-                {
-                    MessageBox.Show("M5027");
-                    textBoxEmID.Focus();
-                    return;
-                }
-
-                if (textBoxEmID.TextLength > 6)
-                {
-                    MessageBox.Show("受注社員IDは6文字以下です");
-                    textBoxEmID.Focus();
-                    return;
-                }
+                soid = comboBoxSalesOffice.SelectedValue.ToString();
             }
-
+            if(comboBoxEmployee.SelectedIndex != -1)
+            {
+                emid = comboBoxEmployee.SelectedValue.ToString();
+            }
             if (!String.IsNullOrEmpty(textBoxChID.Text.Trim()))
             {
-
-                if (!dataInputFormCheck.CheckNumeric(textBoxChID.Text.Trim()))
-                {
-                    MessageBox.Show("M5027");
-                    textBoxChID.Focus();
-                    return;
-                }
-
-                if (textBoxChID.TextLength > 6)
-                {
-                    MessageBox.Show("受注IDは6文字以下です");
-                    textBoxChID.Focus();
-                    return;
-                }
+                chid = textBoxChID.Text;
             }
 
-            if (!String.IsNullOrEmpty(textBoxSaHidden.Text.Trim()))
-            {
-                if (textBoxSaHidden.TextLength > 200)
-                {
-                    MessageBox.Show("非表示理由は200文字以下です");
-                    textBoxChID.Focus();
-                    return;
-                }
-            }
-            dataGridViewDsp.Rows.Clear();
-            if (textBoxSaID.Text == "" || textBoxSaID.Text == null)
-            {
-                fncAllSelect();
-                return;
-            }
-
-            int said = int.Parse(textBoxSaID.Text);
             try
             {
                 var context = new SalesManagement_DevContext();
-                var sale = context.T_Sale.Where(x => x.SaID == said).ToArray();
-                dataGridViewDsp.Rows.Add(sale[0].SaID, sale[0].ClID, sale[0].SoID, sale[0].EmID, sale[0].ChID, sale[0].SaDate, sale[0].SaFlag, sale[0].SaHidden);
-                context.Dispose();
+                var tb = from t1 in context.T_Sale
+                         join t2 in context.M_Clients
+                         on t1.ClID equals t2.ClID
+                         join t3 in context.M_SalesOffices
+                         on t1.SoID equals t3.SoID
+                         join t4 in context.M_Employees
+                         on t1.EmID equals t4.EmID
+                         where t1.SaID.ToString().Contains(said) &&
+                               t1.ClID.ToString().Contains(clid) &&
+                               t1.SoID.ToString().Contains(soid) &&
+                               t1.EmID.ToString().Contains(emid) &&
+                               t1.ChID.ToString().Contains(chid)
+                         select new
+                         {
+                             t1.SaID,
+                             t2.ClName,
+                             t3.SoName,
+                             t4.EmName,
+                             t1.ChID,
+                             t1.SaDate,
+                             t1.SaFlag,
+                             t1.SaHidden
+                         };
+                foreach (var p in tb)
+                {
+                    dataGridViewDsp.Rows.Add(p.SaID, p.ClName, p.SoName, p.EmName, p.ChID, p.SaDate, p.SaFlag, p.SaHidden);
+                }
 
+                context.Dispose();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void dataGridViewDsp_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -212,10 +237,11 @@ namespace SalesManagement_SysDev
         private void buttonClear_Click(object sender, EventArgs e)
         {
             textBoxSaID.Text = "";
-            textBoxClID.Text = "";
-            textBoxSoID.Text = "";
-            textBoxEmID.Text = "";
             textBoxChID.Text = "";
+            comboBoxSalesOffice.SelectedIndex = -1;
+            comboBoxClient.SelectedIndex = -1;
+            comboBoxEmployee.SelectedIndex = -1;
+
             dateTimePickerSaDate.Value = DateTime.Today;
         }
 
