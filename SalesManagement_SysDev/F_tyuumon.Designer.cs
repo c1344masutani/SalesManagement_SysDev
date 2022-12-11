@@ -41,12 +41,9 @@ namespace SalesManagement_SysDev
             this.OrID = new System.Windows.Forms.Label();
             this.ChDate = new System.Windows.Forms.Label();
             this.textBoxChid = new System.Windows.Forms.TextBox();
-            this.textBoxSoid = new System.Windows.Forms.TextBox();
-            this.textBoxEmid = new System.Windows.Forms.TextBox();
             this.textBoxChHidden = new System.Windows.Forms.TextBox();
             this.textBoxOrid = new System.Windows.Forms.TextBox();
             this.SoID = new System.Windows.Forms.Label();
-            this.textBoxCliid = new System.Windows.Forms.TextBox();
             this.dateTimePickerChdate = new System.Windows.Forms.DateTimePicker();
             this.dataGridViewDsp = new System.Windows.Forms.DataGridView();
             this.checkBoxChStateflg = new System.Windows.Forms.CheckBox();
@@ -59,6 +56,9 @@ namespace SalesManagement_SysDev
             this.label6 = new System.Windows.Forms.Label();
             this.buttonConfirm = new System.Windows.Forms.Button();
             this.buttonHidden = new System.Windows.Forms.Button();
+            this.comboBoxSalesOffice = new System.Windows.Forms.ComboBox();
+            this.comboBoxEmployee = new System.Windows.Forms.ComboBox();
+            this.comboBoxClient = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             this.SuspendLayout();
@@ -218,24 +218,6 @@ namespace SalesManagement_SysDev
             this.textBoxChid.Size = new System.Drawing.Size(206, 51);
             this.textBoxChid.TabIndex = 96;
             // 
-            // textBoxSoid
-            // 
-            this.textBoxSoid.Location = new System.Drawing.Point(404, 250);
-            this.textBoxSoid.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxSoid.Multiline = true;
-            this.textBoxSoid.Name = "textBoxSoid";
-            this.textBoxSoid.Size = new System.Drawing.Size(206, 51);
-            this.textBoxSoid.TabIndex = 97;
-            // 
-            // textBoxEmid
-            // 
-            this.textBoxEmid.Location = new System.Drawing.Point(404, 329);
-            this.textBoxEmid.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxEmid.Multiline = true;
-            this.textBoxEmid.Name = "textBoxEmid";
-            this.textBoxEmid.Size = new System.Drawing.Size(206, 52);
-            this.textBoxEmid.TabIndex = 98;
-            // 
             // textBoxChHidden
             // 
             this.textBoxChHidden.Location = new System.Drawing.Point(404, 536);
@@ -267,15 +249,6 @@ namespace SalesManagement_SysDev
             this.SoID.Size = new System.Drawing.Size(178, 40);
             this.SoID.TabIndex = 102;
             this.SoID.Text = "営業所ID";
-            // 
-            // textBoxCliid
-            // 
-            this.textBoxCliid.Location = new System.Drawing.Point(404, 421);
-            this.textBoxCliid.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxCliid.Multiline = true;
-            this.textBoxCliid.Name = "textBoxCliid";
-            this.textBoxCliid.Size = new System.Drawing.Size(206, 52);
-            this.textBoxCliid.TabIndex = 103;
             // 
             // dateTimePickerChdate
             // 
@@ -422,12 +395,42 @@ namespace SalesManagement_SysDev
             this.buttonHidden.UseVisualStyleBackColor = true;
             this.buttonHidden.Click += new System.EventHandler(this.buttonHidden_Click);
             // 
+            // comboBoxSalesOffice
+            // 
+            this.comboBoxSalesOffice.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.comboBoxSalesOffice.FormattingEnabled = true;
+            this.comboBoxSalesOffice.Location = new System.Drawing.Point(404, 253);
+            this.comboBoxSalesOffice.Name = "comboBoxSalesOffice";
+            this.comboBoxSalesOffice.Size = new System.Drawing.Size(206, 41);
+            this.comboBoxSalesOffice.TabIndex = 116;
+            // 
+            // comboBoxEmployee
+            // 
+            this.comboBoxEmployee.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.comboBoxEmployee.FormattingEnabled = true;
+            this.comboBoxEmployee.Location = new System.Drawing.Point(404, 332);
+            this.comboBoxEmployee.Name = "comboBoxEmployee";
+            this.comboBoxEmployee.Size = new System.Drawing.Size(206, 41);
+            this.comboBoxEmployee.TabIndex = 117;
+            // 
+            // comboBoxClient
+            // 
+            this.comboBoxClient.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.comboBoxClient.FormattingEnabled = true;
+            this.comboBoxClient.Location = new System.Drawing.Point(404, 424);
+            this.comboBoxClient.Name = "comboBoxClient";
+            this.comboBoxClient.Size = new System.Drawing.Size(206, 41);
+            this.comboBoxClient.TabIndex = 118;
+            // 
             // F_tyuumon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.comboBoxClient);
+            this.Controls.Add(this.comboBoxEmployee);
+            this.Controls.Add(this.comboBoxSalesOffice);
             this.Controls.Add(this.buttonHidden);
             this.Controls.Add(this.buttonConfirm);
             this.Controls.Add(this.label6);
@@ -440,12 +443,9 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.checkBoxChStateflg);
             this.Controls.Add(this.dataGridViewDsp);
             this.Controls.Add(this.dateTimePickerChdate);
-            this.Controls.Add(this.textBoxCliid);
             this.Controls.Add(this.SoID);
             this.Controls.Add(this.textBoxOrid);
             this.Controls.Add(this.textBoxChHidden);
-            this.Controls.Add(this.textBoxEmid);
-            this.Controls.Add(this.textBoxSoid);
             this.Controls.Add(this.textBoxChid);
             this.Controls.Add(this.ChDate);
             this.Controls.Add(this.OrID);
@@ -483,12 +483,9 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label OrID;
         private System.Windows.Forms.Label ChDate;
         private System.Windows.Forms.TextBox textBoxChid;
-        private System.Windows.Forms.TextBox textBoxSoid;
-        private System.Windows.Forms.TextBox textBoxEmid;
         private System.Windows.Forms.TextBox textBoxChHidden;
         private System.Windows.Forms.TextBox textBoxOrid;
         private System.Windows.Forms.Label SoID;
-        private System.Windows.Forms.TextBox textBoxCliid;
         private System.Windows.Forms.DateTimePicker dateTimePickerChdate;
         private System.Windows.Forms.DataGridView dataGridViewDsp;
         private System.Windows.Forms.CheckBox checkBoxChStateflg;
@@ -501,5 +498,8 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button buttonConfirm;
         private System.Windows.Forms.Button buttonHidden;
+        private System.Windows.Forms.ComboBox comboBoxSalesOffice;
+        private System.Windows.Forms.ComboBox comboBoxEmployee;
+        private System.Windows.Forms.ComboBox comboBoxClient;
     }
 }
