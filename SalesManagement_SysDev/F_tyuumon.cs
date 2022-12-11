@@ -262,35 +262,6 @@ namespace SalesManagement_SysDev
         private void buttonConfirm_Click(object sender, EventArgs e)
         {
 
-            
-
-            if (!String.IsNullOrEmpty(textBoxOrid.Text.Trim()))
-            {
-
-                if (!dataInputFormCheck.CheckNumeric(textBoxOrid.Text.Trim()))
-                {
-                    MessageBox.Show("M5027");
-                    textBoxOrid.Focus();
-                    return;
-                }
-
-                if (textBoxOrid.TextLength > 6)
-                {
-                    MessageBox.Show("受注IDは6文字以下です");
-                    textBoxOrid.Focus();
-                    return;
-                }
-            }
-
-            if (!String.IsNullOrEmpty(textBoxChHidden.Text.Trim()))
-            {
-                if (textBoxChHidden.TextLength > 200)
-                {
-                    MessageBox.Show("非表示理由は200文字以下です");
-                    textBoxChHidden.Focus();
-                    return;
-                }
-            }
 
             var context = new SalesManagement_DevContext();
             int chid = int.Parse(textBoxChid.Text);
