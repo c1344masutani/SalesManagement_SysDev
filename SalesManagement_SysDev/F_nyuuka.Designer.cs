@@ -41,9 +41,6 @@ namespace SalesManagement_SysDev
             this.label11 = new System.Windows.Forms.Label();
             this.dataGridViewDsp = new System.Windows.Forms.DataGridView();
             this.textBoxArID = new System.Windows.Forms.TextBox();
-            this.textBoxSoID = new System.Windows.Forms.TextBox();
-            this.textBoxEmID = new System.Windows.Forms.TextBox();
-            this.textBoxClID = new System.Windows.Forms.TextBox();
             this.textBoxOrID = new System.Windows.Forms.TextBox();
             this.textBoxArHidden = new System.Windows.Forms.TextBox();
             this.buttonSearch = new System.Windows.Forms.Button();
@@ -53,6 +50,9 @@ namespace SalesManagement_SysDev
             this.dateTimePickerArdate = new System.Windows.Forms.DateTimePicker();
             this.buttonConfirm = new System.Windows.Forms.Button();
             this.buttonHidden = new System.Windows.Forms.Button();
+            this.comboBoxClient = new System.Windows.Forms.ComboBox();
+            this.comboBoxEmployee = new System.Windows.Forms.ComboBox();
+            this.comboBoxSalesOffice = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             this.SuspendLayout();
@@ -206,30 +206,6 @@ namespace SalesManagement_SysDev
             this.textBoxArID.Size = new System.Drawing.Size(206, 51);
             this.textBoxArID.TabIndex = 94;
             // 
-            // textBoxSoID
-            // 
-            this.textBoxSoID.Location = new System.Drawing.Point(362, 267);
-            this.textBoxSoID.Multiline = true;
-            this.textBoxSoID.Name = "textBoxSoID";
-            this.textBoxSoID.Size = new System.Drawing.Size(206, 51);
-            this.textBoxSoID.TabIndex = 95;
-            // 
-            // textBoxEmID
-            // 
-            this.textBoxEmID.Location = new System.Drawing.Point(362, 364);
-            this.textBoxEmID.Multiline = true;
-            this.textBoxEmID.Name = "textBoxEmID";
-            this.textBoxEmID.Size = new System.Drawing.Size(206, 51);
-            this.textBoxEmID.TabIndex = 96;
-            // 
-            // textBoxClID
-            // 
-            this.textBoxClID.Location = new System.Drawing.Point(988, 164);
-            this.textBoxClID.Multiline = true;
-            this.textBoxClID.Name = "textBoxClID";
-            this.textBoxClID.Size = new System.Drawing.Size(206, 51);
-            this.textBoxClID.TabIndex = 97;
-            // 
             // textBoxOrID
             // 
             this.textBoxOrID.Location = new System.Drawing.Point(988, 267);
@@ -331,12 +307,42 @@ namespace SalesManagement_SysDev
             this.buttonHidden.UseVisualStyleBackColor = true;
             this.buttonHidden.Click += new System.EventHandler(this.buttonHidden_Click);
             // 
+            // comboBoxClient
+            // 
+            this.comboBoxClient.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.comboBoxClient.FormattingEnabled = true;
+            this.comboBoxClient.Location = new System.Drawing.Point(988, 174);
+            this.comboBoxClient.Name = "comboBoxClient";
+            this.comboBoxClient.Size = new System.Drawing.Size(206, 41);
+            this.comboBoxClient.TabIndex = 121;
+            // 
+            // comboBoxEmployee
+            // 
+            this.comboBoxEmployee.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.comboBoxEmployee.FormattingEnabled = true;
+            this.comboBoxEmployee.Location = new System.Drawing.Point(362, 363);
+            this.comboBoxEmployee.Name = "comboBoxEmployee";
+            this.comboBoxEmployee.Size = new System.Drawing.Size(206, 41);
+            this.comboBoxEmployee.TabIndex = 122;
+            // 
+            // comboBoxSalesOffice
+            // 
+            this.comboBoxSalesOffice.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.comboBoxSalesOffice.FormattingEnabled = true;
+            this.comboBoxSalesOffice.Location = new System.Drawing.Point(362, 266);
+            this.comboBoxSalesOffice.Name = "comboBoxSalesOffice";
+            this.comboBoxSalesOffice.Size = new System.Drawing.Size(206, 41);
+            this.comboBoxSalesOffice.TabIndex = 123;
+            // 
             // F_nyuuka
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.comboBoxSalesOffice);
+            this.Controls.Add(this.comboBoxEmployee);
+            this.Controls.Add(this.comboBoxClient);
             this.Controls.Add(this.buttonHidden);
             this.Controls.Add(this.buttonConfirm);
             this.Controls.Add(this.dateTimePickerArdate);
@@ -346,9 +352,6 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.textBoxArHidden);
             this.Controls.Add(this.textBoxOrID);
-            this.Controls.Add(this.textBoxClID);
-            this.Controls.Add(this.textBoxEmID);
-            this.Controls.Add(this.textBoxSoID);
             this.Controls.Add(this.textBoxArID);
             this.Controls.Add(this.dataGridViewDsp);
             this.Controls.Add(this.label11);
@@ -385,9 +388,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView dataGridViewDsp;
         private System.Windows.Forms.TextBox textBoxArID;
-        private System.Windows.Forms.TextBox textBoxSoID;
-        private System.Windows.Forms.TextBox textBoxEmID;
-        private System.Windows.Forms.TextBox textBoxClID;
         private System.Windows.Forms.TextBox textBoxOrID;
         private System.Windows.Forms.TextBox textBoxArHidden;
         private System.Windows.Forms.Button buttonSearch;
@@ -397,5 +397,8 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.DateTimePicker dateTimePickerArdate;
         private System.Windows.Forms.Button buttonConfirm;
         private System.Windows.Forms.Button buttonHidden;
+        private System.Windows.Forms.ComboBox comboBoxClient;
+        private System.Windows.Forms.ComboBox comboBoxEmployee;
+        private System.Windows.Forms.ComboBox comboBoxSalesOffice;
     }
 }
