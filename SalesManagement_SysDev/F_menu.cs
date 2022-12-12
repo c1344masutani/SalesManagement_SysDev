@@ -12,6 +12,11 @@ namespace SalesManagement_SysDev
 {
     public partial class F_menu : Form
     {
+        //ログインフォームから変数の内容を共有
+        internal static int? position = null;
+        internal static string loginname = "";
+
+
         public F_menu()
         {
             InitializeComponent();
@@ -175,6 +180,50 @@ namespace SalesManagement_SysDev
             else if(result == System.Windows.Forms.DialogResult.Cancel)
             {
                 return;
+            }
+            
+        }
+
+        private void F_menu_Activated(object sender, EventArgs e)
+        {
+            labelLoginName.Text = loginname;
+
+            //営業担当
+            if(position == 2)
+            {
+                buttonClient.Enabled = false;
+                buttonClient.BackColor = Color.Gray;
+                buttonProduct.Enabled = false;
+                buttonProduct.BackColor = Color.Gray;
+                buttonEmployee.Enabled = false;
+                buttonEmployee.BackColor = Color.Gray;
+                buttonSale.Enabled = false;
+                buttonSale.BackColor = Color.Gray;
+                buttonHattyu.Enabled = false;
+                buttonHattyu.BackColor = Color.Gray;
+                buttonWarehousing.Enabled = false;
+                buttonWarehousing.BackColor = Color.Gray;
+                buttonSyukko.Enabled = false;
+                buttonWarehousing.BackColor = Color.Gray;
+                buttonArrival.Enabled = false;
+                buttonArrival.BackColor = Color.Gray;
+            }
+            //物流担当
+            else if(position == 4)
+            {
+                buttonClient.Enabled = false;
+                buttonClient.BackColor = Color.Gray;
+                buttonProduct.Enabled = false;
+                buttonProduct.BackColor = Color.Gray;
+                buttonEmployee.Enabled = false;
+                buttonEmployee.BackColor = Color.Gray;
+                buttonSale.Enabled = false;
+                buttonSale.BackColor = Color.Gray;
+                buttonOrder.Enabled = false;
+                buttonOrder.BackColor = Color.Gray;
+                buttonChumon.Enabled = false;
+                buttonChumon.BackColor = Color.Gray;
+
             }
             
         }
