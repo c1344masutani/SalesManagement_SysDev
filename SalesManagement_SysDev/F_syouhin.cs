@@ -17,12 +17,12 @@ namespace SalesManagement_SysDev
 
         //データベース商品メーカテーブルアクセス用クラスのインスタンス化
         MakerDataAccess makerDataAccess = new MakerDataAccess();
-        ProductDataAccess productDataAccess = new ProductDataAccess();
+        SmallClassificationDataAccess SmallClassificationDataAccess = new SmallClassificationDataAccess();
 
         //コンボボックス用の商品メーカデータ
         private static List<M_Maker> Maker;
-        //データグリッドビュー用の商品データ
-        private static List<M_Product> Product;
+        private static List<M_SmallClassification> SmallClassifications;
+        
 
         public F_syouhin()
         {
@@ -39,6 +39,15 @@ namespace SalesManagement_SysDev
             // 商品メーカコンボボックスを読み取り専用
             comboBoxMaker.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxMaker.SelectedIndex = -1;
+
+            //小分類コンボボックス
+            SmallClassifications = SmallClassificationDataAccess.GetSmallClassificationDspData();
+            comboBoxSmallClass.DataSource = SmallClassifications;
+            comboBoxSmallClass.DisplayMember = "ScName";
+            comboBoxSmallClass.ValueMember = "ScID";
+            //小分類コンボボックスを読み取り専用
+            comboBoxSmallClass.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxSmallClass.SelectedIndex = -1;
         }
 
         private void Regester_button_Click(object sender, EventArgs e)
@@ -79,20 +88,7 @@ namespace SalesManagement_SysDev
                     return;
                 }
             }
-            if (!string.IsNullOrEmpty(textBoxScID.Text.Trim()))
-            {
-                if (!dataInputFormCheck.CheckNumeric(textBoxScID.Text.Trim()))
-                {
-                    MessageBox.Show("小分類IDは数値です");
-                    textBoxScID.Focus();
-                    return;
-                }
-                if (textBoxScID.TextLength > 2)
-                {
-                    MessageBox.Show("小分類IDは2文字以下です");
-                    return;
-                }
-            }
+
             if (!string.IsNullOrEmpty(textBoxPrModelNumber.Text.Trim()))
             {
                 if (textBoxPrModelNumber.TextLength > 20)
@@ -125,7 +121,7 @@ namespace SalesManagement_SysDev
                 PrName = textBoxPrName.Text.Trim(),
                 Price = int.Parse(textBoxPrice.Text.Trim()),
                 PrSafetyStock = int.Parse(textBoxPrSafetyStock.Text.Trim()),
-                ScID = int.Parse(textBoxScID.Text.Trim()),
+                ScID = int.Parse(comboBoxSmallClass.SelectedValue.ToString()),
                 PrModelNumber = textBoxPrModelNumber.Text.Trim(),
                 PrColor = comboBoxColor.SelectedItem.ToString(),
                 PrReleaseDate = PrReleaseDate.Value,
@@ -155,7 +151,7 @@ namespace SalesManagement_SysDev
             textBoxPrName.Text = "";
             textBoxPrice.Text = "";
             textBoxPrSafetyStock.Text = "";
-            textBoxScID.Text = "";
+            comboBoxSmallClass.SelectedIndex = -1;
             textBoxPrModelNumber.Text = "";
             comboBoxColor.SelectedIndex = -1;
             PrReleaseDate.Value = System.DateTime.Now;
@@ -203,20 +199,7 @@ namespace SalesManagement_SysDev
                     return;
                 }
             }
-            if (!string.IsNullOrEmpty(textBoxScID.Text.Trim()))
-            {
-                if (!dataInputFormCheck.CheckNumeric(textBoxScID.Text.Trim()))
-                {
-                    MessageBox.Show("小分類IDは数値です");
-                    textBoxScID.Focus();
-                    return;
-                }
-                if (textBoxScID.TextLength > 2)
-                {
-                    MessageBox.Show("小分類IDは2文字以下です");
-                    return;
-                }
-            }
+
             if (!string.IsNullOrEmpty(textBoxPrModelNumber.Text.Trim()))
             {
                 if (textBoxPrModelNumber.TextLength > 20)
@@ -252,7 +235,7 @@ namespace SalesManagement_SysDev
                 product.PrName = textBoxPrName.Text.Trim();
                 product.Price = int.Parse(textBoxPrice.Text.Trim());
                 product.PrSafetyStock = int.Parse(textBoxPrSafetyStock.Text.Trim());
-                product.ScID = int.Parse(textBoxScID.Text.Trim());
+                product.ScID = int.Parse(comboBoxSmallClass.SelectedValue.ToString());
                 product.PrModelNumber = textBoxPrModelNumber.Text.Trim();
                 product.PrColor = comboBoxColor.SelectedItem.ToString();
                 product.PrReleaseDate = PrReleaseDate.Value;
@@ -311,7 +294,7 @@ namespace SalesManagement_SysDev
             dataGridViewDsp.Columns[4].Width = 70;
             dataGridViewDsp.Columns[4].HeaderText = "安全在庫数";
             dataGridViewDsp.Columns[5].Width = 70;
-            dataGridViewDsp.Columns[5].HeaderText = "小分類ID";
+            dataGridViewDsp.Columns[5].HeaderText = "小分類名";
             dataGridViewDsp.Columns[6].Width = 70;
             dataGridViewDsp.Columns[6].HeaderText = "型番";
             dataGridViewDsp.Columns[7].Width = 70;
@@ -337,9 +320,28 @@ namespace SalesManagement_SysDev
             try
             {
                 var context = new SalesManagement_DevContext();
-                foreach (var p in context.M_Products)
+                var tb = from t1 in context.M_Products
+                         join t2 in context.M_Makers
+                         on t1.MaID equals t2.MaID
+                         join t3 in context.M_SmallClassifications
+                         on t1.ScID equals t3.ScID
+                         select new
+                         {
+                             t1.PrID,
+                             t1.PrName,
+                             t2.MaName,
+                             t1.Price,
+                             t1.PrSafetyStock,
+                             t3.ScName,
+                             t1.PrModelNumber,
+                             t1.PrColor,
+                             t1.PrReleaseDate,
+                             t1.PrFlag,
+                             t1.PrHidden
+                         };
+                foreach(var p in tb)
                 {
-                    dataGridViewDsp.Rows.Add(p.PrID,p.PrName,p.MaID,p.Price,p.PrSafetyStock,p.ScID,p.PrModelNumber,p.PrColor,p.PrReleaseDate,p.PrFlag,p.PrHidden);
+                    dataGridViewDsp.Rows.Add(p.PrID, p.PrName, p.MaName, p.Price, p.PrSafetyStock, p.ScName, p.PrModelNumber, p.PrColor, p.PrReleaseDate, p.PrFlag, p.PrHidden);
                 }
                 context.Dispose();
             }
@@ -382,7 +384,7 @@ namespace SalesManagement_SysDev
             comboBoxMaker.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
             textBoxPrice.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
             textBoxPrSafetyStock.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
-            textBoxScID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString();
+            comboBoxSmallClass.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString();
             textBoxPrModelNumber.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[6].Value.ToString();
             comboBoxColor.SelectedItem = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[7].Value.ToString();
             PrReleaseDate.Value = DateTime.Parse(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[8].Value.ToString());
@@ -399,90 +401,90 @@ namespace SalesManagement_SysDev
 
         private void Search_button_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(textBoxPrName.Text.Trim()))
-            {
-                if (textBoxPrName.TextLength > 50)
-                {
-                    MessageBox.Show("商品名は50文字以下です");
-                    return;
-                }
-            }
-            if (!string.IsNullOrEmpty(textBoxPrice.Text.Trim()))
-            {
-                if (!dataInputFormCheck.CheckNumeric(textBoxPrice.Text.Trim()))
-                {
-                    MessageBox.Show("価格は数値です");
-                    textBoxPrice.Focus();
-                    return;
-                }
-                if (textBoxPrice.TextLength > 9)
-                {
-                    MessageBox.Show("価格は9文字以下です");
-                    return;
-                }
-            }
-            if (!string.IsNullOrEmpty(textBoxPrSafetyStock.Text.Trim()))
-            {
-                if (!dataInputFormCheck.CheckNumeric(textBoxPrSafetyStock.Text.Trim()))
-                {
-                    MessageBox.Show("安全在庫数は数値です");
-                    textBoxPrSafetyStock.Focus();
-                    return;
-                }
-                if (textBoxPrSafetyStock.TextLength > 4)
-                {
-                    MessageBox.Show("安全在庫数は4文字以下です");
-                    return;
-                }
-            }
-            if (!string.IsNullOrEmpty(textBoxScID.Text.Trim()))
-            {
-                if (!dataInputFormCheck.CheckNumeric(textBoxScID.Text.Trim()))
-                {
-                    MessageBox.Show("小分類IDは数値です");
-                    textBoxScID.Focus();
-                    return;
-                }
-                if (textBoxScID.TextLength > 2)
-                {
-                    MessageBox.Show("小分類IDは2文字以下です");
-                    return;
-                }
-            }
-            if (!string.IsNullOrEmpty(textBoxPrModelNumber.Text.Trim()))
-            {
-                if (textBoxPrModelNumber.TextLength > 20)
-                {
-                    MessageBox.Show("型番は20文字以下です");
-                    return;
-                }
-            }
-            if (!string.IsNullOrEmpty(textBoxHidden.Text.Trim()))
-            {
-                if (textBoxHidden.TextLength > 200)
-                {
-                    MessageBox.Show("非表示理由は200文字以下です");
-                    return;
-                }
-            }
+            
             dataGridViewDsp.Rows.Clear();
-            if (String.IsNullOrEmpty(textBoxPrID.Text))
+            string prid = string.Empty;
+            string prname = string.Empty;
+            string maid = string.Empty;
+            string price = string.Empty;
+            string stock = string.Empty;
+            string smallclass = string.Empty;
+            string modelnumber = string.Empty;
+            string color = string.Empty;
+            if (!String.IsNullOrEmpty(textBoxPrID.Text.Trim()))
             {
-                fncAllSelect();
-                return;
+                prid = textBoxPrID.Text;
             }
-            int prid = int.Parse(textBoxPrID.Text);
+            if (!String.IsNullOrEmpty(textBoxPrName.Text.Trim()))
+            {
+                prname = textBoxPrName.Text;
+            }
+            if(comboBoxMaker.SelectedIndex != -1)
+            {
+                maid = comboBoxMaker.SelectedValue.ToString();
+            }
+            if (!String.IsNullOrEmpty(textBoxPrice.Text.Trim()))
+            {
+                price = textBoxPrice.Text;
+            }
+            if (!String.IsNullOrEmpty(textBoxPrSafetyStock.Text.Trim()))
+            {
+                stock = textBoxPrSafetyStock.Text;
+            }
+            if(comboBoxSmallClass.SelectedIndex != -1)
+            {
+                smallclass = comboBoxSmallClass.SelectedValue.ToString();
+            }
+            if (!String.IsNullOrEmpty(textBoxPrModelNumber.Text.Trim()))
+            {
+                modelnumber = textBoxPrModelNumber.Text;
+            }
+            if(comboBoxColor.SelectedIndex != -1)
+            {
+                color = comboBoxColor.SelectedItem.ToString();
+            }
+
             try
             {
                 var context = new SalesManagement_DevContext();
-                var product = context.M_Products.Where(x => x.PrID == prid).ToArray();
-                dataGridViewDsp.Rows.Add(product[0].PrID, product[0].PrName, product[0].MaID, product[0].Price, product[0].PrSafetyStock, product[0].ScID, product[0].PrModelNumber, product[0].PrColor, product[0].PrReleaseDate, product[0].PrFlag, product[0].PrHidden);
+                var tb = from t1 in context.M_Products
+                         join t2 in context.M_Makers
+                         on t1.MaID equals t2.MaID
+                         join t3 in context.M_SmallClassifications
+                         on t1.ScID equals t3.ScID
+                         where t1.PrID.ToString().Contains(prid) &&
+                               t1.PrName.Contains(prname) &&
+                               t1.MaID.ToString().Contains(maid) &&
+                               t1.Price.ToString().Contains(price) &&
+                               t1.PrSafetyStock.ToString().Contains(stock) &&
+                               t1.ScID.ToString().Contains(smallclass) &&
+                               t1.PrModelNumber.ToString().Contains(modelnumber) &&
+                               t1.PrColor.ToString().Contains(color) 
+                         select new
+                         {
+                             t1.PrID,
+                             t1.PrName,
+                             t2.MaName,
+                             t1.Price,
+                             t1.PrSafetyStock,
+                             t3.ScName,
+                             t1.PrModelNumber,
+                             t1.PrColor,
+                             t1.PrReleaseDate,
+                             t1.PrFlag,
+                             t1.PrHidden
+                         };
+                foreach (var p in tb)
+                {
+                    dataGridViewDsp.Rows.Add(p.PrID, p.PrName, p.MaName, p.Price, p.PrSafetyStock, p.ScName, p.PrModelNumber, p.PrColor, p.PrReleaseDate, p.PrFlag, p.PrHidden);
+                }
                 context.Dispose();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
     }
 }

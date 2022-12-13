@@ -66,6 +66,7 @@
     <Compile Include="DbAccess\PositionDataAccess.cs" />
     <Compile Include="DbAccess\ProductDataAccess.cs" />
     <Compile Include="DbAccess\SalesOfficeDataAccess.cs" />
+    <Compile Include="DbAccess\SmallClassificationDataAccess.cs" />
     <Compile Include="DbAccess\StockDataAccess.cs" />
     <Compile Include="F_kokyaku.cs">
       <SubType>Form</SubType>

@@ -32,7 +32,6 @@ namespace SalesManagement_SysDev
             this.buttonClear = new System.Windows.Forms.Button();
             this.dataGridViewDsp = new System.Windows.Forms.DataGridView();
             this.checkBoxPrFlag = new System.Windows.Forms.CheckBox();
-            this.textBoxScID = new System.Windows.Forms.TextBox();
             this.LabelPrModelNumber = new System.Windows.Forms.Label();
             this.LabelScID = new System.Windows.Forms.Label();
             this.textBoxPrName = new System.Windows.Forms.TextBox();
@@ -69,6 +68,7 @@ namespace SalesManagement_SysDev
             this.comboBoxColor = new System.Windows.Forms.ComboBox();
             this.PrReleaseDate = new System.Windows.Forms.DateTimePicker();
             this.comboBoxMaker = new System.Windows.Forms.ComboBox();
+            this.comboBoxSmallClass = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -89,6 +89,7 @@ namespace SalesManagement_SysDev
             // 
             // dataGridViewDsp
             // 
+            this.dataGridViewDsp.AllowUserToAddRows = false;
             this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDsp.Location = new System.Drawing.Point(47, 677);
             this.dataGridViewDsp.Margin = new System.Windows.Forms.Padding(2);
@@ -114,15 +115,6 @@ namespace SalesManagement_SysDev
             this.checkBoxPrFlag.Text = "非表示";
             this.checkBoxPrFlag.UseVisualStyleBackColor = false;
             // 
-            // textBoxScID
-            // 
-            this.textBoxScID.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxScID.Location = new System.Drawing.Point(1026, 268);
-            this.textBoxScID.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxScID.Name = "textBoxScID";
-            this.textBoxScID.Size = new System.Drawing.Size(206, 51);
-            this.textBoxScID.TabIndex = 65;
-            // 
             // LabelPrModelNumber
             // 
             this.LabelPrModelNumber.AutoSize = true;
@@ -145,9 +137,9 @@ namespace SalesManagement_SysDev
             this.LabelScID.Location = new System.Drawing.Point(752, 275);
             this.LabelScID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LabelScID.Name = "LabelScID";
-            this.LabelScID.Size = new System.Drawing.Size(178, 40);
+            this.LabelScID.Size = new System.Drawing.Size(177, 40);
             this.LabelScID.TabIndex = 62;
-            this.LabelScID.Text = "小分類ID";
+            this.LabelScID.Text = "小分類名";
             // 
             // textBoxPrName
             // 
@@ -557,12 +549,22 @@ namespace SalesManagement_SysDev
             this.comboBoxMaker.Size = new System.Drawing.Size(206, 41);
             this.comboBoxMaker.TabIndex = 91;
             // 
+            // comboBoxSmallClass
+            // 
+            this.comboBoxSmallClass.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.comboBoxSmallClass.FormattingEnabled = true;
+            this.comboBoxSmallClass.Location = new System.Drawing.Point(1026, 278);
+            this.comboBoxSmallClass.Name = "comboBoxSmallClass";
+            this.comboBoxSmallClass.Size = new System.Drawing.Size(206, 41);
+            this.comboBoxSmallClass.TabIndex = 92;
+            // 
             // F_syouhin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.comboBoxSmallClass);
             this.Controls.Add(this.comboBoxMaker);
             this.Controls.Add(this.PrReleaseDate);
             this.Controls.Add(this.comboBoxColor);
@@ -586,7 +588,6 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.textBoxPrModelNumber);
             this.Controls.Add(this.LabelPrHidden);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBoxScID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Regester_button);
             this.Controls.Add(this.textBoxPrSafetyStock);
@@ -619,7 +620,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.DataGridView dataGridViewDsp;
         private System.Windows.Forms.CheckBox checkBoxPrFlag;
-        private System.Windows.Forms.TextBox textBoxScID;
         private System.Windows.Forms.Label LabelPrModelNumber;
         private System.Windows.Forms.Label LabelScID;
         private System.Windows.Forms.TextBox textBoxPrName;
@@ -656,5 +656,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.ComboBox comboBoxColor;
         private System.Windows.Forms.DateTimePicker PrReleaseDate;
         private System.Windows.Forms.ComboBox comboBoxMaker;
+        private System.Windows.Forms.ComboBox comboBoxSmallClass;
     }
 }
