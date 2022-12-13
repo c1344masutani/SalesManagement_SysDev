@@ -231,6 +231,7 @@ namespace SalesManagement_SysDev
             // 
             // dataGridViewDsp
             // 
+            this.dataGridViewDsp.AllowUserToAddRows = false;
             this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDsp.Location = new System.Drawing.Point(125, 475);
             this.dataGridViewDsp.Margin = new System.Windows.Forms.Padding(2);

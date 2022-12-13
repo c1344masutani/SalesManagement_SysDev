@@ -319,59 +319,63 @@ namespace SalesManagement_SysDev
 
         private void Search_button_Click(object sender, EventArgs e)
         {
-
-            if (!string.IsNullOrEmpty(textBoxEmName.Text.Trim()))
-            {
-
-                if (textBoxEmName.TextLength > 50)
-                {
-                    MessageBox.Show("社員名は50文字以下です");
-                    textBoxEmName.Focus();
-                    return;
-                }
-            }
-
-            
-
-            
-
-            if (!string.IsNullOrEmpty(textBoxEmPassWord.Text.Trim()))
-            {
-                if (textBoxEmPassWord.TextLength > 10)
-                {
-                    MessageBox.Show("パスワードは10文字以下です");
-                    textBoxEmPassWord.Focus();
-                    return;
-                }
-            }
-
-            if (!string.IsNullOrEmpty(textBoxEmPhone.Text.Trim()))
-            {
-                if (textBoxEmPhone.TextLength > 13)
-                {
-                    MessageBox.Show("電話番号は13文字以下です");
-                    textBoxEmPhone.Focus();
-                    return;
-                }
-            }
-
-            if (!string.IsNullOrEmpty(textBoxhidden.Text.Trim()))
-            {
-                if (textBoxhidden.TextLength > 200)
-                {
-                    MessageBox.Show("非表示理由は200文字以下です");
-                    textBoxhidden.Focus();
-                    return;
-                }
-            }
-
             dataGridViewDsp.Rows.Clear();
-            int emid = int.Parse(textBoxEmID.Text);
+            string emid = string.Empty;
+            string emname = string.Empty;
+            string soid = string.Empty;
+            string poid = string.Empty;
+            string tel = string.Empty;
+            if (!String.IsNullOrEmpty(textBoxEmID.Text.Trim()))
+            {
+                emid = textBoxEmID.Text;
+            }
+            if (!String.IsNullOrEmpty(textBoxEmName.Text.Trim()))
+            {
+                emname = textBoxEmName.Text;
+            }
+            if(comboBoxSalesOffice.SelectedIndex != -1)
+            {
+                soid = comboBoxSalesOffice.SelectedValue.ToString();
+            }
+            if(comboBoxPosition.SelectedIndex != -1)
+            {
+                poid = comboBoxPosition.SelectedValue.ToString();
+            }
+            if (!String.IsNullOrEmpty(textBoxEmPhone.Text.Trim()))
+            {
+                tel = textBoxEmPhone.Text;
+            }
+
             try
             {
                 var context = new SalesManagement_DevContext();
-                var employees = context.M_Employees.Where(x => x.EmID == emid).ToArray();
-                dataGridViewDsp.Rows.Add(employees[0].EmID, employees[0].EmName, employees[0].SoID, employees[0].PoID, employees[0].EmHiredate, employees[0].EmPhone, employees[0].EmPassword, employees[0].EmFlag, employees[0].EmHidden);
+                var tb = from t1 in context.M_Employees
+                         join t2 in context.M_SalesOffices
+                         on t1.SoID equals t2.SoID
+                         join t3 in context.M_Positions
+                         on t1.PoID equals t3.PoID
+                         where t1.EmID.ToString().Contains(emid) &&
+                               t1.EmName.Contains(emname) &&
+                               t1.SoID.ToString().Contains(soid) &&
+                               t1.PoID.ToString().Contains(poid) &&
+                               t1.EmPhone.ToString().Contains(tel)
+                         select new
+                         {
+                             t1.EmID,
+                             t1.EmName,
+                             t2.SoName,
+                             t3.PoName,
+                             t1.EmHiredate,
+                             t1.EmPhone,
+                             t1.EmPassword,
+                             t1.EmFlag,
+                             t1.EmHidden
+                         };
+                foreach (var p in tb)
+                {
+                    dataGridViewDsp.Rows.Add(p.EmID, p.EmName, p.SoName, p.PoName, p.EmHiredate, p.EmPhone, p.EmPassword, p.EmFlag, p.EmHidden);
+                }
+
                 context.Dispose();
             }
             catch (Exception ex)
