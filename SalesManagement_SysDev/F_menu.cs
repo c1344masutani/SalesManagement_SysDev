@@ -204,7 +204,7 @@ namespace SalesManagement_SysDev
                 buttonWarehousing.Enabled = false;
                 buttonWarehousing.BackColor = Color.Gray;
                 buttonSyukko.Enabled = false;
-                buttonWarehousing.BackColor = Color.Gray;
+                buttonSyukko.BackColor = Color.Gray;
                 buttonArrival.Enabled = false;
                 buttonArrival.BackColor = Color.Gray;
             }
