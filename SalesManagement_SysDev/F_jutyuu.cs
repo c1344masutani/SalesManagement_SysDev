@@ -358,7 +358,7 @@ namespace SalesManagement_SysDev
                         EmID = order.EmID,
                         ClID = order.ClID,
                         OrID = order.OrID,
-                        ChDate = order.OrDate,
+                        ChDate = DateTime.Today,
                         ChStateFlag = 0,
                         ChFlag = 0,
                         ChHidden = ""

@@ -14,10 +14,27 @@ namespace SalesManagement_SysDev
     {
         //入力形式チェック用クラスのインスタンス化
         DataInputFormCheck dataInputFormCheck = new DataInputFormCheck();
+        //社員テーブルアクセス用クラスのインスタンス化
+        EmployeeDataAccess employeeDataAccess = new EmployeeDataAccess();
+
+        //コンボボックス用の社員データ
+        private static List<M_Employee> Employee;
 
         public F_nyuuko()
         {
             InitializeComponent();
+        }
+
+        private void SetFormComboBox()
+        {
+            //社員コンボボックス
+            Employee = employeeDataAccess.GetEmployeeDspData();
+            comboBoxEmployee.DataSource = Employee;
+            comboBoxEmployee.DisplayMember = "EmName";
+            comboBoxEmployee.ValueMember = "EmID";
+            //社員コンボボックスを読み取り専用
+            comboBoxEmployee.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxEmployee.SelectedIndex = -1;
         }
 
         private void back_button_Click(object sender, EventArgs e)
@@ -56,6 +73,7 @@ namespace SalesManagement_SysDev
             //読み取り専用
             dataGridViewDsp.ReadOnly = true;
             fncAllSelect();
+            SetFormComboBox();
         }
 
         private void fncAllSelect()
@@ -64,9 +82,22 @@ namespace SalesManagement_SysDev
             try
             {
                 var context = new SalesManagement_DevContext();
-                foreach (var p in context.T_Warehousings)
+                var tb = from t1 in context.T_Warehousings
+                         join t2 in context.M_Employees
+                         on t1.EmID equals t2.EmID
+                         select new
+                         {
+                             t1.WaID,
+                             t1.HaID,
+                             t2.EmName,
+                             t1.WaDate,
+                             t1.WaShelfFlag,
+                             t1.WaFlag,
+                             t1.WaHidden
+                         };
+                foreach(var p in tb)
                 {
-                    dataGridViewDsp.Rows.Add(p.WaID,p.HaID,p.EmID,p.WaDate,p.WaShelfFlag,p.WaFlag,p.WaHidden);
+                    dataGridViewDsp.Rows.Add(p.WaID, p.HaID, p.EmName, p.WaDate, p.WaShelfFlag, p.WaFlag, p.WaHidden);
                 }
                 context.Dispose();
             }
@@ -106,20 +137,7 @@ namespace SalesManagement_SysDev
                     return;
                 }
             }
-            if (!string.IsNullOrEmpty(textBoxEmID.Text.Trim()))
-            {
-                if (!dataInputFormCheck.CheckNumeric(textBoxEmID.Text.Trim()))
-                {
-                    MessageBox.Show("入庫管理社員IDは数値です");
-                    textBoxEmID.Focus();
-                    return;
-                }
-                if (textBoxEmID.TextLength > 6)
-                {
-                    MessageBox.Show("入庫管理社員IDは6文字以下です");
-                    return;
-                }
-            }
+            
             if (!string.IsNullOrEmpty(textBoxWaHidden.Text.Trim()))
             {
                 if (textBoxWaHidden.TextLength > 200)
@@ -171,7 +189,7 @@ namespace SalesManagement_SysDev
         {
             textBoxWaID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[0].Value.ToString();
             textBoxHaID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
-            textBoxEmID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
+            comboBoxEmployee.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
             dateTimePickerWaDate.Value = DateTime.Parse(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString());
 
         }
@@ -183,7 +201,11 @@ namespace SalesManagement_SysDev
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
-
+            textBoxWaID.Text = "";
+            textBoxHaID.Text = "";
+            comboBoxEmployee.Text = "";
+            dateTimePickerWaDate.Value = DateTime.Today;
+            textBoxWaHidden.Text = "";
         }
     }
 }

@@ -45,13 +45,13 @@ namespace SalesManagement_SysDev
             this.textBoxWaID = new System.Windows.Forms.TextBox();
             this.textBoxHaID = new System.Windows.Forms.TextBox();
             this.textBoxWaHidden = new System.Windows.Forms.TextBox();
-            this.textBoxEmID = new System.Windows.Forms.TextBox();
             this.dateTimePickerWaDate = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.comboBoxEmployee = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             this.SuspendLayout();
@@ -246,15 +246,6 @@ namespace SalesManagement_SysDev
             this.textBoxWaHidden.Size = new System.Drawing.Size(366, 78);
             this.textBoxWaHidden.TabIndex = 80;
             // 
-            // textBoxEmID
-            // 
-            this.textBoxEmID.Location = new System.Drawing.Point(1596, 167);
-            this.textBoxEmID.Multiline = true;
-            this.textBoxEmID.Name = "textBoxEmID";
-            this.textBoxEmID.ReadOnly = true;
-            this.textBoxEmID.Size = new System.Drawing.Size(259, 40);
-            this.textBoxEmID.TabIndex = 81;
-            // 
             // dateTimePickerWaDate
             // 
             this.dateTimePickerWaDate.Location = new System.Drawing.Point(1596, 294);
@@ -322,19 +313,28 @@ namespace SalesManagement_SysDev
             this.label9.TabIndex = 87;
             this.label9.Text = "必須";
             // 
+            // comboBoxEmployee
+            // 
+            this.comboBoxEmployee.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.comboBoxEmployee.FormattingEnabled = true;
+            this.comboBoxEmployee.Location = new System.Drawing.Point(1596, 170);
+            this.comboBoxEmployee.Name = "comboBoxEmployee";
+            this.comboBoxEmployee.Size = new System.Drawing.Size(206, 41);
+            this.comboBoxEmployee.TabIndex = 105;
+            // 
             // F_nyuuko
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.comboBoxEmployee);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.dateTimePickerWaDate);
-            this.Controls.Add(this.textBoxEmID);
             this.Controls.Add(this.textBoxWaHidden);
             this.Controls.Add(this.textBoxHaID);
             this.Controls.Add(this.textBoxWaID);
@@ -379,12 +379,12 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.TextBox textBoxWaID;
         private System.Windows.Forms.TextBox textBoxHaID;
         private System.Windows.Forms.TextBox textBoxWaHidden;
-        private System.Windows.Forms.TextBox textBoxEmID;
         private System.Windows.Forms.DateTimePicker dateTimePickerWaDate;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox comboBoxEmployee;
     }
 }

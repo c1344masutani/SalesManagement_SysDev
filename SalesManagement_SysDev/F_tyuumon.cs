@@ -315,7 +315,7 @@ namespace SalesManagement_SysDev
                     ClID = chumon.ClID,
                     SoID = chumon.SoID,
                     OrID = chumon.OrID,
-                    SyDate = chumon.ChDate,
+                    SyDate = DateTime.Today,
                     SyStateFlag = 0,
                     SyFlag = 0,
                     SyHidden = ""

@@ -68,6 +68,12 @@
     <Compile Include="DbAccess\SalesOfficeDataAccess.cs" />
     <Compile Include="DbAccess\SmallClassificationDataAccess.cs" />
     <Compile Include="DbAccess\StockDataAccess.cs" />
+    <Compile Include="F_eigyousyo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_eigyousyo.Designer.cs">
+      <DependentUpon>F_eigyousyo.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_kokyaku.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,9 @@
     <Compile Include="F_zaiko.Designer.cs">
       <DependentUpon>F_zaiko.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="F_eigyousyo.resx">
+      <DependentUpon>F_eigyousyo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="F_hattyu.resx">
       <DependentUpon>F_hattyu.cs</DependentUpon>
     </EmbeddedResource>

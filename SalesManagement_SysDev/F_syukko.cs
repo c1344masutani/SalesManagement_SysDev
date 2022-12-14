@@ -218,7 +218,7 @@ namespace SalesManagement_SysDev
                     EmID = syukko.EmID,
                     ClID = syukko.ClID,
                     OrID = syukko.OrID,
-                    ArDate = syukko.SyDate,
+                    ArDate = DateTime.Today,
                     ArStateFlag = 0,
                     ArFlag = 0,
                     ArHidden = ""

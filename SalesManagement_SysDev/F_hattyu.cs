@@ -70,9 +70,9 @@ namespace SalesManagement_SysDev
             //0番目（左端）の項目名を設定
             dataGridViewDsp.Columns[0].HeaderText = "発注ID";
             dataGridViewDsp.Columns[1].Width = 70;
-            dataGridViewDsp.Columns[1].HeaderText = "メーカID";
+            dataGridViewDsp.Columns[1].HeaderText = "メーカ名";
             dataGridViewDsp.Columns[2].Width = 70;
-            dataGridViewDsp.Columns[2].HeaderText = "発注社員ID";
+            dataGridViewDsp.Columns[2].HeaderText = "発注社員名";
             dataGridViewDsp.Columns[3].Width = 130;
             dataGridViewDsp.Columns[3].HeaderText = "発注年月日";
             dataGridViewDsp.Columns[4].Width = 70;
@@ -97,9 +97,24 @@ namespace SalesManagement_SysDev
             try
             {
                 var context = new SalesManagement_DevContext();
-                foreach (var p in context.T_Hattyus)
+                var tb = from t1 in context.T_Hattyus
+                         join t2 in context.M_Makers
+                         on t1.MaID equals t2.MaID
+                         join t3 in context.M_Employees
+                         on t1.EmID equals t3.EmID
+                         select new
+                         {
+                             t1.HaID,
+                             t2.MaName,
+                             t3.EmName,
+                             t1.HaDate,
+                             t1.WaWarehouseFlag,
+                             t1.HaFlag,
+                             t1.HaHidden
+                         };
+                foreach (var p in tb)
                 {
-                    dataGridViewDsp.Rows.Add(p.HaID,p.MaID,p.EmID,p.HaDate,p.WaWarehouseFlag,p.HaFlag,p.HaHidden);
+                    dataGridViewDsp.Rows.Add(p.HaID, p.MaName, p.EmName, p.HaDate, p.WaWarehouseFlag, p.HaFlag, p.HaHidden);
                 }
                 context.Dispose();
             }
@@ -251,7 +266,7 @@ namespace SalesManagement_SysDev
                     {
                         HaID = hattyu.HaID,
                         EmID = hattyu.EmID,
-                        WaDate = hattyu.HaDate,
+                        WaDate = DateTime.Today,
                         WaShelfFlag = 0,
                         WaFlag = 0,
                         WaHidden = ""
@@ -281,33 +296,55 @@ namespace SalesManagement_SysDev
 
         private void button_kensaku_Click(object sender, EventArgs e)
         {
+            string haid = string.Empty;
+            string maid = string.Empty;
+            string emid = string.Empty;
+            if (!String.IsNullOrEmpty(textBoxHaID.Text.Trim()))
+            {
+                haid = textBoxHaID.Text;
+            }
+            if(comboBoxMaker.SelectedIndex != -1)
+            {
+                maid = comboBoxMaker.SelectedValue.ToString();
+            }
+            if(comboBoxEmployee.SelectedIndex != -1)
+            {
+                emid = comboBoxEmployee.SelectedValue.ToString();
+            }
 
-            if (!String.IsNullOrEmpty(textBoxHaHidden.Text.Trim()))
-            {
-                if (textBoxHaHidden.TextLength > 200)
-                {
-                    MessageBox.Show("非表示理由は200文字以下です");
-                    return;
-                }
-            }
             dataGridViewDsp.Rows.Clear();
-            if (textBoxHaID.Text == "" || textBoxHaID.Text == null)
-            {
-                fncAllSelect();
-                return;
-            }
-            int haid = int.Parse(textBoxHaID.Text);
             try
             {
                 var context = new SalesManagement_DevContext();
-                var hattyu = context.T_Hattyus.Where(x => x.HaID == haid).ToArray();
-                dataGridViewDsp.Rows.Add(hattyu[0].HaID,hattyu[0].MaID,hattyu[0].EmID,hattyu[0].HaDate,hattyu[0].WaWarehouseFlag,hattyu[0].HaFlag,hattyu[0].HaHidden);
+                var tb = from t1 in context.T_Hattyus
+                         join t2 in context.M_Makers
+                         on t1.MaID equals t2.MaID
+                         join t3 in context.M_Employees
+                         on t1.EmID equals t3.EmID
+                         where t1.HaID.ToString().Contains(haid) &&
+                               t1.MaID.ToString().Contains(maid) &&
+                               t1.EmID.ToString().Contains(emid) 
+                         select new
+                         {
+                             t1.HaID,
+                             t2.MaName,
+                             t3.EmName,
+                             t1.HaDate,
+                             t1.WaWarehouseFlag,
+                             t1.HaFlag,
+                             t1.HaHidden
+                         };
+                foreach (var p in tb)
+                {
+                    dataGridViewDsp.Rows.Add(p.HaID, p.MaName, p.EmName, p.HaDate, p.WaWarehouseFlag, p.HaFlag, p.HaHidden);
+                }
                 context.Dispose();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void buttonClear_Click(object sender, EventArgs e)

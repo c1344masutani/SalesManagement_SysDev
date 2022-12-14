@@ -275,7 +275,7 @@ namespace SalesManagement_SysDev
                     EmID = arrival.EmID,
                     SoID = arrival.SoID,
                     OrID = arrival.OrID,
-                    ShFinishDate = arrival.ArDate,
+                    ShFinishDate = DateTime.Today,
                     ShStateFlag = 0,
                     ShFlag = 0,
                     ShHidden = ""

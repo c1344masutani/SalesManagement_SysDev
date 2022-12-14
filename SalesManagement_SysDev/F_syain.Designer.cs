@@ -50,7 +50,6 @@ namespace SalesManagement_SysDev
             this.Regester_button = new System.Windows.Forms.Button();
             this.Update_button = new System.Windows.Forms.Button();
             this.Search_button = new System.Windows.Forms.Button();
-            this.Delete_button = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -60,10 +59,11 @@ namespace SalesManagement_SysDev
             this.label16 = new System.Windows.Forms.Label();
             this.back_button = new System.Windows.Forms.Button();
             this.datetimeEmHiredate = new System.Windows.Forms.DateTimePicker();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.checkBoxEmFlag = new System.Windows.Forms.CheckBox();
             this.comboBoxSalesOffice = new System.Windows.Forms.ComboBox();
             this.comboBoxPosition = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -182,6 +182,7 @@ namespace SalesManagement_SysDev
             this.textBoxEmID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEmID.Multiline = true;
             this.textBoxEmID.Name = "textBoxEmID";
+            this.textBoxEmID.ReadOnly = true;
             this.textBoxEmID.Size = new System.Drawing.Size(185, 47);
             this.textBoxEmID.TabIndex = 9;
             // 
@@ -272,7 +273,7 @@ namespace SalesManagement_SysDev
             // 
             this.Search_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Search_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.Search_button.Location = new System.Drawing.Point(1544, 31);
+            this.Search_button.Location = new System.Drawing.Point(1350, 30);
             this.Search_button.Margin = new System.Windows.Forms.Padding(2);
             this.Search_button.Name = "Search_button";
             this.Search_button.Size = new System.Drawing.Size(141, 50);
@@ -280,19 +281,6 @@ namespace SalesManagement_SysDev
             this.Search_button.Text = "検索";
             this.Search_button.UseVisualStyleBackColor = true;
             this.Search_button.Click += new System.EventHandler(this.Search_button_Click);
-            // 
-            // Delete_button
-            // 
-            this.Delete_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Delete_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.Delete_button.Location = new System.Drawing.Point(1308, 31);
-            this.Delete_button.Margin = new System.Windows.Forms.Padding(2);
-            this.Delete_button.Name = "Delete_button";
-            this.Delete_button.Size = new System.Drawing.Size(141, 50);
-            this.Delete_button.TabIndex = 22;
-            this.Delete_button.Text = "削除";
-            this.Delete_button.UseVisualStyleBackColor = true;
-            this.Delete_button.Click += new System.EventHandler(this.Delete_button_Click);
             // 
             // label10
             // 
@@ -382,7 +370,7 @@ namespace SalesManagement_SysDev
             // 
             this.back_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.back_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.back_button.Location = new System.Drawing.Point(1760, 31);
+            this.back_button.Location = new System.Drawing.Point(1727, 30);
             this.back_button.Margin = new System.Windows.Forms.Padding(2);
             this.back_button.Name = "back_button";
             this.back_button.Size = new System.Drawing.Size(141, 50);
@@ -398,18 +386,6 @@ namespace SalesManagement_SysDev
             this.datetimeEmHiredate.Name = "datetimeEmHiredate";
             this.datetimeEmHiredate.Size = new System.Drawing.Size(254, 25);
             this.datetimeEmHiredate.TabIndex = 31;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
-            this.pictureBox1.InitialImage = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(181, 85);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 48;
-            this.pictureBox1.TabStop = false;
             // 
             // checkBoxEmFlag
             // 
@@ -442,12 +418,35 @@ namespace SalesManagement_SysDev
             this.comboBoxPosition.Size = new System.Drawing.Size(254, 41);
             this.comboBoxPosition.TabIndex = 51;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(743, 306);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 53);
+            this.button1.TabIndex = 52;
+            this.button1.Text = "営業所管理";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
+            this.pictureBox1.InitialImage = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
+            this.pictureBox1.Location = new System.Drawing.Point(28, 12);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(181, 85);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 48;
+            this.pictureBox1.TabStop = false;
+            // 
             // F_syain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1924, 1050);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBoxPosition);
             this.Controls.Add(this.comboBoxSalesOffice);
             this.Controls.Add(this.checkBoxEmFlag);
@@ -461,7 +460,6 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.Delete_button);
             this.Controls.Add(this.Search_button);
             this.Controls.Add(this.Update_button);
             this.Controls.Add(this.Regester_button);
@@ -513,7 +511,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Button Regester_button;
         private System.Windows.Forms.Button Update_button;
         private System.Windows.Forms.Button Search_button;
-        private System.Windows.Forms.Button Delete_button;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
@@ -528,5 +525,6 @@ namespace SalesManagement_SysDev
         private EventHandler label1_Click;
         private System.Windows.Forms.ComboBox comboBoxSalesOffice;
         private System.Windows.Forms.ComboBox comboBoxPosition;
+        private System.Windows.Forms.Button button1;
     }
 }

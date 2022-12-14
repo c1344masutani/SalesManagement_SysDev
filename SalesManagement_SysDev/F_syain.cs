@@ -383,5 +383,16 @@ namespace SalesManagement_SysDev
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form frm = new F_eigyousyo();
+
+            Opacity = 0;
+
+            frm.ShowDialog();
+
+            this.Close();
+        }
     }
 }
