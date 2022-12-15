@@ -486,5 +486,16 @@ namespace SalesManagement_SysDev
             }
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form frm = new F_Maker();
+
+            Opacity = 0;
+
+            frm.ShowDialog();
+
+            this.Close();
+        }
     }
 }

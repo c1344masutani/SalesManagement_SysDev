@@ -62,6 +62,19 @@ namespace SalesManagement_SysDev
             {
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            //非表示機能
+            try
+            {
+                DataGridViewRow row = dataGridViewDsp.Rows.Cast<DataGridViewRow>().First(r => r.Cells[6].Value.ToString() == "2");
+                row.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                // 該当データなし時は、例外が発生する
+                //MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void back_button_Click(object sender, EventArgs e)
