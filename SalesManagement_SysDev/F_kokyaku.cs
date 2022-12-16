@@ -154,6 +154,13 @@ namespace SalesManagement_SysDev
 
         private void Update_button_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(textBoxClientID.Text.Trim()))
+            {
+                MessageBox.Show("顧客IDを入力してください");
+                return;
+            }
+
+
             if (!String.IsNullOrEmpty(textBoxClientName.Text.Trim()))
             {
                 if (textBoxClientName.TextLength > 50)
