@@ -319,23 +319,79 @@ namespace SalesManagement_SysDev
         private void Search_button_Click(object sender, EventArgs e)
         {
             dataGridViewDsp.Rows.Clear();
-            if(textBoxClientID.Text == "" || textBoxClientID.Text == null)
+            string clid = string.Empty;
+            string soid = string.Empty;
+            string clname = string.Empty;
+            string clpostal = string.Empty;
+            string address = string.Empty;
+            string phone = string.Empty;
+            string fax = string.Empty;
+
+            if (!String.IsNullOrEmpty(textBoxClientID.Text.Trim()))
             {
-                fncAllSelect();
-                return;
+                clid = textBoxClientID.Text;
             }
-            int clid = int.Parse(textBoxClientID.Text);
+            if(comboBoxSalesOffice.SelectedIndex != -1)
+            {
+                soid = comboBoxSalesOffice.SelectedValue.ToString();
+            }
+            if (!String.IsNullOrEmpty(textBoxClientName.Text.Trim()))
+            {
+                clname = textBoxClientName.Text;
+            }
+            if (!String.IsNullOrEmpty(textBoxPostnumber.Text.Trim()))
+            {
+                clpostal = textBoxPostnumber.Text;
+            }
+            if (!String.IsNullOrEmpty(textBoxAddress.Text.Trim()))
+            {
+                address = textBoxAddress.Text;
+            }
+            if (!String.IsNullOrEmpty(textBoxPhone.Text.Trim()))
+            {
+                phone = textBoxPhone.Text;
+            }
+            if (!String.IsNullOrEmpty(textBoxFAX.Text.Trim()))
+            {
+                fax = textBoxFAX.Text;
+            }
+
             try
             {
                 var context = new SalesManagement_DevContext();
-                var client = context.M_Clients.Where(x => x.ClID == clid).ToArray();
-                dataGridViewDsp.Rows.Add(client[0].ClID, client[0].SoID, client[0].ClName, client[0].ClPostal, client[0].ClAddress, client[0].ClPhone, client[0].ClFAX, client[0].ClFlag, client[0].ClHidden);
+                var tb = from t1 in context.M_Clients
+                         join t2 in context.M_SalesOffices
+                         on t1.SoID equals t2.SoID
+                         where t1.ClID.ToString().Contains(clid) &&
+                               t2.SoID.ToString().Contains(soid) &&
+                               t1.ClName.Contains(clname) &&
+                               t1.ClAddress.Contains(address) &&
+                               t1.ClPhone.Contains(phone) &&
+                               t1.ClPostal.Contains(clpostal) &&
+                               t1.ClFAX.Contains(fax)
+                         select new
+                         {
+                             t1.ClID,
+                             t2.SoName,
+                             t1.ClName,
+                             t1.ClAddress,
+                             t1.ClPhone,
+                             t1.ClPostal,
+                             t1.ClFAX,
+                             t1.ClFlag,
+                             t1.ClHidden
+                         };
+                foreach (var p in tb)
+                {
+                    dataGridViewDsp.Rows.Add(p.ClID, p.SoName, p.ClName, p.ClAddress, p.ClPhone, p.ClPostal, p.ClFAX, p.ClFlag, p.ClHidden);
+                }
                 context.Dispose();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void client_Load(object sender, EventArgs e)
@@ -405,6 +461,18 @@ namespace SalesManagement_SysDev
                 checkBoxClflg.Checked = true;
             }
             textBoxHidden.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[8].Value.ToString();
+        }
+
+        private void button_Clear_Click(object sender, EventArgs e)
+        {
+            textBoxClientID.Text = "";
+            comboBoxSalesOffice.SelectedIndex = -1;
+            textBoxClientName.Text = "";
+            textBoxAddress.Text = "";
+            textBoxPhone.Text = "";
+            textBoxPostnumber.Text = "";
+            textBoxFAX.Text = "";
+            textBoxHidden.Text = "";
         }
     }
 }

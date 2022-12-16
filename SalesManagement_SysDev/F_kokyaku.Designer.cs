@@ -61,6 +61,7 @@ namespace SalesManagement_SysDev
             this.label16 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBoxSalesOffice = new System.Windows.Forms.ComboBox();
+            this.button_Clear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -454,12 +455,27 @@ namespace SalesManagement_SysDev
             this.comboBoxSalesOffice.Size = new System.Drawing.Size(185, 41);
             this.comboBoxSalesOffice.TabIndex = 59;
             // 
+            // button_Clear
+            // 
+            this.button_Clear.BackColor = System.Drawing.Color.Transparent;
+            this.button_Clear.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button_Clear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.button_Clear.Location = new System.Drawing.Point(1459, 31);
+            this.button_Clear.Margin = new System.Windows.Forms.Padding(2);
+            this.button_Clear.Name = "button_Clear";
+            this.button_Clear.Size = new System.Drawing.Size(321, 51);
+            this.button_Clear.TabIndex = 70;
+            this.button_Clear.Text = "入力クリア";
+            this.button_Clear.UseVisualStyleBackColor = false;
+            this.button_Clear.Click += new System.EventHandler(this.button_Clear_Click);
+            // 
             // F_kokyaku
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1924, 1024);
+            this.Controls.Add(this.button_Clear);
             this.Controls.Add(this.comboBoxSalesOffice);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -537,5 +553,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox comboBoxSalesOffice;
+        private System.Windows.Forms.Button button_Clear;
     }
 }
