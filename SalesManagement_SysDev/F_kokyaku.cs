@@ -53,6 +53,12 @@ namespace SalesManagement_SysDev
                 return;
             }
 
+            if(comboBoxSalesOffice.SelectedIndex == -1)
+            {
+                MessageBox.Show("営業所を選択してください");
+                return;
+            }
+
             if (!String.IsNullOrEmpty(textBoxAddress.Text.Trim()))
             {
                 if (textBoxAddress.TextLength > 50)
