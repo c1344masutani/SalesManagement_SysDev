@@ -33,7 +33,6 @@ namespace SalesManagement_SysDev
             this.textBoxPhone = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Update_button = new System.Windows.Forms.Button();
-            this.Delete_button = new System.Windows.Forms.Button();
             this.textBoxClientID = new System.Windows.Forms.TextBox();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.Regester_button = new System.Windows.Forms.Button();
@@ -72,7 +71,7 @@ namespace SalesManagement_SysDev
             this.Search_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Search_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
             this.Search_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Search_button.Location = new System.Drawing.Point(1540, 31);
+            this.Search_button.Location = new System.Drawing.Point(1276, 35);
             this.Search_button.Margin = new System.Windows.Forms.Padding(2);
             this.Search_button.Name = "Search_button";
             this.Search_button.Size = new System.Drawing.Size(140, 50);
@@ -116,21 +115,6 @@ namespace SalesManagement_SysDev
             this.Update_button.Text = "更新";
             this.Update_button.UseVisualStyleBackColor = false;
             this.Update_button.Click += new System.EventHandler(this.Update_button_Click);
-            // 
-            // Delete_button
-            // 
-            this.Delete_button.BackColor = System.Drawing.Color.Gainsboro;
-            this.Delete_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Delete_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.Delete_button.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Delete_button.Location = new System.Drawing.Point(1281, 30);
-            this.Delete_button.Margin = new System.Windows.Forms.Padding(2);
-            this.Delete_button.Name = "Delete_button";
-            this.Delete_button.Size = new System.Drawing.Size(141, 53);
-            this.Delete_button.TabIndex = 24;
-            this.Delete_button.Text = "削除";
-            this.Delete_button.UseVisualStyleBackColor = false;
-            this.Delete_button.Click += new System.EventHandler(this.Delete_button_Click);
             // 
             // textBoxClientID
             // 
@@ -202,7 +186,7 @@ namespace SalesManagement_SysDev
             this.checkBoxClflg.BackColor = System.Drawing.Color.Transparent;
             this.checkBoxClflg.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBoxClflg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.checkBoxClflg.Location = new System.Drawing.Point(1565, 386);
+            this.checkBoxClflg.Location = new System.Drawing.Point(633, 390);
             this.checkBoxClflg.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxClflg.Name = "checkBoxClflg";
             this.checkBoxClflg.Size = new System.Drawing.Size(163, 44);
@@ -222,7 +206,7 @@ namespace SalesManagement_SysDev
             // textBoxHidden
             // 
             this.textBoxHidden.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxHidden.Location = new System.Drawing.Point(522, 390);
+            this.textBoxHidden.Location = new System.Drawing.Point(1206, 390);
             this.textBoxHidden.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxHidden.Name = "textBoxHidden";
             this.textBoxHidden.Size = new System.Drawing.Size(302, 43);
@@ -260,7 +244,7 @@ namespace SalesManagement_SysDev
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.label10.Location = new System.Drawing.Point(234, 390);
+            this.label10.Location = new System.Drawing.Point(918, 390);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(217, 40);
@@ -497,7 +481,6 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.textBoxFAX);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Delete_button);
             this.Controls.Add(this.Update_button);
             this.Controls.Add(this.Regester_button);
             this.Controls.Add(this.label5);
@@ -527,7 +510,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.TextBox textBoxPhone;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Update_button;
-        private System.Windows.Forms.Button Delete_button;
         private System.Windows.Forms.TextBox textBoxClientID;
         private System.Windows.Forms.TextBox textBoxAddress;
         private System.Windows.Forms.Button Regester_button;

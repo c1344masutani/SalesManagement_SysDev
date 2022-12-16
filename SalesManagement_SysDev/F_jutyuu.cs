@@ -461,5 +461,17 @@ namespace SalesManagement_SysDev
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            textBoxOrID.Text = "";
+            comboBoxSalesOffice.SelectedIndex = -1;
+            comboBoxEmployee.SelectedIndex = -1;
+            comboBoxClient.SelectedIndex = -1;
+            comboBoxProduct.SelectedIndex = -1;
+            textBoxClCharge.Text = "";
+            numericUpDownOrQuantity.Value = 0;
+
+        }
     }
 }

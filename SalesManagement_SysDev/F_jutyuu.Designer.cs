@@ -61,10 +61,10 @@ namespace SalesManagement_SysDev
             this.label18 = new System.Windows.Forms.Label();
             this.numericUpDownOrQuantity = new System.Windows.Forms.NumericUpDown();
             this.comboBoxSalesOffice = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBoxEmployee = new System.Windows.Forms.ComboBox();
             this.comboBoxClient = new System.Windows.Forms.ComboBox();
             this.comboBoxProduct = new System.Windows.Forms.ComboBox();
+            this.buttonClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOrQuantity)).BeginInit();
@@ -207,7 +207,7 @@ namespace SalesManagement_SysDev
             // 
             this.Update_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Update_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.Update_button.Location = new System.Drawing.Point(1062, 31);
+            this.Update_button.Location = new System.Drawing.Point(993, 31);
             this.Update_button.Name = "Update_button";
             this.Update_button.Size = new System.Drawing.Size(141, 50);
             this.Update_button.TabIndex = 56;
@@ -219,7 +219,7 @@ namespace SalesManagement_SysDev
             // 
             this.Search_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Search_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.Search_button.Location = new System.Drawing.Point(1336, 31);
+            this.Search_button.Location = new System.Drawing.Point(1182, 31);
             this.Search_button.Name = "Search_button";
             this.Search_button.Size = new System.Drawing.Size(141, 50);
             this.Search_button.TabIndex = 58;
@@ -411,14 +411,6 @@ namespace SalesManagement_SysDev
             this.comboBoxSalesOffice.Size = new System.Drawing.Size(178, 41);
             this.comboBoxSalesOffice.TabIndex = 82;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(0, 0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 26);
-            this.comboBox1.TabIndex = 83;
-            // 
             // comboBoxEmployee
             // 
             this.comboBoxEmployee.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -446,16 +438,30 @@ namespace SalesManagement_SysDev
             this.comboBoxProduct.Size = new System.Drawing.Size(178, 41);
             this.comboBoxProduct.TabIndex = 86;
             // 
+            // buttonClear
+            // 
+            this.buttonClear.BackColor = System.Drawing.Color.Transparent;
+            this.buttonClear.Font = new System.Drawing.Font("HGS明朝E", 20F);
+            this.buttonClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.buttonClear.Location = new System.Drawing.Point(1409, 31);
+            this.buttonClear.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(305, 50);
+            this.buttonClear.TabIndex = 102;
+            this.buttonClear.Text = "入力クリア";
+            this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
             // F_jutyuu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.comboBoxProduct);
             this.Controls.Add(this.comboBoxClient);
             this.Controls.Add(this.comboBoxEmployee);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.comboBoxSalesOffice);
             this.Controls.Add(this.numericUpDownOrQuantity);
             this.Controls.Add(this.label18);
@@ -534,9 +540,9 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.NumericUpDown numericUpDownOrQuantity;
         private System.Windows.Forms.ComboBox comboBoxSalesOffice;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBoxEmployee;
         private System.Windows.Forms.ComboBox comboBoxClient;
         private System.Windows.Forms.ComboBox comboBoxProduct;
+        private System.Windows.Forms.Button buttonClear;
     }
 }

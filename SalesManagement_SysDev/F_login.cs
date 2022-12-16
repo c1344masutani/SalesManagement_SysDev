@@ -44,8 +44,10 @@ namespace SalesManagement_SysDev
             string loginID = ID_textBox.Text;
             string loginPW = PW_textBox.Text;
             bool flg;
-            //Form frm = new F_menu();
-            //frm.ShowDialog();
+
+            //プログラムチェック用
+            Form frm = new F_menu();
+            frm.ShowDialog();
 
             //ユーザID・PWの入力状況チェック
             if (loginID.Trim() == "" || loginID == null || loginPW.Trim() == "" || loginPW == null)
