@@ -69,7 +69,7 @@ namespace SalesManagement_SysDev
                     var login = context.M_Employees.Single(x => x.EmID.ToString() == loginID);
                     F_menu.position = login.PoID;
                     F_menu.loginname = login.EmName;
-                    Form frm = new F_menu();
+                    //Form frm = new F_menu();
 
                     Opacity = 0;
 
