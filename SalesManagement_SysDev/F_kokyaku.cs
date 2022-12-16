@@ -47,6 +47,11 @@ namespace SalesManagement_SysDev
                     return;
                 }
             }
+            else
+            {
+                MessageBox.Show("顧客名を入力してください");
+                return;
+            }
 
             if (!String.IsNullOrEmpty(textBoxAddress.Text.Trim()))
             {
@@ -56,6 +61,11 @@ namespace SalesManagement_SysDev
                     textBoxAddress.Focus();
                     return;
                 }
+            }
+            else
+            {
+                MessageBox.Show("住所を入力してください");
+                return;
             }
 
             if (!String.IsNullOrEmpty(textBoxPhone.Text.Trim()))
@@ -67,6 +77,11 @@ namespace SalesManagement_SysDev
                     return;
                 }
             }
+            else
+            {
+                MessageBox.Show("電話番号を入力してください");
+                return;
+            }
 
             if (!String.IsNullOrEmpty(textBoxPostnumber.Text.Trim()))
             {
@@ -76,6 +91,11 @@ namespace SalesManagement_SysDev
                     textBoxPostnumber.Focus();
                     return;
                 }
+            }
+            else
+            {
+                MessageBox.Show("郵便番号を入力してください");
+                return;
             }
 
             if (!String.IsNullOrEmpty(textBoxHidden.Text.Trim()))
@@ -128,6 +148,77 @@ namespace SalesManagement_SysDev
 
         private void Update_button_Click(object sender, EventArgs e)
         {
+            if (!String.IsNullOrEmpty(textBoxClientName.Text.Trim()))
+            {
+                if (textBoxClientName.TextLength > 50)
+                {
+                    MessageBox.Show("顧客名は50文字以下です");
+                    textBoxClientName.Focus();
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("顧客名を入力してください");
+                return;
+            }
+
+            if (!String.IsNullOrEmpty(textBoxAddress.Text.Trim()))
+            {
+                if (textBoxAddress.TextLength > 50)
+                {
+                    MessageBox.Show("住所は50文字以下です");
+                    textBoxAddress.Focus();
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("住所を入力してください");
+                return;
+            }
+
+            if (!String.IsNullOrEmpty(textBoxPhone.Text.Trim()))
+            {
+                if (textBoxPhone.TextLength > 13)
+                {
+                    MessageBox.Show("電話番号は13文字以下です");
+                    textBoxPhone.Focus();
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("電話番号を入力してください");
+                return;
+            }
+
+            if (!String.IsNullOrEmpty(textBoxPostnumber.Text.Trim()))
+            {
+                if (textBoxPostnumber.TextLength > 7)
+                {
+                    MessageBox.Show("郵便番号は7文字以下です");
+                    textBoxPostnumber.Focus();
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("郵便番号を入力してください");
+                return;
+            }
+
+            if (!String.IsNullOrEmpty(textBoxHidden.Text.Trim()))
+            {
+                if (textBoxHidden.TextLength > 200)
+                {
+                    MessageBox.Show("非表示理由は200文字以下です");
+                    textBoxHidden.Focus();
+                    return;
+                }
+            }
+
+
             int flg;
             if (checkBoxClflg.Checked == true)
             {
@@ -186,9 +277,24 @@ namespace SalesManagement_SysDev
             try
             {
                 var context = new SalesManagement_DevContext();
-                foreach (var p in context.M_Clients)
+                var tb = from t1 in context.M_Clients
+                         join t2 in context.M_SalesOffices
+                         on t1.SoID equals t2.SoID
+                         select new
+                         {
+                             t1.ClID,
+                             t2.SoName,
+                             t1.ClName,
+                             t1.ClAddress,
+                             t1.ClPhone,
+                             t1.ClPostal,
+                             t1.ClFAX,
+                             t1.ClFlag,
+                             t1.ClHidden
+                         };
+                foreach(var p in tb)
                 {
-                    dataGridViewDsp.Rows.Add(p.ClID, p.SoID, p.ClName, p.ClAddress, p.ClPhone, p.ClPostal, p.ClFAX, p.ClFlag, p.ClHidden);
+                    dataGridViewDsp.Rows.Add(p.ClID, p.SoName, p.ClName, p.ClAddress, p.ClPhone, p.ClPostal, p.ClFAX, p.ClFlag, p.ClHidden);
                 }
                 context.Dispose();
             }
@@ -241,7 +347,7 @@ namespace SalesManagement_SysDev
             //0番目（左端）の項目名を設定
             dataGridViewDsp.Columns[0].HeaderText = "顧客ID";
             dataGridViewDsp.Columns[1].Width = 70;
-            dataGridViewDsp.Columns[1].HeaderText = "営業所ID";
+            dataGridViewDsp.Columns[1].HeaderText = "営業所名";
             dataGridViewDsp.Columns[2].Width = 130;
             dataGridViewDsp.Columns[2].HeaderText = "顧客名";
             dataGridViewDsp.Columns[3].Width = 200;
