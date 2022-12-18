@@ -315,7 +315,7 @@ namespace SalesManagement_SysDev
                     ClID = chumon.ClID,
                     SoID = chumon.SoID,
                     OrID = chumon.OrID,
-                    SyDate = DateTime.Today,
+                    SyDate = DateTime.Now,
                     SyStateFlag = 0,
                     SyFlag = 0,
                     SyHidden = ""
@@ -361,6 +361,7 @@ namespace SalesManagement_SysDev
                 chumon.ChFlag = flg;
                 context.SaveChanges();
                 context.Dispose();
+                MessageBox.Show("非表示にしました");
                 fncAllSelect();
             }
             catch (Exception ex)

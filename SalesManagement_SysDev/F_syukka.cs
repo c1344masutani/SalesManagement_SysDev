@@ -216,19 +216,24 @@ namespace SalesManagement_SysDev
 
         private void buttonConfirm_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(textBoxOrID.Text.Trim()))
+            if (!String.IsNullOrEmpty(textBoxShID.Text.Trim()))
             {
-                if (!dataInputFormCheck.CheckNumeric(textBoxOrID.Text.Trim()))
+                if (!dataInputFormCheck.CheckNumeric(textBoxShID.Text.Trim()))
                 {
-                    MessageBox.Show("受注IDは数値です");
-                    textBoxOrID.Focus();
+                    MessageBox.Show("出荷IDは数値です");
+                    textBoxShID.Focus();
                     return;
                 }
-                if (textBoxOrID.TextLength > 6)
+                if (textBoxShID.TextLength > 6)
                 {
-                    MessageBox.Show("受注IDは6文字以下です");
+                    MessageBox.Show("出荷IDは6文字以下です");
                     return;
                 }
+            }
+            else
+            {
+                MessageBox.Show("出荷を入力してください");
+                return;
             }
 
             if (!String.IsNullOrEmpty(textBoxShHidden.Text.Trim()))
@@ -281,7 +286,7 @@ namespace SalesManagement_SysDev
                     SoID = shipment.SoID,
                     EmID = shipment.EmID,
                     ChID = chumon.ChID,
-                    SaDate = DateTime.Today,
+                    SaDate = DateTime.Now,
                     SaFlag = 0,
                     SaHidden = ""
                 };
@@ -329,6 +334,7 @@ namespace SalesManagement_SysDev
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                MessageBox.Show("非表示にしました");
             }
             catch (Exception ex)
             {

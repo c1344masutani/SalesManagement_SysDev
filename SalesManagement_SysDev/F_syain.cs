@@ -142,10 +142,18 @@ namespace SalesManagement_SysDev
                     return;
                 }
             }
+            else
+            {
+                MessageBox.Show("社員名を入力してください");
+                return;
+            }
 
-            
+            if(comboBoxSalesOffice.SelectedIndex == -1)
+            {
+                MessageBox.Show("営業所名を選択してください");
+                return;
+            }
 
-               
             if(!string.IsNullOrEmpty(textBoxEmPassWord.Text.Trim()))
             {
                 if (textBoxEmPassWord.TextLength > 10)
@@ -154,6 +162,17 @@ namespace SalesManagement_SysDev
                     textBoxEmPassWord.Focus();
                     return;
                 }
+            }
+            else
+            {
+                MessageBox.Show("パスワードを入力してください");
+                return;
+            }
+
+            if(comboBoxPosition.SelectedIndex == -1)
+            {
+                MessageBox.Show("役職名を選択してください");
+                return;
             }
 
             if (!string.IsNullOrEmpty(textBoxEmPhone.Text.Trim()))
@@ -164,6 +183,11 @@ namespace SalesManagement_SysDev
                     textBoxEmPhone.Focus();
                     return;
                 }
+            }
+            else
+            {
+                MessageBox.Show("電話番号を入力してください");
+                return;
             }
                 
             if(!string.IsNullOrEmpty(textBoxhidden.Text.Trim()))
@@ -236,33 +260,73 @@ namespace SalesManagement_SysDev
 
         private void Update_button_Click(object sender, EventArgs e)
         {
-
             if (!string.IsNullOrEmpty(textBoxEmName.Text.Trim()))
+            {
+
                 if (textBoxEmName.TextLength > 50)
                 {
                     MessageBox.Show("社員名は50文字以下です");
+                    textBoxEmName.Focus();
                     return;
                 }
-            
-            
+            }
+            else
+            {
+                MessageBox.Show("社員名を入力してください");
+                return;
+            }
+
+            if (comboBoxSalesOffice.SelectedIndex == -1)
+            {
+                MessageBox.Show("営業所名を選択してください");
+                return;
+            }
+
             if (!string.IsNullOrEmpty(textBoxEmPassWord.Text.Trim()))
+            {
                 if (textBoxEmPassWord.TextLength > 10)
                 {
                     MessageBox.Show("パスワードは10文字以下です");
+                    textBoxEmPassWord.Focus();
                     return;
                 }
+            }
+            else
+            {
+                MessageBox.Show("パスワードを入力してください");
+                return;
+            }
+
+            if (comboBoxPosition.SelectedIndex == -1)
+            {
+                MessageBox.Show("役職名を選択してください");
+                return;
+            }
+
             if (!string.IsNullOrEmpty(textBoxEmPhone.Text.Trim()))
+            {
                 if (textBoxEmPhone.TextLength > 13)
                 {
                     MessageBox.Show("電話番号は13文字以下です");
+                    textBoxEmPhone.Focus();
                     return;
                 }
+            }
+            else
+            {
+                MessageBox.Show("電話番号を入力してください");
+                return;
+            }
+
             if (!string.IsNullOrEmpty(textBoxhidden.Text.Trim()))
+            {
                 if (textBoxhidden.TextLength > 200)
                 {
                     MessageBox.Show("非表示理由は200文字以下です");
+                    textBoxhidden.Focus();
                     return;
                 }
+            }
 
             int check;
             if (checkBoxEmFlag.Checked == true)

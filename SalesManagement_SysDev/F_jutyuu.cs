@@ -179,6 +179,30 @@ namespace SalesManagement_SysDev
         private void Regester_button_Click(object sender, EventArgs e)
         {
 
+            if(comboBoxSalesOffice.SelectedIndex == -1)
+            {
+                MessageBox.Show("営業所を選択してください");
+                return;
+            }
+
+            if(comboBoxEmployee.SelectedIndex == -1)
+            {
+                MessageBox.Show("社員名を選択してください");
+                return;
+            }
+
+            if(comboBoxClient.SelectedIndex == -1)
+            {
+                MessageBox.Show("顧客名を選択してください");
+                return;
+            }
+
+            if(comboBoxProduct.SelectedIndex == -1)
+            {
+                MessageBox.Show("商品名を選択してください");
+                return;
+            }
+
             if (!String.IsNullOrEmpty(textBoxClCharge.Text.Trim()))
             {
 
@@ -188,6 +212,16 @@ namespace SalesManagement_SysDev
                     textBoxClCharge.Focus();
                     return;
                 }
+            }
+            else
+            {
+                MessageBox.Show("顧客担当者名を入力してください");
+            }
+
+            if(numericUpDownOrQuantity.Value == 0)
+            {
+                MessageBox.Show("数量が0です");
+                return;
             }
 
             if (!String.IsNullOrEmpty(textBoxOrHidden.Text.Trim()))
@@ -281,16 +315,55 @@ namespace SalesManagement_SysDev
 
         private void Update_button_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(textBoxOrID.Text))
+            {
+                MessageBox.Show("受注IDを入力してください");
+                return;
+            }
 
-            
+            if (comboBoxSalesOffice.SelectedIndex == -1)
+            {
+                MessageBox.Show("営業所を選択してください");
+                return;
+            }
+
+            if (comboBoxEmployee.SelectedIndex == -1)
+            {
+                MessageBox.Show("社員名を選択してください");
+                return;
+            }
+
+            if (comboBoxClient.SelectedIndex == -1)
+            {
+                MessageBox.Show("顧客名を選択してください");
+                return;
+            }
+
+            if (comboBoxProduct.SelectedIndex == -1)
+            {
+                MessageBox.Show("商品名を選択してください");
+                return;
+            }
 
             if (!String.IsNullOrEmpty(textBoxClCharge.Text.Trim()))
             {
+
                 if (textBoxClCharge.TextLength > 50)
                 {
                     MessageBox.Show("顧客担当者名は50文字以下です");
+                    textBoxClCharge.Focus();
                     return;
                 }
+            }
+            else
+            {
+                MessageBox.Show("顧客担当者名を入力してください");
+            }
+
+            if (numericUpDownOrQuantity.Value == 0)
+            {
+                MessageBox.Show("数量が0です");
+                return;
             }
 
             if (!String.IsNullOrEmpty(textBoxOrHidden.Text.Trim()))
@@ -298,6 +371,7 @@ namespace SalesManagement_SysDev
                 if (textBoxOrHidden.TextLength > 200)
                 {
                     MessageBox.Show("非表示理由は200文字以下です");
+                    textBoxOrHidden.Focus();
                     return;
                 }
             }
@@ -410,50 +484,71 @@ namespace SalesManagement_SysDev
 
         private void Search_button_Click(object sender, EventArgs e)
         {
-
-
-            
-
-            if (!String.IsNullOrEmpty(textBoxClCharge.Text.Trim()))
-            {
-
-                if (!dataInputFormCheck.CheckNumeric(textBoxClCharge.Text.Trim()))
-                {
-                    MessageBox.Show("M5027");
-                    textBoxClCharge.Focus();
-                    return;
-                }
-
-                if (textBoxClCharge.TextLength > 50)
-                {
-                    MessageBox.Show("顧客担当者名は50文字以下です");
-                    textBoxClCharge.Focus();
-                    return;
-                }
-            }
-
-            if (!String.IsNullOrEmpty(textBoxOrHidden.Text.Trim()))
-            {
-                if (textBoxOrHidden.TextLength > 200)
-                {
-                    MessageBox.Show("非表示理由は200文字以下です");
-                    textBoxOrHidden.Focus();
-                    return;
-                }
-            }
-
             dataGridViewDsp.Rows.Clear();
-            if(textBoxOrID.Text == "" || textBoxOrID.Text == null)
+            string orid = string.Empty;
+            string soid = string.Empty;
+            string emid = string.Empty;
+            string clid = string.Empty;
+            string clcharge = string.Empty;
+
+            if (!String.IsNullOrEmpty(textBoxOrID.Text))
             {
-                fncAllSelect();
-                return;
+                orid = textBoxOrID.Text;
             }
-            int orid = int.Parse(textBoxOrID.Text);
+            if(comboBoxSalesOffice.SelectedIndex != -1)
+            {
+                soid = comboBoxSalesOffice.SelectedValue.ToString();
+            }
+            if(comboBoxEmployee.SelectedIndex != -1)
+            {
+                emid = comboBoxEmployee.SelectedValue.ToString();
+            }
+            if(comboBoxClient.SelectedIndex != -1)
+            {
+                clid = comboBoxClient.SelectedValue.ToString();
+            }
+            if (!String.IsNullOrEmpty(textBoxClCharge.Text))
+            {
+                clcharge = textBoxClCharge.Text;
+            }
+
             try
             {
                 var context = new SalesManagement_DevContext();
-                var order = context.T_Orders.Where(x => x.OrID == orid).ToArray();
-                dataGridViewDsp.Rows.Add(order[0].OrID, order[0].SoID, order[0].EmID, order[0].ClID, order[0].ClCharge, order[0].OrDate, order[0].OrStateFlag, order[0].OrFlag, order[0].OrHidden);
+                var tb = from t1 in context.T_Orders
+                         join t2 in context.M_SalesOffices
+                         on t1.SoID equals t2.SoID
+                         join t3 in context.M_Employees
+                         on t1.EmID equals t3.EmID
+                         join t4 in context.M_Clients
+                         on t1.ClID equals t4.ClID
+                         join t5 in context.T_OrderDetails
+                         on t1.OrID equals t5.OrID
+                         join t6 in context.M_Products
+                         on t5.PrID equals t6.PrID
+                         where t1.OrID.ToString().Contains(orid) &&
+                               t1.SoID.ToString().Contains(orid) &&
+                               t1.EmID.ToString().Contains(emid) &&
+                               t1.ClID.ToString().Contains(clid) &&
+                               t1.ClCharge.Contains(clcharge)
+                         select new
+                         {
+                             t1.OrID,
+                             t2.SoName,
+                             t3.EmName,
+                             t4.ClName,
+                             t6.PrName,
+                             t1.ClCharge,
+                             t1.OrDate,
+                             t1.OrStateFlag,
+                             t1.OrFlag,
+                             t1.OrHidden
+                         };
+                foreach (var p in tb)
+                {
+                    dataGridViewDsp.Rows.Add(p.OrID, p.SoName, p.EmName, p.ClName, p.PrName, p.ClCharge, p.OrDate, p.OrStateFlag, p.OrFlag, p.OrHidden);
+                }
+
                 context.Dispose();
             }
             catch (Exception ex)

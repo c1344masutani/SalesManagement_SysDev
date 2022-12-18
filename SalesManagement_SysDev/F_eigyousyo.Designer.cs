@@ -234,6 +234,7 @@ namespace SalesManagement_SysDev
             this.textBoxSoID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSoID.Multiline = true;
             this.textBoxSoID.Name = "textBoxSoID";
+            this.textBoxSoID.ReadOnly = true;
             this.textBoxSoID.Size = new System.Drawing.Size(185, 47);
             this.textBoxSoID.TabIndex = 63;
             // 

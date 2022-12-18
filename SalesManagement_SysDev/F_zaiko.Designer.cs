@@ -31,10 +31,8 @@ namespace SalesManagement_SysDev
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxStID = new System.Windows.Forms.TextBox();
-            this.textBoxPrID = new System.Windows.Forms.TextBox();
             this.textBoxStQuantity = new System.Windows.Forms.TextBox();
             this.dataGridViewDsp = new System.Windows.Forms.DataGridView();
             this.button_Search = new System.Windows.Forms.Button();
@@ -73,17 +71,6 @@ namespace SalesManagement_SysDev
             this.label2.TabIndex = 1;
             this.label2.Text = "在庫ID";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("HGS明朝E", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label3.Location = new System.Drawing.Point(151, 251);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 36);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "商品ID";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -100,16 +87,9 @@ namespace SalesManagement_SysDev
             this.textBoxStID.Location = new System.Drawing.Point(352, 175);
             this.textBoxStID.Multiline = true;
             this.textBoxStID.Name = "textBoxStID";
+            this.textBoxStID.ReadOnly = true;
             this.textBoxStID.Size = new System.Drawing.Size(206, 51);
             this.textBoxStID.TabIndex = 4;
-            // 
-            // textBoxPrID
-            // 
-            this.textBoxPrID.Location = new System.Drawing.Point(352, 240);
-            this.textBoxPrID.Multiline = true;
-            this.textBoxPrID.Name = "textBoxPrID";
-            this.textBoxPrID.Size = new System.Drawing.Size(206, 51);
-            this.textBoxPrID.TabIndex = 5;
             // 
             // textBoxStQuantity
             // 
@@ -208,7 +188,7 @@ namespace SalesManagement_SysDev
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label7.Location = new System.Drawing.Point(151, 325);
+            this.label7.Location = new System.Drawing.Point(151, 251);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(137, 40);
             this.label7.TabIndex = 70;
@@ -216,7 +196,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxPrName
             // 
-            this.textBoxPrName.Location = new System.Drawing.Point(352, 314);
+            this.textBoxPrName.Location = new System.Drawing.Point(352, 251);
             this.textBoxPrName.Multiline = true;
             this.textBoxPrName.Name = "textBoxPrName";
             this.textBoxPrName.Size = new System.Drawing.Size(206, 51);
@@ -259,10 +239,8 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.button_Search);
             this.Controls.Add(this.dataGridViewDsp);
             this.Controls.Add(this.textBoxStQuantity);
-            this.Controls.Add(this.textBoxPrID);
             this.Controls.Add(this.textBoxStID);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "F_zaiko";
@@ -279,10 +257,8 @@ namespace SalesManagement_SysDev
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxStID;
-        private System.Windows.Forms.TextBox textBoxPrID;
         private System.Windows.Forms.TextBox textBoxStQuantity;
         private System.Windows.Forms.DataGridView dataGridViewDsp;
         private System.Windows.Forms.Button button_Search;

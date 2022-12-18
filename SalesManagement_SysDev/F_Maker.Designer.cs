@@ -152,6 +152,7 @@ namespace SalesManagement_SysDev
             this.textBoxMaID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMaID.Multiline = true;
             this.textBoxMaID.Name = "textBoxMaID";
+            this.textBoxMaID.ReadOnly = true;
             this.textBoxMaID.Size = new System.Drawing.Size(185, 47);
             this.textBoxMaID.TabIndex = 98;
             // 
@@ -249,7 +250,7 @@ namespace SalesManagement_SysDev
             this.textBoxPhone.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPhone.Multiline = true;
             this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(185, 47);
+            this.textBoxPhone.Size = new System.Drawing.Size(388, 47);
             this.textBoxPhone.TabIndex = 107;
             // 
             // label7
@@ -270,7 +271,7 @@ namespace SalesManagement_SysDev
             this.textBoxFax.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFax.Multiline = true;
             this.textBoxFax.Name = "textBoxFax";
-            this.textBoxFax.Size = new System.Drawing.Size(185, 47);
+            this.textBoxFax.Size = new System.Drawing.Size(388, 47);
             this.textBoxFax.TabIndex = 109;
             // 
             // checkBoxMaFlag
@@ -364,7 +365,7 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.Regester_button);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "F_Maker";
             this.Text = "F_Maker";
             this.Load += new System.EventHandler(this.F_Maker_Load);

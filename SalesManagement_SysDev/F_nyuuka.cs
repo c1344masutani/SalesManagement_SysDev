@@ -238,6 +238,11 @@ namespace SalesManagement_SysDev
         private void buttonConfirm_Click(object sender, EventArgs e)
         {
             var context = new SalesManagement_DevContext();
+            if (String.IsNullOrEmpty(textBoxArID.Text))
+            {
+                MessageBox.Show("入荷IDを入力してください");
+                return;
+            }
             int arid = int.Parse(textBoxArID.Text);
             int flg;
             if (checkBoxArStateFlag.Checked == true)
@@ -275,7 +280,7 @@ namespace SalesManagement_SysDev
                     EmID = arrival.EmID,
                     SoID = arrival.SoID,
                     OrID = arrival.OrID,
-                    ShFinishDate = DateTime.Today,
+                    ShFinishDate = DateTime.Now,
                     ShStateFlag = 0,
                     ShFlag = 0,
                     ShHidden = ""
@@ -305,6 +310,12 @@ namespace SalesManagement_SysDev
 
         private void buttonHidden_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(textBoxArID.Text))
+            {
+                MessageBox.Show("入荷IDを入力してください");
+                return;
+            }
+
             int flg;
             if (checkBoxArHidden.Checked == true)
             {

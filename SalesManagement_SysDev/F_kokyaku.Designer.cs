@@ -162,7 +162,7 @@ namespace SalesManagement_SysDev
             // textBoxClientName
             // 
             this.textBoxClientName.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxClientName.Location = new System.Drawing.Point(522, 312);
+            this.textBoxClientName.Location = new System.Drawing.Point(521, 237);
             this.textBoxClientName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxClientName.Name = "textBoxClientName";
             this.textBoxClientName.Size = new System.Drawing.Size(274, 43);
@@ -271,7 +271,7 @@ namespace SalesManagement_SysDev
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.label4.Location = new System.Drawing.Point(235, 312);
+            this.label4.Location = new System.Drawing.Point(234, 237);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 40);
@@ -284,7 +284,7 @@ namespace SalesManagement_SysDev
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.label3.Location = new System.Drawing.Point(235, 234);
+            this.label3.Location = new System.Drawing.Point(234, 314);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(177, 40);
@@ -362,7 +362,7 @@ namespace SalesManagement_SysDev
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label11.Location = new System.Drawing.Point(432, 256);
+            this.label11.Location = new System.Drawing.Point(431, 336);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(44, 18);
@@ -414,7 +414,7 @@ namespace SalesManagement_SysDev
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label15.Location = new System.Drawing.Point(398, 331);
+            this.label15.Location = new System.Drawing.Point(397, 256);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(44, 18);
@@ -450,7 +450,7 @@ namespace SalesManagement_SysDev
             // 
             this.comboBoxSalesOffice.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.comboBoxSalesOffice.FormattingEnabled = true;
-            this.comboBoxSalesOffice.Location = new System.Drawing.Point(522, 237);
+            this.comboBoxSalesOffice.Location = new System.Drawing.Point(521, 317);
             this.comboBoxSalesOffice.Name = "comboBoxSalesOffice";
             this.comboBoxSalesOffice.Size = new System.Drawing.Size(185, 41);
             this.comboBoxSalesOffice.TabIndex = 59;

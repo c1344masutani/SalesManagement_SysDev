@@ -78,6 +78,85 @@ namespace SalesManagement_SysDev
 
         private void Regester_button_Click(object sender, EventArgs e)
         {
+            if (!String.IsNullOrEmpty(textBoxMaName.Text))
+            {
+                if(textBoxMaName.TextLength > 50)
+                {
+                    MessageBox.Show("メーカ名は50文字以下です");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("メーカ名を入力してください");
+                return;
+            }
+
+            if (!String.IsNullOrEmpty(textBoxPostal.Text))
+            {
+                if(textBoxPostal.TextLength > 7)
+                {
+                    MessageBox.Show("郵便番号は7桁以下です");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("郵便番号を入力してください");
+                return;
+            }
+
+            if (!String.IsNullOrEmpty(textBoxAddress.Text))
+            {
+                if(textBoxAddress.TextLength > 50)
+                {
+                    MessageBox.Show("住所は50文字以下です");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("住所を入力してください");
+                return;
+            }
+
+            if (!String.IsNullOrEmpty(textBoxPhone.Text))
+            {
+                if(textBoxPhone.TextLength > 13)
+                {
+                    MessageBox.Show("電話番号は13桁以下です");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("電話番号を入力してください");
+                return;
+            }
+
+            if (!String.IsNullOrEmpty(textBoxFax.Text))
+            {
+                if(textBoxFax.TextLength > 13)
+                {
+                    MessageBox.Show("FAX番号は13桁以下です");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("FAX番号を入力してください");
+                return;
+            }
+
+            if (!String.IsNullOrEmpty(textBoxHidden.Text))
+            {
+                if (textBoxHidden.TextLength > 200)
+                {
+                    MessageBox.Show("非表示理由は200文字以下です");
+                    return;
+                }
+            }
+
             int flg;
             if(checkBoxMaFlag.Checked == true)
             {
@@ -116,6 +195,91 @@ namespace SalesManagement_SysDev
 
         private void Update_button_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(textBoxMaID.Text))
+            {
+                MessageBox.Show("メーカIDを入力してください");
+                return;
+            }
+
+            if (!String.IsNullOrEmpty(textBoxMaName.Text))
+            {
+                if (textBoxMaName.TextLength > 50)
+                {
+                    MessageBox.Show("メーカ名は50文字以下です");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("メーカ名を入力してください");
+                return;
+            }
+
+            if (!String.IsNullOrEmpty(textBoxPostal.Text))
+            {
+                if (textBoxPostal.TextLength > 7)
+                {
+                    MessageBox.Show("郵便番号は7桁以下です");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("郵便番号を入力してください");
+                return;
+            }
+
+            if (!String.IsNullOrEmpty(textBoxAddress.Text))
+            {
+                if (textBoxAddress.TextLength > 50)
+                {
+                    MessageBox.Show("住所は50文字以下です");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("住所を入力してください");
+                return;
+            }
+
+            if (!String.IsNullOrEmpty(textBoxPhone.Text))
+            {
+                if (textBoxPhone.TextLength > 13)
+                {
+                    MessageBox.Show("電話番号は13桁以下です");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("電話番号を入力してください");
+                return;
+            }
+
+            if (!String.IsNullOrEmpty(textBoxFax.Text))
+            {
+                if (textBoxFax.TextLength > 13)
+                {
+                    MessageBox.Show("FAX番号は13桁以下です");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("FAX番号を入力してください");
+                return;
+            }
+
+            if (!String.IsNullOrEmpty(textBoxHidden.Text))
+            {
+                if (textBoxHidden.TextLength > 200)
+                {
+                    MessageBox.Show("非表示理由は200文字以下です");
+                    return;
+                }
+            }
+
             int flg;
             if (checkBoxMaFlag.Checked == true)
             {

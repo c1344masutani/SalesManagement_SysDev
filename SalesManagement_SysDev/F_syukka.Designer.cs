@@ -118,7 +118,7 @@ namespace SalesManagement_SysDev
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label8.Location = new System.Drawing.Point(234, 414);
+            this.label8.Location = new System.Drawing.Point(918, 417);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(217, 40);
@@ -190,7 +190,7 @@ namespace SalesManagement_SysDev
             this.ShFinishDate.AutoSize = true;
             this.ShFinishDate.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.ShFinishDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.ShFinishDate.Location = new System.Drawing.Point(918, 414);
+            this.ShFinishDate.Location = new System.Drawing.Point(918, 332);
             this.ShFinishDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ShFinishDate.Name = "ShFinishDate";
             this.ShFinishDate.Size = new System.Drawing.Size(297, 40);
@@ -202,7 +202,7 @@ namespace SalesManagement_SysDev
             this.checkBoxShStateFlag.AutoSize = true;
             this.checkBoxShStateFlag.Font = new System.Drawing.Font("HGS明朝E", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBoxShStateFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.checkBoxShStateFlag.Location = new System.Drawing.Point(925, 354);
+            this.checkBoxShStateFlag.Location = new System.Drawing.Point(241, 417);
             this.checkBoxShStateFlag.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxShStateFlag.Name = "checkBoxShStateFlag";
             this.checkBoxShStateFlag.Size = new System.Drawing.Size(185, 40);
@@ -215,7 +215,7 @@ namespace SalesManagement_SysDev
             this.checkBoxShFlag.AutoSize = true;
             this.checkBoxShFlag.Font = new System.Drawing.Font("HGS明朝E", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBoxShFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.checkBoxShFlag.Location = new System.Drawing.Point(1222, 354);
+            this.checkBoxShFlag.Location = new System.Drawing.Point(538, 417);
             this.checkBoxShFlag.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxShFlag.Name = "checkBoxShFlag";
             this.checkBoxShFlag.Size = new System.Drawing.Size(149, 40);
@@ -229,16 +229,17 @@ namespace SalesManagement_SysDev
             this.textBoxShID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxShID.Multiline = true;
             this.textBoxShID.Name = "textBoxShID";
+            this.textBoxShID.ReadOnly = true;
             this.textBoxShID.Size = new System.Drawing.Size(185, 47);
             this.textBoxShID.TabIndex = 64;
             // 
             // textBoxShHidden
             // 
-            this.textBoxShHidden.Location = new System.Drawing.Point(522, 414);
+            this.textBoxShHidden.Location = new System.Drawing.Point(1222, 417);
             this.textBoxShHidden.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxShHidden.Multiline = true;
             this.textBoxShHidden.Name = "textBoxShHidden";
-            this.textBoxShHidden.Size = new System.Drawing.Size(185, 47);
+            this.textBoxShHidden.Size = new System.Drawing.Size(435, 47);
             this.textBoxShHidden.TabIndex = 65;
             // 
             // textBoxOrID
@@ -253,17 +254,19 @@ namespace SalesManagement_SysDev
             // 
             // dateTimePickerShFinishDate
             // 
-            this.dateTimePickerShFinishDate.Location = new System.Drawing.Point(1300, 425);
+            this.dateTimePickerShFinishDate.CalendarFont = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.dateTimePickerShFinishDate.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.dateTimePickerShFinishDate.Location = new System.Drawing.Point(1328, 346);
             this.dateTimePickerShFinishDate.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePickerShFinishDate.Name = "dateTimePickerShFinishDate";
-            this.dateTimePickerShFinishDate.Size = new System.Drawing.Size(185, 25);
+            this.dateTimePickerShFinishDate.Size = new System.Drawing.Size(273, 39);
             this.dateTimePickerShFinishDate.TabIndex = 70;
             // 
             // dataGridViewDsp
             // 
             this.dataGridViewDsp.AllowUserToAddRows = false;
             this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDsp.Location = new System.Drawing.Point(192, 492);
+            this.dataGridViewDsp.Location = new System.Drawing.Point(206, 494);
             this.dataGridViewDsp.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewDsp.Name = "dataGridViewDsp";
             this.dataGridViewDsp.RowHeadersWidth = 51;
@@ -337,7 +340,7 @@ namespace SalesManagement_SysDev
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label5.Location = new System.Drawing.Point(1236, 444);
+            this.label5.Location = new System.Drawing.Point(1236, 362);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 18);
