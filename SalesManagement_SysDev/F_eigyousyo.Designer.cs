@@ -172,7 +172,7 @@ namespace SalesManagement_SysDev
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label4.Location = new System.Drawing.Point(584, 162);
+            this.label4.Location = new System.Drawing.Point(797, 162);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(177, 40);
@@ -184,7 +184,7 @@ namespace SalesManagement_SysDev
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label5.Location = new System.Drawing.Point(63, 323);
+            this.label5.Location = new System.Drawing.Point(64, 332);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(177, 40);
@@ -196,7 +196,7 @@ namespace SalesManagement_SysDev
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label6.Location = new System.Drawing.Point(591, 249);
+            this.label6.Location = new System.Drawing.Point(804, 249);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(170, 40);
@@ -208,7 +208,7 @@ namespace SalesManagement_SysDev
             this.checkBoxSoFlag.AutoSize = true;
             this.checkBoxSoFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBoxSoFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.checkBoxSoFlag.Location = new System.Drawing.Point(629, 470);
+            this.checkBoxSoFlag.Location = new System.Drawing.Point(70, 492);
             this.checkBoxSoFlag.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxSoFlag.Name = "checkBoxSoFlag";
             this.checkBoxSoFlag.Size = new System.Drawing.Size(163, 44);
@@ -221,7 +221,7 @@ namespace SalesManagement_SysDev
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label8.Location = new System.Drawing.Point(876, 470);
+            this.label8.Location = new System.Drawing.Point(297, 496);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(217, 40);
@@ -244,48 +244,48 @@ namespace SalesManagement_SysDev
             this.textBoxSoName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSoName.Multiline = true;
             this.textBoxSoName.Name = "textBoxSoName";
-            this.textBoxSoName.Size = new System.Drawing.Size(185, 47);
+            this.textBoxSoName.Size = new System.Drawing.Size(415, 47);
             this.textBoxSoName.TabIndex = 64;
             // 
             // textBoxPostal
             // 
-            this.textBoxPostal.Location = new System.Drawing.Point(295, 316);
+            this.textBoxPostal.Location = new System.Drawing.Point(295, 325);
             this.textBoxPostal.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPostal.Multiline = true;
             this.textBoxPostal.Name = "textBoxPostal";
-            this.textBoxPostal.Size = new System.Drawing.Size(185, 47);
+            this.textBoxPostal.Size = new System.Drawing.Size(281, 47);
             this.textBoxPostal.TabIndex = 65;
             // 
             // textBoxAddress
             // 
-            this.textBoxAddress.Location = new System.Drawing.Point(71, 466);
+            this.textBoxAddress.Location = new System.Drawing.Point(295, 402);
             this.textBoxAddress.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAddress.Multiline = true;
             this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(505, 47);
+            this.textBoxAddress.Size = new System.Drawing.Size(798, 47);
             this.textBoxAddress.TabIndex = 66;
             // 
             // textBoxPhone
             // 
-            this.textBoxPhone.Location = new System.Drawing.Point(833, 155);
+            this.textBoxPhone.Location = new System.Drawing.Point(1097, 155);
             this.textBoxPhone.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPhone.Multiline = true;
             this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(275, 47);
+            this.textBoxPhone.Size = new System.Drawing.Size(426, 47);
             this.textBoxPhone.TabIndex = 67;
             // 
             // textBoxFax
             // 
-            this.textBoxFax.Location = new System.Drawing.Point(833, 249);
+            this.textBoxFax.Location = new System.Drawing.Point(1097, 249);
             this.textBoxFax.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFax.Multiline = true;
             this.textBoxFax.Name = "textBoxFax";
-            this.textBoxFax.Size = new System.Drawing.Size(275, 47);
+            this.textBoxFax.Size = new System.Drawing.Size(426, 47);
             this.textBoxFax.TabIndex = 68;
             // 
             // textBoxHidden
             // 
-            this.textBoxHidden.Location = new System.Drawing.Point(1167, 463);
+            this.textBoxHidden.Location = new System.Drawing.Point(588, 489);
             this.textBoxHidden.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxHidden.Multiline = true;
             this.textBoxHidden.Name = "textBoxHidden";
