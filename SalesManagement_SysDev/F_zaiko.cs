@@ -280,5 +280,10 @@ namespace SalesManagement_SysDev
             textBoxPrice.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
             textBoxStQuantity.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
         }
+
+        private void textBoxPrName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

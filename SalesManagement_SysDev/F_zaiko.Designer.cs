@@ -221,6 +221,7 @@ namespace SalesManagement_SysDev
             this.textBoxPrName.Name = "textBoxPrName";
             this.textBoxPrName.Size = new System.Drawing.Size(206, 51);
             this.textBoxPrName.TabIndex = 71;
+            this.textBoxPrName.TextChanged += new System.EventHandler(this.textBoxPrName_TextChanged);
             // 
             // label5
             // 
