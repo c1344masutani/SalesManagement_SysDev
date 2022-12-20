@@ -117,33 +117,11 @@ namespace SalesManagement_SysDev
 
         private void buttonConfirm_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(textBoxOrID.Text.Trim()))
+            if (String.IsNullOrEmpty(textBoxSyID.Text))
             {
-                if (!dataInputFormCheck.CheckNumeric(textBoxOrID.Text.Trim()))
-                {
-                    MessageBox.Show("受注IDは数値です");
-                    textBoxOrID.Focus();
-                    return;
-                }
-                if (textBoxOrID.TextLength > 6)
-                {
-                    MessageBox.Show("受注IDは6文字以下です");
-                    return;
-                }
-            }
-            else
-            {
-                MessageBox.Show("受注IDを入力してください");
+                MessageBox.Show("出庫IDを入力してください");
                 return;
-            }
 
-            if (!String.IsNullOrEmpty(textBoxSyHidden.Text.Trim()))
-            {
-                if (textBoxSyHidden.TextLength > 200)
-                {
-                    MessageBox.Show("非表示理由は200文字以下です");
-                    return;
-                }
             }
 
             var context = new SalesManagement_DevContext();
@@ -215,6 +193,11 @@ namespace SalesManagement_SysDev
 
         private void buttonHidden_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(textBoxSyID.Text))
+            {
+                MessageBox.Show("出庫IDを入力してください");
+                return;
+            }
             int flg;
             if (checkBoxSyFlg.Checked == true)
             {

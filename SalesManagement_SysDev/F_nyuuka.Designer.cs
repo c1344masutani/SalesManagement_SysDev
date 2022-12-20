@@ -53,6 +53,7 @@ namespace SalesManagement_SysDev
             this.comboBoxClient = new System.Windows.Forms.ComboBox();
             this.comboBoxEmployee = new System.Windows.Forms.ComboBox();
             this.comboBoxSalesOffice = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             this.SuspendLayout();
@@ -256,7 +257,6 @@ namespace SalesManagement_SysDev
             this.button_back.Name = "button_back";
             this.button_back.Size = new System.Drawing.Size(141, 50);
             this.button_back.TabIndex = 104;
-            this.button_back.Text = "戻る";
             this.button_back.UseVisualStyleBackColor = true;
             this.button_back.Click += new System.EventHandler(this.button_back_Click);
             // 
@@ -334,12 +334,24 @@ namespace SalesManagement_SysDev
             this.comboBoxSalesOffice.Size = new System.Drawing.Size(206, 41);
             this.comboBoxSalesOffice.TabIndex = 123;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.button1.Location = new System.Drawing.Point(1778, 26);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(154, 56);
+            this.button1.TabIndex = 124;
+            this.button1.Text = "戻る";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // F_nyuuka
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBoxSalesOffice);
             this.Controls.Add(this.comboBoxEmployee);
             this.Controls.Add(this.comboBoxClient);
@@ -400,5 +412,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.ComboBox comboBoxClient;
         private System.Windows.Forms.ComboBox comboBoxEmployee;
         private System.Windows.Forms.ComboBox comboBoxSalesOffice;
+        private System.Windows.Forms.Button button1;
     }
 }

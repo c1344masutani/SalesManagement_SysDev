@@ -315,6 +315,12 @@ namespace SalesManagement_SysDev
 
         private void buttonHidden_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(textBoxShID.Text))
+            {
+                MessageBox.Show("出荷IDを入力してください");
+                return;
+            }
+
             int flg;
             if (checkBoxShFlag.Checked == true)
             {

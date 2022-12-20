@@ -69,7 +69,7 @@ namespace SalesManagement_SysDev
             this.ChHidden.BackColor = System.Drawing.Color.Transparent;
             this.ChHidden.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.ChHidden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.ChHidden.Location = new System.Drawing.Point(144, 536);
+            this.ChHidden.Location = new System.Drawing.Point(881, 425);
             this.ChHidden.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ChHidden.Name = "ChHidden";
             this.ChHidden.Size = new System.Drawing.Size(217, 40);
@@ -85,9 +85,9 @@ namespace SalesManagement_SysDev
             this.ClID.Location = new System.Drawing.Point(150, 421);
             this.ClID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ClID.Name = "ClID";
-            this.ClID.Size = new System.Drawing.Size(138, 40);
+            this.ClID.Size = new System.Drawing.Size(137, 40);
             this.ClID.TabIndex = 73;
-            this.ClID.Text = "顧客ID";
+            this.ClID.Text = "顧客名";
             // 
             // EmID
             // 
@@ -98,9 +98,9 @@ namespace SalesManagement_SysDev
             this.EmID.Location = new System.Drawing.Point(150, 329);
             this.EmID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EmID.Name = "EmID";
-            this.EmID.Size = new System.Drawing.Size(138, 40);
+            this.EmID.Size = new System.Drawing.Size(137, 40);
             this.EmID.TabIndex = 74;
-            this.EmID.Text = "社員ID";
+            this.EmID.Text = "社員名";
             // 
             // ChID
             // 
@@ -220,11 +220,11 @@ namespace SalesManagement_SysDev
             // 
             // textBoxChHidden
             // 
-            this.textBoxChHidden.Location = new System.Drawing.Point(404, 536);
+            this.textBoxChHidden.Location = new System.Drawing.Point(888, 484);
             this.textBoxChHidden.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxChHidden.Multiline = true;
             this.textBoxChHidden.Name = "textBoxChHidden";
-            this.textBoxChHidden.Size = new System.Drawing.Size(206, 51);
+            this.textBoxChHidden.Size = new System.Drawing.Size(488, 96);
             this.textBoxChHidden.TabIndex = 99;
             // 
             // textBoxOrid
@@ -246,9 +246,9 @@ namespace SalesManagement_SysDev
             this.SoID.Location = new System.Drawing.Point(150, 250);
             this.SoID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SoID.Name = "SoID";
-            this.SoID.Size = new System.Drawing.Size(178, 40);
+            this.SoID.Size = new System.Drawing.Size(177, 40);
             this.SoID.TabIndex = 102;
-            this.SoID.Text = "営業所ID";
+            this.SoID.Text = "営業所名";
             // 
             // dateTimePickerChdate
             // 
@@ -276,7 +276,7 @@ namespace SalesManagement_SysDev
             this.checkBoxChStateflg.AutoSize = true;
             this.checkBoxChStateflg.Font = new System.Drawing.Font("HGS明朝E", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBoxChStateflg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.checkBoxChStateflg.Location = new System.Drawing.Point(889, 421);
+            this.checkBoxChStateflg.Location = new System.Drawing.Point(157, 540);
             this.checkBoxChStateflg.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxChStateflg.Name = "checkBoxChStateflg";
             this.checkBoxChStateflg.Size = new System.Drawing.Size(185, 40);
@@ -289,7 +289,7 @@ namespace SalesManagement_SysDev
             this.checkBoxChflg.AutoSize = true;
             this.checkBoxChflg.Font = new System.Drawing.Font("HGS明朝E", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBoxChflg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.checkBoxChflg.Location = new System.Drawing.Point(891, 347);
+            this.checkBoxChflg.Location = new System.Drawing.Point(437, 540);
             this.checkBoxChflg.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxChflg.Name = "checkBoxChflg";
             this.checkBoxChflg.Size = new System.Drawing.Size(149, 40);

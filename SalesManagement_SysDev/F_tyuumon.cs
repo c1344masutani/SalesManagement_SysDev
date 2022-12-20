@@ -68,7 +68,7 @@ namespace SalesManagement_SysDev
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form frm = new F_menu();
+            Form frm = new F_menu2();
 
             Opacity = 0;
 
@@ -261,7 +261,11 @@ namespace SalesManagement_SysDev
 
         private void buttonConfirm_Click(object sender, EventArgs e)
         {
-
+            if (String.IsNullOrEmpty(textBoxChid.Text))
+            {
+                MessageBox.Show("注文IDを入力してください");
+                return;
+            }
 
             var context = new SalesManagement_DevContext();
             int chid = int.Parse(textBoxChid.Text);
@@ -343,6 +347,12 @@ namespace SalesManagement_SysDev
 
         private void buttonHidden_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(textBoxChid.Text))
+            {
+                MessageBox.Show("注文IDを入力してください");
+                return;
+            }
+
             int flg;
             if (checkBoxChflg.Checked == true)
             {
