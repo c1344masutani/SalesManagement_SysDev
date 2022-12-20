@@ -46,8 +46,8 @@ namespace SalesManagement_SysDev
             bool flg;
 
             //プログラムチェック用
-            Form frm = new F_menu2();
-            frm.ShowDialog();
+            //Form frm = new F_menu2();
+            //frm.ShowDialog();
 
             //ユーザID・PWの入力状況チェック
             if (loginID.Trim() == "" || loginID == null || loginPW.Trim() == "" || loginPW == null)
@@ -69,7 +69,7 @@ namespace SalesManagement_SysDev
                     var login = context.M_Employees.Single(x => x.EmID.ToString() == loginID);
                     F_menu2.position = login.PoID;
                     F_menu2.loginname = login.EmName;
-                    //Form frm = new F_menu2();
+                    Form frm = new F_menu2();
 
                     Opacity = 0;
 
