@@ -23,6 +23,10 @@ namespace SalesManagement_SysDev
 
         private void buttonManager_Click(object sender, EventArgs e)
         {
+            labelmenuTitle.Text = "管理者メニュー";
+            buttonManager.BackColor = Color.SandyBrown;
+            buttonSalesStaff.BackColor = Color.FromArgb(128, 64, 0);
+            buttonLogisticsStaff.BackColor = Color.FromArgb(128, 64, 0);
             groupBoxManager.Visible = true;
             groupBoxLogisticsStaff.Visible = false;
             groupBoxSalesStaff.Visible = false;
@@ -31,6 +35,10 @@ namespace SalesManagement_SysDev
 
         private void buttonSalesStaff_Click(object sender, EventArgs e)
         {
+            labelmenuTitle.Text = "営業担当メニュー";
+            buttonSalesStaff.BackColor = Color.SandyBrown;
+            buttonManager.BackColor = Color.FromArgb(128, 64, 0);
+            buttonLogisticsStaff.BackColor = Color.FromArgb(128, 64, 0);
             groupBoxSalesStaff.Visible = true;
             groupBoxManager.Visible = false;
             groupBoxLogisticsStaff.Visible = false;
@@ -39,6 +47,10 @@ namespace SalesManagement_SysDev
 
         private void buttonLogisticsStaff_Click(object sender, EventArgs e)
         {
+            labelmenuTitle.Text = "物流担当メニュー";
+            buttonLogisticsStaff.BackColor = Color.SandyBrown;
+            buttonManager.BackColor = Color.FromArgb(128, 64, 0);
+            buttonSalesStaff.BackColor = Color.FromArgb(128, 64, 0);
             groupBoxLogisticsStaff.Visible = true;
             groupBoxManager.Visible = false;
             groupBoxSalesStaff.Visible = false;
@@ -226,8 +238,12 @@ namespace SalesManagement_SysDev
             //営業担当
             if (position == 2)
             {
+                labelmenuTitle.Text = "営業担当メニュー";
+                buttonSalesStaff.BackColor = Color.SandyBrown;
                 buttonManager.Enabled = false;
+                buttonManager.ForeColor = Color.White;
                 buttonLogisticsStaff.Enabled = false;
+                buttonLogisticsStaff.ForeColor = Color.White;
                 groupBoxManager.Visible = false;
                 groupBoxLogisticsStaff.Visible = false;
             }
@@ -235,6 +251,8 @@ namespace SalesManagement_SysDev
             //物流担当
             else if (position == 4)
             {
+                labelmenuTitle.Text = "物流担当メニュー";
+                buttonLogisticsStaff.BackColor = Color.SandyBrown;
                 buttonManager.Enabled = false;
                 buttonSalesStaff.Enabled = false;
                 groupBoxManager.Visible = false;
@@ -244,6 +262,8 @@ namespace SalesManagement_SysDev
             //管理者
             else if(position == 1)
             {
+                labelmenuTitle.Text = "管理者メニュー";
+                buttonManager.BackColor = Color.SandyBrown;
                 groupBoxLogisticsStaff.Visible = false;
                 groupBoxSalesStaff.Visible = false;
             }

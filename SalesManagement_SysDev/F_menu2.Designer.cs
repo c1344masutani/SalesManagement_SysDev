@@ -40,17 +40,17 @@ namespace SalesManagement_SysDev
             this.buttonEmployee = new System.Windows.Forms.Button();
             this.buttonSale = new System.Windows.Forms.Button();
             this.groupBoxSalesStaff = new System.Windows.Forms.GroupBox();
+            this.buttonShipment = new System.Windows.Forms.Button();
+            this.buttonStock = new System.Windows.Forms.Button();
             this.buttonOrder = new System.Windows.Forms.Button();
             this.buttonChumon = new System.Windows.Forms.Button();
             this.buttonArrival = new System.Windows.Forms.Button();
-            this.buttonStock = new System.Windows.Forms.Button();
-            this.buttonShipment = new System.Windows.Forms.Button();
             this.groupBoxLogisticsStaff = new System.Windows.Forms.GroupBox();
+            this.buttonHattyu = new System.Windows.Forms.Button();
             this.buttonChumon2 = new System.Windows.Forms.Button();
             this.buttonArrval2 = new System.Windows.Forms.Button();
             this.buttonWarehousing = new System.Windows.Forms.Button();
             this.buttonSyukko = new System.Windows.Forms.Button();
-            this.buttonHattyu = new System.Windows.Forms.Button();
             this.buttonLogout = new System.Windows.Forms.Button();
             this.labelLoginName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -87,7 +87,7 @@ namespace SalesManagement_SysDev
             // 
             // buttonManager
             // 
-            this.buttonManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.buttonManager.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.buttonManager.Font = new System.Drawing.Font("HG創英角ｺﾞｼｯｸUB", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.buttonManager.ForeColor = System.Drawing.Color.White;
             this.buttonManager.Location = new System.Drawing.Point(42, 182);
@@ -100,7 +100,7 @@ namespace SalesManagement_SysDev
             // 
             // buttonSalesStaff
             // 
-            this.buttonSalesStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.buttonSalesStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.buttonSalesStaff.Font = new System.Drawing.Font("HG創英角ｺﾞｼｯｸUB", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.buttonSalesStaff.ForeColor = System.Drawing.Color.White;
             this.buttonSalesStaff.Location = new System.Drawing.Point(42, 484);
@@ -113,7 +113,7 @@ namespace SalesManagement_SysDev
             // 
             // buttonLogisticsStaff
             // 
-            this.buttonLogisticsStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.buttonLogisticsStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.buttonLogisticsStaff.Font = new System.Drawing.Font("HG創英角ｺﾞｼｯｸUB", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.buttonLogisticsStaff.ForeColor = System.Drawing.Color.White;
             this.buttonLogisticsStaff.Location = new System.Drawing.Point(42, 787);
@@ -203,6 +203,32 @@ namespace SalesManagement_SysDev
             this.groupBoxSalesStaff.TabStop = false;
             this.groupBoxSalesStaff.Text = "営業担当メニュー";
             // 
+            // buttonShipment
+            // 
+            this.buttonShipment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.buttonShipment.Font = new System.Drawing.Font("HG創英角ｺﾞｼｯｸUB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonShipment.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonShipment.Location = new System.Drawing.Point(173, 722);
+            this.buttonShipment.Name = "buttonShipment";
+            this.buttonShipment.Size = new System.Drawing.Size(1060, 136);
+            this.buttonShipment.TabIndex = 17;
+            this.buttonShipment.Text = "出荷管理";
+            this.buttonShipment.UseVisualStyleBackColor = false;
+            this.buttonShipment.Click += new System.EventHandler(this.buttonShipment_Click);
+            // 
+            // buttonStock
+            // 
+            this.buttonStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.buttonStock.Font = new System.Drawing.Font("HG創英角ｺﾞｼｯｸUB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonStock.ForeColor = System.Drawing.Color.White;
+            this.buttonStock.Location = new System.Drawing.Point(173, 33);
+            this.buttonStock.Name = "buttonStock";
+            this.buttonStock.Size = new System.Drawing.Size(1060, 136);
+            this.buttonStock.TabIndex = 12;
+            this.buttonStock.Text = "在庫管理";
+            this.buttonStock.UseVisualStyleBackColor = false;
+            this.buttonStock.Click += new System.EventHandler(this.buttonStock_Click);
+            // 
             // buttonOrder
             // 
             this.buttonOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
@@ -242,32 +268,6 @@ namespace SalesManagement_SysDev
             this.buttonArrival.UseVisualStyleBackColor = false;
             this.buttonArrival.Click += new System.EventHandler(this.buttonArrival_Click);
             // 
-            // buttonStock
-            // 
-            this.buttonStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.buttonStock.Font = new System.Drawing.Font("HG創英角ｺﾞｼｯｸUB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.buttonStock.ForeColor = System.Drawing.Color.White;
-            this.buttonStock.Location = new System.Drawing.Point(173, 33);
-            this.buttonStock.Name = "buttonStock";
-            this.buttonStock.Size = new System.Drawing.Size(1060, 136);
-            this.buttonStock.TabIndex = 12;
-            this.buttonStock.Text = "在庫管理";
-            this.buttonStock.UseVisualStyleBackColor = false;
-            this.buttonStock.Click += new System.EventHandler(this.buttonStock_Click);
-            // 
-            // buttonShipment
-            // 
-            this.buttonShipment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.buttonShipment.Font = new System.Drawing.Font("HG創英角ｺﾞｼｯｸUB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.buttonShipment.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonShipment.Location = new System.Drawing.Point(173, 722);
-            this.buttonShipment.Name = "buttonShipment";
-            this.buttonShipment.Size = new System.Drawing.Size(1060, 136);
-            this.buttonShipment.TabIndex = 17;
-            this.buttonShipment.Text = "出荷管理";
-            this.buttonShipment.UseVisualStyleBackColor = false;
-            this.buttonShipment.Click += new System.EventHandler(this.buttonShipment_Click);
-            // 
             // groupBoxLogisticsStaff
             // 
             this.groupBoxLogisticsStaff.Controls.Add(this.buttonHattyu);
@@ -281,6 +281,19 @@ namespace SalesManagement_SysDev
             this.groupBoxLogisticsStaff.TabIndex = 99;
             this.groupBoxLogisticsStaff.TabStop = false;
             this.groupBoxLogisticsStaff.Text = "物流担当メニュー";
+            // 
+            // buttonHattyu
+            // 
+            this.buttonHattyu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.buttonHattyu.Font = new System.Drawing.Font("HG創英角ｺﾞｼｯｸUB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonHattyu.ForeColor = System.Drawing.Color.White;
+            this.buttonHattyu.Location = new System.Drawing.Point(173, 204);
+            this.buttonHattyu.Name = "buttonHattyu";
+            this.buttonHattyu.Size = new System.Drawing.Size(1060, 136);
+            this.buttonHattyu.TabIndex = 17;
+            this.buttonHattyu.Text = "発注管理";
+            this.buttonHattyu.UseVisualStyleBackColor = false;
+            this.buttonHattyu.Click += new System.EventHandler(this.buttonHattyu_Click);
             // 
             // buttonChumon2
             // 
@@ -334,25 +347,12 @@ namespace SalesManagement_SysDev
             this.buttonSyukko.UseVisualStyleBackColor = false;
             this.buttonSyukko.Click += new System.EventHandler(this.buttonSyukko_Click);
             // 
-            // buttonHattyu
-            // 
-            this.buttonHattyu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.buttonHattyu.Font = new System.Drawing.Font("HG創英角ｺﾞｼｯｸUB", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.buttonHattyu.ForeColor = System.Drawing.Color.White;
-            this.buttonHattyu.Location = new System.Drawing.Point(173, 204);
-            this.buttonHattyu.Name = "buttonHattyu";
-            this.buttonHattyu.Size = new System.Drawing.Size(1060, 136);
-            this.buttonHattyu.TabIndex = 17;
-            this.buttonHattyu.Text = "発注管理";
-            this.buttonHattyu.UseVisualStyleBackColor = false;
-            this.buttonHattyu.Click += new System.EventHandler(this.buttonHattyu_Click);
-            // 
             // buttonLogout
             // 
             this.buttonLogout.BackColor = System.Drawing.Color.Transparent;
             this.buttonLogout.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.buttonLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.buttonLogout.Location = new System.Drawing.Point(1756, 52);
+            this.buttonLogout.Location = new System.Drawing.Point(1756, 103);
             this.buttonLogout.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLogout.Name = "buttonLogout";
             this.buttonLogout.Size = new System.Drawing.Size(321, 59);
@@ -365,7 +365,7 @@ namespace SalesManagement_SysDev
             // 
             this.labelLoginName.AutoSize = true;
             this.labelLoginName.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.labelLoginName.Location = new System.Drawing.Point(1272, 71);
+            this.labelLoginName.Location = new System.Drawing.Point(1729, 37);
             this.labelLoginName.Name = "labelLoginName";
             this.labelLoginName.Size = new System.Drawing.Size(0, 33);
             this.labelLoginName.TabIndex = 101;
