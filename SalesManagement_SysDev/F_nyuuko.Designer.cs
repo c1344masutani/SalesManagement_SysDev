@@ -153,9 +153,9 @@ namespace SalesManagement_SysDev
             this.label3.Location = new System.Drawing.Point(1197, 167);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(298, 40);
+            this.label3.Size = new System.Drawing.Size(297, 40);
             this.label3.TabIndex = 72;
-            this.label3.Text = "入庫確認社員ID";
+            this.label3.Text = "入庫確認社員名";
             // 
             // label4
             // 

@@ -55,9 +55,9 @@ namespace SalesManagement_SysDev
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonConfirm = new System.Windows.Forms.Button();
             this.buttonHidden = new System.Windows.Forms.Button();
-            this.comboBoxEmployee = new System.Windows.Forms.ComboBox();
-            this.comboBoxClient = new System.Windows.Forms.ComboBox();
-            this.comboBoxSalesOffice = new System.Windows.Forms.ComboBox();
+            this.textBoxEmployee = new System.Windows.Forms.TextBox();
+            this.textBoxClient = new System.Windows.Forms.TextBox();
+            this.textBoxSalesOffice = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -299,6 +299,7 @@ namespace SalesManagement_SysDev
             this.textBoxOrID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxOrID.Multiline = true;
             this.textBoxOrID.Name = "textBoxOrID";
+            this.textBoxOrID.ReadOnly = true;
             this.textBoxOrID.Size = new System.Drawing.Size(208, 45);
             this.textBoxOrID.TabIndex = 92;
             // 
@@ -308,6 +309,7 @@ namespace SalesManagement_SysDev
             this.textBoxSyID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSyID.Multiline = true;
             this.textBoxSyID.Name = "textBoxSyID";
+            this.textBoxSyID.ReadOnly = true;
             this.textBoxSyID.Size = new System.Drawing.Size(208, 45);
             this.textBoxSyID.TabIndex = 95;
             // 
@@ -383,32 +385,35 @@ namespace SalesManagement_SysDev
             this.buttonHidden.UseVisualStyleBackColor = true;
             this.buttonHidden.Click += new System.EventHandler(this.buttonHidden_Click);
             // 
-            // comboBoxEmployee
+            // textBoxEmployee
             // 
-            this.comboBoxEmployee.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.comboBoxEmployee.FormattingEnabled = true;
-            this.comboBoxEmployee.Location = new System.Drawing.Point(590, 259);
-            this.comboBoxEmployee.Name = "comboBoxEmployee";
-            this.comboBoxEmployee.Size = new System.Drawing.Size(208, 41);
-            this.comboBoxEmployee.TabIndex = 117;
+            this.textBoxEmployee.Location = new System.Drawing.Point(590, 258);
+            this.textBoxEmployee.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxEmployee.Multiline = true;
+            this.textBoxEmployee.Name = "textBoxEmployee";
+            this.textBoxEmployee.ReadOnly = true;
+            this.textBoxEmployee.Size = new System.Drawing.Size(208, 45);
+            this.textBoxEmployee.TabIndex = 120;
             // 
-            // comboBoxClient
+            // textBoxClient
             // 
-            this.comboBoxClient.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.comboBoxClient.FormattingEnabled = true;
-            this.comboBoxClient.Location = new System.Drawing.Point(590, 365);
-            this.comboBoxClient.Name = "comboBoxClient";
-            this.comboBoxClient.Size = new System.Drawing.Size(208, 41);
-            this.comboBoxClient.TabIndex = 118;
+            this.textBoxClient.Location = new System.Drawing.Point(590, 362);
+            this.textBoxClient.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxClient.Multiline = true;
+            this.textBoxClient.Name = "textBoxClient";
+            this.textBoxClient.ReadOnly = true;
+            this.textBoxClient.Size = new System.Drawing.Size(208, 45);
+            this.textBoxClient.TabIndex = 121;
             // 
-            // comboBoxSalesOffice
+            // textBoxSalesOffice
             // 
-            this.comboBoxSalesOffice.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.comboBoxSalesOffice.FormattingEnabled = true;
-            this.comboBoxSalesOffice.Location = new System.Drawing.Point(1416, 171);
-            this.comboBoxSalesOffice.Name = "comboBoxSalesOffice";
-            this.comboBoxSalesOffice.Size = new System.Drawing.Size(208, 41);
-            this.comboBoxSalesOffice.TabIndex = 119;
+            this.textBoxSalesOffice.Location = new System.Drawing.Point(1416, 165);
+            this.textBoxSalesOffice.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxSalesOffice.Multiline = true;
+            this.textBoxSalesOffice.Name = "textBoxSalesOffice";
+            this.textBoxSalesOffice.ReadOnly = true;
+            this.textBoxSalesOffice.Size = new System.Drawing.Size(208, 45);
+            this.textBoxSalesOffice.TabIndex = 122;
             // 
             // F_syukko
             // 
@@ -416,9 +421,9 @@ namespace SalesManagement_SysDev
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
-            this.Controls.Add(this.comboBoxSalesOffice);
-            this.Controls.Add(this.comboBoxClient);
-            this.Controls.Add(this.comboBoxEmployee);
+            this.Controls.Add(this.textBoxSalesOffice);
+            this.Controls.Add(this.textBoxClient);
+            this.Controls.Add(this.textBoxEmployee);
             this.Controls.Add(this.buttonHidden);
             this.Controls.Add(this.buttonConfirm);
             this.Controls.Add(this.checkBoxSyFlg);
@@ -484,8 +489,8 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.CheckBox checkBoxSyFlg;
         private System.Windows.Forms.Button buttonConfirm;
         private System.Windows.Forms.Button buttonHidden;
-        private System.Windows.Forms.ComboBox comboBoxEmployee;
-        private System.Windows.Forms.ComboBox comboBoxClient;
-        private System.Windows.Forms.ComboBox comboBoxSalesOffice;
+        private System.Windows.Forms.TextBox textBoxEmployee;
+        private System.Windows.Forms.TextBox textBoxClient;
+        private System.Windows.Forms.TextBox textBoxSalesOffice;
     }
 }

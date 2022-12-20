@@ -138,7 +138,17 @@ namespace SalesManagement_SysDev
 
         private void button_touroku_Click(object sender, EventArgs e)
         {
+            if(comboBoxMaker.SelectedIndex == -1)
+            {
+                MessageBox.Show("メーカ名を選択してください");
+                return;
+            }
 
+            if(comboBoxEmployee.SelectedIndex == -1)
+            {
+                MessageBox.Show("発注社員名を選択してください");
+                return;
+            }
 
             if (!String.IsNullOrEmpty(textBoxHaHidden.Text.Trim()))
             {
@@ -214,9 +224,24 @@ namespace SalesManagement_SysDev
 
         private void button_koushin_Click(object sender, EventArgs e)
         {
-            
 
-            
+            if (String.IsNullOrEmpty(textBoxHaID.Text))
+            {
+                MessageBox.Show("発注IDを入力してください");
+                return;
+            }
+
+            if (comboBoxMaker.SelectedIndex == -1)
+            {
+                MessageBox.Show("メーカ名を選択してください");
+                return;
+            }
+
+            if (comboBoxEmployee.SelectedIndex == -1)
+            {
+                MessageBox.Show("発注社員名を選択してください");
+                return;
+            }
 
             if (!String.IsNullOrEmpty(textBoxHaHidden.Text.Trim()))
             {

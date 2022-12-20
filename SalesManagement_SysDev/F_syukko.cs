@@ -15,51 +15,13 @@ namespace SalesManagement_SysDev
         //入力形式チェック用クラスのインスタンス化
         DataInputFormCheck dataInputFormCheck = new DataInputFormCheck();
 
-        //コンボボックス用
-        SalesOfficeDataAccess salesOfficeDataAccess = new SalesOfficeDataAccess();
-        EmployeeDataAccess employeeDataAccess = new EmployeeDataAccess();
-        ClientDataAccess clientDataAccess = new ClientDataAccess();
-
-        private static List<M_SalesOffice> SalesOffice;
-        private static List<M_Employee> Employee;
-        private static List<M_Client> Client;
-
         public F_syukko()
         {
             InitializeComponent();
         }
 
 
-        private void SetFormComboBox()
-        {
-            //営業所コンボボックス
-            SalesOffice = salesOfficeDataAccess.GetSalesOfficeDspData();
-            comboBoxSalesOffice.DataSource = SalesOffice;
-            comboBoxSalesOffice.DisplayMember = "SoName";
-            comboBoxSalesOffice.ValueMember = "SoID";
-            //読み取り専用
-            comboBoxSalesOffice.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxSalesOffice.SelectedIndex = -1;
-
-            //社員コンボボックス
-            Employee = employeeDataAccess.GetEmployeeDspData();
-            comboBoxEmployee.DataSource = Employee;
-            comboBoxEmployee.DisplayMember = "EmName";
-            comboBoxEmployee.ValueMember = "EmID";
-            //社員コンボボックスを読み取り専用
-            comboBoxEmployee.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxEmployee.SelectedIndex = -1;
-
-            //顧客コンボボックス
-            Client = clientDataAccess.GetClientDspData();
-            comboBoxClient.DataSource = Client;
-            comboBoxClient.DisplayMember = "ClName";
-            comboBoxClient.ValueMember = "ClID";
-            //読み取り専用
-            comboBoxClient.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBoxClient.SelectedIndex = -1;
-
-        }
+        
 
         private void back_button_Click(object sender, EventArgs e)
         {
@@ -101,7 +63,6 @@ namespace SalesManagement_SysDev
             //読み取り専用
             dataGridViewDsp.ReadOnly = true;
             fncAllSelect();
-            SetFormComboBox();
         }
 
         private void fncAllSelect()
@@ -170,6 +131,11 @@ namespace SalesManagement_SysDev
                     return;
                 }
             }
+            else
+            {
+                MessageBox.Show("受注IDを入力してください");
+                return;
+            }
 
             if (!String.IsNullOrEmpty(textBoxSyHidden.Text.Trim()))
             {
@@ -218,7 +184,7 @@ namespace SalesManagement_SysDev
                     EmID = syukko.EmID,
                     ClID = syukko.ClID,
                     OrID = syukko.OrID,
-                    ArDate = DateTime.Today,
+                    ArDate = DateTime.Now,
                     ArStateFlag = 0,
                     ArFlag = 0,
                     ArHidden = ""
@@ -278,9 +244,9 @@ namespace SalesManagement_SysDev
         private void dataGridViewDsp_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             textBoxSyID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[0].Value.ToString();
-            comboBoxEmployee.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
-            comboBoxClient.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
-            comboBoxSalesOffice.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
+            textBoxEmployee.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
+            textBoxClient.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
+            textBoxSalesOffice.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
             textBoxOrID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
             dateTimePickerSyDate.Value = DateTime.Parse(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString());
 

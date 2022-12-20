@@ -138,6 +138,12 @@ namespace SalesManagement_SysDev
                 }
             }
             
+            if(comboBoxEmployee.SelectedIndex == -1)
+            {
+                MessageBox.Show("入庫確認社員名を選択してください");
+                return;
+            }
+
             if (!string.IsNullOrEmpty(textBoxWaHidden.Text.Trim()))
             {
                 if (textBoxWaHidden.TextLength > 200)
@@ -189,7 +195,6 @@ namespace SalesManagement_SysDev
         {
             textBoxWaID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[0].Value.ToString();
             textBoxHaID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
-            comboBoxEmployee.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
             dateTimePickerWaDate.Value = DateTime.Parse(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString());
 
         }

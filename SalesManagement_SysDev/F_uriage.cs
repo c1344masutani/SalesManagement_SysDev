@@ -236,13 +236,7 @@ namespace SalesManagement_SysDev
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            textBoxSaID.Text = "";
-            textBoxChID.Text = "";
-            comboBoxSalesOffice.SelectedIndex = -1;
-            comboBoxClient.SelectedIndex = -1;
-            comboBoxEmployee.SelectedIndex = -1;
-
-            dateTimePickerSaDate.Value = DateTime.Today;
+            ClearInput();    
         }
 
         private void buttonHidden_Click(object sender, EventArgs e)
@@ -267,11 +261,24 @@ namespace SalesManagement_SysDev
                 context.Dispose();
                 MessageBox.Show("非表示にしました");
                 fncAllSelect();
+                ClearInput();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+        }
+
+        private void ClearInput()
+        {
+            textBoxSaID.Text = "";
+            textBoxChID.Text = "";
+            comboBoxSalesOffice.SelectedIndex = -1;
+            comboBoxClient.SelectedIndex = -1;
+            comboBoxEmployee.SelectedIndex = -1;
+
+            dateTimePickerSaDate.Value = DateTime.Now;
         }
     }
 }

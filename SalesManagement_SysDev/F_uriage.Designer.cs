@@ -67,7 +67,7 @@ namespace SalesManagement_SysDev
             this.SaHidden.BackColor = System.Drawing.Color.Transparent;
             this.SaHidden.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.SaHidden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.SaHidden.Location = new System.Drawing.Point(234, 440);
+            this.SaHidden.Location = new System.Drawing.Point(919, 437);
             this.SaHidden.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SaHidden.Name = "SaHidden";
             this.SaHidden.Size = new System.Drawing.Size(217, 40);
@@ -158,12 +158,13 @@ namespace SalesManagement_SysDev
             this.textBoxSaID.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSaID.Multiline = true;
             this.textBoxSaID.Name = "textBoxSaID";
+            this.textBoxSaID.ReadOnly = true;
             this.textBoxSaID.Size = new System.Drawing.Size(206, 52);
             this.textBoxSaID.TabIndex = 82;
             // 
             // textBoxSaHidden
             // 
-            this.textBoxSaHidden.Location = new System.Drawing.Point(522, 440);
+            this.textBoxSaHidden.Location = new System.Drawing.Point(1207, 437);
             this.textBoxSaHidden.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSaHidden.Multiline = true;
             this.textBoxSaHidden.Name = "textBoxSaHidden";
@@ -189,15 +190,16 @@ namespace SalesManagement_SysDev
             this.textBoxChID.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxChID.Multiline = true;
             this.textBoxChID.Name = "textBoxChID";
+            this.textBoxChID.ReadOnly = true;
             this.textBoxChID.Size = new System.Drawing.Size(202, 47);
             this.textBoxChID.TabIndex = 89;
             // 
             // checkBoxSaFlag
             // 
             this.checkBoxSaFlag.AutoSize = true;
-            this.checkBoxSaFlag.Font = new System.Drawing.Font("MS UI Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.checkBoxSaFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBoxSaFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.checkBoxSaFlag.Location = new System.Drawing.Point(925, 438);
+            this.checkBoxSaFlag.Location = new System.Drawing.Point(241, 437);
             this.checkBoxSaFlag.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxSaFlag.Name = "checkBoxSaFlag";
             this.checkBoxSaFlag.Size = new System.Drawing.Size(163, 44);

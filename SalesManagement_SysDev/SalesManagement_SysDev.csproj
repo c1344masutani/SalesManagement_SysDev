@@ -86,6 +86,12 @@
     <Compile Include="F_Maker.Designer.cs">
       <DependentUpon>F_Maker.cs</DependentUpon>
     </Compile>
+    <Compile Include="F_menu2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_menu2.Designer.cs">
+      <DependentUpon>F_menu2.cs</DependentUpon>
+    </Compile>
     <Compile Include="F_nyuuka.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_Maker.resx">
       <DependentUpon>F_Maker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_menu2.resx">
+      <DependentUpon>F_menu2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_nyuuka.resx">
       <DependentUpon>F_nyuuka.cs</DependentUpon>

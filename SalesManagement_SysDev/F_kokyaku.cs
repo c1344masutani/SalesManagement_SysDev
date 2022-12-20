@@ -47,6 +47,17 @@ namespace SalesManagement_SysDev
                     return;
                 }
             }
+            else
+            {
+                MessageBox.Show("顧客名を入力してください");
+                return;
+            }
+
+            if(comboBoxSalesOffice.SelectedIndex == -1)
+            {
+                MessageBox.Show("営業所を選択してください");
+                return;
+            }
 
             if (!String.IsNullOrEmpty(textBoxAddress.Text.Trim()))
             {
@@ -56,6 +67,11 @@ namespace SalesManagement_SysDev
                     textBoxAddress.Focus();
                     return;
                 }
+            }
+            else
+            {
+                MessageBox.Show("住所を入力してください");
+                return;
             }
 
             if (!String.IsNullOrEmpty(textBoxPhone.Text.Trim()))
@@ -67,6 +83,11 @@ namespace SalesManagement_SysDev
                     return;
                 }
             }
+            else
+            {
+                MessageBox.Show("電話番号を入力してください");
+                return;
+            }
 
             if (!String.IsNullOrEmpty(textBoxPostnumber.Text.Trim()))
             {
@@ -76,6 +97,11 @@ namespace SalesManagement_SysDev
                     textBoxPostnumber.Focus();
                     return;
                 }
+            }
+            else
+            {
+                MessageBox.Show("郵便番号を入力してください");
+                return;
             }
 
             if (!String.IsNullOrEmpty(textBoxHidden.Text.Trim()))
@@ -128,6 +154,84 @@ namespace SalesManagement_SysDev
 
         private void Update_button_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(textBoxClientID.Text.Trim()))
+            {
+                MessageBox.Show("顧客IDを入力してください");
+                return;
+            }
+
+
+            if (!String.IsNullOrEmpty(textBoxClientName.Text.Trim()))
+            {
+                if (textBoxClientName.TextLength > 50)
+                {
+                    MessageBox.Show("顧客名は50文字以下です");
+                    textBoxClientName.Focus();
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("顧客名を入力してください");
+                return;
+            }
+
+            if (!String.IsNullOrEmpty(textBoxAddress.Text.Trim()))
+            {
+                if (textBoxAddress.TextLength > 50)
+                {
+                    MessageBox.Show("住所は50文字以下です");
+                    textBoxAddress.Focus();
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("住所を入力してください");
+                return;
+            }
+
+            if (!String.IsNullOrEmpty(textBoxPhone.Text.Trim()))
+            {
+                if (textBoxPhone.TextLength > 13)
+                {
+                    MessageBox.Show("電話番号は13文字以下です");
+                    textBoxPhone.Focus();
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("電話番号を入力してください");
+                return;
+            }
+
+            if (!String.IsNullOrEmpty(textBoxPostnumber.Text.Trim()))
+            {
+                if (textBoxPostnumber.TextLength > 7)
+                {
+                    MessageBox.Show("郵便番号は7文字以下です");
+                    textBoxPostnumber.Focus();
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("郵便番号を入力してください");
+                return;
+            }
+
+            if (!String.IsNullOrEmpty(textBoxHidden.Text.Trim()))
+            {
+                if (textBoxHidden.TextLength > 200)
+                {
+                    MessageBox.Show("非表示理由は200文字以下です");
+                    textBoxHidden.Focus();
+                    return;
+                }
+            }
+
+
             int flg;
             if (checkBoxClflg.Checked == true)
             {
@@ -186,9 +290,24 @@ namespace SalesManagement_SysDev
             try
             {
                 var context = new SalesManagement_DevContext();
-                foreach (var p in context.M_Clients)
+                var tb = from t1 in context.M_Clients
+                         join t2 in context.M_SalesOffices
+                         on t1.SoID equals t2.SoID
+                         select new
+                         {
+                             t1.ClID,
+                             t2.SoName,
+                             t1.ClName,
+                             t1.ClAddress,
+                             t1.ClPhone,
+                             t1.ClPostal,
+                             t1.ClFAX,
+                             t1.ClFlag,
+                             t1.ClHidden
+                         };
+                foreach(var p in tb)
                 {
-                    dataGridViewDsp.Rows.Add(p.ClID, p.SoID, p.ClName, p.ClAddress, p.ClPhone, p.ClPostal, p.ClFAX, p.ClFlag, p.ClHidden);
+                    dataGridViewDsp.Rows.Add(p.ClID, p.SoName, p.ClName, p.ClAddress, p.ClPhone, p.ClPostal, p.ClFAX, p.ClFlag, p.ClHidden);
                 }
                 context.Dispose();
             }
@@ -213,23 +332,79 @@ namespace SalesManagement_SysDev
         private void Search_button_Click(object sender, EventArgs e)
         {
             dataGridViewDsp.Rows.Clear();
-            if(textBoxClientID.Text == "" || textBoxClientID.Text == null)
+            string clid = string.Empty;
+            string soid = string.Empty;
+            string clname = string.Empty;
+            string clpostal = string.Empty;
+            string address = string.Empty;
+            string phone = string.Empty;
+            string fax = string.Empty;
+
+            if (!String.IsNullOrEmpty(textBoxClientID.Text.Trim()))
             {
-                fncAllSelect();
-                return;
+                clid = textBoxClientID.Text;
             }
-            int clid = int.Parse(textBoxClientID.Text);
+            if(comboBoxSalesOffice.SelectedIndex != -1)
+            {
+                soid = comboBoxSalesOffice.SelectedValue.ToString();
+            }
+            if (!String.IsNullOrEmpty(textBoxClientName.Text.Trim()))
+            {
+                clname = textBoxClientName.Text;
+            }
+            if (!String.IsNullOrEmpty(textBoxPostnumber.Text.Trim()))
+            {
+                clpostal = textBoxPostnumber.Text;
+            }
+            if (!String.IsNullOrEmpty(textBoxAddress.Text.Trim()))
+            {
+                address = textBoxAddress.Text;
+            }
+            if (!String.IsNullOrEmpty(textBoxPhone.Text.Trim()))
+            {
+                phone = textBoxPhone.Text;
+            }
+            if (!String.IsNullOrEmpty(textBoxFAX.Text.Trim()))
+            {
+                fax = textBoxFAX.Text;
+            }
+
             try
             {
                 var context = new SalesManagement_DevContext();
-                var client = context.M_Clients.Where(x => x.ClID == clid).ToArray();
-                dataGridViewDsp.Rows.Add(client[0].ClID, client[0].SoID, client[0].ClName, client[0].ClPostal, client[0].ClAddress, client[0].ClPhone, client[0].ClFAX, client[0].ClFlag, client[0].ClHidden);
+                var tb = from t1 in context.M_Clients
+                         join t2 in context.M_SalesOffices
+                         on t1.SoID equals t2.SoID
+                         where t1.ClID.ToString().Contains(clid) &&
+                               t2.SoID.ToString().Contains(soid) &&
+                               t1.ClName.Contains(clname) &&
+                               t1.ClAddress.Contains(address) &&
+                               t1.ClPhone.Contains(phone) &&
+                               t1.ClPostal.Contains(clpostal) &&
+                               t1.ClFAX.Contains(fax)
+                         select new
+                         {
+                             t1.ClID,
+                             t2.SoName,
+                             t1.ClName,
+                             t1.ClAddress,
+                             t1.ClPhone,
+                             t1.ClPostal,
+                             t1.ClFAX,
+                             t1.ClFlag,
+                             t1.ClHidden
+                         };
+                foreach (var p in tb)
+                {
+                    dataGridViewDsp.Rows.Add(p.ClID, p.SoName, p.ClName, p.ClAddress, p.ClPhone, p.ClPostal, p.ClFAX, p.ClFlag, p.ClHidden);
+                }
                 context.Dispose();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void client_Load(object sender, EventArgs e)
@@ -241,7 +416,7 @@ namespace SalesManagement_SysDev
             //0番目（左端）の項目名を設定
             dataGridViewDsp.Columns[0].HeaderText = "顧客ID";
             dataGridViewDsp.Columns[1].Width = 70;
-            dataGridViewDsp.Columns[1].HeaderText = "営業所ID";
+            dataGridViewDsp.Columns[1].HeaderText = "営業所名";
             dataGridViewDsp.Columns[2].Width = 130;
             dataGridViewDsp.Columns[2].HeaderText = "顧客名";
             dataGridViewDsp.Columns[3].Width = 200;
@@ -299,6 +474,18 @@ namespace SalesManagement_SysDev
                 checkBoxClflg.Checked = true;
             }
             textBoxHidden.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[8].Value.ToString();
+        }
+
+        private void button_Clear_Click(object sender, EventArgs e)
+        {
+            textBoxClientID.Text = "";
+            comboBoxSalesOffice.SelectedIndex = -1;
+            textBoxClientName.Text = "";
+            textBoxAddress.Text = "";
+            textBoxPhone.Text = "";
+            textBoxPostnumber.Text = "";
+            textBoxFAX.Text = "";
+            textBoxHidden.Text = "";
         }
     }
 }

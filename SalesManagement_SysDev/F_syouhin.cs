@@ -60,6 +60,18 @@ namespace SalesManagement_SysDev
                     return;
                 }
             }
+            else
+            {
+                MessageBox.Show("商品名を入力してください");
+                return;
+            }
+
+            if(comboBoxMaker.SelectedIndex == -1)
+            {
+                MessageBox.Show("メーカ名を選択してください");
+                return;
+            }
+
             if (!string.IsNullOrEmpty(textBoxPrice.Text.Trim()))
             {
                 if (!dataInputFormCheck.CheckNumeric(textBoxPrice.Text.Trim()))
@@ -74,6 +86,12 @@ namespace SalesManagement_SysDev
                     return;
                 }
             }
+            else
+            {
+                MessageBox.Show("価格を入力してください");
+                return;
+            }
+
             if (!string.IsNullOrEmpty(textBoxPrSafetyStock.Text.Trim()))
             {
                 if (!dataInputFormCheck.CheckNumeric(textBoxPrSafetyStock.Text.Trim()))
@@ -88,6 +106,17 @@ namespace SalesManagement_SysDev
                     return;
                 }
             }
+            else
+            {
+                MessageBox.Show("安全在庫数を入力してください");
+                return;
+            }
+
+            if(comboBoxSmallClass.SelectedIndex == -1)
+            {
+                MessageBox.Show("小分類名を選択してください");
+                return;
+            }
 
             if (!string.IsNullOrEmpty(textBoxPrModelNumber.Text.Trim()))
             {
@@ -97,6 +126,18 @@ namespace SalesManagement_SysDev
                     return;
                 }
             }
+            else
+            {
+                MessageBox.Show("型番を入力してください");
+                return;
+            }
+
+            if(comboBoxColor.SelectedIndex == -1)
+            {
+                MessageBox.Show("色を選択してください");
+                return;
+            }
+
             if (!string.IsNullOrEmpty(textBoxHidden.Text.Trim()))
             {
                 if (textBoxHidden.TextLength > 200)
@@ -105,6 +146,7 @@ namespace SalesManagement_SysDev
                     return;
                 }
             }
+
             int check;
             if (checkBoxPrFlag.Checked == true)
             {
@@ -171,6 +213,18 @@ namespace SalesManagement_SysDev
                     return;
                 }
             }
+            else
+            {
+                MessageBox.Show("商品名を入力してください");
+                return;
+            }
+
+            if (comboBoxMaker.SelectedIndex == -1)
+            {
+                MessageBox.Show("メーカ名を選択してください");
+                return;
+            }
+
             if (!string.IsNullOrEmpty(textBoxPrice.Text.Trim()))
             {
                 if (!dataInputFormCheck.CheckNumeric(textBoxPrice.Text.Trim()))
@@ -185,6 +239,12 @@ namespace SalesManagement_SysDev
                     return;
                 }
             }
+            else
+            {
+                MessageBox.Show("価格を入力してください");
+                return;
+            }
+
             if (!string.IsNullOrEmpty(textBoxPrSafetyStock.Text.Trim()))
             {
                 if (!dataInputFormCheck.CheckNumeric(textBoxPrSafetyStock.Text.Trim()))
@@ -199,6 +259,17 @@ namespace SalesManagement_SysDev
                     return;
                 }
             }
+            else
+            {
+                MessageBox.Show("安全在庫数を入力してください");
+                return;
+            }
+
+            if (comboBoxSmallClass.SelectedIndex == -1)
+            {
+                MessageBox.Show("小分類名を選択してください");
+                return;
+            }
 
             if (!string.IsNullOrEmpty(textBoxPrModelNumber.Text.Trim()))
             {
@@ -208,6 +279,18 @@ namespace SalesManagement_SysDev
                     return;
                 }
             }
+            else
+            {
+                MessageBox.Show("型番を入力してください");
+                return;
+            }
+
+            if (comboBoxColor.SelectedIndex == -1)
+            {
+                MessageBox.Show("色を選択してください");
+                return;
+            }
+
             if (!string.IsNullOrEmpty(textBoxHidden.Text.Trim()))
             {
                 if (textBoxHidden.TextLength > 200)
@@ -216,6 +299,7 @@ namespace SalesManagement_SysDev
                     return;
                 }
             }
+
             int check;
             if (checkBoxPrFlag.Checked == true)
             {

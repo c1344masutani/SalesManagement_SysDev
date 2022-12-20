@@ -33,58 +33,8 @@ namespace SalesManagement_SysDev
 
         private void button_Search_Click(object sender, EventArgs e)
         {
-
-            if (!string.IsNullOrEmpty(textBoxPrID.Text.Trim())) 
-            {
-
-                if (!dataInputFormCheck.CheckNumeric(textBoxPrID.Text.Trim()))
-                {
-                    MessageBox.Show("M5027");
-                    textBoxPrID.Focus();
-                    return;
-                }
-
-                if (textBoxPrID.TextLength > 6)
-                {
-                    MessageBox.Show("商品IDは6文字以下です");
-                    textBoxPrID.Focus();
-                    return;
-                }
-            }
-
-            if (!string.IsNullOrEmpty(textBoxStQuantity.Text.Trim()))
-            {
-                if (!dataInputFormCheck.CheckNumeric(textBoxStQuantity.Text.Trim()))
-                {
-                    MessageBox.Show("M5027");
-                    textBoxStQuantity.Focus();
-                    return;
-                }
-
-                if (textBoxStQuantity.TextLength > 4)
-                {
-                    MessageBox.Show("在庫数は4文字以下です");
-                    textBoxStQuantity.Focus();
-                    return;
-                }
-
-            }
-
-            if (!string.IsNullOrEmpty(textBoxPrName.Text.Trim()))
-            {
-                if (textBoxPrName.TextLength > 50)
-                {
-                    MessageBox.Show("商品名は50文字以下です");
-                    textBoxPrName.Focus();
-                    return;
-                }
-
-            }
-            
-
             dataGridViewDsp.Rows.Clear();
             string stid = string.Empty;
-            string prid = string.Empty;
             string prname = string.Empty;
             string price = string.Empty;
             string stquantity = string.Empty;
@@ -92,10 +42,7 @@ namespace SalesManagement_SysDev
             {
                 stid = textBoxStID.Text;
             }
-            if (!String.IsNullOrEmpty(textBoxPrID.Text))
-            {
-                prid = textBoxPrID.Text;
-            }
+            
             if (!String.IsNullOrEmpty(textBoxPrName.Text))
             {
                 prname = textBoxPrName.Text;
@@ -116,7 +63,6 @@ namespace SalesManagement_SysDev
                          join t2 in context.M_Products
                          on t1.PrID equals t2.PrID
                          where t1.StID.ToString().Contains(stid) &&
-                               t1.PrID.ToString().Contains(prid) &&
                                t2.PrName.Contains(prname) &&
                                t2.Price.ToString().Contains(price) &&
                                t1.StQuantity.ToString().Contains(stquantity)
@@ -221,25 +167,8 @@ namespace SalesManagement_SysDev
 
         private void button_Update_Click(object sender, EventArgs e)
         {
+            
 
-            if (!string.IsNullOrEmpty(textBoxPrID.Text.Trim()))
-                if (textBoxPrID.TextLength > 6)
-                {
-                    MessageBox.Show("商品IDは6文字以下です");
-                    return;
-                }
-            if (!string.IsNullOrEmpty(textBoxStQuantity.Text.Trim()))
-                if (textBoxStQuantity.TextLength > 4)
-                {
-                    MessageBox.Show("在庫数は4文字以下です");
-                    return;
-                }
-            if (!string.IsNullOrEmpty(textBoxPrName.Text.Trim()))
-                if (textBoxPrName.TextLength > 50)
-                {
-                    MessageBox.Show("商品名は50文字以下です");
-                    return;
-                }
             int flg;
             if(checkBox_StFlag.Checked == true)
             {
@@ -261,6 +190,7 @@ namespace SalesManagement_SysDev
                 context.Dispose();
                 fncAllSelect();
                 MessageBox.Show("更新完了");
+                ClearInput();
             }
             catch (Exception ex)
             {
@@ -275,15 +205,18 @@ namespace SalesManagement_SysDev
         private void dataGridViewDsp_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             textBoxStID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[0].Value.ToString();
-            textBoxPrID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
             textBoxPrName.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
             textBoxPrice.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
             textBoxStQuantity.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
         }
 
-        private void textBoxPrName_TextChanged(object sender, EventArgs e)
+        private void ClearInput()
         {
-
+            textBoxStID.Text = "";
+            textBoxPrName.Text = "";
+            textBoxPrice.Text = "";
+            textBoxStQuantity.Text = "";
+            
         }
     }
 }
