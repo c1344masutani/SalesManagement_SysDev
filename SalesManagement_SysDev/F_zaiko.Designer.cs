@@ -163,7 +163,7 @@ namespace SalesManagement_SysDev
             this.checkBox_StFlag.AutoSize = true;
             this.checkBox_StFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBox_StFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.checkBox_StFlag.Location = new System.Drawing.Point(682, 321);
+            this.checkBox_StFlag.Location = new System.Drawing.Point(157, 330);
             this.checkBox_StFlag.Name = "checkBox_StFlag";
             this.checkBox_StFlag.Size = new System.Drawing.Size(163, 44);
             this.checkBox_StFlag.TabIndex = 50;
@@ -201,7 +201,6 @@ namespace SalesManagement_SysDev
             this.textBoxPrName.Name = "textBoxPrName";
             this.textBoxPrName.Size = new System.Drawing.Size(206, 51);
             this.textBoxPrName.TabIndex = 71;
-            this.textBoxPrName.TextChanged += new System.EventHandler(this.textBoxPrName_TextChanged);
             // 
             // label5
             // 

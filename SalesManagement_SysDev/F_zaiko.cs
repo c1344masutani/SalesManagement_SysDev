@@ -167,7 +167,10 @@ namespace SalesManagement_SysDev
 
         private void button_Update_Click(object sender, EventArgs e)
         {
-            
+            if (String.IsNullOrEmpty(textBoxStID.Text))
+            {
+                MessageBox.Show("在庫IDを入力してください");
+            }
 
             int flg;
             if(checkBox_StFlag.Checked == true)

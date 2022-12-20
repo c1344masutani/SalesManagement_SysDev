@@ -67,7 +67,7 @@ namespace SalesManagement_SysDev
             this.SaHidden.BackColor = System.Drawing.Color.Transparent;
             this.SaHidden.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.SaHidden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.SaHidden.Location = new System.Drawing.Point(919, 437);
+            this.SaHidden.Location = new System.Drawing.Point(515, 437);
             this.SaHidden.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SaHidden.Name = "SaHidden";
             this.SaHidden.Size = new System.Drawing.Size(217, 40);
@@ -83,9 +83,9 @@ namespace SalesManagement_SysDev
             this.EmID.Location = new System.Drawing.Point(918, 150);
             this.EmID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EmID.Name = "EmID";
-            this.EmID.Size = new System.Drawing.Size(218, 40);
+            this.EmID.Size = new System.Drawing.Size(217, 40);
             this.EmID.TabIndex = 73;
-            this.EmID.Text = "受注社員ID";
+            this.EmID.Text = "受注社員名";
             // 
             // ChID
             // 
@@ -109,9 +109,9 @@ namespace SalesManagement_SysDev
             this.SoID.Location = new System.Drawing.Point(234, 338);
             this.SoID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SoID.Name = "SoID";
-            this.SoID.Size = new System.Drawing.Size(178, 40);
+            this.SoID.Size = new System.Drawing.Size(177, 40);
             this.SoID.TabIndex = 74;
-            this.SoID.Text = "営業所ID";
+            this.SoID.Text = "営業所名";
             // 
             // ClID
             // 
@@ -122,9 +122,9 @@ namespace SalesManagement_SysDev
             this.ClID.Location = new System.Drawing.Point(234, 245);
             this.ClID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ClID.Name = "ClID";
-            this.ClID.Size = new System.Drawing.Size(138, 40);
+            this.ClID.Size = new System.Drawing.Size(137, 40);
             this.ClID.TabIndex = 75;
-            this.ClID.Text = "顧客ID";
+            this.ClID.Text = "顧客名";
             // 
             // SaID
             // 
@@ -164,11 +164,11 @@ namespace SalesManagement_SysDev
             // 
             // textBoxSaHidden
             // 
-            this.textBoxSaHidden.Location = new System.Drawing.Point(1207, 437);
+            this.textBoxSaHidden.Location = new System.Drawing.Point(806, 429);
             this.textBoxSaHidden.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSaHidden.Multiline = true;
             this.textBoxSaHidden.Name = "textBoxSaHidden";
-            this.textBoxSaHidden.Size = new System.Drawing.Size(203, 48);
+            this.textBoxSaHidden.Size = new System.Drawing.Size(620, 48);
             this.textBoxSaHidden.TabIndex = 86;
             // 
             // dataGridViewDsp
