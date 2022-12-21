@@ -143,6 +143,8 @@ namespace SalesManagement_SysDev
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                ClearInput();
+                
                 MessageBox.Show("登録完了");
 
             }
@@ -257,6 +259,14 @@ namespace SalesManagement_SysDev
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                ClearInput();
+
+                //非表示メッセージ
+                if(flg == 2)
+                {
+                    MessageBox.Show("非表示にしました");
+                    return;
+                }
                 MessageBox.Show("更新完了");
             }
             catch (Exception ex)
@@ -293,6 +303,7 @@ namespace SalesManagement_SysDev
                 var tb = from t1 in context.M_Clients
                          join t2 in context.M_SalesOffices
                          on t1.SoID equals t2.SoID
+                         where t1.ClFlag == 0
                          select new
                          {
                              t1.ClID,
@@ -316,17 +327,6 @@ namespace SalesManagement_SysDev
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            //非表示機能
-            try
-            {
-                DataGridViewRow row = dataGridViewDsp.Rows.Cast<DataGridViewRow>().First(r => r.Cells[7].Value.ToString() == "2");
-                row.Visible = false;
-            }
-            catch (Exception ex)
-            {
-                // 該当データなし時は、例外が発生する
-                //MessageBox.Show(ex.Message);
-            }
         }
 
         private void Search_button_Click(object sender, EventArgs e)
@@ -477,6 +477,11 @@ namespace SalesManagement_SysDev
         }
 
         private void button_Clear_Click(object sender, EventArgs e)
+        {
+            ClearInput();
+        }
+
+        private void ClearInput()
         {
             textBoxClientID.Text = "";
             comboBoxSalesOffice.SelectedIndex = -1;

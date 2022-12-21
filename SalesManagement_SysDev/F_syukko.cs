@@ -25,7 +25,7 @@ namespace SalesManagement_SysDev
 
         private void back_button_Click(object sender, EventArgs e)
         {
-            Form frm = new F_menu();
+            Form frm = new F_menu2();
 
             Opacity = 0;
 
@@ -78,6 +78,7 @@ namespace SalesManagement_SysDev
                          on t1.ClID equals t3.ClID
                          join t4 in context.M_SalesOffices
                          on t1.SoID equals t4.SoID
+                         where t1.SyFlag == 0
                          select new
                          {
                              t1.SyID,
@@ -90,7 +91,7 @@ namespace SalesManagement_SysDev
                              t1.SyFlag,
                              t1.SyHidden
                          };
-                foreach(var p in tb)
+                foreach (var p in tb)
                 {
                     dataGridViewDsp.Rows.Add(p.SyID, p.EmName, p.ClName, p.SoName, p.OrID, p.SyDate, p.SyStateFlag, p.SyFlag, p.SyHidden);
                 }
@@ -99,19 +100,6 @@ namespace SalesManagement_SysDev
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-
-            //非表示機能
-            try
-            {
-                DataGridViewRow row = dataGridViewDsp.Rows.Cast<DataGridViewRow>().First(r => r.Cells[7].Value.ToString() == "2");
-                row.Visible = false;
-            }
-            catch (Exception ex)
-            {
-                // 該当データなし時は、例外が発生する
-                //MessageBox.Show(ex.Message);
             }
         }
 
@@ -179,6 +167,7 @@ namespace SalesManagement_SysDev
                 };
                 context.T_ArrivalDetails.Add(arrivaldetail);
                 context.SaveChanges();
+                ClearInput();
                 MessageBox.Show("出庫を確定しました");
             }
             catch (Exception ex)
@@ -217,6 +206,8 @@ namespace SalesManagement_SysDev
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                ClearInput();
+                MessageBox.Show("非表示にしました");
             }
             catch (Exception ex)
             {
@@ -232,12 +223,48 @@ namespace SalesManagement_SysDev
             textBoxSalesOffice.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
             textBoxOrID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
             dateTimePickerSyDate.Value = DateTime.Parse(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString());
+            if(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[6].Value.ToString() == "1")
+            {
+                checkBoxSyStateFlag.Checked = true;
+            }
+            else
+            {
+                checkBoxSyStateFlag.Checked = false;
+            }
+
+            if(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[7].Value.ToString() == "2")
+            {
+                checkBoxSyFlg.Checked = true;
+            }
+            else
+            {
+                checkBoxSyFlg.Checked = false;
+            }
+            textBoxSyHidden.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[8].Value.ToString();
 
         }
 
         private void PriceTextBox_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            ClearInput();
+        }
+
+        private void ClearInput()
+        {
+            textBoxSyID.Text = "";
+            textBoxEmployee.Text = "";
+            textBoxClient.Text = "";
+            textBoxSalesOffice.Text = "";
+            textBoxOrID.Text = "";
+            dateTimePickerSyDate.Value = DateTime.Now;
+            checkBoxSyStateFlag.Checked = false;
+            checkBoxSyFlg.Checked = false;
+            textBoxSyHidden.Text = "";
         }
     }
 }

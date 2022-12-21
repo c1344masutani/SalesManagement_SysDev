@@ -79,7 +79,7 @@ namespace SalesManagement_SysDev
             // 
             this.back_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.back_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.back_button.Location = new System.Drawing.Point(1762, 48);
+            this.back_button.Location = new System.Drawing.Point(1760, 31);
             this.back_button.Margin = new System.Windows.Forms.Padding(2);
             this.back_button.Name = "back_button";
             this.back_button.Size = new System.Drawing.Size(141, 50);

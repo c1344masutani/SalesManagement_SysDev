@@ -115,9 +115,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("HGS明朝E", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(175, 549);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.button1.Location = new System.Drawing.Point(167, 549);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 50);
+            this.button1.Size = new System.Drawing.Size(197, 50);
             this.button1.TabIndex = 7;
             this.button1.Text = "新規登録";
             this.button1.UseVisualStyleBackColor = true;

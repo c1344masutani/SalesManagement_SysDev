@@ -59,6 +59,7 @@ namespace SalesManagement_SysDev
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.buttonback = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             this.SuspendLayout();
@@ -303,7 +304,7 @@ namespace SalesManagement_SysDev
             // 
             this.buttonHidden.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.buttonHidden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.buttonHidden.Location = new System.Drawing.Point(1149, 24);
+            this.buttonHidden.Location = new System.Drawing.Point(1149, 27);
             this.buttonHidden.Margin = new System.Windows.Forms.Padding(2);
             this.buttonHidden.Name = "buttonHidden";
             this.buttonHidden.Size = new System.Drawing.Size(171, 55);
@@ -411,12 +412,27 @@ namespace SalesManagement_SysDev
             this.label12.TabIndex = 129;
             this.label12.Text = "必須";
             // 
+            // buttonback
+            // 
+            this.buttonback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonback.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonback.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.buttonback.Location = new System.Drawing.Point(1775, 32);
+            this.buttonback.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonback.Name = "buttonback";
+            this.buttonback.Size = new System.Drawing.Size(145, 50);
+            this.buttonback.TabIndex = 130;
+            this.buttonback.Text = "戻る";
+            this.buttonback.UseVisualStyleBackColor = false;
+            this.buttonback.Click += new System.EventHandler(this.buttonback_Click);
+            // 
             // F_nyuuka
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.buttonback);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -489,5 +505,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button buttonback;
     }
 }

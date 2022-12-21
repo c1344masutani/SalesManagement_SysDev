@@ -87,6 +87,7 @@ namespace SalesManagement_SysDev
             this.buttonClear.TabIndex = 75;
             this.buttonClear.Text = "入力クリア";
             this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // back_button
             // 
@@ -173,7 +174,7 @@ namespace SalesManagement_SysDev
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.label7.Location = new System.Drawing.Point(321, 462);
+            this.label7.Location = new System.Drawing.Point(1051, 436);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(217, 40);
@@ -286,7 +287,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxSyHidden
             // 
-            this.textBoxSyHidden.Location = new System.Drawing.Point(590, 462);
+            this.textBoxSyHidden.Location = new System.Drawing.Point(1320, 436);
             this.textBoxSyHidden.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSyHidden.Multiline = true;
             this.textBoxSyHidden.Name = "textBoxSyHidden";
@@ -326,7 +327,7 @@ namespace SalesManagement_SysDev
             this.checkBoxSyStateFlag.AutoSize = true;
             this.checkBoxSyStateFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBoxSyStateFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.checkBoxSyStateFlag.Location = new System.Drawing.Point(1151, 476);
+            this.checkBoxSyStateFlag.Location = new System.Drawing.Point(328, 458);
             this.checkBoxSyStateFlag.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSyStateFlag.Name = "checkBoxSyStateFlag";
             this.checkBoxSyStateFlag.Size = new System.Drawing.Size(163, 44);
@@ -339,7 +340,7 @@ namespace SalesManagement_SysDev
             this.checkBoxSyFlg.AutoSize = true;
             this.checkBoxSyFlg.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBoxSyFlg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.checkBoxSyFlg.Location = new System.Drawing.Point(1432, 476);
+            this.checkBoxSyFlg.Location = new System.Drawing.Point(609, 458);
             this.checkBoxSyFlg.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxSyFlg.Name = "checkBoxSyFlg";
             this.checkBoxSyFlg.Size = new System.Drawing.Size(163, 44);

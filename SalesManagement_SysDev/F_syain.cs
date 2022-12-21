@@ -62,6 +62,7 @@ namespace SalesManagement_SysDev
                          on t1.SoID equals t2.SoID
                          join t3 in context.M_Positions
                          on t1.PoID equals t3.PoID
+                         where t1.EmFlag == 0
                          select new
                          {
                              t1.EmID,
@@ -121,7 +122,7 @@ namespace SalesManagement_SysDev
 
         private void back_button_Click(object sender, EventArgs e)
         {
-            Form frm = new F_menu();
+            Form frm = new F_menu2();
 
             Opacity = 0;
 
@@ -229,6 +230,7 @@ namespace SalesManagement_SysDev
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                ClearInput();
                 MessageBox.Show("登録完了");
             }
             catch (Exception ex)
@@ -353,6 +355,14 @@ namespace SalesManagement_SysDev
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                ClearInput();
+
+                //非表示メッセージ
+                if(check == 2)
+                {
+                    MessageBox.Show("非表示にしました");
+                    return;
+                }
                 MessageBox.Show("更新完了");
             }
             catch (Exception ex)
@@ -364,21 +374,6 @@ namespace SalesManagement_SysDev
 
         private void Delete_button_Click(object sender, EventArgs e)
         {
-            try
-            {
-                int emid = int.Parse(textBoxEmID.Text);
-                var context = new SalesManagement_DevContext();
-                var employees = context.M_Employees.Single(x => x.EmID == emid);
-                context.M_Employees.Remove(employees);
-                context.SaveChanges();
-                context.Dispose();
-                fncAllSelect();
-                MessageBox.Show("削除完了");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private void Search_button_Click(object sender, EventArgs e)
@@ -457,6 +452,24 @@ namespace SalesManagement_SysDev
             frm.ShowDialog();
 
             this.Close();
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            ClearInput();
+        }
+
+        private void ClearInput()
+        {
+            textBoxEmID.Text = "";
+            textBoxEmName.Text = "";
+            comboBoxSalesOffice.SelectedIndex = -1;
+            textBoxEmPassWord.Text = "";
+            comboBoxPosition.SelectedIndex = -1;
+            datetimeEmHiredate.Value = DateTime.Now;
+            textBoxEmPhone.Text = "";
+            checkBoxEmFlag.Checked = false;
+            textBoxhidden.Text = "";
         }
     }
 }

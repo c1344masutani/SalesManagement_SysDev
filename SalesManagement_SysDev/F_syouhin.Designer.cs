@@ -45,7 +45,6 @@ namespace SalesManagement_SysDev
             this.LabelPrID = new System.Windows.Forms.Label();
             this.Regester_button = new System.Windows.Forms.Button();
             this.Update_button = new System.Windows.Forms.Button();
-            this.Delete_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.LabelPrRelease = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -79,7 +78,7 @@ namespace SalesManagement_SysDev
             this.buttonClear.BackColor = System.Drawing.Color.Transparent;
             this.buttonClear.Font = new System.Drawing.Font("HGS明朝E", 20F);
             this.buttonClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.buttonClear.Location = new System.Drawing.Point(1228, 24);
+            this.buttonClear.Location = new System.Drawing.Point(1357, 21);
             this.buttonClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(305, 55);
@@ -92,12 +91,12 @@ namespace SalesManagement_SysDev
             // 
             this.dataGridViewDsp.AllowUserToAddRows = false;
             this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDsp.Location = new System.Drawing.Point(48, 677);
+            this.dataGridViewDsp.Location = new System.Drawing.Point(48, 625);
             this.dataGridViewDsp.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewDsp.Name = "dataGridViewDsp";
             this.dataGridViewDsp.RowHeadersWidth = 62;
             this.dataGridViewDsp.RowTemplate.Height = 27;
-            this.dataGridViewDsp.Size = new System.Drawing.Size(1900, 314);
+            this.dataGridViewDsp.Size = new System.Drawing.Size(1900, 366);
             this.dataGridViewDsp.TabIndex = 67;
             this.dataGridViewDsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellClick);
             this.dataGridViewDsp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellContentClick);
@@ -108,7 +107,7 @@ namespace SalesManagement_SysDev
             this.checkBoxPrFlag.BackColor = System.Drawing.Color.Transparent;
             this.checkBoxPrFlag.Font = new System.Drawing.Font("HGS明朝E", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBoxPrFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.checkBoxPrFlag.Location = new System.Drawing.Point(781, 560);
+            this.checkBoxPrFlag.Location = new System.Drawing.Point(98, 567);
             this.checkBoxPrFlag.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxPrFlag.Name = "checkBoxPrFlag";
             this.checkBoxPrFlag.Size = new System.Drawing.Size(149, 40);
@@ -144,39 +143,39 @@ namespace SalesManagement_SysDev
             // 
             // textBoxPrName
             // 
-            this.textBoxPrName.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBoxPrName.Font = new System.Drawing.Font("HGS明朝E", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxPrName.Location = new System.Drawing.Point(315, 275);
             this.textBoxPrName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrName.Name = "textBoxPrName";
-            this.textBoxPrName.Size = new System.Drawing.Size(206, 51);
+            this.textBoxPrName.Size = new System.Drawing.Size(206, 39);
             this.textBoxPrName.TabIndex = 61;
             // 
             // textBoxPrSafetyStock
             // 
-            this.textBoxPrSafetyStock.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBoxPrSafetyStock.Font = new System.Drawing.Font("HGS明朝E", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxPrSafetyStock.Location = new System.Drawing.Point(1026, 164);
             this.textBoxPrSafetyStock.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrSafetyStock.Name = "textBoxPrSafetyStock";
-            this.textBoxPrSafetyStock.Size = new System.Drawing.Size(206, 51);
+            this.textBoxPrSafetyStock.Size = new System.Drawing.Size(253, 39);
             this.textBoxPrSafetyStock.TabIndex = 60;
             // 
             // textBoxPrID
             // 
-            this.textBoxPrID.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxPrID.Location = new System.Drawing.Point(315, 170);
+            this.textBoxPrID.Font = new System.Drawing.Font("HGS明朝E", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBoxPrID.Location = new System.Drawing.Point(315, 175);
             this.textBoxPrID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrID.Name = "textBoxPrID";
             this.textBoxPrID.ReadOnly = true;
-            this.textBoxPrID.Size = new System.Drawing.Size(206, 51);
+            this.textBoxPrID.Size = new System.Drawing.Size(206, 39);
             this.textBoxPrID.TabIndex = 57;
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBoxPrice.Font = new System.Drawing.Font("HGS明朝E", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxPrice.Location = new System.Drawing.Point(315, 462);
             this.textBoxPrice.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.Size = new System.Drawing.Size(206, 51);
+            this.textBoxPrice.Size = new System.Drawing.Size(206, 39);
             this.textBoxPrice.TabIndex = 56;
             // 
             // LabelPrSafetyStock
@@ -273,20 +272,6 @@ namespace SalesManagement_SysDev
             this.Update_button.UseVisualStyleBackColor = false;
             this.Update_button.Click += new System.EventHandler(this.Update_button_Click);
             // 
-            // Delete_button
-            // 
-            this.Delete_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Delete_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Delete_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.Delete_button.Location = new System.Drawing.Point(1026, 23);
-            this.Delete_button.Margin = new System.Windows.Forms.Padding(2);
-            this.Delete_button.Name = "Delete_button";
-            this.Delete_button.Size = new System.Drawing.Size(154, 56);
-            this.Delete_button.TabIndex = 47;
-            this.Delete_button.Text = "削除";
-            this.Delete_button.UseVisualStyleBackColor = false;
-            this.Delete_button.Click += new System.EventHandler(this.Delete_button_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -329,7 +314,7 @@ namespace SalesManagement_SysDev
             this.LabelPrHidden.BackColor = System.Drawing.Color.Transparent;
             this.LabelPrHidden.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.LabelPrHidden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.LabelPrHidden.Location = new System.Drawing.Point(30, 568);
+            this.LabelPrHidden.Location = new System.Drawing.Point(712, 553);
             this.LabelPrHidden.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LabelPrHidden.Name = "LabelPrHidden";
             this.LabelPrHidden.Size = new System.Drawing.Size(217, 40);
@@ -338,18 +323,18 @@ namespace SalesManagement_SysDev
             // 
             // textBoxPrModelNumber
             // 
-            this.textBoxPrModelNumber.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBoxPrModelNumber.Font = new System.Drawing.Font("HGS明朝E", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxPrModelNumber.Location = new System.Drawing.Point(1026, 367);
-            this.textBoxPrModelNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxPrModelNumber.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPrModelNumber.Name = "textBoxPrModelNumber";
-            this.textBoxPrModelNumber.Size = new System.Drawing.Size(206, 51);
+            this.textBoxPrModelNumber.Size = new System.Drawing.Size(253, 39);
             this.textBoxPrModelNumber.TabIndex = 73;
             // 
             // textBoxHidden
             // 
             this.textBoxHidden.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textBoxHidden.Location = new System.Drawing.Point(314, 560);
-            this.textBoxHidden.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxHidden.Location = new System.Drawing.Point(1026, 542);
+            this.textBoxHidden.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxHidden.Name = "textBoxHidden";
             this.textBoxHidden.Size = new System.Drawing.Size(393, 51);
             this.textBoxHidden.TabIndex = 75;
@@ -489,7 +474,7 @@ namespace SalesManagement_SysDev
             // 
             this.Search_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Search_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.Search_button.Location = new System.Drawing.Point(1580, 24);
+            this.Search_button.Location = new System.Drawing.Point(1046, 21);
             this.Search_button.Margin = new System.Windows.Forms.Padding(2);
             this.Search_button.Name = "Search_button";
             this.Search_button.Size = new System.Drawing.Size(141, 55);
@@ -526,7 +511,7 @@ namespace SalesManagement_SysDev
             // 
             // comboBoxColor
             // 
-            this.comboBoxColor.Font = new System.Drawing.Font("HGS明朝E", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.comboBoxColor.Font = new System.Drawing.Font("HGS明朝E", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.comboBoxColor.FormattingEnabled = true;
             this.comboBoxColor.Items.AddRange(new object[] {
             "黒",
@@ -541,17 +526,17 @@ namespace SalesManagement_SysDev
             this.comboBoxColor.Location = new System.Drawing.Point(1026, 452);
             this.comboBoxColor.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxColor.Name = "comboBoxColor";
-            this.comboBoxColor.Size = new System.Drawing.Size(206, 52);
+            this.comboBoxColor.Size = new System.Drawing.Size(253, 41);
             this.comboBoxColor.TabIndex = 89;
             // 
             // PrReleaseDate
             // 
-            this.PrReleaseDate.Font = new System.Drawing.Font("HGP明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.PrReleaseDate.Font = new System.Drawing.Font("HGP明朝E", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.PrReleaseDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.PrReleaseDate.Location = new System.Drawing.Point(1589, 164);
             this.PrReleaseDate.Margin = new System.Windows.Forms.Padding(2);
             this.PrReleaseDate.Name = "PrReleaseDate";
-            this.PrReleaseDate.Size = new System.Drawing.Size(286, 47);
+            this.PrReleaseDate.Size = new System.Drawing.Size(286, 39);
             this.PrReleaseDate.TabIndex = 90;
             // 
             // comboBoxMaker
@@ -571,13 +556,13 @@ namespace SalesManagement_SysDev
             this.comboBoxSmallClass.Location = new System.Drawing.Point(1026, 278);
             this.comboBoxSmallClass.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxSmallClass.Name = "comboBoxSmallClass";
-            this.comboBoxSmallClass.Size = new System.Drawing.Size(206, 41);
+            this.comboBoxSmallClass.Size = new System.Drawing.Size(253, 41);
             this.comboBoxSmallClass.TabIndex = 92;
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(548, 367);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 56);
             this.button2.TabIndex = 93;
@@ -624,7 +609,6 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.LabelPrModelNumber);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.LabelScID);
-            this.Controls.Add(this.Delete_button);
             this.Controls.Add(this.LabelPrID);
             this.Controls.Add(this.LabelPrSafetyStock);
             this.Controls.Add(this.LabelMaID);
@@ -632,7 +616,7 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.textBoxPrName);
             this.Controls.Add(this.LabelPrName);
             this.Controls.Add(this.LabelPrice);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "F_syouhin";
             this.Text = "product";
             this.Load += new System.EventHandler(this.F_product_Load);
@@ -661,7 +645,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label LabelPrID;
         private System.Windows.Forms.Button Regester_button;
         private System.Windows.Forms.Button Update_button;
-        private System.Windows.Forms.Button Delete_button;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label LabelPrRelease;
         private System.Windows.Forms.Label label2;

@@ -52,7 +52,20 @@ namespace SalesManagement_SysDev
             try
             {
                 var context = new SalesManagement_DevContext();
-                foreach(var p in context.M_Makers)
+                var tb = from t1 in context.M_Makers
+                         where t1.MaFlag == 0
+                         select new
+                         {
+                             t1.MaID,
+                             t1.MaName,
+                             t1.MaPostal,
+                             t1.MaAdress,
+                             t1.MaPhone,
+                             t1.MaFAX,
+                             t1.MaFlag,
+                             t1.MaHidden
+                         };
+                foreach(var p in tb)
                 {
                     dataGridViewDsp.Rows.Add(p.MaID, p.MaName, p.MaPostal, p.MaAdress, p.MaPhone, p.MaFAX, p.MaFlag, p.MaHidden);
                 }
@@ -63,17 +76,6 @@ namespace SalesManagement_SysDev
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            //非表示機能
-            try
-            {
-                DataGridViewRow row = dataGridViewDsp.Rows.Cast<DataGridViewRow>().First(r => r.Cells[6].Value.ToString() == "2");
-                row.Visible = false;
-            }
-            catch (Exception ex)
-            {
-                // 該当データなし時は、例外が発生する
-                //MessageBox.Show(ex.Message);
-            }
         }
 
         private void Regester_button_Click(object sender, EventArgs e)
@@ -185,6 +187,7 @@ namespace SalesManagement_SysDev
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                ClearInput();
                 MessageBox.Show("登録完了");
             }
             catch (Exception ex)
@@ -306,6 +309,14 @@ namespace SalesManagement_SysDev
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                ClearInput();
+                //非表示メッセージ
+                if(flg == 2)
+                {
+                    MessageBox.Show("非表示にしました");
+                    return;
+                }
+
                 MessageBox.Show("更新完了");
             }
             catch (Exception ex)
@@ -395,14 +406,7 @@ namespace SalesManagement_SysDev
 
         private void button_Clear_Click(object sender, EventArgs e)
         {
-            textBoxMaID.Text = "";
-            textBoxMaName.Text = "";
-            textBoxPostal.Text = "";
-            textBoxAddress.Text = "";
-            textBoxPhone.Text = "";
-            textBoxFax.Text = "";
-            checkBoxMaFlag.Checked = false;
-            textBoxHidden.Text = "";
+            ClearInput();
         }
 
         private void dataGridViewDsp_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -422,6 +426,18 @@ namespace SalesManagement_SysDev
                 checkBoxMaFlag.Checked = false;
             }
             textBoxHidden.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[7].Value.ToString();
+        }
+
+        private void ClearInput()
+        {
+            textBoxMaID.Text = "";
+            textBoxMaName.Text = "";
+            textBoxPostal.Text = "";
+            textBoxAddress.Text = "";
+            textBoxPhone.Text = "";
+            textBoxFax.Text = "";
+            checkBoxMaFlag.Checked = false;
+            textBoxHidden.Text = "";
         }
     }
 }

@@ -31,7 +31,6 @@ namespace SalesManagement_SysDev
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Update_button = new System.Windows.Forms.Button();
             this.back_button = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.PriceTextBox = new System.Windows.Forms.Label();
@@ -52,6 +51,8 @@ namespace SalesManagement_SysDev
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.comboBoxEmployee = new System.Windows.Forms.ComboBox();
+            this.buttonConfirm = new System.Windows.Forms.Button();
+            this.buttonHidden = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             this.SuspendLayout();
@@ -78,19 +79,6 @@ namespace SalesManagement_SysDev
             this.label1.Size = new System.Drawing.Size(305, 56);
             this.label1.TabIndex = 49;
             this.label1.Text = "入 庫 管 理";
-            // 
-            // Update_button
-            // 
-            this.Update_button.BackColor = System.Drawing.Color.Gainsboro;
-            this.Update_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Update_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.Update_button.Location = new System.Drawing.Point(886, 36);
-            this.Update_button.Name = "Update_button";
-            this.Update_button.Size = new System.Drawing.Size(151, 50);
-            this.Update_button.TabIndex = 51;
-            this.Update_button.Text = "更新";
-            this.Update_button.UseVisualStyleBackColor = false;
-            this.Update_button.Click += new System.EventHandler(this.Update_button_Click);
             // 
             // back_button
             // 
@@ -224,7 +212,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxWaID
             // 
-            this.textBoxWaID.Location = new System.Drawing.Point(474, 164);
+            this.textBoxWaID.Location = new System.Drawing.Point(385, 164);
             this.textBoxWaID.Multiline = true;
             this.textBoxWaID.Name = "textBoxWaID";
             this.textBoxWaID.ReadOnly = true;
@@ -233,7 +221,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxHaID
             // 
-            this.textBoxHaID.Location = new System.Drawing.Point(474, 276);
+            this.textBoxHaID.Location = new System.Drawing.Point(385, 276);
             this.textBoxHaID.Multiline = true;
             this.textBoxHaID.Name = "textBoxHaID";
             this.textBoxHaID.ReadOnly = true;
@@ -326,12 +314,40 @@ namespace SalesManagement_SysDev
             this.comboBoxEmployee.Size = new System.Drawing.Size(206, 41);
             this.comboBoxEmployee.TabIndex = 105;
             // 
+            // buttonConfirm
+            // 
+            this.buttonConfirm.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonConfirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.buttonConfirm.Location = new System.Drawing.Point(787, 39);
+            this.buttonConfirm.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonConfirm.Name = "buttonConfirm";
+            this.buttonConfirm.Size = new System.Drawing.Size(220, 47);
+            this.buttonConfirm.TabIndex = 117;
+            this.buttonConfirm.Text = "入庫確定";
+            this.buttonConfirm.UseVisualStyleBackColor = true;
+            this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click);
+            // 
+            // buttonHidden
+            // 
+            this.buttonHidden.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonHidden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.buttonHidden.Location = new System.Drawing.Point(1044, 39);
+            this.buttonHidden.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonHidden.Name = "buttonHidden";
+            this.buttonHidden.Size = new System.Drawing.Size(171, 47);
+            this.buttonHidden.TabIndex = 118;
+            this.buttonHidden.Text = "非表示";
+            this.buttonHidden.UseVisualStyleBackColor = true;
+            this.buttonHidden.Click += new System.EventHandler(this.buttonHidden_Click);
+            // 
             // F_nyuuko
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.buttonHidden);
+            this.Controls.Add(this.buttonConfirm);
             this.Controls.Add(this.comboBoxEmployee);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -352,7 +368,6 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.PriceTextBox);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.back_button);
-            this.Controls.Add(this.Update_button);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "F_nyuuko";
@@ -369,7 +384,6 @@ namespace SalesManagement_SysDev
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button Update_button;
         private System.Windows.Forms.Button back_button;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Label PriceTextBox;
@@ -390,5 +404,7 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox comboBoxEmployee;
+        private System.Windows.Forms.Button buttonConfirm;
+        private System.Windows.Forms.Button buttonHidden;
     }
 }

@@ -107,6 +107,7 @@ namespace SalesManagement_SysDev
                          on t1.EmID equals t3.EmID
                          join t4 in context.M_SalesOffices
                          on t1.SoID equals t4.SoID
+                         where t1.ShFlag == 0
                          select new
                          {
                              t1.ShID,
@@ -130,17 +131,6 @@ namespace SalesManagement_SysDev
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            //非表示機能
-            try
-            {
-                DataGridViewRow row = dataGridViewDsp.Rows.Cast<DataGridViewRow>().First(r => r.Cells[7].Value.ToString() == "2");
-                row.Visible = false;
-            }
-            catch (Exception ex)
-            {
-                // 該当データなし時は、例外が発生する
-                //MessageBox.Show(ex.Message);
-            }
         }
 
         private void Search_button_Click(object sender, EventArgs e)
@@ -275,8 +265,8 @@ namespace SalesManagement_SysDev
             {
                 var shipment = context.T_Shipments.Single(x => x.ShID == shid);
                 var shipmentdetail = context.T_ShipmentDetails.Single(x => x.ShID == shid);
-                var chumon = context.T_Chumons.Single(x => x.OrID == shipment.OrID);
-                var chumondetail = context.T_ChumonDetails.Single(x => x.ChID == chumon.ChID);
+                var order = context.T_Orders.Single(x => x.OrID == shipment.OrID);
+                var orderdetail = context.T_OrderDetails.Single(x => x.OrID == order.OrID);
                 var product = context.M_Products.Single(x => x.PrID == shipmentdetail.PrID);
 
                 //売上テーブルに追加
@@ -285,7 +275,7 @@ namespace SalesManagement_SysDev
                     ClID = shipment.ClID,
                     SoID = shipment.SoID,
                     EmID = shipment.EmID,
-                    ChID = chumon.ChID,
+                    ChID = shipment.OrID,
                     SaDate = DateTime.Now,
                     SaFlag = 0,
                     SaHidden = ""
@@ -297,12 +287,13 @@ namespace SalesManagement_SysDev
                 var salementdetail = new T_SaleDetail
                 {
                     SaID = sale.SaID,
-                    PrID = chumondetail.PrID,
-                    SaQuantity = chumondetail.ChQuantity,
-                    SaPrTotalPrice = product.Price * chumondetail.ChQuantity
+                    PrID = orderdetail.PrID,
+                    SaQuantity = orderdetail.OrQuantity,
+                    SaPrTotalPrice = product.Price * orderdetail.OrQuantity
                 };
                 context.T_ShipmentDetails.Add(shipmentdetail);
                 context.SaveChanges();
+                ClearInput();
                 MessageBox.Show("出荷を確定しました");
             }
             catch (Exception ex)
@@ -340,6 +331,7 @@ namespace SalesManagement_SysDev
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                ClearInput();
                 MessageBox.Show("非表示にしました");
             }
             catch (Exception ex)
@@ -360,23 +352,31 @@ namespace SalesManagement_SysDev
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            textBoxShID.Text = "";
-            comboBoxClient.SelectedIndex = -1;
-            comboBoxEmployee.SelectedIndex = -1;
-            comboBoxSalesOffice.SelectedIndex = -1;
-            textBoxOrID.Text = "";
-            dateTimePickerShFinishDate.Value = DateTime.Today;
+            ClearInput();
         }
 
         private void back_button_Click(object sender, EventArgs e)
         {
-            Form frm = new F_menu();
+            Form frm = new F_menu2();
 
             Opacity = 0;
 
             frm.ShowDialog();
 
             this.Close();
+        }
+
+        private void ClearInput()
+        {
+            textBoxShID.Text = "";
+            comboBoxClient.SelectedIndex = -1;
+            comboBoxEmployee.SelectedIndex = -1;
+            comboBoxSalesOffice.SelectedIndex = -1;
+            textBoxOrID.Text = "";
+            dateTimePickerShFinishDate.Value = DateTime.Today;
+            checkBoxShFlag.Checked = false;
+            checkBoxShStateFlag.Checked = false;
+            textBoxShHidden.Text = "";
         }
     }
 }

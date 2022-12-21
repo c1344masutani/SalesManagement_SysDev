@@ -48,6 +48,10 @@ namespace SalesManagement_SysDev
             //小分類コンボボックスを読み取り専用
             comboBoxSmallClass.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxSmallClass.SelectedIndex = -1;
+
+            //色コンボボックス
+            comboBoxColor.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxColor.SelectedIndex = -1;
         }
 
         private void Regester_button_Click(object sender, EventArgs e)
@@ -178,6 +182,7 @@ namespace SalesManagement_SysDev
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                ClearInput();
                 MessageBox.Show("登録完了");
             }
             catch (Exception ex)
@@ -188,17 +193,7 @@ namespace SalesManagement_SysDev
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            textBoxPrID.Text = "";
-            comboBoxMaker.SelectedIndex = -1;
-            textBoxPrName.Text = "";
-            textBoxPrice.Text = "";
-            textBoxPrSafetyStock.Text = "";
-            comboBoxSmallClass.SelectedIndex = -1;
-            textBoxPrModelNumber.Text = "";
-            comboBoxColor.SelectedIndex = -1;
-            PrReleaseDate.Value = System.DateTime.Now;
-            checkBoxPrFlag.Checked = false;
-            textBoxHidden.Text = "";
+            ClearInput();
 
 
         }
@@ -328,6 +323,14 @@ namespace SalesManagement_SysDev
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                ClearInput();
+                //非表示メッセージ
+                if(check == 2)
+                {
+                    MessageBox.Show("非表示にしました");
+                    return;
+                }
+
                 MessageBox.Show("更新完了");
 
             }
@@ -339,21 +342,6 @@ namespace SalesManagement_SysDev
 
         private void Delete_button_Click(object sender, EventArgs e)
         {
-            try
-            {
-                int prid = int.Parse(textBoxPrID.Text);
-                var context = new SalesManagement_DevContext();
-                var product = context.M_Products.Single(x => x.PrID == prid);
-                context.M_Products.Remove(product);
-                context.SaveChanges();
-                context.Dispose();
-                fncAllSelect();
-                MessageBox.Show("削除完了");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private void dataGridViewDsp_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -409,6 +397,7 @@ namespace SalesManagement_SysDev
                          on t1.MaID equals t2.MaID
                          join t3 in context.M_SmallClassifications
                          on t1.ScID equals t3.ScID
+                         where t1.PrFlag == 0
                          select new
                          {
                              t1.PrID,
@@ -433,6 +422,8 @@ namespace SalesManagement_SysDev
             {
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -447,7 +438,7 @@ namespace SalesManagement_SysDev
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form frm = new F_menu();
+            Form frm = new F_menu2();
 
             Opacity = 0;
 
@@ -580,6 +571,25 @@ namespace SalesManagement_SysDev
             frm.ShowDialog();
 
             this.Close();
+        }
+
+        private void buttonHidden_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void ClearInput()
+        {
+            textBoxPrID.Text = "";
+            comboBoxMaker.SelectedIndex = -1;
+            textBoxPrName.Text = "";
+            textBoxPrice.Text = "";
+            textBoxPrSafetyStock.Text = "";
+            comboBoxSmallClass.SelectedIndex = -1;
+            textBoxPrModelNumber.Text = "";
+            comboBoxColor.SelectedIndex = -1;
+            PrReleaseDate.Value = System.DateTime.Now;
+            checkBoxPrFlag.Checked = false;
+            textBoxHidden.Text = "";
         }
     }
 }

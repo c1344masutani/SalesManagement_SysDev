@@ -64,7 +64,7 @@ namespace SalesManagement_SysDev
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form frm = new F_menu();
+            Form frm = new F_menu2();
 
             Opacity = 0;
 
@@ -117,6 +117,7 @@ namespace SalesManagement_SysDev
                          on t1.SoID equals t3.SoID
                          join t4 in context.M_Employees
                          on t1.EmID equals t4.EmID
+                         where t1.SaFlag == 0
                          select new
                          {
                              t1.SaID,
@@ -139,19 +140,6 @@ namespace SalesManagement_SysDev
             {
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            //非表示機能
-            try
-            {
-                DataGridViewRow row = dataGridViewDsp.Rows.Cast<DataGridViewRow>().First(r => r.Cells[6].Value.ToString() == "2");
-                row.Visible = false;
-            }
-            catch (Exception ex)
-            {
-                // 該当データなし時は、例外が発生する
-                //MessageBox.Show(ex.Message);
-            }
-
 
         }
 

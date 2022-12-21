@@ -75,7 +75,7 @@ namespace SalesManagement_SysDev
         private void F_order_received_Load(object sender, EventArgs e)
         {
             //列数の指定
-            dataGridViewDsp.ColumnCount = 10;
+            dataGridViewDsp.ColumnCount = 11;
             //0番目（左端）の列幅を設定
             dataGridViewDsp.Columns[0].Width = 70;
             //0番目（左端）の項目名を設定
@@ -93,11 +93,13 @@ namespace SalesManagement_SysDev
             dataGridViewDsp.Columns[6].Width = 130;
             dataGridViewDsp.Columns[6].HeaderText = "受注年月日";
             dataGridViewDsp.Columns[7].Width = 70;
-            dataGridViewDsp.Columns[7].HeaderText = "受注確定フラグ";
+            dataGridViewDsp.Columns[7].HeaderText = "数量";
             dataGridViewDsp.Columns[8].Width = 70;
-            dataGridViewDsp.Columns[8].HeaderText = "非表示フラグ";
-            dataGridViewDsp.Columns[9].Width = 200;
-            dataGridViewDsp.Columns[9].HeaderText = "非表示理由";
+            dataGridViewDsp.Columns[8].HeaderText = "受注確定フラグ";
+            dataGridViewDsp.Columns[9].Width = 70;
+            dataGridViewDsp.Columns[9].HeaderText = "非表示フラグ";
+            dataGridViewDsp.Columns[10].Width = 200;
+            dataGridViewDsp.Columns[10].HeaderText = "非表示理由";
             //選択モードを行単位
             dataGridViewDsp.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             //読み取り専用
@@ -125,6 +127,7 @@ namespace SalesManagement_SysDev
                          on t1.OrID equals t5.OrID
                          join t6 in context.M_Products
                          on t5.PrID equals t6.PrID
+                         where t1.OrFlag == 0
                          select new
                          {
                              t1.OrID,
@@ -134,13 +137,14 @@ namespace SalesManagement_SysDev
                              t6.PrName,
                              t1.ClCharge,
                              t1.OrDate,
+                             t5.OrQuantity,
                              t1.OrStateFlag,
                              t1.OrFlag,
                              t1.OrHidden
                          };
                 foreach(var p in tb)
                 {
-                    dataGridViewDsp.Rows.Add(p.OrID,p.SoName,p.EmName,p.ClName,p.PrName,p.ClCharge,p.OrDate,p.OrStateFlag,p.OrFlag,p.OrHidden);
+                    dataGridViewDsp.Rows.Add(p.OrID,p.SoName,p.EmName,p.ClName,p.PrName,p.ClCharge,p.OrDate,p.OrQuantity, p.OrStateFlag,p.OrFlag,p.OrHidden);
                 }
 
                 context.Dispose();         
@@ -151,23 +155,11 @@ namespace SalesManagement_SysDev
             }
 
 
-            //非表示機能
-            try
-            {
-                DataGridViewRow row = dataGridViewDsp.Rows.Cast<DataGridViewRow>().First(r => r.Cells[8].Value.ToString() == "2");
-                row.Visible = false;
-            }
-            catch (Exception ex)
-            {
-                // 該当データなし時は、例外が発生する
-                //MessageBox.Show(ex.Message);
-            }
-
         }
 
         private void back_button_Click(object sender, EventArgs e)
         {
-            Form frm = new F_menu();
+            Form frm = new F_menu2();
 
             Opacity = 0;
 
@@ -218,9 +210,9 @@ namespace SalesManagement_SysDev
                 MessageBox.Show("顧客担当者名を入力してください");
             }
 
-            if(numericUpDownOrQuantity.Value == 0)
+            if (String.IsNullOrEmpty(textBoxOrQuantity.Text))
             {
-                MessageBox.Show("数量が0です");
+                MessageBox.Show("数量を入力してください");
                 return;
             }
 
@@ -291,8 +283,8 @@ namespace SalesManagement_SysDev
             {
                 OrID = order.OrID,
                 PrID = product.PrID,
-                OrQuantity = int.Parse(numericUpDownOrQuantity.Value.ToString()),
-                OrTotalPrice = product.Price * int.Parse(numericUpDownOrQuantity.Value.ToString())
+                OrQuantity = int.Parse(textBoxOrQuantity.Text),
+                OrTotalPrice = product.Price * int.Parse(textBoxOrQuantity.Text)
             };
 
             //受注詳細テーブルに登録
@@ -302,6 +294,7 @@ namespace SalesManagement_SysDev
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                InputClear();
                 MessageBox.Show("登録完了");
 
             }
@@ -360,9 +353,9 @@ namespace SalesManagement_SysDev
                 MessageBox.Show("顧客担当者名を入力してください");
             }
 
-            if (numericUpDownOrQuantity.Value == 0)
+            if (String.IsNullOrEmpty(textBoxOrQuantity.Text))
             {
-                MessageBox.Show("数量が0です");
+                MessageBox.Show("数量を入力してください");
                 return;
             }
 
@@ -418,12 +411,12 @@ namespace SalesManagement_SysDev
                 int prid = int.Parse(comboBoxProduct.SelectedValue.ToString());
                 var product = context.M_Products.Single(x => x.PrID == prid);
                 orderdetail.PrID = prid;
-                orderdetail.OrQuantity = int.Parse(numericUpDownOrQuantity.Value.ToString());
-                orderdetail.OrTotalPrice = product.Price * int.Parse(numericUpDownOrQuantity.Value.ToString());
-
+                orderdetail.OrQuantity = int.Parse(textBoxOrQuantity.Text);
+                orderdetail.OrTotalPrice = product.Price * int.Parse(textBoxOrQuantity.Text);
                 context.SaveChanges();
 
-                //注文テーブル 注文状態フラグが1の時
+
+                //受注確定フラグが1の時
                 if (order.OrStateFlag == 1)
                 {
                     var chuumon = new T_Chumon
@@ -432,7 +425,7 @@ namespace SalesManagement_SysDev
                         EmID = order.EmID,
                         ClID = order.ClID,
                         OrID = order.OrID,
-                        ChDate = DateTime.Today,
+                        ChDate = DateTime.Now,
                         ChStateFlag = 0,
                         ChFlag = 0,
                         ChHidden = ""
@@ -450,6 +443,11 @@ namespace SalesManagement_SysDev
 
                     context.T_ChumonDetails.Add(chuumondetail);
                     context.SaveChanges();
+                    context.Dispose();
+                    fncAllSelect();
+                    InputClear();
+                    MessageBox.Show("受注を確定しました");
+                    return;
                 }
                 
                 
@@ -457,7 +455,17 @@ namespace SalesManagement_SysDev
 
                 context.Dispose();
                 fncAllSelect();
+                InputClear();
+
+                //非表示メッセージ
+                if (checkOr == 2)
+                {
+                    MessageBox.Show("非表示にしました");
+                    return;
+                }
+                
                 MessageBox.Show("更新完了");
+
             }
             catch (Exception ex)
             {
@@ -479,7 +487,8 @@ namespace SalesManagement_SysDev
             comboBoxProduct.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
             textBoxClCharge.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString();
             datetimepickerOrDate.Value = DateTime.Parse(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[6].Value.ToString());
-            textBoxOrHidden.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[9].Value.ToString();
+            textBoxOrQuantity.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[7].Value.ToString();
+            textBoxOrHidden.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[10].Value.ToString();
         }
 
         private void Search_button_Click(object sender, EventArgs e)
@@ -540,13 +549,14 @@ namespace SalesManagement_SysDev
                              t6.PrName,
                              t1.ClCharge,
                              t1.OrDate,
+                             t5.OrQuantity,
                              t1.OrStateFlag,
                              t1.OrFlag,
                              t1.OrHidden
                          };
                 foreach (var p in tb)
                 {
-                    dataGridViewDsp.Rows.Add(p.OrID, p.SoName, p.EmName, p.ClName, p.PrName, p.ClCharge, p.OrDate, p.OrStateFlag, p.OrFlag, p.OrHidden);
+                    dataGridViewDsp.Rows.Add(p.OrID, p.SoName, p.EmName, p.ClName, p.PrName, p.ClCharge, p.OrDate,p.OrQuantity, p.OrStateFlag, p.OrFlag, p.OrHidden);
                 }
 
                 context.Dispose();
@@ -559,14 +569,19 @@ namespace SalesManagement_SysDev
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
+            InputClear();
+
+        }
+
+        private void InputClear()
+        {
             textBoxOrID.Text = "";
             comboBoxSalesOffice.SelectedIndex = -1;
             comboBoxEmployee.SelectedIndex = -1;
             comboBoxClient.SelectedIndex = -1;
             comboBoxProduct.SelectedIndex = -1;
             textBoxClCharge.Text = "";
-            numericUpDownOrQuantity.Value = 0;
-
+            textBoxOrQuantity.Text = "";
         }
     }
 }

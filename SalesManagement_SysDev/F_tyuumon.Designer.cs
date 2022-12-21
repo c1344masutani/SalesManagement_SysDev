@@ -82,7 +82,7 @@ namespace SalesManagement_SysDev
             this.ClID.BackColor = System.Drawing.Color.Transparent;
             this.ClID.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.ClID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.ClID.Location = new System.Drawing.Point(150, 421);
+            this.ClID.Location = new System.Drawing.Point(882, 164);
             this.ClID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ClID.Name = "ClID";
             this.ClID.Size = new System.Drawing.Size(137, 40);
@@ -188,7 +188,7 @@ namespace SalesManagement_SysDev
             this.OrID.BackColor = System.Drawing.Color.Transparent;
             this.OrID.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.OrID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.OrID.Location = new System.Drawing.Point(881, 175);
+            this.OrID.Location = new System.Drawing.Point(881, 254);
             this.OrID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.OrID.Name = "OrID";
             this.OrID.Size = new System.Drawing.Size(138, 40);
@@ -201,7 +201,7 @@ namespace SalesManagement_SysDev
             this.ChDate.BackColor = System.Drawing.Color.Transparent;
             this.ChDate.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.ChDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.ChDate.Location = new System.Drawing.Point(881, 250);
+            this.ChDate.Location = new System.Drawing.Point(881, 329);
             this.ChDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ChDate.Name = "ChDate";
             this.ChDate.Size = new System.Drawing.Size(217, 40);
@@ -220,7 +220,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxChHidden
             // 
-            this.textBoxChHidden.Location = new System.Drawing.Point(888, 484);
+            this.textBoxChHidden.Location = new System.Drawing.Point(1228, 425);
             this.textBoxChHidden.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxChHidden.Multiline = true;
             this.textBoxChHidden.Name = "textBoxChHidden";
@@ -229,7 +229,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxOrid
             // 
-            this.textBoxOrid.Location = new System.Drawing.Point(1170, 175);
+            this.textBoxOrid.Location = new System.Drawing.Point(1228, 254);
             this.textBoxOrid.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxOrid.Multiline = true;
             this.textBoxOrid.Name = "textBoxOrid";
@@ -252,7 +252,7 @@ namespace SalesManagement_SysDev
             // 
             // dateTimePickerChdate
             // 
-            this.dateTimePickerChdate.Location = new System.Drawing.Point(1170, 260);
+            this.dateTimePickerChdate.Location = new System.Drawing.Point(1228, 343);
             this.dateTimePickerChdate.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePickerChdate.Name = "dateTimePickerChdate";
             this.dateTimePickerChdate.Size = new System.Drawing.Size(206, 25);
@@ -262,12 +262,12 @@ namespace SalesManagement_SysDev
             // 
             this.dataGridViewDsp.AllowUserToAddRows = false;
             this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDsp.Location = new System.Drawing.Point(99, 628);
+            this.dataGridViewDsp.Location = new System.Drawing.Point(99, 553);
             this.dataGridViewDsp.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewDsp.Name = "dataGridViewDsp";
             this.dataGridViewDsp.RowHeadersWidth = 51;
             this.dataGridViewDsp.RowTemplate.Height = 24;
-            this.dataGridViewDsp.Size = new System.Drawing.Size(2251, 598);
+            this.dataGridViewDsp.Size = new System.Drawing.Size(2251, 673);
             this.dataGridViewDsp.TabIndex = 105;
             this.dataGridViewDsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellClick);
             // 
@@ -276,7 +276,7 @@ namespace SalesManagement_SysDev
             this.checkBoxChStateflg.AutoSize = true;
             this.checkBoxChStateflg.Font = new System.Drawing.Font("HGS明朝E", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBoxChStateflg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.checkBoxChStateflg.Location = new System.Drawing.Point(157, 540);
+            this.checkBoxChStateflg.Location = new System.Drawing.Point(157, 427);
             this.checkBoxChStateflg.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxChStateflg.Name = "checkBoxChStateflg";
             this.checkBoxChStateflg.Size = new System.Drawing.Size(185, 40);
@@ -289,7 +289,7 @@ namespace SalesManagement_SysDev
             this.checkBoxChflg.AutoSize = true;
             this.checkBoxChflg.Font = new System.Drawing.Font("HGS明朝E", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBoxChflg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.checkBoxChflg.Location = new System.Drawing.Point(437, 540);
+            this.checkBoxChflg.Location = new System.Drawing.Point(439, 427);
             this.checkBoxChflg.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxChflg.Name = "checkBoxChflg";
             this.checkBoxChflg.Size = new System.Drawing.Size(149, 40);
@@ -339,7 +339,7 @@ namespace SalesManagement_SysDev
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label4.Location = new System.Drawing.Point(353, 455);
+            this.label4.Location = new System.Drawing.Point(1024, 186);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 18);
             this.label4.TabIndex = 111;
@@ -351,7 +351,7 @@ namespace SalesManagement_SysDev
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label5.Location = new System.Drawing.Point(1119, 208);
+            this.label5.Location = new System.Drawing.Point(1024, 276);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 18);
             this.label5.TabIndex = 112;
@@ -363,7 +363,7 @@ namespace SalesManagement_SysDev
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label6.Location = new System.Drawing.Point(1119, 272);
+            this.label6.Location = new System.Drawing.Point(1090, 348);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 18);
             this.label6.TabIndex = 113;
@@ -417,7 +417,7 @@ namespace SalesManagement_SysDev
             // 
             this.comboBoxClient.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.comboBoxClient.FormattingEnabled = true;
-            this.comboBoxClient.Location = new System.Drawing.Point(404, 424);
+            this.comboBoxClient.Location = new System.Drawing.Point(1228, 167);
             this.comboBoxClient.Name = "comboBoxClient";
             this.comboBoxClient.Size = new System.Drawing.Size(206, 41);
             this.comboBoxClient.TabIndex = 118;

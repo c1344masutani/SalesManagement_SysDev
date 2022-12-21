@@ -51,6 +51,8 @@ namespace SalesManagement_SysDev
             this.textBoxFax = new System.Windows.Forms.TextBox();
             this.textBoxHidden = new System.Windows.Forms.TextBox();
             this.dataGridViewDsp = new System.Windows.Forms.DataGridView();
+            this.buttonHidden = new System.Windows.Forms.Button();
+            this.buttonClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             this.SuspendLayout();
@@ -83,7 +85,7 @@ namespace SalesManagement_SysDev
             // 
             this.Regester_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Regester_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.Regester_button.Location = new System.Drawing.Point(800, 33);
+            this.Regester_button.Location = new System.Drawing.Point(729, 33);
             this.Regester_button.Margin = new System.Windows.Forms.Padding(2);
             this.Regester_button.Name = "Regester_button";
             this.Regester_button.Size = new System.Drawing.Size(218, 50);
@@ -96,7 +98,7 @@ namespace SalesManagement_SysDev
             // 
             this.Update_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Update_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.Update_button.Location = new System.Drawing.Point(1097, 33);
+            this.Update_button.Location = new System.Drawing.Point(980, 33);
             this.Update_button.Margin = new System.Windows.Forms.Padding(2);
             this.Update_button.Name = "Update_button";
             this.Update_button.Size = new System.Drawing.Size(141, 50);
@@ -109,7 +111,7 @@ namespace SalesManagement_SysDev
             // 
             this.Search_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Search_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.Search_button.Location = new System.Drawing.Point(1338, 30);
+            this.Search_button.Location = new System.Drawing.Point(1144, 33);
             this.Search_button.Margin = new System.Windows.Forms.Padding(2);
             this.Search_button.Name = "Search_button";
             this.Search_button.Size = new System.Drawing.Size(141, 50);
@@ -122,7 +124,7 @@ namespace SalesManagement_SysDev
             // 
             this.back_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.back_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.back_button.Location = new System.Drawing.Point(1702, 33);
+            this.back_button.Location = new System.Drawing.Point(1812, 33);
             this.back_button.Margin = new System.Windows.Forms.Padding(2);
             this.back_button.Name = "back_button";
             this.back_button.Size = new System.Drawing.Size(141, 50);
@@ -305,12 +307,42 @@ namespace SalesManagement_SysDev
             this.dataGridViewDsp.TabIndex = 70;
             this.dataGridViewDsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellClick);
             // 
+            // buttonHidden
+            // 
+            this.buttonHidden.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.buttonHidden.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonHidden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
+            this.buttonHidden.Location = new System.Drawing.Point(1308, 33);
+            this.buttonHidden.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonHidden.Name = "buttonHidden";
+            this.buttonHidden.Size = new System.Drawing.Size(179, 50);
+            this.buttonHidden.TabIndex = 105;
+            this.buttonHidden.Text = "非表示";
+            this.buttonHidden.UseVisualStyleBackColor = false;
+            this.buttonHidden.Click += new System.EventHandler(this.buttonHidden_Click);
+            // 
+            // buttonClear
+            // 
+            this.buttonClear.BackColor = System.Drawing.Color.Transparent;
+            this.buttonClear.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.buttonClear.Location = new System.Drawing.Point(1525, 33);
+            this.buttonClear.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(249, 50);
+            this.buttonClear.TabIndex = 106;
+            this.buttonClear.Text = "入力クリア";
+            this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
             // F_eigyousyo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.buttonClear);
+            this.Controls.Add(this.buttonHidden);
             this.Controls.Add(this.dataGridViewDsp);
             this.Controls.Add(this.textBoxHidden);
             this.Controls.Add(this.textBoxFax);
@@ -367,5 +399,7 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.TextBox textBoxFax;
         private System.Windows.Forms.TextBox textBoxHidden;
         private System.Windows.Forms.DataGridView dataGridViewDsp;
+        private System.Windows.Forms.Button buttonHidden;
+        private System.Windows.Forms.Button buttonClear;
     }
 }

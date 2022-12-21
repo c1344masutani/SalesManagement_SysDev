@@ -22,7 +22,7 @@ namespace SalesManagement_SysDev
 
         private void button_back_Click(object sender, EventArgs e)
         {
-            Form frm = new F_menu();
+            Form frm = new F_menu2();
 
             Opacity = 0;
 
@@ -100,6 +100,7 @@ namespace SalesManagement_SysDev
                 var tb = from t1 in context.T_Stocks
                          join t2 in context.M_Products
                          on t1.PrID equals t2.PrID
+                         where t1.StFlag == 0
                          select new
                          {
                              t1.StID,
@@ -121,19 +122,6 @@ namespace SalesManagement_SysDev
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-
-
-            try
-            {
-                DataGridViewRow row = dataGridViewDsp.Rows.Cast<DataGridViewRow>().First(r => r.Cells[5].Value.ToString() == "2");
-                row.Visible = false;
-            }
-            catch (Exception ex)
-            {
-                // 該当データなし時は、例外が発生する
-                //MessageBox.Show(ex.Message);
             }
 
 
@@ -219,7 +207,42 @@ namespace SalesManagement_SysDev
             textBoxPrName.Text = "";
             textBoxPrice.Text = "";
             textBoxStQuantity.Text = "";
-            
+            checkBox_StFlag.Checked = false;
+        }
+
+        private void buttonHidden_Click(object sender, EventArgs e)
+        {
+            int flg;
+            if(checkBox_StFlag.Checked == true)
+            {
+                flg = 2;
+            }
+            else
+            {
+                flg = 0;
+            }
+
+            try
+            {
+                int stid = int.Parse(textBoxStID.Text);
+                var context = new SalesManagement_DevContext();
+                var stock = context.T_Stocks.Single(x => x.StID == stid);
+                stock.StFlag = flg;
+                context.SaveChanges();
+                context.Dispose();
+                MessageBox.Show("非表示にしました");
+                fncAllSelect();
+                ClearInput();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button_Clear_Click(object sender, EventArgs e)
+        {
+            ClearInput();
         }
     }
 }

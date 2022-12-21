@@ -64,6 +64,7 @@ namespace SalesManagement_SysDev
             this.comboBoxPosition = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -121,7 +122,7 @@ namespace SalesManagement_SysDev
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label6.Location = new System.Drawing.Point(238, 381);
+            this.label6.Location = new System.Drawing.Point(234, 379);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(217, 40);
@@ -260,7 +261,7 @@ namespace SalesManagement_SysDev
             // 
             this.Update_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Update_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.Update_button.Location = new System.Drawing.Point(1044, 32);
+            this.Update_button.Location = new System.Drawing.Point(994, 30);
             this.Update_button.Margin = new System.Windows.Forms.Padding(2);
             this.Update_button.Name = "Update_button";
             this.Update_button.Size = new System.Drawing.Size(141, 50);
@@ -273,7 +274,7 @@ namespace SalesManagement_SysDev
             // 
             this.Search_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Search_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.Search_button.Location = new System.Drawing.Point(1350, 30);
+            this.Search_button.Location = new System.Drawing.Point(1180, 30);
             this.Search_button.Margin = new System.Windows.Forms.Padding(2);
             this.Search_button.Name = "Search_button";
             this.Search_button.Size = new System.Drawing.Size(141, 50);
@@ -359,7 +360,7 @@ namespace SalesManagement_SysDev
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label16.Location = new System.Drawing.Point(461, 403);
+            this.label16.Location = new System.Drawing.Point(457, 401);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(44, 18);
@@ -440,12 +441,27 @@ namespace SalesManagement_SysDev
             this.pictureBox1.TabIndex = 48;
             this.pictureBox1.TabStop = false;
             // 
+            // buttonClear
+            // 
+            this.buttonClear.BackColor = System.Drawing.Color.Transparent;
+            this.buttonClear.Font = new System.Drawing.Font("HGS明朝E", 20F);
+            this.buttonClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.buttonClear.Location = new System.Drawing.Point(1379, 26);
+            this.buttonClear.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(282, 54);
+            this.buttonClear.TabIndex = 70;
+            this.buttonClear.Text = "入力クリア";
+            this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
             // F_syain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1924, 1050);
+            this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBoxPosition);
             this.Controls.Add(this.comboBoxSalesOffice);
@@ -526,5 +542,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.ComboBox comboBoxSalesOffice;
         private System.Windows.Forms.ComboBox comboBoxPosition;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonClear;
     }
 }

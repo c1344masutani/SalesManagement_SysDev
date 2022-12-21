@@ -45,6 +45,7 @@ namespace SalesManagement_SysDev
             this.textBoxPrName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxPrice = new System.Windows.Forms.TextBox();
+            this.buttonHidden = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -115,7 +116,7 @@ namespace SalesManagement_SysDev
             // 
             this.button_Search.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button_Search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.button_Search.Location = new System.Drawing.Point(716, 30);
+            this.button_Search.Location = new System.Drawing.Point(699, 30);
             this.button_Search.Name = "button_Search";
             this.button_Search.Size = new System.Drawing.Size(154, 56);
             this.button_Search.TabIndex = 11;
@@ -127,7 +128,7 @@ namespace SalesManagement_SysDev
             // 
             this.button_Update.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button_Update.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.button_Update.Location = new System.Drawing.Point(1018, 31);
+            this.button_Update.Location = new System.Drawing.Point(877, 31);
             this.button_Update.Name = "button_Update";
             this.button_Update.Size = new System.Drawing.Size(154, 56);
             this.button_Update.TabIndex = 12;
@@ -182,6 +183,7 @@ namespace SalesManagement_SysDev
             this.button_Clear.TabIndex = 69;
             this.button_Clear.Text = "入力クリア";
             this.button_Clear.UseVisualStyleBackColor = false;
+            this.button_Clear.Click += new System.EventHandler(this.button_Clear_Click);
             // 
             // label7
             // 
@@ -221,12 +223,25 @@ namespace SalesManagement_SysDev
             this.textBoxPrice.Size = new System.Drawing.Size(206, 51);
             this.textBoxPrice.TabIndex = 73;
             // 
+            // buttonHidden
+            // 
+            this.buttonHidden.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonHidden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.buttonHidden.Location = new System.Drawing.Point(1063, 30);
+            this.buttonHidden.Name = "buttonHidden";
+            this.buttonHidden.Size = new System.Drawing.Size(176, 56);
+            this.buttonHidden.TabIndex = 74;
+            this.buttonHidden.Text = "非表示";
+            this.buttonHidden.UseVisualStyleBackColor = true;
+            this.buttonHidden.Click += new System.EventHandler(this.buttonHidden_Click);
+            // 
             // F_zaiko
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.buttonHidden);
             this.Controls.Add(this.textBoxPrice);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBoxPrName);
@@ -271,5 +286,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.TextBox textBoxPrName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxPrice;
+        private System.Windows.Forms.Button buttonHidden;
     }
 }

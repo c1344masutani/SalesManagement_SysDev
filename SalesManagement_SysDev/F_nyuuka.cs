@@ -85,6 +85,7 @@ namespace SalesManagement_SysDev
                          on t1.EmID equals t3.EmID
                          join t4 in context.M_Clients
                          on t1.ClID equals t4.ClID
+                         where t1.ArFlag == 0
                          select new
                          {
                              t1.ArID,
@@ -107,29 +108,11 @@ namespace SalesManagement_SysDev
             {
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            //非表示機能
-            try
-            {
-                DataGridViewRow row = dataGridViewDsp.Rows.Cast<DataGridViewRow>().First(r => r.Cells[7].Value.ToString() == "2");
-                row.Visible = false;
-            }
-            catch (Exception ex)
-            {
-                // 該当データなし時は、例外が発生する
-                //MessageBox.Show(ex.Message);
-            }
         }
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            textBoxArID.Text = "";
-            comboBoxSalesOffice.SelectedIndex = -1;
-            comboBoxEmployee.SelectedIndex = -1;
-            comboBoxClient.SelectedIndex = -1;
-            textBoxOrID.Text = "";
-            dateTimePickerArdate.Value = DateTime.Today;
-            textBoxArHidden.Text = "";
+            ClearInput();
         }
 
         private void F_nyuuka_Load(object sender, EventArgs e)
@@ -297,6 +280,7 @@ namespace SalesManagement_SysDev
                 };
                 context.T_ShipmentDetails.Add(shipmentdetail);
                 context.SaveChanges();
+                ClearInput();
                 MessageBox.Show("入荷を確定しました");
             }
             catch (Exception ex)
@@ -335,6 +319,8 @@ namespace SalesManagement_SysDev
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                ClearInput();
+                MessageBox.Show("非表示にしました");
             }
             catch (Exception ex)
             {
@@ -351,6 +337,28 @@ namespace SalesManagement_SysDev
             textBoxOrID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
             dateTimePickerArdate.Value = DateTime.Parse(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString());
 
+        }
+
+        private void ClearInput()
+        {
+            textBoxArID.Text = "";
+            comboBoxSalesOffice.SelectedIndex = -1;
+            comboBoxEmployee.SelectedIndex = -1;
+            comboBoxClient.SelectedIndex = -1;
+            textBoxOrID.Text = "";
+            dateTimePickerArdate.Value = DateTime.Today;
+            textBoxArHidden.Text = "";
+        }
+
+        private void buttonback_Click(object sender, EventArgs e)
+        {
+            Form frm = new F_menu2();
+
+            Opacity = 0;
+
+            frm.ShowDialog();
+
+            this.Close();
         }
     }
 }

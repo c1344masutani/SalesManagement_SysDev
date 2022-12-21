@@ -59,15 +59,14 @@ namespace SalesManagement_SysDev
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.numericUpDownOrQuantity = new System.Windows.Forms.NumericUpDown();
             this.comboBoxSalesOffice = new System.Windows.Forms.ComboBox();
             this.comboBoxEmployee = new System.Windows.Forms.ComboBox();
             this.comboBoxClient = new System.Windows.Forms.ComboBox();
             this.comboBoxProduct = new System.Windows.Forms.ComboBox();
             this.buttonClear = new System.Windows.Forms.Button();
+            this.textBoxOrQuantity = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOrQuantity)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -152,7 +151,7 @@ namespace SalesManagement_SysDev
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label8.Location = new System.Drawing.Point(238, 442);
+            this.label8.Location = new System.Drawing.Point(817, 447);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(217, 40);
             this.label8.TabIndex = 51;
@@ -250,7 +249,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxOrHidden
             // 
-            this.textBoxOrHidden.Location = new System.Drawing.Point(539, 442);
+            this.textBoxOrHidden.Location = new System.Drawing.Point(1172, 447);
             this.textBoxOrHidden.Multiline = true;
             this.textBoxOrHidden.Name = "textBoxOrHidden";
             this.textBoxOrHidden.Size = new System.Drawing.Size(447, 87);
@@ -276,7 +275,7 @@ namespace SalesManagement_SysDev
             this.checkBoxOrStateFlag.AutoSize = true;
             this.checkBoxOrStateFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBoxOrStateFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.checkBoxOrStateFlag.Location = new System.Drawing.Point(1274, 485);
+            this.checkBoxOrStateFlag.Location = new System.Drawing.Point(235, 447);
             this.checkBoxOrStateFlag.Name = "checkBoxOrStateFlag";
             this.checkBoxOrStateFlag.Size = new System.Drawing.Size(203, 44);
             this.checkBoxOrStateFlag.TabIndex = 69;
@@ -288,7 +287,7 @@ namespace SalesManagement_SysDev
             this.checkBoxOrFlag.AutoSize = true;
             this.checkBoxOrFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBoxOrFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.checkBoxOrFlag.Location = new System.Drawing.Point(1588, 485);
+            this.checkBoxOrFlag.Location = new System.Drawing.Point(554, 447);
             this.checkBoxOrFlag.Name = "checkBoxOrFlag";
             this.checkBoxOrFlag.Size = new System.Drawing.Size(163, 44);
             this.checkBoxOrFlag.TabIndex = 70;
@@ -394,14 +393,6 @@ namespace SalesManagement_SysDev
             this.label18.TabIndex = 80;
             this.label18.Text = "数量";
             // 
-            // numericUpDownOrQuantity
-            // 
-            this.numericUpDownOrQuantity.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.numericUpDownOrQuantity.Location = new System.Drawing.Point(1566, 189);
-            this.numericUpDownOrQuantity.Name = "numericUpDownOrQuantity";
-            this.numericUpDownOrQuantity.Size = new System.Drawing.Size(120, 39);
-            this.numericUpDownOrQuantity.TabIndex = 81;
-            // 
             // comboBoxSalesOffice
             // 
             this.comboBoxSalesOffice.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -452,18 +443,26 @@ namespace SalesManagement_SysDev
             this.buttonClear.UseVisualStyleBackColor = false;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
+            // textBoxOrQuantity
+            // 
+            this.textBoxOrQuantity.Location = new System.Drawing.Point(1706, 189);
+            this.textBoxOrQuantity.Multiline = true;
+            this.textBoxOrQuantity.Name = "textBoxOrQuantity";
+            this.textBoxOrQuantity.Size = new System.Drawing.Size(178, 39);
+            this.textBoxOrQuantity.TabIndex = 103;
+            // 
             // F_jutyuu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.textBoxOrQuantity);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.comboBoxProduct);
             this.Controls.Add(this.comboBoxClient);
             this.Controls.Add(this.comboBoxEmployee);
             this.Controls.Add(this.comboBoxSalesOffice);
-            this.Controls.Add(this.numericUpDownOrQuantity);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
@@ -500,7 +499,6 @@ namespace SalesManagement_SysDev
             this.Load += new System.EventHandler(this.F_order_received_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOrQuantity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -538,11 +536,11 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.NumericUpDown numericUpDownOrQuantity;
         private System.Windows.Forms.ComboBox comboBoxSalesOffice;
         private System.Windows.Forms.ComboBox comboBoxEmployee;
         private System.Windows.Forms.ComboBox comboBoxClient;
         private System.Windows.Forms.ComboBox comboBoxProduct;
         private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.TextBox textBoxOrQuantity;
     }
 }

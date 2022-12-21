@@ -128,6 +128,7 @@ namespace SalesManagement_SysDev
                          on t1.EmID equals t3.EmID
                          join t4 in context.M_Clients
                          on t1.ClID equals t4.ClID
+                         where t1.ChFlag == 0
                          select new
                          {
                              t1.ChID,
@@ -149,18 +150,6 @@ namespace SalesManagement_SysDev
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            //非表示機能
-            try
-            {
-                DataGridViewRow row = dataGridViewDsp.Rows.Cast<DataGridViewRow>().First(r => r.Cells[7].Value.ToString() == "2");
-                row.Visible = false;
-            }
-            catch (Exception ex)
-            {
-                // 該当データなし時は、例外が発生する
-                //MessageBox.Show(ex.Message);
             }
         }
 
@@ -247,16 +236,7 @@ namespace SalesManagement_SysDev
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            textBoxChid.Text = "";
-            comboBoxSalesOffice.SelectedIndex = -1;
-            comboBoxEmployee.SelectedIndex = -1;
-            comboBoxClient.SelectedIndex = -1;
-            textBoxOrid.Text = "";
-            dateTimePickerChdate.Value = DateTime.Today;
-            checkBoxChStateflg.Checked = false;
-            checkBoxChflg.Checked = false;
-            textBoxChHidden.Text = "";
-            fncAllSelect();
+            ClearInput();
         }
 
         private void buttonConfirm_Click(object sender, EventArgs e)
@@ -335,6 +315,7 @@ namespace SalesManagement_SysDev
                 };
                 context.T_SyukkoDetails.Add(syukkodetail);
                 context.SaveChanges();
+                ClearInput();
                 MessageBox.Show("注文を確定しました");
             }
             catch (Exception ex)
@@ -372,12 +353,26 @@ namespace SalesManagement_SysDev
                 context.SaveChanges();
                 context.Dispose();
                 MessageBox.Show("非表示にしました");
+                ClearInput();
                 fncAllSelect();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void ClearInput()
+        {
+            textBoxChid.Text = "";
+            comboBoxSalesOffice.SelectedIndex = -1;
+            comboBoxEmployee.SelectedIndex = -1;
+            comboBoxClient.SelectedIndex = -1;
+            textBoxOrid.Text = "";
+            dateTimePickerChdate.Value = DateTime.Today;
+            checkBoxChStateflg.Checked = false;
+            checkBoxChflg.Checked = false;
+            textBoxChHidden.Text = "";
         }
     }
 }

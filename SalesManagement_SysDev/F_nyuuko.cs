@@ -39,7 +39,7 @@ namespace SalesManagement_SysDev
 
         private void back_button_Click(object sender, EventArgs e)
         {
-            Form frm = new F_menu();
+            Form frm = new F_menu2();
 
             Opacity = 0;
 
@@ -85,6 +85,7 @@ namespace SalesManagement_SysDev
                 var tb = from t1 in context.T_Warehousings
                          join t2 in context.M_Employees
                          on t1.EmID equals t2.EmID
+                         where t1.WaFlag == 0
                          select new
                          {
                              t1.WaID,
@@ -106,95 +107,18 @@ namespace SalesManagement_SysDev
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-
-            //非表示機能
-            try
-            {
-                DataGridViewRow row = dataGridViewDsp.Rows.Cast<DataGridViewRow>().First(r => r.Cells[5].Value.ToString() == "2");
-                row.Visible = false;
-            }
-            catch (Exception ex)
-            {
-                // 該当データなし時は、例外が発生する
-                //MessageBox.Show(ex.Message);
-            }
-
         }
 
         private void Update_button_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(textBoxHaID.Text.Trim()))
-            {
-                if (!dataInputFormCheck.CheckNumeric(textBoxHaID.Text.Trim()))
-                {
-                    MessageBox.Show("発注IDは数値です");
-                    textBoxHaID.Focus();
-                    return;
-                }
-                if (textBoxHaID.TextLength > 6)
-                {
-                    MessageBox.Show("発注IDは6文字以下です");
-                    return;
-                }
-            }
-            
-            if(comboBoxEmployee.SelectedIndex == -1)
-            {
-                MessageBox.Show("入庫確認社員名を選択してください");
-                return;
-            }
 
-            if (!string.IsNullOrEmpty(textBoxWaHidden.Text.Trim()))
-            {
-                if (textBoxWaHidden.TextLength > 200)
-                {
-                    MessageBox.Show("非表示理由は200文字以下です");
-                    return;
-                }
-            }
-            int checkWa;
-            if (checkBoxWaFlag.Checked == true)
-            {
-                checkWa = 2;
-            }
-            else
-            {
-                checkWa = 0;
-            }
-
-            int checkWaState;
-            if (checkBoxWaSheifFlag.Checked == true)
-            {
-                checkWaState = 1;
-            }
-            else
-            {
-                checkWaState = 0;
-            }
-
-            var context = new SalesManagement_DevContext();
-            int waid = int.Parse(textBoxWaID.Text);
-            try
-            {
-                var warehousing = context.T_Warehousings.Single(x => x.WaID == waid);
-                warehousing.WaShelfFlag = checkWaState;
-                warehousing.WaFlag = checkWa;
-                warehousing.WaHidden = textBoxWaHidden.Text;
-                context.SaveChanges();
-                context.Dispose();
-                fncAllSelect();
-                MessageBox.Show("更新完了");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private void dataGridViewDsp_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             textBoxWaID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[0].Value.ToString();
             textBoxHaID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
+            comboBoxEmployee.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
             dateTimePickerWaDate.Value = DateTime.Parse(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString());
 
         }
@@ -206,11 +130,7 @@ namespace SalesManagement_SysDev
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            textBoxWaID.Text = "";
-            textBoxHaID.Text = "";
-            comboBoxEmployee.Text = "";
-            dateTimePickerWaDate.Value = DateTime.Today;
-            textBoxWaHidden.Text = "";
+            ClearInput();
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -231,6 +151,114 @@ namespace SalesManagement_SysDev
         private void textBoxWaHidden_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonConfirm_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(textBoxWaID.Text.Trim()))
+            {
+                if (!dataInputFormCheck.CheckNumeric(textBoxWaID.Text.Trim()))
+                {
+                    MessageBox.Show("入庫IDは数値です");
+                    textBoxWaID.Focus();
+                    return;
+                }
+                if (textBoxWaID.TextLength > 6)
+                {
+                    MessageBox.Show("入庫IDは6文字以下です");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("入庫IDを入力してください");
+                return;
+            }
+
+            int checkWaState;
+            if (checkBoxWaSheifFlag.Checked == true)
+            {
+                checkWaState = 1;
+            }
+            else
+            {
+                checkWaState = 0;
+            }
+
+            var context = new SalesManagement_DevContext();
+            int waid = int.Parse(textBoxWaID.Text);
+            try
+            {
+                var warehousing = context.T_Warehousings.Single(x => x.WaID == waid);
+                warehousing.WaShelfFlag = checkWaState;
+                context.SaveChanges();
+                context.Dispose();
+                fncAllSelect();
+                MessageBox.Show("入庫を確定しました");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonHidden_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(textBoxWaID.Text.Trim()))
+            {
+                if (!dataInputFormCheck.CheckNumeric(textBoxWaID.Text.Trim()))
+                {
+                    MessageBox.Show("入庫IDは数値です");
+                    textBoxWaID.Focus();
+                    return;
+                }
+                if (textBoxWaID.TextLength > 6)
+                {
+                    MessageBox.Show("入庫IDは6文字以下です");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("入庫IDを入力してください");
+                return;
+            }
+
+            int checkWa;
+            if (checkBoxWaFlag.Checked == true)
+            {
+                checkWa = 2;
+            }
+            else
+            {
+                checkWa = 0;
+            }
+
+            var context = new SalesManagement_DevContext();
+            int waid = int.Parse(textBoxWaID.Text);
+            try
+            {
+                var warehousing = context.T_Warehousings.Single(x => x.WaID == waid);
+                warehousing.WaFlag = checkWa;
+                warehousing.WaHidden = textBoxWaHidden.Text;
+                context.SaveChanges();
+                context.Dispose();
+                fncAllSelect();
+                MessageBox.Show("非表示にしました");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ClearInput()
+        {
+            textBoxWaID.Text = "";
+            textBoxHaID.Text = "";
+            comboBoxEmployee.Text = "";
+            dateTimePickerWaDate.Value = DateTime.Today;
+            textBoxWaHidden.Text = "";
         }
     }
 }

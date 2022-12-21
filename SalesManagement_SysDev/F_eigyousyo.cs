@@ -52,7 +52,20 @@ namespace SalesManagement_SysDev
             try
             {
                 var context = new SalesManagement_DevContext();
-                foreach(var p in context.M_SalesOffices)
+                var tb = from t1 in context.M_SalesOffices
+                         where t1.SoFlag == 0
+                         select new
+                         {
+                             t1.SoID,
+                             t1.SoName,
+                             t1.SoPostal,
+                             t1.SoAddress,
+                             t1.SoPhone,
+                             t1.SoFAX,
+                             t1.SoFlag,
+                             t1.SoHidden
+                         };
+                foreach(var p in tb)
                 {
                     dataGridViewDsp.Rows.Add(p.SoID, p.SoName, p.SoPostal, p.SoAddress, p.SoPhone, p.SoFAX, p.SoFlag, p.SoHidden);
                 }
@@ -63,17 +76,7 @@ namespace SalesManagement_SysDev
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            //非表示機能
-            try
-            {
-                DataGridViewRow row = dataGridViewDsp.Rows.Cast<DataGridViewRow>().First(r => r.Cells[6].Value.ToString() == "2");
-                row.Visible = false;
-            }
-            catch (Exception ex)
-            {
-                // 該当データなし時は、例外が発生する
-                //MessageBox.Show(ex.Message);
-            }
+            
 
         }
 
@@ -197,6 +200,7 @@ namespace SalesManagement_SysDev
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                ClearInput();
                 MessageBox.Show("登録完了");
             }
             catch (Exception ex)
@@ -316,6 +320,14 @@ namespace SalesManagement_SysDev
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
+                ClearInput();
+                //非表示メッセージ
+                if(flg == 2)
+                {
+                    MessageBox.Show("非表示にしました");
+                    return;
+                }
+
                 MessageBox.Show("更新完了");
             }
             catch (Exception ex)
@@ -402,6 +414,59 @@ namespace SalesManagement_SysDev
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void buttonHidden_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(textBoxSoID.Text))
+            {
+                MessageBox.Show("営業所IDを入力してください");
+                return;
+            }
+
+            int flg;
+            if(checkBoxSoFlag.Checked == true)
+            {
+                flg = 2;
+            }
+            else
+            {
+                flg = 0;
+            }
+
+            try
+            {
+                int soid = int.Parse(textBoxSoID.Text);
+                var context = new SalesManagement_DevContext();
+                var salesoffice = context.M_SalesOffices.Single(x => x.SoID == soid);
+                salesoffice.SoFlag = flg;
+                context.SaveChanges();
+                context.Dispose();
+                MessageBox.Show("非表示にしました");
+                fncAllSelect();
+                ClearInput();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ClearInput()
+        {
+            textBoxSoID.Text = "";
+            textBoxSoName.Text = "";
+            textBoxPostal.Text = "";
+            textBoxAddress.Text = "";
+            textBoxPhone.Text = "";
+            textBoxFax.Text = "";
+            checkBoxSoFlag.Checked = false;
+            textBoxHidden.Text = "";
+        }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            ClearInput();
         }
     }
 }
