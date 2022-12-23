@@ -209,6 +209,7 @@ namespace SalesManagement_SysDev
             this.checkBoxShStateFlag.TabIndex = 62;
             this.checkBoxShStateFlag.Text = "出荷確定";
             this.checkBoxShStateFlag.UseVisualStyleBackColor = true;
+            this.checkBoxShStateFlag.CheckedChanged += new System.EventHandler(this.checkBoxShStateFlag_CheckedChanged);
             // 
             // checkBoxShFlag
             // 

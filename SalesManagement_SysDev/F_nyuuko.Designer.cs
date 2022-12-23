@@ -197,9 +197,9 @@ namespace SalesManagement_SysDev
             this.checkBoxWaSheifFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
             this.checkBoxWaSheifFlag.Location = new System.Drawing.Point(385, 398);
             this.checkBoxWaSheifFlag.Name = "checkBoxWaSheifFlag";
-            this.checkBoxWaSheifFlag.Size = new System.Drawing.Size(163, 44);
+            this.checkBoxWaSheifFlag.Size = new System.Drawing.Size(203, 44);
             this.checkBoxWaSheifFlag.TabIndex = 76;
-            this.checkBoxWaSheifFlag.Text = "入庫済";
+            this.checkBoxWaSheifFlag.Text = "入庫確定";
             this.checkBoxWaSheifFlag.UseVisualStyleBackColor = true;
             // 
             // checkBoxWaFlag

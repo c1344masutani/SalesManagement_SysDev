@@ -283,6 +283,7 @@ namespace SalesManagement_SysDev
             this.checkBoxChStateflg.TabIndex = 106;
             this.checkBoxChStateflg.Text = "注文確定";
             this.checkBoxChStateflg.UseVisualStyleBackColor = true;
+            this.checkBoxChStateflg.CheckedChanged += new System.EventHandler(this.checkBoxChStateflg_CheckedChanged);
             // 
             // checkBoxChflg
             // 

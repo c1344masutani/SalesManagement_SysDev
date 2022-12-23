@@ -232,6 +232,22 @@ namespace SalesManagement_SysDev
             comboBoxClient.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
             textBoxOrid.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
             dateTimePickerChdate.Value = DateTime.Parse(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString());
+            if(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[6].Value.ToString() == "1")
+            {
+                checkBoxChStateflg.Checked = true;
+            }
+            else
+            {
+                checkBoxChStateflg.Checked = false;
+            }
+            if(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[7].Value.ToString() == "2")
+            {
+                checkBoxChflg.Checked = true;
+            }
+            else
+            {
+                checkBoxChflg.Checked = false;
+            }
             textBoxChHidden.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[8].Value.ToString();
         }
 
@@ -258,6 +274,7 @@ namespace SalesManagement_SysDev
             else
             {
                 flg = 0;
+                MessageBox.Show("注文確定にチェックを入れてください");
                 return;
             }
 
@@ -343,6 +360,8 @@ namespace SalesManagement_SysDev
             else
             {
                 flg = 0;
+                MessageBox.Show("非表示にチェックを入れてください。");
+                return;
             }
 
             try
@@ -374,6 +393,26 @@ namespace SalesManagement_SysDev
             checkBoxChStateflg.Checked = false;
             checkBoxChflg.Checked = false;
             textBoxChHidden.Text = "";
+        }
+
+        private void checkBoxChStateflg_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBoxChStateflg.Checked == true)
+            {
+                comboBoxSalesOffice.Enabled = false;
+                comboBoxEmployee.Enabled = false;
+                comboBoxClient.Enabled = false;
+                textBoxOrid.Enabled = false;
+                dateTimePickerChdate.Enabled = false;
+            }
+            else
+            {
+                comboBoxSalesOffice.Enabled = true;
+                comboBoxEmployee.Enabled = true;
+                comboBoxClient.Enabled = true;
+                textBoxOrid.Enabled = true;
+                dateTimePickerChdate.Enabled = true;
+            }
         }
     }
 }

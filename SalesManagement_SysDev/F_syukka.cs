@@ -245,6 +245,7 @@ namespace SalesManagement_SysDev
             else
             {
                 flg = 0;
+                MessageBox.Show("出荷確定にチェックを入れてください");
                 return;
             }
 
@@ -320,6 +321,8 @@ namespace SalesManagement_SysDev
             else
             {
                 flg = 0;
+                MessageBox.Show("非表示にチェックを入れてください");
+                return;
             }
 
             try
@@ -378,6 +381,26 @@ namespace SalesManagement_SysDev
             checkBoxShFlag.Checked = false;
             checkBoxShStateFlag.Checked = false;
             textBoxShHidden.Text = "";
+        }
+
+        private void checkBoxShStateFlag_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBoxShStateFlag.Checked == true)
+            {
+                comboBoxClient.Enabled = false;
+                comboBoxEmployee.Enabled = false;
+                comboBoxSalesOffice.Enabled = false;
+                textBoxOrID.Enabled = false;
+                dateTimePickerShFinishDate.Enabled = false;
+            }
+            else
+            {
+                comboBoxClient.Enabled = true;
+                comboBoxEmployee.Enabled = true;
+                comboBoxSalesOffice.Enabled = true;
+                textBoxOrID.Enabled = true;
+                dateTimePickerShFinishDate.Enabled = true;
+            }
         }
     }
 }

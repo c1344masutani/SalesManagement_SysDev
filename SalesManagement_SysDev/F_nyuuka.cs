@@ -235,6 +235,7 @@ namespace SalesManagement_SysDev
             else
             {
                 flg = 0;
+                MessageBox.Show("入荷確定にチェックを入れてください");
                 return;
             }
 
@@ -308,6 +309,8 @@ namespace SalesManagement_SysDev
             else
             {
                 flg = 0;
+                MessageBox.Show("非表示にチェックを入れてください");
+                return;
             }
 
             try
@@ -360,6 +363,26 @@ namespace SalesManagement_SysDev
             frm.ShowDialog();
 
             this.Close();
+        }
+
+        private void checkBoxArStateFlag_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBoxArStateFlag.Checked == true)
+            {
+                comboBoxSalesOffice.Enabled = false;
+                comboBoxEmployee.Enabled = false;
+                comboBoxClient.Enabled = false;
+                textBoxOrID.Enabled = false;
+                dateTimePickerArdate.Enabled = false;
+            }
+            else
+            {
+                comboBoxSalesOffice.Enabled = true;
+                comboBoxEmployee.Enabled = true;
+                comboBoxClient.Enabled = true;
+                textBoxOrID.Enabled = true;
+                dateTimePickerArdate.Enabled = true;
+            }
         }
     }
 }

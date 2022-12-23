@@ -196,6 +196,8 @@ namespace SalesManagement_SysDev
             else
             {
                 checkWaState = 0;
+                MessageBox.Show("入荷確定にチェックを入れてください");
+                return;
             }
 
             var context = new SalesManagement_DevContext();
@@ -249,6 +251,8 @@ namespace SalesManagement_SysDev
             else
             {
                 checkWa = 0;
+                MessageBox.Show("非表示にチェックを入れてください");
+                return;
             }
 
             var context = new SalesManagement_DevContext();

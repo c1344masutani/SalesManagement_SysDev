@@ -86,9 +86,9 @@ namespace SalesManagement_SysDev
             this.PriceTextBox.Location = new System.Drawing.Point(109, 269);
             this.PriceTextBox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PriceTextBox.Name = "PriceTextBox";
-            this.PriceTextBox.Size = new System.Drawing.Size(178, 40);
+            this.PriceTextBox.Size = new System.Drawing.Size(177, 40);
             this.PriceTextBox.TabIndex = 79;
-            this.PriceTextBox.Text = "営業所ID";
+            this.PriceTextBox.Text = "営業所名";
             // 
             // label1
             // 
@@ -99,9 +99,9 @@ namespace SalesManagement_SysDev
             this.label1.Location = new System.Drawing.Point(109, 364);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 40);
+            this.label1.Size = new System.Drawing.Size(137, 40);
             this.label1.TabIndex = 80;
-            this.label1.Text = "社員ID";
+            this.label1.Text = "社員名";
             // 
             // labelArID
             // 
@@ -125,9 +125,9 @@ namespace SalesManagement_SysDev
             this.label3.Location = new System.Drawing.Point(713, 175);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 40);
+            this.label3.Size = new System.Drawing.Size(137, 40);
             this.label3.TabIndex = 82;
-            this.label3.Text = "顧客ID";
+            this.label3.Text = "顧客名";
             // 
             // label4
             // 
@@ -162,10 +162,11 @@ namespace SalesManagement_SysDev
             this.checkBoxArStateFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
             this.checkBoxArStateFlag.Location = new System.Drawing.Point(720, 371);
             this.checkBoxArStateFlag.Name = "checkBoxArStateFlag";
-            this.checkBoxArStateFlag.Size = new System.Drawing.Size(163, 44);
+            this.checkBoxArStateFlag.Size = new System.Drawing.Size(203, 44);
             this.checkBoxArStateFlag.TabIndex = 85;
-            this.checkBoxArStateFlag.Text = "入荷済";
+            this.checkBoxArStateFlag.Text = "入荷確定";
             this.checkBoxArStateFlag.UseVisualStyleBackColor = true;
+            this.checkBoxArStateFlag.CheckedChanged += new System.EventHandler(this.checkBoxArStateFlag_CheckedChanged);
             // 
             // checkBoxArHidden
             // 
