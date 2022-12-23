@@ -415,7 +415,7 @@ namespace SalesManagement_SysDev
             dataGridViewDsp.Columns[0].Width = 70;
             //0番目（左端）の項目名を設定
             dataGridViewDsp.Columns[0].HeaderText = "顧客ID";
-            dataGridViewDsp.Columns[1].Width = 70;
+            dataGridViewDsp.Columns[1].Width = 130;
             dataGridViewDsp.Columns[1].HeaderText = "営業所名";
             dataGridViewDsp.Columns[2].Width = 130;
             dataGridViewDsp.Columns[2].HeaderText = "顧客名";
@@ -426,7 +426,7 @@ namespace SalesManagement_SysDev
             dataGridViewDsp.Columns[5].Width = 130;
             dataGridViewDsp.Columns[5].HeaderText = "郵便番号";
             dataGridViewDsp.Columns[6].Width = 130;
-            dataGridViewDsp.Columns[6].HeaderText = "FAX";
+            dataGridViewDsp.Columns[6].HeaderText = "FAX番号";
             dataGridViewDsp.Columns[7].Width = 70;
             dataGridViewDsp.Columns[7].HeaderText = "顧客管理フラグ";
             dataGridViewDsp.Columns[8].Width = 200;
@@ -447,10 +447,11 @@ namespace SalesManagement_SysDev
 
         private void back_button_Click(object sender, EventArgs e)
         {
-            Form frm = new F_menu();
+            Form frm = new F_menu2();
 
             Opacity = 0;
 
+            frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
 
             this.Close();

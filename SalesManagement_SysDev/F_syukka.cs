@@ -361,6 +361,7 @@ namespace SalesManagement_SysDev
 
             Opacity = 0;
 
+            frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
 
             this.Close();

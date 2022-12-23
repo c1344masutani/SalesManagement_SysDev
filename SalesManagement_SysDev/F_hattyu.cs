@@ -69,6 +69,7 @@ namespace SalesManagement_SysDev
 
             Opacity = 0;
 
+            frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
 
             this.Close();
@@ -82,11 +83,11 @@ namespace SalesManagement_SysDev
             dataGridViewDsp.Columns[0].Width = 70;
             //0番目（左端）の項目名を設定
             dataGridViewDsp.Columns[0].HeaderText = "発注ID";
-            dataGridViewDsp.Columns[1].Width = 70;
+            dataGridViewDsp.Columns[1].Width = 130;
             dataGridViewDsp.Columns[1].HeaderText = "メーカ名";
-            dataGridViewDsp.Columns[2].Width = 70;
+            dataGridViewDsp.Columns[2].Width = 130;
             dataGridViewDsp.Columns[2].HeaderText = "商品名";
-            dataGridViewDsp.Columns[3].Width = 70;
+            dataGridViewDsp.Columns[3].Width = 130;
             dataGridViewDsp.Columns[3].HeaderText = "発注社員名";
             dataGridViewDsp.Columns[4].Width = 130;
             dataGridViewDsp.Columns[4].HeaderText = "発注年月日";

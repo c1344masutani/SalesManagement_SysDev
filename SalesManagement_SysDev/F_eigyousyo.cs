@@ -29,7 +29,7 @@ namespace SalesManagement_SysDev
             dataGridViewDsp.Columns[1].HeaderText = "営業所名";
             dataGridViewDsp.Columns[2].Width = 70;
             dataGridViewDsp.Columns[2].HeaderText = "郵便番号";
-            dataGridViewDsp.Columns[3].Width = 130;
+            dataGridViewDsp.Columns[3].Width = 200;
             dataGridViewDsp.Columns[3].HeaderText = "住所";
             dataGridViewDsp.Columns[4].Width = 130;
             dataGridViewDsp.Columns[4].HeaderText = "電話番号";
@@ -86,6 +86,7 @@ namespace SalesManagement_SysDev
 
             Opacity = 0;
 
+            frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
 
             this.Close();
