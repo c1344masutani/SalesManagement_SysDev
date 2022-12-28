@@ -234,15 +234,7 @@ namespace SalesManagement_SysDev
             }
 
 
-            int flg;
-            if (checkBoxClflg.Checked == true)
-            {
-                flg = 2;
-            }
-            else
-            {
-                flg = 0;
-            }
+            
             try
             {
                 int clid = int.Parse(textBoxClientID.Text);
@@ -254,19 +246,12 @@ namespace SalesManagement_SysDev
                 client.ClPhone = textBoxPhone.Text.Trim();
                 client.ClPostal = textBoxPostnumber.Text.Trim();
                 client.ClFAX = textBoxFAX.Text.Trim();
-                client.ClFlag = flg;
+                client.ClFlag = 0;
                 client.ClHidden = textBoxHidden.Text.Trim();
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
                 ClearInput();
-
-                //非表示メッセージ
-                if(flg == 2)
-                {
-                    MessageBox.Show("非表示にしました");
-                    return;
-                }
                 MessageBox.Show("更新完了");
             }
             catch (Exception ex)
@@ -277,21 +262,6 @@ namespace SalesManagement_SysDev
 
         private void Delete_button_Click(object sender, EventArgs e)
         {
-            try
-            {
-                int clid = int.Parse(textBoxClientID.Text);
-                var context = new SalesManagement_DevContext();
-                var client = context.M_Clients.Single(x => x.ClID == clid);
-                context.M_Clients.Remove(client);
-                context.SaveChanges();
-                context.Dispose();
-                fncAllSelect();
-                MessageBox.Show("削除完了");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private void fncAllSelect()
@@ -492,6 +462,44 @@ namespace SalesManagement_SysDev
             textBoxPostnumber.Text = "";
             textBoxFAX.Text = "";
             textBoxHidden.Text = "";
+        }
+
+        private void buttonHidden_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(textBoxClientID.Text))
+            {
+                MessageBox.Show("顧客IDを入力してください");
+                return;
+            }
+
+            int flg;
+            if (checkBoxClflg.Checked == true)
+            {
+                flg = 2;
+            }
+            else
+            {
+                flg = 0;
+                MessageBox.Show("非表示にチェックを入れてください");
+                return;
+            }
+
+            try
+            {
+                int clid = int.Parse(textBoxClientID.Text);
+                var context = new SalesManagement_DevContext();
+                var client = context.M_Clients.Single(x => x.ClID == clid);
+                client.ClFlag = flg;
+                context.SaveChanges();
+                context.Dispose();
+                fncAllSelect();
+                ClearInput();
+                MessageBox.Show("非表示にしました");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

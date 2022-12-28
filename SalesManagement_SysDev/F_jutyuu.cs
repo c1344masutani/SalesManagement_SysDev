@@ -584,5 +584,118 @@ namespace SalesManagement_SysDev
             textBoxClCharge.Text = "";
             textBoxOrQuantity.Text = "";
         }
+
+        private void buttonConfirm_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(textBoxOrID.Text))
+            {
+                MessageBox.Show("受注IDを入力してください");
+                return;
+            }
+
+            int flg;
+            if (checkBoxOrStateFlag.Checked == true)
+            {
+                flg = 1;
+            }
+            else
+            {
+                flg = 0;
+                MessageBox.Show("受注確定にチェックを入れてください");
+                return;
+            }
+
+            var context = new SalesManagement_DevContext();
+            int orid = int.Parse(textBoxOrID.Text);
+
+            try
+            {
+                //受注確定フラグを1に
+                var order = context.T_Orders.Single(x => x.OrID == orid);
+                order.OrStateFlag = flg;
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            try
+            {
+                var order = context.T_Orders.Single(x => x.OrID == orid);
+                var orderdetail = context.T_OrderDetails.Single(x => x.OrID == orid);
+
+                var chuumon = new T_Chumon
+                {
+                    SoID = order.SoID,
+                    EmID = order.EmID,
+                    ClID = order.ClID,
+                    OrID = order.OrID,
+                    ChDate = DateTime.Now,
+                    ChStateFlag = 0,
+                    ChFlag = 0,
+                    ChHidden = ""
+                };
+
+                context.T_Chumons.Add(chuumon);
+                context.SaveChanges();
+
+                var chuumondetail = new T_ChumonDetail
+                {
+                    ChID = chuumon.ChID,
+                    PrID = orderdetail.PrID,
+                    ChQuantity = orderdetail.OrQuantity
+                };
+
+                context.T_ChumonDetails.Add(chuumondetail);
+                context.SaveChanges();
+                context.Dispose();
+                fncAllSelect();
+                InputClear();
+                MessageBox.Show("受注を確定しました");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonHidden_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(textBoxOrID.Text))
+            {
+                MessageBox.Show("受注IDを入力してください");
+                return;
+            }
+
+            int flg;
+            if(checkBoxOrFlag.Checked == true)
+            {
+                flg = 2;
+            }
+            else
+            {
+                flg = 0;
+                MessageBox.Show("非表示にチェックを入れてください");
+                return;
+            }
+
+            try
+            {
+                int orid = int.Parse(textBoxOrID.Text);
+                var context = new SalesManagement_DevContext();
+                var order = context.T_Orders.Single(x => x.OrID == orid);
+                order.OrFlag = flg;
+                context.SaveChanges();
+                context.Dispose();
+                fncAllSelect();
+                InputClear();
+                MessageBox.Show("非表示にしました");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

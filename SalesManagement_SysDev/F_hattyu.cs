@@ -511,5 +511,117 @@ namespace SalesManagement_SysDev
             checkBoxWaWarehouseFlag.Checked = false;
             checkBoxHaFlag.Checked = false;
         }
+
+        private void buttonConfirm_Click(object sender, EventArgs e)
+        {
+            
+
+            if (String.IsNullOrEmpty(textBoxHaID.Text))
+            {
+                MessageBox.Show("発注IDを入力してください");
+                return;
+            }
+
+            int flg;
+            if(checkBoxWaWarehouseFlag.Checked == true)
+            {
+                flg = 1;
+            }
+            else
+            {
+                flg = 0;
+                MessageBox.Show("発注確定にチェックを入れてください");
+                return;
+            }
+
+            var context = new SalesManagement_DevContext();
+            int haid = int.Parse(textBoxHaID.Text);
+            var hattyu = context.T_Hattyus.Single(x => x.HaID == haid);
+
+            try
+            {
+                //発注確定フラグを１に
+                hattyu.WaWarehouseFlag = flg;
+                context.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+            var hattyudetail = context.T_HattyuDetails.Single(x => x.HaID == haid);
+
+            try
+            {
+                var warehousing = new T_Warehousing
+                {
+                    HaID = hattyu.HaID,
+                    EmID = hattyu.EmID,
+                    WaDate = DateTime.Now,
+                    WaShelfFlag = 0,
+                    WaFlag = 0,
+                    WaHidden = ""
+                };
+                context.T_Warehousings.Add(warehousing);
+                context.SaveChanges();
+
+                var warehousingdetail = new T_WarehousingDetail
+                {
+                    WaID = warehousing.WaID,
+                    PrID = hattyudetail.PrID,
+                    WaQuantity = hattyudetail.HaQuantity
+                };
+
+                context.T_WarehousingDetails.Add(warehousingdetail);
+                context.SaveChanges();
+                context.Dispose();
+                fncAllSelect();
+                MessageBox.Show("発注を確定しました");
+                InputClear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonHidden_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(textBoxHaID.Text))
+            {
+                MessageBox.Show("発注IDを入力してください");
+                return;
+            }
+
+            int flg;
+            if(checkBoxHaFlag.Checked == true)
+            {
+                flg = 2;
+            }
+            else
+            {
+                flg = 0;
+                MessageBox.Show("非表示にチェックを入れてください");
+                return;
+            }
+
+            try
+            {
+                int haid = int.Parse(textBoxHaID.Text);
+                var context = new SalesManagement_DevContext();
+                var hattyu = context.T_Hattyus.Single(x => x.HaID == haid);
+                hattyu.HaFlag = flg;
+                context.SaveChanges();
+                context.Dispose();
+                fncAllSelect();
+                InputClear();
+                MessageBox.Show("非表示にしました");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

@@ -283,15 +283,7 @@ namespace SalesManagement_SysDev
                 }
             }
 
-            int flg;
-            if (checkBoxMaFlag.Checked == true)
-            {
-                flg = 2;
-            }
-            else
-            {
-                flg = 0;
-            }
+            
 
             try
             {
@@ -304,18 +296,13 @@ namespace SalesManagement_SysDev
                 maker.MaAdress = textBoxAddress.Text;
                 maker.MaPhone = textBoxPhone.Text;
                 maker.MaFAX = textBoxFax.Text;
-                maker.MaFlag = flg;
+                maker.MaFlag = 0;
                 maker.MaHidden = textBoxHidden.Text;
                 context.SaveChanges();
                 context.Dispose();
                 fncAllSelect();
                 ClearInput();
-                //非表示メッセージ
-                if(flg == 2)
-                {
-                    MessageBox.Show("非表示にしました");
-                    return;
-                }
+                
 
                 MessageBox.Show("更新完了");
             }
@@ -439,6 +426,44 @@ namespace SalesManagement_SysDev
             textBoxFax.Text = "";
             checkBoxMaFlag.Checked = false;
             textBoxHidden.Text = "";
+        }
+
+        private void buttonHidden_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(textBoxMaID.Text))
+            {
+                MessageBox.Show("メーカIDを入力してください");
+                return;
+            }
+
+            int flg;
+            if(checkBoxMaFlag.Checked == true)
+            {
+                flg = 2;
+            }
+            else
+            {
+                flg = 0;
+                MessageBox.Show("非表示にチェックを入れてください");
+                return;
+            }
+
+            try
+            {
+                int maid = int.Parse(textBoxMaID.Text);
+                var context = new SalesManagement_DevContext();
+                var maker = context.M_Makers.Single(x => x.MaID == maid);
+                maker.MaFlag = flg;
+                context.SaveChanges();
+                context.Dispose();
+                fncAllSelect();
+                ClearInput();
+                MessageBox.Show("非表示にしました");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

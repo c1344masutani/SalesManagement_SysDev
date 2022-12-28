@@ -41,7 +41,6 @@ namespace SalesManagement_SysDev
             this.dataGridViewDsp = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.Regester_button = new System.Windows.Forms.Button();
-            this.Update_button = new System.Windows.Forms.Button();
             this.Search_button = new System.Windows.Forms.Button();
             this.back_button = new System.Windows.Forms.Button();
             this.textBoxOrID = new System.Windows.Forms.TextBox();
@@ -65,6 +64,8 @@ namespace SalesManagement_SysDev
             this.comboBoxProduct = new System.Windows.Forms.ComboBox();
             this.buttonClear = new System.Windows.Forms.Button();
             this.textBoxOrQuantity = new System.Windows.Forms.TextBox();
+            this.buttonConfirm = new System.Windows.Forms.Button();
+            this.buttonHidden = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             this.SuspendLayout();
@@ -74,7 +75,7 @@ namespace SalesManagement_SysDev
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("HGS明朝E", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label1.Location = new System.Drawing.Point(299, 31);
+            this.label1.Location = new System.Drawing.Point(257, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(305, 56);
             this.label1.TabIndex = 0;
@@ -194,31 +195,19 @@ namespace SalesManagement_SysDev
             // 
             this.Regester_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Regester_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.Regester_button.Location = new System.Drawing.Point(712, 31);
+            this.Regester_button.Location = new System.Drawing.Point(603, 31);
             this.Regester_button.Name = "Regester_button";
-            this.Regester_button.Size = new System.Drawing.Size(232, 50);
+            this.Regester_button.Size = new System.Drawing.Size(216, 50);
             this.Regester_button.TabIndex = 55;
             this.Regester_button.Text = "新規追加";
             this.Regester_button.UseVisualStyleBackColor = true;
             this.Regester_button.Click += new System.EventHandler(this.Regester_button_Click);
             // 
-            // Update_button
-            // 
-            this.Update_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.Update_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.Update_button.Location = new System.Drawing.Point(993, 31);
-            this.Update_button.Name = "Update_button";
-            this.Update_button.Size = new System.Drawing.Size(141, 50);
-            this.Update_button.TabIndex = 56;
-            this.Update_button.Text = "更新";
-            this.Update_button.UseVisualStyleBackColor = true;
-            this.Update_button.Click += new System.EventHandler(this.Update_button_Click);
-            // 
             // Search_button
             // 
             this.Search_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Search_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.Search_button.Location = new System.Drawing.Point(1182, 31);
+            this.Search_button.Location = new System.Drawing.Point(1337, 31);
             this.Search_button.Name = "Search_button";
             this.Search_button.Size = new System.Drawing.Size(141, 50);
             this.Search_button.TabIndex = 58;
@@ -434,10 +423,10 @@ namespace SalesManagement_SysDev
             this.buttonClear.BackColor = System.Drawing.Color.Transparent;
             this.buttonClear.Font = new System.Drawing.Font("HGS明朝E", 20F);
             this.buttonClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.buttonClear.Location = new System.Drawing.Point(1409, 31);
+            this.buttonClear.Location = new System.Drawing.Point(1513, 31);
             this.buttonClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(305, 50);
+            this.buttonClear.Size = new System.Drawing.Size(281, 50);
             this.buttonClear.TabIndex = 102;
             this.buttonClear.Text = "入力クリア";
             this.buttonClear.UseVisualStyleBackColor = false;
@@ -451,12 +440,40 @@ namespace SalesManagement_SysDev
             this.textBoxOrQuantity.Size = new System.Drawing.Size(178, 39);
             this.textBoxOrQuantity.TabIndex = 103;
             // 
+            // buttonConfirm
+            // 
+            this.buttonConfirm.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonConfirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.buttonConfirm.Location = new System.Drawing.Point(854, 31);
+            this.buttonConfirm.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonConfirm.Name = "buttonConfirm";
+            this.buttonConfirm.Size = new System.Drawing.Size(220, 49);
+            this.buttonConfirm.TabIndex = 117;
+            this.buttonConfirm.Text = "受注確定";
+            this.buttonConfirm.UseVisualStyleBackColor = true;
+            this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click);
+            // 
+            // buttonHidden
+            // 
+            this.buttonHidden.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonHidden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.buttonHidden.Location = new System.Drawing.Point(1114, 31);
+            this.buttonHidden.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonHidden.Name = "buttonHidden";
+            this.buttonHidden.Size = new System.Drawing.Size(171, 49);
+            this.buttonHidden.TabIndex = 118;
+            this.buttonHidden.Text = "非表示";
+            this.buttonHidden.UseVisualStyleBackColor = true;
+            this.buttonHidden.Click += new System.EventHandler(this.buttonHidden_Click);
+            // 
             // F_jutyuu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.buttonHidden);
+            this.Controls.Add(this.buttonConfirm);
             this.Controls.Add(this.textBoxOrQuantity);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.comboBoxProduct);
@@ -480,7 +497,6 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.textBoxOrID);
             this.Controls.Add(this.back_button);
             this.Controls.Add(this.Search_button);
-            this.Controls.Add(this.Update_button);
             this.Controls.Add(this.Regester_button);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dataGridViewDsp);
@@ -518,7 +534,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.DataGridView dataGridViewDsp;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button Regester_button;
-        private System.Windows.Forms.Button Update_button;
         private System.Windows.Forms.Button Search_button;
         private System.Windows.Forms.Button back_button;
         private System.Windows.Forms.TextBox textBoxOrID;
@@ -542,5 +557,7 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.ComboBox comboBoxProduct;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.TextBox textBoxOrQuantity;
+        private System.Windows.Forms.Button buttonConfirm;
+        private System.Windows.Forms.Button buttonHidden;
     }
 }

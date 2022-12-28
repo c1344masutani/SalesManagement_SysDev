@@ -221,6 +221,8 @@ namespace SalesManagement_SysDev
             else
             {
                 flg = 0;
+                MessageBox.Show("非表示にチェックを入れてください");
+                return;
             }
 
             try

@@ -46,7 +46,6 @@ namespace SalesManagement_SysDev
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.button_touroku = new System.Windows.Forms.Button();
-            this.button_koushin = new System.Windows.Forms.Button();
             this.button_kensaku = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.button_back = new System.Windows.Forms.Button();
@@ -59,6 +58,8 @@ namespace SalesManagement_SysDev
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.comboBoxProduct = new System.Windows.Forms.ComboBox();
+            this.buttonConfirm = new System.Windows.Forms.Button();
+            this.buttonHidden = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -262,23 +263,11 @@ namespace SalesManagement_SysDev
             this.button_touroku.UseVisualStyleBackColor = true;
             this.button_touroku.Click += new System.EventHandler(this.button_touroku_Click);
             // 
-            // button_koushin
-            // 
-            this.button_koushin.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button_koushin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.button_koushin.Location = new System.Drawing.Point(769, 23);
-            this.button_koushin.Name = "button_koushin";
-            this.button_koushin.Size = new System.Drawing.Size(141, 50);
-            this.button_koushin.TabIndex = 98;
-            this.button_koushin.Text = "更新";
-            this.button_koushin.UseVisualStyleBackColor = true;
-            this.button_koushin.Click += new System.EventHandler(this.button_koushin_Click);
-            // 
             // button_kensaku
             // 
             this.button_kensaku.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button_kensaku.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.button_kensaku.Location = new System.Drawing.Point(956, 23);
+            this.button_kensaku.Location = new System.Drawing.Point(1182, 23);
             this.button_kensaku.Name = "button_kensaku";
             this.button_kensaku.Size = new System.Drawing.Size(141, 50);
             this.button_kensaku.TabIndex = 99;
@@ -292,7 +281,7 @@ namespace SalesManagement_SysDev
             this.buttonClear.Font = new System.Drawing.Font("HGS明朝E", 20F);
             this.buttonClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.buttonClear.Location = new System.Drawing.Point(1354, 23);
-            this.buttonClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonClear.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(305, 50);
             this.buttonClear.TabIndex = 101;
@@ -318,7 +307,7 @@ namespace SalesManagement_SysDev
             this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
             this.pictureBox1.InitialImage = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
             this.pictureBox1.Location = new System.Drawing.Point(11, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(146, 94);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -410,12 +399,40 @@ namespace SalesManagement_SysDev
             this.comboBoxProduct.Size = new System.Drawing.Size(206, 41);
             this.comboBoxProduct.TabIndex = 119;
             // 
+            // buttonConfirm
+            // 
+            this.buttonConfirm.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonConfirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.buttonConfirm.Location = new System.Drawing.Point(739, 23);
+            this.buttonConfirm.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonConfirm.Name = "buttonConfirm";
+            this.buttonConfirm.Size = new System.Drawing.Size(220, 50);
+            this.buttonConfirm.TabIndex = 120;
+            this.buttonConfirm.Text = "発注確定";
+            this.buttonConfirm.UseVisualStyleBackColor = true;
+            this.buttonConfirm.Click += new System.EventHandler(this.buttonConfirm_Click);
+            // 
+            // buttonHidden
+            // 
+            this.buttonHidden.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonHidden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.buttonHidden.Location = new System.Drawing.Point(984, 23);
+            this.buttonHidden.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonHidden.Name = "buttonHidden";
+            this.buttonHidden.Size = new System.Drawing.Size(171, 50);
+            this.buttonHidden.TabIndex = 121;
+            this.buttonHidden.Text = "非表示";
+            this.buttonHidden.UseVisualStyleBackColor = true;
+            this.buttonHidden.Click += new System.EventHandler(this.buttonHidden_Click);
+            // 
             // F_hattyu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1898, 1024);
+            this.Controls.Add(this.buttonHidden);
+            this.Controls.Add(this.buttonConfirm);
             this.Controls.Add(this.comboBoxProduct);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -427,7 +444,6 @@ namespace SalesManagement_SysDev
             this.Controls.Add(this.button_back);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.button_kensaku);
-            this.Controls.Add(this.button_koushin);
             this.Controls.Add(this.button_touroku);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -476,7 +492,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button_touroku;
-        private System.Windows.Forms.Button button_koushin;
         private System.Windows.Forms.Button button_kensaku;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Button button_back;
@@ -488,5 +503,7 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox comboBoxProduct;
+        private System.Windows.Forms.Button buttonConfirm;
+        private System.Windows.Forms.Button buttonHidden;
     }
 }

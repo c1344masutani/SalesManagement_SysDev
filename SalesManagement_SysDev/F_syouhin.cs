@@ -575,10 +575,6 @@ namespace SalesManagement_SysDev
             this.Close();
         }
 
-        private void buttonHidden_Click(object sender, EventArgs e)
-        {
-        }
-
         private void ClearInput()
         {
             textBoxPrID.Text = "";
@@ -592,6 +588,44 @@ namespace SalesManagement_SysDev
             PrReleaseDate.Value = System.DateTime.Now;
             checkBoxPrFlag.Checked = false;
             textBoxHidden.Text = "";
+        }
+
+        private void buttonHidden_Click(object sender, EventArgs e)
+        {
+            if(String.IsNullOrEmpty(textBoxPrID.Text))
+            {
+                MessageBox.Show("商品IDを入力してください");
+                return;
+            }
+
+            int flg;
+            if(checkBoxPrFlag.Checked == true)
+            {
+                flg = 2;
+            }
+            else
+            {
+                flg = 0;
+                MessageBox.Show("非表示にチェックを入れてください");
+                return;
+            }
+
+            try
+            {
+                int prid = int.Parse(textBoxPrID.Text);
+                var context = new SalesManagement_DevContext();
+                var product = context.M_Products.Single(x => x.PrID == prid);
+                product.PrFlag = flg;
+                context.SaveChanges();
+                context.Dispose();
+                fncAllSelect();
+                ClearInput();
+                MessageBox.Show("非表示にしました");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

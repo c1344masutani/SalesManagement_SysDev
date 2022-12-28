@@ -473,5 +473,43 @@ namespace SalesManagement_SysDev
             checkBoxEmFlag.Checked = false;
             textBoxhidden.Text = "";
         }
+
+        private void buttonHidden_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(textBoxEmID.Text))
+            {
+                MessageBox.Show("社員IDを入力してください");
+                return;
+            }
+
+            int flg;
+            if (checkBoxEmFlag.Checked == true)
+            {
+                flg = 2;
+            }
+            else
+            {
+                flg = 0;
+                MessageBox.Show("非表示にチェックを入れてください");
+                return;
+            }
+
+            try
+            {
+                int emid = int.Parse(textBoxEmID.Text);
+                var context = new SalesManagement_DevContext();
+                var employee = context.M_Employees.Single(x => x.EmID == emid);
+                employee.EmFlag = flg;
+                context.SaveChanges();
+                context.Dispose();
+                fncAllSelect();
+                ClearInput();
+                MessageBox.Show("非表示にしました");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

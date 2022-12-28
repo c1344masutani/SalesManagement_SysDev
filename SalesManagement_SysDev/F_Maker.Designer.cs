@@ -53,6 +53,7 @@ namespace SalesManagement_SysDev
             this.label8 = new System.Windows.Forms.Label();
             this.buttonBack = new System.Windows.Forms.Button();
             this.button_Clear = new System.Windows.Forms.Button();
+            this.buttonHidden = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDsp)).BeginInit();
             this.SuspendLayout();
@@ -87,7 +88,7 @@ namespace SalesManagement_SysDev
             // 
             this.Regester_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Regester_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.Regester_button.Location = new System.Drawing.Point(689, 34);
+            this.Regester_button.Location = new System.Drawing.Point(662, 34);
             this.Regester_button.Margin = new System.Windows.Forms.Padding(2);
             this.Regester_button.Name = "Regester_button";
             this.Regester_button.Size = new System.Drawing.Size(232, 50);
@@ -100,7 +101,7 @@ namespace SalesManagement_SysDev
             // 
             this.Update_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Update_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.Update_button.Location = new System.Drawing.Point(978, 34);
+            this.Update_button.Location = new System.Drawing.Point(918, 34);
             this.Update_button.Margin = new System.Windows.Forms.Padding(2);
             this.Update_button.Name = "Update_button";
             this.Update_button.Size = new System.Drawing.Size(141, 50);
@@ -113,7 +114,7 @@ namespace SalesManagement_SysDev
             // 
             this.Search_button.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.Search_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.Search_button.Location = new System.Drawing.Point(1175, 34);
+            this.Search_button.Location = new System.Drawing.Point(1299, 34);
             this.Search_button.Margin = new System.Windows.Forms.Padding(2);
             this.Search_button.Name = "Search_button";
             this.Search_button.Size = new System.Drawing.Size(141, 50);
@@ -312,10 +313,10 @@ namespace SalesManagement_SysDev
             // 
             this.buttonBack.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.buttonBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.buttonBack.Location = new System.Drawing.Point(1759, 43);
+            this.buttonBack.Location = new System.Drawing.Point(1829, 34);
             this.buttonBack.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(141, 50);
+            this.buttonBack.Size = new System.Drawing.Size(141, 47);
             this.buttonBack.TabIndex = 113;
             this.buttonBack.Text = "戻る";
             this.buttonBack.UseVisualStyleBackColor = true;
@@ -326,14 +327,27 @@ namespace SalesManagement_SysDev
             this.button_Clear.BackColor = System.Drawing.Color.Transparent;
             this.button_Clear.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button_Clear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.button_Clear.Location = new System.Drawing.Point(1375, 34);
+            this.button_Clear.Location = new System.Drawing.Point(1469, 31);
             this.button_Clear.Margin = new System.Windows.Forms.Padding(2);
             this.button_Clear.Name = "button_Clear";
-            this.button_Clear.Size = new System.Drawing.Size(321, 59);
+            this.button_Clear.Size = new System.Drawing.Size(321, 50);
             this.button_Clear.TabIndex = 114;
             this.button_Clear.Text = "入力クリア";
             this.button_Clear.UseVisualStyleBackColor = false;
             this.button_Clear.Click += new System.EventHandler(this.button_Clear_Click);
+            // 
+            // buttonHidden
+            // 
+            this.buttonHidden.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.buttonHidden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
+            this.buttonHidden.Location = new System.Drawing.Point(1089, 34);
+            this.buttonHidden.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonHidden.Name = "buttonHidden";
+            this.buttonHidden.Size = new System.Drawing.Size(171, 50);
+            this.buttonHidden.TabIndex = 118;
+            this.buttonHidden.Text = "非表示";
+            this.buttonHidden.UseVisualStyleBackColor = true;
+            this.buttonHidden.Click += new System.EventHandler(this.buttonHidden_Click);
             // 
             // F_Maker
             // 
@@ -341,6 +355,7 @@ namespace SalesManagement_SysDev
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1924, 1050);
+            this.Controls.Add(this.buttonHidden);
             this.Controls.Add(this.button_Clear);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.textBoxHidden);
@@ -402,5 +417,6 @@ namespace SalesManagement_SysDev
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Button button_Clear;
+        private System.Windows.Forms.Button buttonHidden;
     }
 }
