@@ -113,6 +113,16 @@ namespace SalesManagement_SysDev
             dataGridViewDsp.ReadOnly = true;
             fncAllSelect();
             SetFormComboBox();
+            buttonConfirm.Visible = true;
+            buttonHidden.Visible = true;
+            buttonSearch.Visible = false;
+            comboBoxSalesOffice.Enabled = false;
+            comboBoxEmployee.Enabled = false;
+            comboBoxClient.Enabled = false;
+            textBoxOrid.Enabled = false;
+            dateTimePickerChdate.Enabled = false;
+            buttonUpdateMode.BackColor = Color.Orange;
+            buttonSearchMode.BackColor = Color.LightYellow;
         }
 
 
@@ -397,22 +407,48 @@ namespace SalesManagement_SysDev
 
         private void checkBoxChStateflg_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBoxChStateflg.Checked == true)
-            {
-                comboBoxSalesOffice.Enabled = false;
-                comboBoxEmployee.Enabled = false;
-                comboBoxClient.Enabled = false;
-                textBoxOrid.Enabled = false;
-                dateTimePickerChdate.Enabled = false;
-            }
-            else
-            {
-                comboBoxSalesOffice.Enabled = true;
-                comboBoxEmployee.Enabled = true;
-                comboBoxClient.Enabled = true;
-                textBoxOrid.Enabled = true;
-                dateTimePickerChdate.Enabled = true;
-            }
+            
+        }
+
+        private void buttonUpdateMode_Click(object sender, EventArgs e)
+        {
+            buttonConfirm.Visible = true;
+            buttonHidden.Visible = true;
+            buttonSearch.Visible = false;
+            comboBoxSalesOffice.Enabled = false;
+            comboBoxEmployee.Enabled = false;
+            comboBoxClient.Enabled = false;
+            textBoxOrid.Enabled = false;
+            dateTimePickerChdate.Enabled = false;
+            labelRequired1.Visible = true;
+            labelRequired2.Visible = true;
+            labelRequired3.Visible = true;
+            labelRequired4.Visible = true;
+            labelRequired5.Visible = true;
+            labelRequired6.Visible = true;
+
+            buttonUpdateMode.BackColor = Color.Orange;
+            buttonSearchMode.BackColor = Color.LightYellow;
+        }
+
+        private void buttonSearchMode_Click(object sender, EventArgs e)
+        {
+            buttonConfirm.Visible = false;
+            buttonSearch.Visible = true;
+            buttonHidden.Visible = false;
+            comboBoxSalesOffice.Enabled = true;
+            comboBoxEmployee.Enabled = true;
+            comboBoxClient.Enabled = true;
+            textBoxOrid.Enabled = true;
+            dateTimePickerChdate.Enabled = true;
+            labelRequired1.Visible = false;
+            labelRequired2.Visible = false;
+            labelRequired3.Visible = false;
+            labelRequired4.Visible = false;
+            labelRequired5.Visible = false;
+            labelRequired6.Visible = false;
+            buttonUpdateMode.BackColor = Color.LightYellow;
+            buttonSearchMode.BackColor = Color.Orange;
         }
     }
 }

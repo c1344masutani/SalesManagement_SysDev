@@ -44,6 +44,20 @@ namespace SalesManagement_SysDev
             //読み取り専用
             dataGridViewDsp.ReadOnly = true;
             fncAllSelect();
+
+            buttonRegester.Visible = true;
+            buttonUpdate.Visible = true;
+            buttonHidden.Visible = true;
+            buttonSearch.Visible = false;
+            labelRequired1.Visible = true;
+            labelRequired2.Visible = true;
+            labelRequired3.Visible = true;
+            labelRequired4.Visible = true;
+            labelRequired5.Visible = true;
+            labelRequired6.Visible = true;
+
+            buttonUpdateMode.BackColor = Color.Orange;
+            buttonSearchMode.BackColor = Color.LightYellow;
         }
 
         private void fncAllSelect()
@@ -464,6 +478,40 @@ namespace SalesManagement_SysDev
             {
                 MessageBox.Show(ex.Message, "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void buttonUpdateMode_Click(object sender, EventArgs e)
+        {
+            buttonRegester.Visible = true;
+            buttonUpdate.Visible = true;
+            buttonHidden.Visible = true;
+            buttonSearch.Visible = false;
+            labelRequired1.Visible = true;
+            labelRequired2.Visible = true;
+            labelRequired3.Visible = true;
+            labelRequired4.Visible = true;
+            labelRequired5.Visible = true;
+            labelRequired6.Visible = true;
+
+            buttonUpdateMode.BackColor = Color.Orange;
+            buttonSearchMode.BackColor = Color.LightYellow;
+        }
+
+        private void buttonSearchMode_Click(object sender, EventArgs e)
+        {
+            buttonRegester.Visible = false;
+            buttonUpdate.Visible = false;
+            buttonHidden.Visible = false;
+            buttonSearch.Visible = true;
+            labelRequired1.Visible = false;
+            labelRequired2.Visible = false;
+            labelRequired3.Visible = false;
+            labelRequired4.Visible = false;
+            labelRequired5.Visible = false;
+            labelRequired6.Visible = false;
+
+            buttonUpdateMode.BackColor = Color.LightYellow;
+            buttonSearchMode.BackColor = Color.Orange;
         }
     }
 }

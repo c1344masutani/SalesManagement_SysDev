@@ -146,6 +146,23 @@ namespace SalesManagement_SysDev
             //全データ表示
             fncAllSelect();
             SetFormComboBox();
+
+            buttonConfirm.Visible = true;
+            buttonHidden.Visible = true;
+            buttonSearch.Visible = false;
+            comboBoxClient.Enabled = false;
+            comboBoxEmployee.Enabled = false;
+            comboBoxSalesOffice.Enabled = false;
+            textBoxOrID.Enabled = false;
+            labelRequired1.Visible = true;
+            labelRequired2.Visible = true;
+            labelRequired3.Visible = true;
+            labelRequired4.Visible = true;
+            labelRequired5.Visible = true;
+            labelRequired6.Visible = true;
+
+            buttonUpdateMode.BackColor = Color.Orange;
+            buttonSearchMode.BackColor = Color.LightYellow;
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
@@ -383,6 +400,46 @@ namespace SalesManagement_SysDev
                 textBoxOrID.Enabled = true;
                 dateTimePickerArdate.Enabled = true;
             }
+        }
+
+        private void buttonUpdateMode_Click(object sender, EventArgs e)
+        {
+            buttonConfirm.Visible = true;
+            buttonHidden.Visible = true;
+            buttonSearch.Visible = false;
+            comboBoxClient.Enabled = false;
+            comboBoxEmployee.Enabled = false;
+            comboBoxSalesOffice.Enabled = false;
+            textBoxOrID.Enabled = false;
+            labelRequired1.Visible = true;
+            labelRequired2.Visible = true;
+            labelRequired3.Visible = true;
+            labelRequired4.Visible = true;
+            labelRequired5.Visible = true;
+            labelRequired6.Visible = true;
+
+            buttonUpdateMode.BackColor = Color.Orange;
+            buttonSearchMode.BackColor = Color.LightYellow;
+        }
+
+        private void buttonSearchMode_Click(object sender, EventArgs e)
+        {
+            buttonConfirm.Visible = false;
+            buttonHidden.Visible = false;
+            buttonSearch.Visible = true;
+            comboBoxClient.Enabled = true;
+            comboBoxEmployee.Enabled = true;
+            comboBoxSalesOffice.Enabled = true;
+            textBoxOrID.Enabled = true;
+            labelRequired1.Visible = false;
+            labelRequired2.Visible = false;
+            labelRequired3.Visible = false;
+            labelRequired4.Visible = false;
+            labelRequired5.Visible = false;
+            labelRequired6.Visible = false;
+
+            buttonUpdateMode.BackColor = Color.LightYellow;
+            buttonSearchMode.BackColor = Color.Orange;
         }
     }
 }

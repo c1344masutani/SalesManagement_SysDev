@@ -152,6 +152,12 @@ namespace SalesManagement_SysDev
             dataGridViewDsp.ReadOnly = true;
             //全データ表示
             fncAllSelect();
+
+            button_Update.Visible = true;
+            buttonHidden.Visible = true;
+            button_Search.Visible = false;
+            buttonUpdateMode.BackColor = Color.Orange;
+            buttonSearchMode.BackColor = Color.LightYellow;
         }
 
         private void button_Update_Click(object sender, EventArgs e)
@@ -246,6 +252,32 @@ namespace SalesManagement_SysDev
         private void button_Clear_Click(object sender, EventArgs e)
         {
             ClearInput();
+        }
+
+        private void buttonUpdateMode_Click(object sender, EventArgs e)
+        {
+            button_Update.Visible = true;
+            buttonHidden.Visible = true;
+            button_Search.Visible = false;
+            labelRequired1.Visible = true;
+            labelRequired2.Visible = true;
+            labelRequired3.Visible = true;
+            labelRequired4.Visible = true;
+            buttonUpdateMode.BackColor = Color.Orange;
+            buttonSearchMode.BackColor = Color.LightYellow;
+        }
+
+        private void buttonSearchMode_Click(object sender, EventArgs e)
+        {
+            button_Update.Visible = false;
+            buttonHidden.Visible = false;
+            button_Search.Visible = true;
+            labelRequired1.Visible = false;
+            labelRequired2.Visible = false;
+            labelRequired3.Visible = false;
+            labelRequired4.Visible = false;
+            buttonUpdateMode.BackColor = Color.LightYellow;
+            buttonSearchMode.BackColor = Color.Orange;
         }
     }
 }
