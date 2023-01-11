@@ -263,8 +263,9 @@ namespace SalesManagement_SysDev
 
             try
             {
-                //出荷テーブルの確定フラグを１に
+                //出荷テーブルの確定フラグを１に 確定日を代入
                 var shipment = context.T_Shipments.Single(x => x.ShID == shid);
+                shipment.ShFinishDate = DateTime.Now;
                 shipment.ShStateFlag = flg;
                 context.SaveChanges();
             }
@@ -362,7 +363,7 @@ namespace SalesManagement_SysDev
             comboBoxEmployee.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
             comboBoxSalesOffice.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
             textBoxOrID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
-            dateTimePickerShFinishDate.Value = DateTime.Parse(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString());
+            //dateTimePickerShFinishDate.Value = DateTime.Parse(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString());
         }
 
         private void buttonClear_Click(object sender, EventArgs e)

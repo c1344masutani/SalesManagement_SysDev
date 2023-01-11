@@ -129,8 +129,9 @@ namespace SalesManagement_SysDev
 
             try
             {
-                //注文テーブルの確定フラグを１に
+                //出庫テーブルの確定フラグを１に 確定日を登録
                 var syukko = context.T_Syukkos.Single(x => x.SyID == syid);
+                syukko.SyDate = DateTime.Now;
                 syukko.SyStateFlag = flg;
                 context.SaveChanges();
             }
@@ -152,7 +153,7 @@ namespace SalesManagement_SysDev
                     EmID = syukko.EmID,
                     ClID = syukko.ClID,
                     OrID = syukko.OrID,
-                    ArDate = DateTime.Now,
+                    ArDate = null,
                     ArStateFlag = 0,
                     ArFlag = 0,
                     ArHidden = ""
@@ -226,7 +227,7 @@ namespace SalesManagement_SysDev
             textBoxClient.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
             textBoxSalesOffice.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
             textBoxOrID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
-            dateTimePickerSyDate.Value = DateTime.Parse(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString());
+            //dateTimePickerSyDate.Value = DateTime.Parse(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString());
             if(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[6].Value.ToString() == "1")
             {
                 checkBoxSyStateFlag.Checked = true;

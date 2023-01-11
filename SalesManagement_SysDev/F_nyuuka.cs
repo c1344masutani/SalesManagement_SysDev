@@ -258,8 +258,9 @@ namespace SalesManagement_SysDev
 
             try
             {
-                //入荷テーブルの確定フラグを１に
+                //入荷テーブルの確定フラグを１に 確定日を登録
                 var arrival = context.T_Arrivals.Single(x => x.ArID == arid);
+                arrival.ArDate = DateTime.Now;
                 arrival.ArStateFlag = flg;
                 context.SaveChanges();
             }
@@ -281,7 +282,7 @@ namespace SalesManagement_SysDev
                     EmID = arrival.EmID,
                     SoID = arrival.SoID,
                     OrID = arrival.OrID,
-                    ShFinishDate = DateTime.Now,
+                    ShFinishDate = null,
                     ShStateFlag = 0,
                     ShFlag = 0,
                     ShHidden = ""
@@ -355,7 +356,7 @@ namespace SalesManagement_SysDev
             comboBoxEmployee.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
             comboBoxClient.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
             textBoxOrID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
-            dateTimePickerArdate.Value = DateTime.Parse(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString());
+            //dateTimePickerArdate.Value = DateTime.Parse(dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[5].Value.ToString());
 
         }
 
