@@ -270,5 +270,9 @@ namespace SalesManagement_SysDev
             checkBoxSyFlg.Checked = false;
             textBoxSyHidden.Text = "";
         }
+
+        private void checkBoxSyStateFlag_CheckedChanged(object sender, EventArgs e)
+        {
+        }
     }
 }

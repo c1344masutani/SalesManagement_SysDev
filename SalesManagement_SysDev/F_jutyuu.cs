@@ -231,6 +231,14 @@ namespace SalesManagement_SysDev
                 MessageBox.Show("数量を入力してください");
                 return;
             }
+            else
+            {
+                if (!dataInputFormCheck.CheckNumeric(textBoxOrQuantity.Text))
+                {
+                    MessageBox.Show("数量は数字で入力してください");
+                    return;
+                }
+            }
 
             if (!String.IsNullOrEmpty(textBoxOrHidden.Text.Trim()))
             {
@@ -373,6 +381,14 @@ namespace SalesManagement_SysDev
             {
                 MessageBox.Show("数量を入力してください");
                 return;
+            }
+            else
+            {
+                if (!dataInputFormCheck.CheckNumeric(textBoxOrQuantity.Text))
+                {
+                    MessageBox.Show("数量は数字で入力してください");
+                    return;
+                }
             }
 
             if (!String.IsNullOrEmpty(textBoxOrHidden.Text.Trim()))
@@ -747,6 +763,28 @@ namespace SalesManagement_SysDev
             labelRequired8.Visible = false;
             buttonUpdateMode.BackColor = Color.LightYellow;
             buttonSearchMode.BackColor = Color.Orange;
+        }
+
+        private void checkBoxOrStateFlag_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBoxOrStateFlag.Checked == true)
+            {
+                comboBoxClient.Enabled = false;
+                comboBoxEmployee.Enabled = false;
+                comboBoxProduct.Enabled = false;
+                comboBoxSalesOffice.Enabled = false;
+                textBoxClCharge.Enabled = false;
+                textBoxOrQuantity.Enabled = false;
+            }
+            else
+            {
+                comboBoxClient.Enabled = true;
+                comboBoxEmployee.Enabled = true;
+                comboBoxProduct.Enabled = true;
+                comboBoxSalesOffice.Enabled = true;
+                textBoxClCharge.Enabled = true;
+                textBoxOrQuantity.Enabled = true;
+            }
         }
     }
 }

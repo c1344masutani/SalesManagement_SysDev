@@ -12,6 +12,9 @@ namespace SalesManagement_SysDev
 {
     public partial class F_eigyousyo : Form
     {
+        //入力形式チェック用クラスのインスタンス化
+        DataInputFormCheck dataInputFormCheck = new DataInputFormCheck();
+
         public F_eigyousyo()
         {
             InitializeComponent();
@@ -44,6 +47,20 @@ namespace SalesManagement_SysDev
             //読み取り専用
             dataGridViewDsp.ReadOnly = true;
             fncAllSelect();
+
+            buttonRegester.Visible = true;
+            buttonUpdate.Visible = true;
+            buttonHidden.Visible = true;
+            buttonSearch.Visible = false;
+            labelRequired1.Visible = true;
+            labelRequired2.Visible = true;
+            labelRequired3.Visible = true;
+            labelRequired4.Visible = true;
+            labelRequired5.Visible = true;
+            labelRequired6.Visible = true;
+
+            buttonUpdateMode.BackColor = Color.Orange;
+            buttonSearchMode.BackColor = Color.LightYellow;
         }
 
         private void fncAllSelect()
@@ -110,11 +127,18 @@ namespace SalesManagement_SysDev
 
             if (!String.IsNullOrEmpty(textBoxPostal.Text))
             {
-                if(textBoxPostal.TextLength > 7)
+                if (textBoxPostal.TextLength > 7)
                 {
                     MessageBox.Show("郵便番号は7文字以下です");
                     return;
                 }
+
+                if (!dataInputFormCheck.CheckNumeric(textBoxPostal.Text))
+                {
+                    MessageBox.Show("郵便番号は数字で入力してください");
+                    return;
+                }
+
             }
             else
             {
@@ -237,6 +261,12 @@ namespace SalesManagement_SysDev
                 if (textBoxPostal.TextLength > 7)
                 {
                     MessageBox.Show("郵便番号は7文字以下です");
+                    return;
+                }
+
+                if (!dataInputFormCheck.CheckNumeric(textBoxPostal.Text))
+                {
+                    MessageBox.Show("郵便番号は数字で入力してください");
                     return;
                 }
             }

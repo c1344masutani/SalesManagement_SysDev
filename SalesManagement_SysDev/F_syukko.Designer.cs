@@ -334,6 +334,7 @@ namespace SalesManagement_SysDev
             this.checkBoxSyStateFlag.TabIndex = 98;
             this.checkBoxSyStateFlag.Text = "出庫済";
             this.checkBoxSyStateFlag.UseVisualStyleBackColor = true;
+            this.checkBoxSyStateFlag.CheckedChanged += new System.EventHandler(this.checkBoxSyStateFlag_CheckedChanged);
             // 
             // checkBoxSyFlg
             // 

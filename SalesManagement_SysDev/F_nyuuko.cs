@@ -283,5 +283,10 @@ namespace SalesManagement_SysDev
             textBoxWaHidden.Text = "";
             textBoxQuantity.Text = "";
         }
+
+        private void checkBoxWaSheifFlag_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

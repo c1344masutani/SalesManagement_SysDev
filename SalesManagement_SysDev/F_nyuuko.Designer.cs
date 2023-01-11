@@ -201,6 +201,7 @@ namespace SalesManagement_SysDev
             this.checkBoxWaSheifFlag.TabIndex = 76;
             this.checkBoxWaSheifFlag.Text = "入庫確定";
             this.checkBoxWaSheifFlag.UseVisualStyleBackColor = true;
+            this.checkBoxWaSheifFlag.CheckedChanged += new System.EventHandler(this.checkBoxWaSheifFlag_CheckedChanged);
             // 
             // checkBoxWaFlag
             // 

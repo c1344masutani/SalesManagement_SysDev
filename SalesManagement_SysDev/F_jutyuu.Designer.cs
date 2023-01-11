@@ -273,6 +273,7 @@ namespace SalesManagement_SysDev
             this.checkBoxOrStateFlag.TabIndex = 69;
             this.checkBoxOrStateFlag.Text = "受注確定";
             this.checkBoxOrStateFlag.UseVisualStyleBackColor = true;
+            this.checkBoxOrStateFlag.CheckedChanged += new System.EventHandler(this.checkBoxOrStateFlag_CheckedChanged);
             // 
             // checkBoxOrFlag
             // 

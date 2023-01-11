@@ -397,22 +397,7 @@ namespace SalesManagement_SysDev
 
         private void checkBoxShStateFlag_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBoxShStateFlag.Checked == true)
-            {
-                comboBoxClient.Enabled = false;
-                comboBoxEmployee.Enabled = false;
-                comboBoxSalesOffice.Enabled = false;
-                textBoxOrID.Enabled = false;
-                dateTimePickerShFinishDate.Enabled = false;
-            }
-            else
-            {
-                comboBoxClient.Enabled = true;
-                comboBoxEmployee.Enabled = true;
-                comboBoxSalesOffice.Enabled = true;
-                textBoxOrID.Enabled = true;
-                dateTimePickerShFinishDate.Enabled = true;
-            }
+
         }
 
         private void buttonUpdateMode_Click(object sender, EventArgs e)

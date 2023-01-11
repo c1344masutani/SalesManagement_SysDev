@@ -187,6 +187,14 @@ namespace SalesManagement_SysDev
                 MessageBox.Show("発注数を入力してください");
                 return;
             }
+            else
+            {
+                if (!dataInputFormCheck.CheckNumeric(textBoxHaQuantity.Text))
+                {
+                    MessageBox.Show("発注数は数字で入力してください");
+                    return;
+                }
+            }
 
             if (!String.IsNullOrEmpty(textBoxHaHidden.Text.Trim()))
             {
@@ -326,6 +334,14 @@ namespace SalesManagement_SysDev
             {
                 MessageBox.Show("発注数を入力してください");
                 return;
+            }
+            else
+            {
+                if (!dataInputFormCheck.CheckNumeric(textBoxHaQuantity.Text))
+                {
+                    MessageBox.Show("発注数は数字で入力してください");
+                    return;
+                }
             }
 
             if (!String.IsNullOrEmpty(textBoxHaHidden.Text.Trim()))
@@ -667,6 +683,22 @@ namespace SalesManagement_SysDev
             labelRequired6.Visible = false;
             buttonUpdateMode.BackColor = Color.LightYellow;
             buttonSearchMode.BackColor = Color.Orange;
+        }
+
+        private void checkBoxWaWarehouseFlag_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBoxWaWarehouseFlag.Checked == true)
+            {
+                comboBoxMaker.Enabled = false;
+                comboBoxEmployee.Enabled = false;
+                comboBoxProduct.Enabled = false;
+            }
+            else
+            {
+                comboBoxMaker.Enabled = true;
+                comboBoxEmployee.Enabled = true;
+                comboBoxProduct.Enabled = true;
+            }
         }
     }
 }

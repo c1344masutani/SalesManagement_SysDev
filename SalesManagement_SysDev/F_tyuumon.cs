@@ -407,7 +407,20 @@ namespace SalesManagement_SysDev
 
         private void checkBoxChStateflg_CheckedChanged(object sender, EventArgs e)
         {
-            
+            if(checkBoxChStateflg.Checked == true)
+            {
+                comboBoxClient.Enabled = false;
+                comboBoxEmployee.Enabled = false;
+                comboBoxSalesOffice.Enabled = false;
+                textBoxOrid.Enabled = false;
+            }
+            else
+            {
+                comboBoxClient.Enabled = true;
+                comboBoxEmployee.Enabled = true;
+                comboBoxSalesOffice.Enabled = true;
+                textBoxOrid.Enabled = true;
+            }
         }
 
         private void buttonUpdateMode_Click(object sender, EventArgs e)

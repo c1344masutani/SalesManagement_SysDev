@@ -188,6 +188,7 @@ namespace SalesManagement_SysDev
             this.checkBoxWaWarehouseFlag.TabIndex = 87;
             this.checkBoxWaWarehouseFlag.Text = "入庫済";
             this.checkBoxWaWarehouseFlag.UseVisualStyleBackColor = true;
+            this.checkBoxWaWarehouseFlag.CheckedChanged += new System.EventHandler(this.checkBoxWaWarehouseFlag_CheckedChanged);
             // 
             // checkBoxHaFlag
             // 
