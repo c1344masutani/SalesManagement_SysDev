@@ -49,6 +49,24 @@ namespace SalesManagement_SysDev
             //Form frm = new F_menu2();
             //frm.ShowDialog();
 
+            //テスト用
+            if(loginID == "test" && loginPW == "test")
+            {
+                F_menu2.position = 1;
+                F_menu2.loginname = "テスト用";
+
+                Form frm = new F_menu2();
+
+                Opacity = 0;
+
+                frm.WindowState = FormWindowState.Maximized;
+                frm.ShowDialog();
+
+
+                this.Close();
+            }
+
+
             //ユーザID・PWの入力状況チェック
             if (loginID.Trim() == "" || loginID == null || loginPW.Trim() == "" || loginPW == null)
             {
