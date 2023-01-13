@@ -67,7 +67,6 @@
     <Compile Include="DbAccess\ProductDataAccess.cs" />
     <Compile Include="DbAccess\SalesOfficeDataAccess.cs" />
     <Compile Include="DbAccess\SmallClassificationDataAccess.cs" />
-    <Compile Include="DbAccess\StockDataAccess.cs" />
     <Compile Include="F_eigyousyo.cs">
       <SubType>Form</SubType>
     </Compile>
