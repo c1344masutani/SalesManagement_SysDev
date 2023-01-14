@@ -70,7 +70,6 @@ namespace SalesManagement_SysDev
                          select new
                          {
                              t1.StID,
-                             t1.PrID,
                              t2.PrName,
                              t2.Price,
                              t1.StQuantity,
@@ -78,7 +77,7 @@ namespace SalesManagement_SysDev
                          };
                 foreach (var p in tb)
                 {
-                    dataGridViewDsp.Rows.Add(p.StID, p.PrID, p.PrName, p.Price, p.StQuantity,p.StFlag);
+                    dataGridViewDsp.Rows.Add(p.StID, p.PrName, p.Price, p.StQuantity,p.StFlag);
                 }
                 context.Dispose();
             }
@@ -105,7 +104,6 @@ namespace SalesManagement_SysDev
                          select new
                          {
                              t1.StID,
-                             t1.PrID,
                              t2.PrName,
                              t2.Price,
                              t1.StQuantity,
@@ -113,7 +111,7 @@ namespace SalesManagement_SysDev
                          };
                 foreach (var p in tb)
                 {
-                    dataGridViewDsp.Rows.Add(p.StID,p.PrID,p.PrName,p.Price,p.StQuantity,p.StFlag);
+                    dataGridViewDsp.Rows.Add(p.StID,p.PrName,p.Price,p.StQuantity,p.StFlag);
                 }
 
                 
@@ -131,21 +129,19 @@ namespace SalesManagement_SysDev
 
         private void F_zaiko_Load(object sender, EventArgs e)
         {
-            dataGridViewDsp.ColumnCount = 6;
+            dataGridViewDsp.ColumnCount = 5;
             //0番目（左端）の列幅を設定
             dataGridViewDsp.Columns[0].Width = 70;
             //0番目（左端）の項目名を設定
             dataGridViewDsp.Columns[0].HeaderText = "在庫ID";
-            dataGridViewDsp.Columns[1].Width = 70;
-            dataGridViewDsp.Columns[1].HeaderText = "商品ID";
+            dataGridViewDsp.Columns[1].Width = 200;
+            dataGridViewDsp.Columns[1].HeaderText = "商品名";
             dataGridViewDsp.Columns[2].Width = 130;
-            dataGridViewDsp.Columns[2].HeaderText = "商品名";
-            dataGridViewDsp.Columns[3].Width = 70;
-            dataGridViewDsp.Columns[3].HeaderText = "値段";
+            dataGridViewDsp.Columns[2].HeaderText = "値段";
+            dataGridViewDsp.Columns[3].Width = 130;
+            dataGridViewDsp.Columns[3].HeaderText = "在庫数";
             dataGridViewDsp.Columns[4].Width = 70;
-            dataGridViewDsp.Columns[4].HeaderText = "在庫数";
-            dataGridViewDsp.Columns[5].Width = 70;
-            dataGridViewDsp.Columns[5].HeaderText = "非表示フラグ";
+            dataGridViewDsp.Columns[4].HeaderText = "非表示フラグ";
             //選択モードを行単位
             dataGridViewDsp.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             //読み取り専用
@@ -156,6 +152,8 @@ namespace SalesManagement_SysDev
             button_Update.Visible = true;
             buttonHidden.Visible = true;
             button_Search.Visible = false;
+            textBoxPrName.Enabled = false;
+            textBoxPrice.Enabled = false;
             buttonUpdateMode.BackColor = Color.Orange;
             buttonSearchMode.BackColor = Color.LightYellow;
         }
@@ -203,9 +201,9 @@ namespace SalesManagement_SysDev
         private void dataGridViewDsp_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             textBoxStID.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[0].Value.ToString();
-            textBoxPrName.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
-            textBoxPrice.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
-            textBoxStQuantity.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[4].Value.ToString();
+            textBoxPrName.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[1].Value.ToString();
+            textBoxPrice.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[2].Value.ToString();
+            textBoxStQuantity.Text = dataGridViewDsp.Rows[dataGridViewDsp.CurrentRow.Index].Cells[3].Value.ToString();
         }
 
         private void ClearInput()
@@ -263,6 +261,8 @@ namespace SalesManagement_SysDev
             labelRequired2.Visible = true;
             labelRequired3.Visible = true;
             labelRequired4.Visible = true;
+            textBoxPrName.Enabled = false;
+            textBoxPrice.Enabled = false;
             buttonUpdateMode.BackColor = Color.Orange;
             buttonSearchMode.BackColor = Color.LightYellow;
         }
@@ -276,6 +276,9 @@ namespace SalesManagement_SysDev
             labelRequired2.Visible = false;
             labelRequired3.Visible = false;
             labelRequired4.Visible = false;
+            textBoxPrName.Enabled = true;
+            textBoxPrice.Enabled = true;
+            textBoxStQuantity.Enabled = true;
             buttonUpdateMode.BackColor = Color.LightYellow;
             buttonSearchMode.BackColor = Color.Orange;
         }

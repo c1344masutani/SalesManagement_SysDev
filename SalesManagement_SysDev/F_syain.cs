@@ -21,7 +21,8 @@ namespace SalesManagement_SysDev
         private static List<M_SalesOffice> SalesOffice;
         private static List<M_Position> Position;
 
-
+        //ログインフォームから来たかの判定用
+        internal static string from = "";
 
         public F_syain()
         {
@@ -137,14 +138,27 @@ namespace SalesManagement_SysDev
 
         private void back_button_Click(object sender, EventArgs e)
         {
-            Form frm = new F_menu2();
+            if(from == "login")
+            {
+                Form frm = new F_Login();
 
-            Opacity = 0;
+                Opacity = 0;
+                frm.ShowDialog();
 
-            frm.WindowState = FormWindowState.Maximized;
-            frm.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                Form frm = new F_menu2();
 
-            this.Close();
+                Opacity = 0;
+
+                frm.WindowState = FormWindowState.Maximized;
+                frm.ShowDialog();
+
+                this.Close();
+            }
+            
         }
 
         private void Regester_button_Click(object sender, EventArgs e)

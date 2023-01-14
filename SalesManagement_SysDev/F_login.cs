@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
+using Microsoft.VisualBasic;
 
 namespace SalesManagement_SysDev
 {
@@ -135,7 +136,41 @@ namespace SalesManagement_SysDev
 
         private void button1_Click(object sender, EventArgs e)
         {
+            var context = new SalesManagement_DevContext();
 
+            string loginID = Interaction.InputBox("管理者の社員IDを入力してください", "管理者ID確認", "", -1, -1);
+            //入力されたIDが管理者かどうか判定
+            bool emid_flg = context.M_Employees.Any(x => x.EmID.ToString() == loginID && x.PoID == 1 && x.EmFlag == 0);
+            if(emid_flg == true)
+            {
+                //PWを入力・確認
+                string loginPW = Interaction.InputBox("パスワードを入力してください", "パスワード確認", "", -1, -1);
+                bool pw_flg = context.M_Employees.Any(x => x.EmID.ToString() == loginID && x.EmPassword == loginPW);
+                if(pw_flg == true)
+                {
+                    F_syain.from = "login";
+                    Form frm = new F_syain();
+
+                    Opacity = 0;
+
+                    frm.WindowState = FormWindowState.Maximized;
+                    frm.ShowDialog();
+
+
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("パスワードが違います");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("管理者の社員IDを入力してください");
+                return;
+            }
+            
         }
     }
 }
