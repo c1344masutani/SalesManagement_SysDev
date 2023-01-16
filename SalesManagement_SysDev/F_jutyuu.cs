@@ -180,7 +180,7 @@ namespace SalesManagement_SysDev
 
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
-
+            frm.Dispose();
             this.Close();
         }
 
@@ -602,6 +602,7 @@ namespace SalesManagement_SysDev
         private void buttonClear_Click(object sender, EventArgs e)
         {
             InputClear();
+            fncAllSelect();
 
         }
 
@@ -785,6 +786,11 @@ namespace SalesManagement_SysDev
                 textBoxClCharge.Enabled = true;
                 textBoxOrQuantity.Enabled = true;
             }
+        }
+
+        private void F_jutyuu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
     }
 }

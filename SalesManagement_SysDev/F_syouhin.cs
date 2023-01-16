@@ -684,5 +684,10 @@ namespace SalesManagement_SysDev
             buttonUpdateMode.BackColor = Color.LightYellow;
             buttonSearchMode.BackColor = Color.Orange;
         }
+
+        private void F_syouhin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
     }
 }

@@ -101,7 +101,7 @@ namespace SalesManagement_SysDev
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label4.Location = new System.Drawing.Point(918, 146);
+            this.label4.Location = new System.Drawing.Point(1073, 129);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 40);
@@ -113,7 +113,7 @@ namespace SalesManagement_SysDev
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label5.Location = new System.Drawing.Point(918, 234);
+            this.label5.Location = new System.Drawing.Point(1073, 217);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(217, 40);
@@ -137,7 +137,7 @@ namespace SalesManagement_SysDev
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label7.Location = new System.Drawing.Point(918, 314);
+            this.label7.Location = new System.Drawing.Point(1073, 297);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(177, 40);
@@ -149,7 +149,7 @@ namespace SalesManagement_SysDev
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label8.Location = new System.Drawing.Point(1232, 399);
+            this.label8.Location = new System.Drawing.Point(1387, 382);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(217, 40);
@@ -182,6 +182,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxEmID
             // 
+            this.textBoxEmID.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxEmID.Location = new System.Drawing.Point(542, 146);
             this.textBoxEmID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEmID.Multiline = true;
@@ -192,16 +193,18 @@ namespace SalesManagement_SysDev
             // 
             // textBoxEmName
             // 
+            this.textBoxEmName.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxEmName.Location = new System.Drawing.Point(542, 234);
             this.textBoxEmName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEmName.Multiline = true;
             this.textBoxEmName.Name = "textBoxEmName";
-            this.textBoxEmName.Size = new System.Drawing.Size(185, 47);
+            this.textBoxEmName.Size = new System.Drawing.Size(378, 47);
             this.textBoxEmName.TabIndex = 10;
             // 
             // textBoxhidden
             // 
-            this.textBoxhidden.Location = new System.Drawing.Point(1482, 395);
+            this.textBoxhidden.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBoxhidden.Location = new System.Drawing.Point(1637, 378);
             this.textBoxhidden.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxhidden.Multiline = true;
             this.textBoxhidden.Name = "textBoxhidden";
@@ -218,20 +221,22 @@ namespace SalesManagement_SysDev
             // 
             // textBoxEmPhone
             // 
-            this.textBoxEmPhone.Location = new System.Drawing.Point(1222, 314);
+            this.textBoxEmPhone.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBoxEmPhone.Location = new System.Drawing.Point(1377, 297);
             this.textBoxEmPhone.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEmPhone.Multiline = true;
             this.textBoxEmPhone.Name = "textBoxEmPhone";
-            this.textBoxEmPhone.Size = new System.Drawing.Size(254, 45);
+            this.textBoxEmPhone.Size = new System.Drawing.Size(329, 45);
             this.textBoxEmPhone.TabIndex = 15;
             // 
             // textBoxEmPassWord
             // 
+            this.textBoxEmPassWord.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxEmPassWord.Location = new System.Drawing.Point(542, 381);
             this.textBoxEmPassWord.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEmPassWord.Multiline = true;
             this.textBoxEmPassWord.Name = "textBoxEmPassWord";
-            this.textBoxEmPassWord.Size = new System.Drawing.Size(254, 45);
+            this.textBoxEmPassWord.Size = new System.Drawing.Size(378, 45);
             this.textBoxEmPassWord.TabIndex = 16;
             // 
             // dataGridViewDsp
@@ -327,7 +332,7 @@ namespace SalesManagement_SysDev
             this.labelRequired5.AutoSize = true;
             this.labelRequired5.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.labelRequired5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.labelRequired5.Location = new System.Drawing.Point(1062, 164);
+            this.labelRequired5.Location = new System.Drawing.Point(1217, 147);
             this.labelRequired5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRequired5.Name = "labelRequired5";
             this.labelRequired5.Size = new System.Drawing.Size(44, 18);
@@ -339,7 +344,7 @@ namespace SalesManagement_SysDev
             this.labelRequired6.AutoSize = true;
             this.labelRequired6.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.labelRequired6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.labelRequired6.Location = new System.Drawing.Point(1141, 253);
+            this.labelRequired6.Location = new System.Drawing.Point(1296, 236);
             this.labelRequired6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRequired6.Name = "labelRequired6";
             this.labelRequired6.Size = new System.Drawing.Size(44, 18);
@@ -351,7 +356,7 @@ namespace SalesManagement_SysDev
             this.labelRequired7.AutoSize = true;
             this.labelRequired7.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.labelRequired7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.labelRequired7.Location = new System.Drawing.Point(1101, 342);
+            this.labelRequired7.Location = new System.Drawing.Point(1256, 325);
             this.labelRequired7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRequired7.Name = "labelRequired7";
             this.labelRequired7.Size = new System.Drawing.Size(44, 18);
@@ -385,10 +390,12 @@ namespace SalesManagement_SysDev
             // 
             // datetimeEmHiredate
             // 
-            this.datetimeEmHiredate.Location = new System.Drawing.Point(1222, 246);
+            this.datetimeEmHiredate.CalendarFont = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.datetimeEmHiredate.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.datetimeEmHiredate.Location = new System.Drawing.Point(1377, 215);
             this.datetimeEmHiredate.Margin = new System.Windows.Forms.Padding(2);
             this.datetimeEmHiredate.Name = "datetimeEmHiredate";
-            this.datetimeEmHiredate.Size = new System.Drawing.Size(254, 25);
+            this.datetimeEmHiredate.Size = new System.Drawing.Size(321, 39);
             this.datetimeEmHiredate.TabIndex = 31;
             // 
             // checkBoxEmFlag
@@ -396,7 +403,7 @@ namespace SalesManagement_SysDev
             this.checkBoxEmFlag.AutoSize = true;
             this.checkBoxEmFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBoxEmFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.checkBoxEmFlag.Location = new System.Drawing.Point(925, 399);
+            this.checkBoxEmFlag.Location = new System.Drawing.Point(1080, 382);
             this.checkBoxEmFlag.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxEmFlag.Name = "checkBoxEmFlag";
             this.checkBoxEmFlag.Size = new System.Drawing.Size(163, 44);
@@ -410,21 +417,21 @@ namespace SalesManagement_SysDev
             this.comboBoxSalesOffice.FormattingEnabled = true;
             this.comboBoxSalesOffice.Location = new System.Drawing.Point(542, 314);
             this.comboBoxSalesOffice.Name = "comboBoxSalesOffice";
-            this.comboBoxSalesOffice.Size = new System.Drawing.Size(185, 41);
+            this.comboBoxSalesOffice.Size = new System.Drawing.Size(243, 41);
             this.comboBoxSalesOffice.TabIndex = 50;
             // 
             // comboBoxPosition
             // 
             this.comboBoxPosition.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.comboBoxPosition.FormattingEnabled = true;
-            this.comboBoxPosition.Location = new System.Drawing.Point(1222, 152);
+            this.comboBoxPosition.Location = new System.Drawing.Point(1377, 135);
             this.comboBoxPosition.Name = "comboBoxPosition";
-            this.comboBoxPosition.Size = new System.Drawing.Size(254, 41);
+            this.comboBoxPosition.Size = new System.Drawing.Size(321, 41);
             this.comboBoxPosition.TabIndex = 51;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(743, 306);
+            this.button1.Location = new System.Drawing.Point(812, 307);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(108, 53);
             this.button1.TabIndex = 52;

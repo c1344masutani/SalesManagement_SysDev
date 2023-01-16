@@ -288,5 +288,10 @@ namespace SalesManagement_SysDev
         {
 
         }
+
+        private void F_nyuuko_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
     }
 }

@@ -275,5 +275,10 @@ namespace SalesManagement_SysDev
         private void checkBoxSyStateFlag_CheckedChanged(object sender, EventArgs e)
         {
         }
+
+        private void F_syukko_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
     }
 }

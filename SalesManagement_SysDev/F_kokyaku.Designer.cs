@@ -168,7 +168,7 @@ namespace SalesManagement_SysDev
             this.textBoxClientName.Location = new System.Drawing.Point(522, 237);
             this.textBoxClientName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxClientName.Name = "textBoxClientName";
-            this.textBoxClientName.Size = new System.Drawing.Size(274, 43);
+            this.textBoxClientName.Size = new System.Drawing.Size(310, 43);
             this.textBoxClientName.TabIndex = 34;
             // 
             // dataGridViewDsp
@@ -454,7 +454,7 @@ namespace SalesManagement_SysDev
             this.comboBoxSalesOffice.FormattingEnabled = true;
             this.comboBoxSalesOffice.Location = new System.Drawing.Point(522, 316);
             this.comboBoxSalesOffice.Name = "comboBoxSalesOffice";
-            this.comboBoxSalesOffice.Size = new System.Drawing.Size(186, 41);
+            this.comboBoxSalesOffice.Size = new System.Drawing.Size(310, 41);
             this.comboBoxSalesOffice.TabIndex = 59;
             // 
             // button_Clear

@@ -323,7 +323,7 @@ namespace SalesManagement_SysDev
             this.comboBoxMaker.FormattingEnabled = true;
             this.comboBoxMaker.Location = new System.Drawing.Point(434, 238);
             this.comboBoxMaker.Name = "comboBoxMaker";
-            this.comboBoxMaker.Size = new System.Drawing.Size(206, 41);
+            this.comboBoxMaker.Size = new System.Drawing.Size(295, 41);
             this.comboBoxMaker.TabIndex = 103;
             // 
             // comboBoxEmployee
@@ -399,7 +399,7 @@ namespace SalesManagement_SysDev
             this.comboBoxProduct.FormattingEnabled = true;
             this.comboBoxProduct.Location = new System.Drawing.Point(434, 314);
             this.comboBoxProduct.Name = "comboBoxProduct";
-            this.comboBoxProduct.Size = new System.Drawing.Size(206, 41);
+            this.comboBoxProduct.Size = new System.Drawing.Size(295, 41);
             this.comboBoxProduct.TabIndex = 119;
             // 
             // buttonConfirm

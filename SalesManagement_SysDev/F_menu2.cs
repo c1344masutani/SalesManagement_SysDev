@@ -282,5 +282,10 @@ namespace SalesManagement_SysDev
                 groupBoxSalesStaff.Visible = false;
             }
         }
+
+        private void F_menu2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
     }
 }

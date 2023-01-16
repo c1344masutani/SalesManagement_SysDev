@@ -186,7 +186,7 @@ namespace SalesManagement_SysDev
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label4.Location = new System.Drawing.Point(917, 163);
+            this.label4.Location = new System.Drawing.Point(1029, 162);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(177, 40);
@@ -212,7 +212,7 @@ namespace SalesManagement_SysDev
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label6.Location = new System.Drawing.Point(924, 250);
+            this.label6.Location = new System.Drawing.Point(1036, 249);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(170, 40);
@@ -224,7 +224,7 @@ namespace SalesManagement_SysDev
             this.checkBoxSoFlag.AutoSize = true;
             this.checkBoxSoFlag.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.checkBoxSoFlag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.checkBoxSoFlag.Location = new System.Drawing.Point(854, 467);
+            this.checkBoxSoFlag.Location = new System.Drawing.Point(966, 466);
             this.checkBoxSoFlag.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxSoFlag.Name = "checkBoxSoFlag";
             this.checkBoxSoFlag.Size = new System.Drawing.Size(163, 44);
@@ -237,7 +237,7 @@ namespace SalesManagement_SysDev
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
-            this.label8.Location = new System.Drawing.Point(1084, 467);
+            this.label8.Location = new System.Drawing.Point(1196, 466);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(217, 40);
@@ -246,6 +246,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxSoID
             // 
+            this.textBoxSoID.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxSoID.Location = new System.Drawing.Point(534, 163);
             this.textBoxSoID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSoID.Multiline = true;
@@ -256,34 +257,38 @@ namespace SalesManagement_SysDev
             // 
             // textBoxSoName
             // 
+            this.textBoxSoName.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxSoName.Location = new System.Drawing.Point(534, 243);
             this.textBoxSoName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSoName.Multiline = true;
             this.textBoxSoName.Name = "textBoxSoName";
-            this.textBoxSoName.Size = new System.Drawing.Size(201, 47);
+            this.textBoxSoName.Size = new System.Drawing.Size(292, 47);
             this.textBoxSoName.TabIndex = 64;
             // 
             // textBoxPostal
             // 
+            this.textBoxPostal.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxPostal.Location = new System.Drawing.Point(534, 320);
             this.textBoxPostal.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPostal.Multiline = true;
             this.textBoxPostal.Name = "textBoxPostal";
-            this.textBoxPostal.Size = new System.Drawing.Size(201, 47);
+            this.textBoxPostal.Size = new System.Drawing.Size(232, 47);
             this.textBoxPostal.TabIndex = 65;
             // 
             // textBoxAddress
             // 
+            this.textBoxAddress.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxAddress.Location = new System.Drawing.Point(261, 463);
             this.textBoxAddress.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAddress.Multiline = true;
             this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(505, 47);
+            this.textBoxAddress.Size = new System.Drawing.Size(565, 47);
             this.textBoxAddress.TabIndex = 66;
             // 
             // textBoxPhone
             // 
-            this.textBoxPhone.Location = new System.Drawing.Point(1185, 153);
+            this.textBoxPhone.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBoxPhone.Location = new System.Drawing.Point(1297, 152);
             this.textBoxPhone.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPhone.Multiline = true;
             this.textBoxPhone.Name = "textBoxPhone";
@@ -292,7 +297,8 @@ namespace SalesManagement_SysDev
             // 
             // textBoxFax
             // 
-            this.textBoxFax.Location = new System.Drawing.Point(1185, 246);
+            this.textBoxFax.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBoxFax.Location = new System.Drawing.Point(1297, 245);
             this.textBoxFax.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFax.Multiline = true;
             this.textBoxFax.Name = "textBoxFax";
@@ -301,7 +307,8 @@ namespace SalesManagement_SysDev
             // 
             // textBoxHidden
             // 
-            this.textBoxHidden.Location = new System.Drawing.Point(1357, 460);
+            this.textBoxHidden.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBoxHidden.Location = new System.Drawing.Point(1469, 459);
             this.textBoxHidden.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxHidden.Multiline = true;
             this.textBoxHidden.Name = "textBoxHidden";
@@ -391,7 +398,7 @@ namespace SalesManagement_SysDev
             this.labelRequired4.BackColor = System.Drawing.Color.Transparent;
             this.labelRequired4.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.labelRequired4.ForeColor = System.Drawing.Color.Red;
-            this.labelRequired4.Location = new System.Drawing.Point(1099, 182);
+            this.labelRequired4.Location = new System.Drawing.Point(1211, 181);
             this.labelRequired4.Name = "labelRequired4";
             this.labelRequired4.Size = new System.Drawing.Size(44, 18);
             this.labelRequired4.TabIndex = 110;
@@ -403,7 +410,7 @@ namespace SalesManagement_SysDev
             this.labelRequired5.BackColor = System.Drawing.Color.Transparent;
             this.labelRequired5.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.labelRequired5.ForeColor = System.Drawing.Color.Red;
-            this.labelRequired5.Location = new System.Drawing.Point(1099, 269);
+            this.labelRequired5.Location = new System.Drawing.Point(1211, 268);
             this.labelRequired5.Name = "labelRequired5";
             this.labelRequired5.Size = new System.Drawing.Size(44, 18);
             this.labelRequired5.TabIndex = 111;

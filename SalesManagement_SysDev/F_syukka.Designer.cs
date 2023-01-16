@@ -393,9 +393,9 @@ namespace SalesManagement_SysDev
             // 
             this.comboBoxClient.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.comboBoxClient.FormattingEnabled = true;
-            this.comboBoxClient.Location = new System.Drawing.Point(522, 258);
+            this.comboBoxClient.Location = new System.Drawing.Point(522, 250);
             this.comboBoxClient.Name = "comboBoxClient";
-            this.comboBoxClient.Size = new System.Drawing.Size(185, 41);
+            this.comboBoxClient.Size = new System.Drawing.Size(294, 41);
             this.comboBoxClient.TabIndex = 120;
             // 
             // comboBoxEmployee
@@ -404,7 +404,7 @@ namespace SalesManagement_SysDev
             this.comboBoxEmployee.FormattingEnabled = true;
             this.comboBoxEmployee.Location = new System.Drawing.Point(522, 335);
             this.comboBoxEmployee.Name = "comboBoxEmployee";
-            this.comboBoxEmployee.Size = new System.Drawing.Size(185, 41);
+            this.comboBoxEmployee.Size = new System.Drawing.Size(294, 41);
             this.comboBoxEmployee.TabIndex = 121;
             // 
             // comboBoxSalesOffice
@@ -413,7 +413,7 @@ namespace SalesManagement_SysDev
             this.comboBoxSalesOffice.FormattingEnabled = true;
             this.comboBoxSalesOffice.Location = new System.Drawing.Point(1222, 146);
             this.comboBoxSalesOffice.Name = "comboBoxSalesOffice";
-            this.comboBoxSalesOffice.Size = new System.Drawing.Size(185, 41);
+            this.comboBoxSalesOffice.Size = new System.Drawing.Size(306, 41);
             this.comboBoxSalesOffice.TabIndex = 122;
             // 
             // buttonUpdateMode

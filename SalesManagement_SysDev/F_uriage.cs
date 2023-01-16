@@ -271,5 +271,10 @@ namespace SalesManagement_SysDev
 
             dateTimePickerSaDate.Value = DateTime.Now;
         }
+
+        private void F_uriage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
     }
 }

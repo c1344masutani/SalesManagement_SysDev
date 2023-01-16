@@ -63,7 +63,7 @@ namespace SalesManagement_SysDev
 
         private void button_back_Click(object sender, EventArgs e)
         {
-            Form frm = new F_menu();
+            Form frm = new F_menu2();
 
             Opacity = 0;
 
@@ -441,6 +441,11 @@ namespace SalesManagement_SysDev
 
             buttonUpdateMode.BackColor = Color.LightYellow;
             buttonSearchMode.BackColor = Color.Orange;
+        }
+
+        private void F_nyuuka_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
     }
 }

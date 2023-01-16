@@ -148,7 +148,7 @@ namespace SalesManagement_SysDev
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.label4.Location = new System.Drawing.Point(1051, 284);
+            this.label4.Location = new System.Drawing.Point(1051, 268);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(138, 40);
@@ -187,7 +187,7 @@ namespace SalesManagement_SysDev
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(87)))));
-            this.label8.Location = new System.Drawing.Point(1051, 366);
+            this.label8.Location = new System.Drawing.Point(1051, 362);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(217, 40);
@@ -200,7 +200,7 @@ namespace SalesManagement_SysDev
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label11.Location = new System.Drawing.Point(1257, 187);
+            this.label11.Location = new System.Drawing.Point(1249, 198);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(44, 18);
@@ -239,7 +239,7 @@ namespace SalesManagement_SysDev
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label10.Location = new System.Drawing.Point(1257, 303);
+            this.label10.Location = new System.Drawing.Point(1202, 287);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(44, 18);
@@ -265,7 +265,7 @@ namespace SalesManagement_SysDev
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("HGS明朝E", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
-            this.label13.Location = new System.Drawing.Point(1270, 385);
+            this.label13.Location = new System.Drawing.Point(1272, 381);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(44, 18);
@@ -287,16 +287,16 @@ namespace SalesManagement_SysDev
             // 
             // textBoxSyHidden
             // 
-            this.textBoxSyHidden.Location = new System.Drawing.Point(1320, 436);
+            this.textBoxSyHidden.Location = new System.Drawing.Point(1365, 436);
             this.textBoxSyHidden.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSyHidden.Multiline = true;
             this.textBoxSyHidden.Name = "textBoxSyHidden";
-            this.textBoxSyHidden.Size = new System.Drawing.Size(366, 78);
+            this.textBoxSyHidden.Size = new System.Drawing.Size(385, 78);
             this.textBoxSyHidden.TabIndex = 91;
             // 
             // textBoxOrID
             // 
-            this.textBoxOrID.Location = new System.Drawing.Point(1416, 279);
+            this.textBoxOrID.Location = new System.Drawing.Point(1365, 263);
             this.textBoxOrID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxOrID.Multiline = true;
             this.textBoxOrID.Name = "textBoxOrID";
@@ -316,10 +316,11 @@ namespace SalesManagement_SysDev
             // 
             // dateTimePickerSyDate
             // 
-            this.dateTimePickerSyDate.Location = new System.Drawing.Point(1416, 373);
+            this.dateTimePickerSyDate.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.dateTimePickerSyDate.Location = new System.Drawing.Point(1365, 364);
             this.dateTimePickerSyDate.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerSyDate.Name = "dateTimePickerSyDate";
-            this.dateTimePickerSyDate.Size = new System.Drawing.Size(208, 25);
+            this.dateTimePickerSyDate.Size = new System.Drawing.Size(334, 39);
             this.dateTimePickerSyDate.TabIndex = 97;
             // 
             // checkBoxSyStateFlag
@@ -409,7 +410,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxSalesOffice
             // 
-            this.textBoxSalesOffice.Location = new System.Drawing.Point(1416, 165);
+            this.textBoxSalesOffice.Location = new System.Drawing.Point(1365, 171);
             this.textBoxSalesOffice.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSalesOffice.Multiline = true;
             this.textBoxSalesOffice.Name = "textBoxSalesOffice";

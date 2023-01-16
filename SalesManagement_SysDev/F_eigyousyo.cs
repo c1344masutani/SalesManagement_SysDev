@@ -105,7 +105,7 @@ namespace SalesManagement_SysDev
 
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
-
+            frm.Dispose();
             this.Close();
         }
 
@@ -498,6 +498,7 @@ namespace SalesManagement_SysDev
         private void buttonClear_Click(object sender, EventArgs e)
         {
             ClearInput();
+            fncAllSelect();
         }
 
         private void buttonUpdateMode_Click(object sender, EventArgs e)
@@ -532,6 +533,11 @@ namespace SalesManagement_SysDev
 
             buttonUpdateMode.BackColor = Color.LightYellow;
             buttonSearchMode.BackColor = Color.Orange;
+        }
+
+        private void F_eigyousyo_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
     }
 }

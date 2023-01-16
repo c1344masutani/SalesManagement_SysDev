@@ -172,5 +172,10 @@ namespace SalesManagement_SysDev
             }
             
         }
+
+        private void F_Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
     }
 }

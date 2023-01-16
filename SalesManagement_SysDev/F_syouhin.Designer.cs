@@ -146,16 +146,16 @@ namespace SalesManagement_SysDev
             // 
             // textBoxPrName
             // 
-            this.textBoxPrName.Font = new System.Drawing.Font("HGS明朝E", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBoxPrName.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxPrName.Location = new System.Drawing.Point(416, 275);
             this.textBoxPrName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrName.Name = "textBoxPrName";
-            this.textBoxPrName.Size = new System.Drawing.Size(206, 39);
+            this.textBoxPrName.Size = new System.Drawing.Size(338, 39);
             this.textBoxPrName.TabIndex = 61;
             // 
             // textBoxPrSafetyStock
             // 
-            this.textBoxPrSafetyStock.Font = new System.Drawing.Font("HGS明朝E", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBoxPrSafetyStock.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxPrSafetyStock.Location = new System.Drawing.Point(1127, 164);
             this.textBoxPrSafetyStock.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrSafetyStock.Name = "textBoxPrSafetyStock";
@@ -174,7 +174,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Font = new System.Drawing.Font("HGS明朝E", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBoxPrice.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxPrice.Location = new System.Drawing.Point(416, 462);
             this.textBoxPrice.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrice.Name = "textBoxPrice";
@@ -326,7 +326,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxPrModelNumber
             // 
-            this.textBoxPrModelNumber.Font = new System.Drawing.Font("HGS明朝E", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBoxPrModelNumber.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxPrModelNumber.Location = new System.Drawing.Point(1127, 367);
             this.textBoxPrModelNumber.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxPrModelNumber.Name = "textBoxPrModelNumber";
@@ -514,7 +514,7 @@ namespace SalesManagement_SysDev
             // 
             // comboBoxColor
             // 
-            this.comboBoxColor.Font = new System.Drawing.Font("HGS明朝E", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.comboBoxColor.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.comboBoxColor.FormattingEnabled = true;
             this.comboBoxColor.Items.AddRange(new object[] {
             "黒",
@@ -534,7 +534,7 @@ namespace SalesManagement_SysDev
             // 
             // PrReleaseDate
             // 
-            this.PrReleaseDate.Font = new System.Drawing.Font("HGP明朝E", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.PrReleaseDate.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.PrReleaseDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.PrReleaseDate.Location = new System.Drawing.Point(1690, 164);
             this.PrReleaseDate.Margin = new System.Windows.Forms.Padding(2);

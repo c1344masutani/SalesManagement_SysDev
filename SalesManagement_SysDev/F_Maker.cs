@@ -12,6 +12,9 @@ namespace SalesManagement_SysDev
 {
     public partial class F_Maker : Form
     {
+        //入力形式チェック用クラスのインスタンス化
+        DataInputFormCheck dataInputFormCheck = new DataInputFormCheck();
+
         public F_Maker()
         {
             InitializeComponent();
@@ -113,6 +116,12 @@ namespace SalesManagement_SysDev
                 if(textBoxPostal.TextLength > 7)
                 {
                     MessageBox.Show("郵便番号は7桁以下です");
+                    return;
+                }
+
+                if (!dataInputFormCheck.CheckNumeric(textBoxPostal.Text))
+                {
+                    MessageBox.Show("郵便番号は数値です");
                     return;
                 }
             }
@@ -237,6 +246,12 @@ namespace SalesManagement_SysDev
                 if (textBoxPostal.TextLength > 7)
                 {
                     MessageBox.Show("郵便番号は7桁以下です");
+                    return;
+                }
+
+                if (!dataInputFormCheck.CheckNumeric(textBoxPostal.Text))
+                {
+                    MessageBox.Show("郵便番号は数値です");
                     return;
                 }
             }
@@ -512,6 +527,11 @@ namespace SalesManagement_SysDev
 
             buttonUpdateMode.BackColor = Color.LightYellow;
             buttonSearchMode.BackColor = Color.Orange;
+        }
+
+        private void F_Maker_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
     }
 }

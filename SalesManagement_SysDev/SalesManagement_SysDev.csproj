@@ -98,12 +98,6 @@
     <Compile Include="F_nyuuka.Designer.cs">
       <DependentUpon>F_nyuuka.cs</DependentUpon>
     </Compile>
-    <Compile Include="F_menu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="F_menu.Designer.cs">
-      <DependentUpon>F_menu.cs</DependentUpon>
-    </Compile>
     <Compile Include="F_tyuumon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,9 +223,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F_jutyuu.resx">
       <DependentUpon>F_jutyuu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="F_menu.resx">
-      <DependentUpon>F_menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_syouhin.resx">
       <DependentUpon>F_syouhin.cs</DependentUpon>

@@ -159,7 +159,7 @@ namespace SalesManagement_SysDev
             this.textBoxSaID.Multiline = true;
             this.textBoxSaID.Name = "textBoxSaID";
             this.textBoxSaID.ReadOnly = true;
-            this.textBoxSaID.Size = new System.Drawing.Size(206, 52);
+            this.textBoxSaID.Size = new System.Drawing.Size(210, 52);
             this.textBoxSaID.TabIndex = 82;
             // 
             // textBoxSaHidden
@@ -277,10 +277,11 @@ namespace SalesManagement_SysDev
             // 
             // dateTimePickerSaDate
             // 
-            this.dateTimePickerSaDate.Location = new System.Drawing.Point(1221, 364);
+            this.dateTimePickerSaDate.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.dateTimePickerSaDate.Location = new System.Drawing.Point(1224, 339);
             this.dateTimePickerSaDate.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePickerSaDate.Name = "dateTimePickerSaDate";
-            this.dateTimePickerSaDate.Size = new System.Drawing.Size(200, 25);
+            this.dateTimePickerSaDate.Size = new System.Drawing.Size(304, 39);
             this.dateTimePickerSaDate.TabIndex = 97;
             // 
             // label3
@@ -381,7 +382,7 @@ namespace SalesManagement_SysDev
             this.comboBoxClient.FormattingEnabled = true;
             this.comboBoxClient.Location = new System.Drawing.Point(522, 256);
             this.comboBoxClient.Name = "comboBoxClient";
-            this.comboBoxClient.Size = new System.Drawing.Size(206, 41);
+            this.comboBoxClient.Size = new System.Drawing.Size(253, 41);
             this.comboBoxClient.TabIndex = 105;
             // 
             // comboBoxSalesOffice
@@ -390,7 +391,7 @@ namespace SalesManagement_SysDev
             this.comboBoxSalesOffice.FormattingEnabled = true;
             this.comboBoxSalesOffice.Location = new System.Drawing.Point(522, 345);
             this.comboBoxSalesOffice.Name = "comboBoxSalesOffice";
-            this.comboBoxSalesOffice.Size = new System.Drawing.Size(203, 41);
+            this.comboBoxSalesOffice.Size = new System.Drawing.Size(253, 41);
             this.comboBoxSalesOffice.TabIndex = 106;
             // 
             // comboBoxEmployee
@@ -399,7 +400,7 @@ namespace SalesManagement_SysDev
             this.comboBoxEmployee.FormattingEnabled = true;
             this.comboBoxEmployee.Location = new System.Drawing.Point(1224, 153);
             this.comboBoxEmployee.Name = "comboBoxEmployee";
-            this.comboBoxEmployee.Size = new System.Drawing.Size(197, 41);
+            this.comboBoxEmployee.Size = new System.Drawing.Size(304, 41);
             this.comboBoxEmployee.TabIndex = 107;
             // 
             // F_uriage

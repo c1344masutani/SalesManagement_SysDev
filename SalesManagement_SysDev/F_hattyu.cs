@@ -71,7 +71,7 @@ namespace SalesManagement_SysDev
 
             frm.WindowState = FormWindowState.Maximized;
             frm.ShowDialog();
-
+            frm.Dispose();
             this.Close();
         }
 
@@ -526,6 +526,7 @@ namespace SalesManagement_SysDev
         private void buttonClear_Click(object sender, EventArgs e)
         {
             InputClear();
+            fncAllSelect();
         }
 
         private void InputClear()
@@ -699,6 +700,11 @@ namespace SalesManagement_SysDev
                 comboBoxEmployee.Enabled = true;
                 comboBoxProduct.Enabled = true;
             }
+        }
+
+        private void F_hattyu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
     }
 }

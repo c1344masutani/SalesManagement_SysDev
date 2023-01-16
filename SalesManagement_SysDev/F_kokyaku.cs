@@ -97,6 +97,12 @@ namespace SalesManagement_SysDev
                     textBoxPostnumber.Focus();
                     return;
                 }
+
+                if (!dataInputFormCheck.CheckNumeric(textBoxPostnumber.Text))
+                {
+                    MessageBox.Show("郵便番号は数値で入力してください");
+                    return;
+                }
             }
             else
             {
@@ -214,6 +220,12 @@ namespace SalesManagement_SysDev
                 {
                     MessageBox.Show("郵便番号は7文字以下です");
                     textBoxPostnumber.Focus();
+                    return;
+                }
+
+                if (!dataInputFormCheck.CheckNumeric(textBoxPostnumber.Text))
+                {
+                    MessageBox.Show("郵便番号は数値で入力してください");
                     return;
                 }
             }
@@ -472,6 +484,7 @@ namespace SalesManagement_SysDev
             textBoxPostnumber.Text = "";
             textBoxFAX.Text = "";
             textBoxHidden.Text = "";
+            checkBoxClflg.Checked = false;
         }
 
         private void buttonHidden_Click(object sender, EventArgs e)
