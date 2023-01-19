@@ -212,6 +212,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxChid
             // 
+            this.textBoxChid.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxChid.Location = new System.Drawing.Point(404, 164);
             this.textBoxChid.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxChid.Multiline = true;
@@ -231,11 +232,12 @@ namespace SalesManagement_SysDev
             // 
             // textBoxOrid
             // 
+            this.textBoxOrid.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxOrid.Location = new System.Drawing.Point(1228, 254);
             this.textBoxOrid.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxOrid.Multiline = true;
             this.textBoxOrid.Name = "textBoxOrid";
-            this.textBoxOrid.Size = new System.Drawing.Size(206, 51);
+            this.textBoxOrid.Size = new System.Drawing.Size(206, 40);
             this.textBoxOrid.TabIndex = 101;
             this.textBoxOrid.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
@@ -254,10 +256,11 @@ namespace SalesManagement_SysDev
             // 
             // dateTimePickerChdate
             // 
+            this.dateTimePickerChdate.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.dateTimePickerChdate.Location = new System.Drawing.Point(1228, 343);
             this.dateTimePickerChdate.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePickerChdate.Name = "dateTimePickerChdate";
-            this.dateTimePickerChdate.Size = new System.Drawing.Size(206, 25);
+            this.dateTimePickerChdate.Size = new System.Drawing.Size(305, 39);
             this.dateTimePickerChdate.TabIndex = 104;
             // 
             // dataGridViewDsp
@@ -269,7 +272,7 @@ namespace SalesManagement_SysDev
             this.dataGridViewDsp.Name = "dataGridViewDsp";
             this.dataGridViewDsp.RowHeadersWidth = 51;
             this.dataGridViewDsp.RowTemplate.Height = 24;
-            this.dataGridViewDsp.Size = new System.Drawing.Size(2251, 673);
+            this.dataGridViewDsp.Size = new System.Drawing.Size(2251, 503);
             this.dataGridViewDsp.TabIndex = 105;
             this.dataGridViewDsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellClick);
             // 
@@ -422,7 +425,7 @@ namespace SalesManagement_SysDev
             this.comboBoxClient.FormattingEnabled = true;
             this.comboBoxClient.Location = new System.Drawing.Point(1228, 167);
             this.comboBoxClient.Name = "comboBoxClient";
-            this.comboBoxClient.Size = new System.Drawing.Size(206, 41);
+            this.comboBoxClient.Size = new System.Drawing.Size(311, 41);
             this.comboBoxClient.TabIndex = 118;
             // 
             // buttonUpdateMode

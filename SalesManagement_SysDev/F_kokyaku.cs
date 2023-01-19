@@ -363,7 +363,8 @@ namespace SalesManagement_SysDev
                                t1.ClAddress.Contains(address) &&
                                t1.ClPhone.Contains(phone) &&
                                t1.ClPostal.Contains(clpostal) &&
-                               t1.ClFAX.Contains(fax)
+                               t1.ClFAX.Contains(fax) &&
+                               t1.ClFlag == 0
                          select new
                          {
                              t1.ClID,
@@ -472,6 +473,7 @@ namespace SalesManagement_SysDev
         private void button_Clear_Click(object sender, EventArgs e)
         {
             ClearInput();
+            fncAllSelect();
         }
 
         private void ClearInput()

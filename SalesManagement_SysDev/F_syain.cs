@@ -447,7 +447,8 @@ namespace SalesManagement_SysDev
                                t1.EmName.Contains(emname) &&
                                t1.SoID.ToString().Contains(soid) &&
                                t1.PoID.ToString().Contains(poid) &&
-                               t1.EmPhone.ToString().Contains(tel)
+                               t1.EmPhone.ToString().Contains(tel) &&
+                               t1.EmFlag == 0
                          select new
                          {
                              t1.EmID,
@@ -488,6 +489,7 @@ namespace SalesManagement_SysDev
         private void buttonClear_Click(object sender, EventArgs e)
         {
             ClearInput();
+            fncAllSelect();
         }
 
         private void ClearInput()

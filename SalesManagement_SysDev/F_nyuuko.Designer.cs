@@ -223,6 +223,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxWaID
             // 
+            this.textBoxWaID.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxWaID.Location = new System.Drawing.Point(385, 164);
             this.textBoxWaID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxWaID.Multiline = true;
@@ -233,6 +234,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxHaID
             // 
+            this.textBoxHaID.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxHaID.Location = new System.Drawing.Point(385, 254);
             this.textBoxHaID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxHaID.Multiline = true;
@@ -377,6 +379,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxProduct
             // 
+            this.textBoxProduct.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxProduct.Location = new System.Drawing.Point(385, 337);
             this.textBoxProduct.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxProduct.Multiline = true;
@@ -413,6 +416,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxQuantity
             // 
+            this.textBoxQuantity.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxQuantity.Location = new System.Drawing.Point(1308, 308);
             this.textBoxQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxQuantity.Multiline = true;

@@ -66,7 +66,8 @@ namespace SalesManagement_SysDev
                          where t1.StID.ToString().Contains(stid) &&
                                t2.PrName.Contains(prname) &&
                                t2.Price.ToString().Contains(price) &&
-                               t1.StQuantity.ToString().Contains(stquantity)
+                               t1.StQuantity.ToString().Contains(stquantity) &&
+                               t1.StFlag == 0
                          select new
                          {
                              t1.StID,
@@ -257,6 +258,7 @@ namespace SalesManagement_SysDev
         private void button_Clear_Click(object sender, EventArgs e)
         {
             ClearInput();
+            fncAllSelect();
         }
 
         private void buttonUpdateMode_Click(object sender, EventArgs e)

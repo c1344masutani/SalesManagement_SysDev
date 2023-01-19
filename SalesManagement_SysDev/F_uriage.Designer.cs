@@ -154,6 +154,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxSaID
             // 
+            this.textBoxSaID.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxSaID.Location = new System.Drawing.Point(522, 143);
             this.textBoxSaID.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSaID.Multiline = true;
@@ -180,12 +181,13 @@ namespace SalesManagement_SysDev
             this.dataGridViewDsp.Name = "dataGridViewDsp";
             this.dataGridViewDsp.RowHeadersWidth = 51;
             this.dataGridViewDsp.RowTemplate.Height = 24;
-            this.dataGridViewDsp.Size = new System.Drawing.Size(2238, 703);
+            this.dataGridViewDsp.Size = new System.Drawing.Size(2238, 567);
             this.dataGridViewDsp.TabIndex = 88;
             this.dataGridViewDsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellClick);
             // 
             // textBoxChID
             // 
+            this.textBoxChID.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxChID.Location = new System.Drawing.Point(1224, 250);
             this.textBoxChID.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxChID.Multiline = true;

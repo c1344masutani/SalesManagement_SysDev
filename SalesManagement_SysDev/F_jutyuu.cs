@@ -553,6 +553,7 @@ namespace SalesManagement_SysDev
                 clcharge = textBoxClCharge.Text;
             }
 
+            dataGridViewDsp.Rows.Clear();
             try
             {
                 var context = new SalesManagement_DevContext();
@@ -568,10 +569,11 @@ namespace SalesManagement_SysDev
                          join t6 in context.M_Products
                          on t5.PrID equals t6.PrID
                          where t1.OrID.ToString().Contains(orid) &&
-                               t1.SoID.ToString().Contains(orid) &&
+                               t1.SoID.ToString().Contains(soid) &&
                                t1.EmID.ToString().Contains(emid) &&
                                t1.ClID.ToString().Contains(clid) &&
-                               t1.ClCharge.Contains(clcharge)
+                               t1.ClCharge.Contains(clcharge) &&
+                               t1.OrFlag == 0
                          select new
                          {
                              t1.OrID,
@@ -615,6 +617,8 @@ namespace SalesManagement_SysDev
             comboBoxProduct.SelectedIndex = -1;
             textBoxClCharge.Text = "";
             textBoxOrQuantity.Text = "";
+            checkBoxOrFlag.Checked = false;
+            checkBoxOrStateFlag.Checked = false;
         }
 
         private void buttonConfirm_Click(object sender, EventArgs e)
@@ -625,14 +629,21 @@ namespace SalesManagement_SysDev
                 return;
             }
 
-            int flg;
+            int flg = 0;
             if (checkBoxOrStateFlag.Checked == true)
             {
-                flg = 1;
+                DialogResult result = MessageBox.Show("受注を確定してもよろしいですか", "受注確定確認", MessageBoxButtons.OKCancel);
+                if (result == System.Windows.Forms.DialogResult.OK)
+                {
+                    flg = 1;
+                }
+                else if (result == System.Windows.Forms.DialogResult.Cancel)
+                {
+                    return;
+                }
             }
             else
             {
-                flg = 0;
                 MessageBox.Show("受注確定にチェックを入れてください");
                 return;
             }
@@ -703,7 +714,7 @@ namespace SalesManagement_SysDev
             int flg = 0;
             if(checkBoxOrFlag.Checked == true)
             {
-                DialogResult result = MessageBox.Show("発注確定してもよろしいですか？", "発注確定確認", MessageBoxButtons.OKCancel);
+                DialogResult result = MessageBox.Show("非表示してもよろしいですか？", "非表示確認", MessageBoxButtons.OKCancel);
                 if (result == System.Windows.Forms.DialogResult.OK)
                 {
                     flg = 2;

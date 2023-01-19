@@ -179,6 +179,7 @@ namespace SalesManagement_SysDev
                 context.T_ArrivalDetails.Add(arrivaldetail);
                 context.SaveChanges();
                 ClearInput();
+                fncAllSelect();
                 MessageBox.Show("出庫を確定しました");
             }
             catch (Exception ex)
@@ -272,6 +273,7 @@ namespace SalesManagement_SysDev
         private void buttonClear_Click(object sender, EventArgs e)
         {
             ClearInput();
+            fncAllSelect();
         }
 
         private void ClearInput()

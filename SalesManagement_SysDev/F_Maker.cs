@@ -385,7 +385,8 @@ namespace SalesManagement_SysDev
                                t1.MaPostal.Contains(postal) &&
                                t1.MaAdress.Contains(address) &&
                                t1.MaPhone.Contains(phone) &&
-                               t1.MaFAX.Contains(fax)
+                               t1.MaFAX.Contains(fax) &&
+                               t1.MaFlag == 0
                          select new
                          {
                              t1.MaID,
@@ -424,6 +425,7 @@ namespace SalesManagement_SysDev
         private void button_Clear_Click(object sender, EventArgs e)
         {
             ClearInput();
+            fncAllSelect();
         }
 
         private void dataGridViewDsp_CellClick(object sender, DataGridViewCellEventArgs e)

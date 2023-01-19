@@ -422,7 +422,8 @@ namespace SalesManagement_SysDev
                                t1.SoPostal.Contains(postal) &&
                                t1.SoAddress.Contains(address) &&
                                t1.SoPhone.Contains(phone) &&
-                               t1.SoFAX.Contains(fax)
+                               t1.SoFAX.Contains(fax) && 
+                               t1.SoFlag == 0
                          select new
                          {
                              t1.SoID,

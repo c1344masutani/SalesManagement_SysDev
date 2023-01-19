@@ -144,6 +144,7 @@ namespace SalesManagement_SysDev
         private void buttonClear_Click(object sender, EventArgs e)
         {
             ClearInput();
+            fncAllSelect();
         }
 
         private void label5_Click(object sender, EventArgs e)

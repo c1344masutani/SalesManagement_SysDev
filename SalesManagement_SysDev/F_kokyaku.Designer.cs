@@ -86,11 +86,11 @@ namespace SalesManagement_SysDev
             // 
             // textBoxPhone
             // 
-            this.textBoxPhone.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBoxPhone.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxPhone.Location = new System.Drawing.Point(1193, 143);
             this.textBoxPhone.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(327, 43);
+            this.textBoxPhone.Size = new System.Drawing.Size(327, 39);
             this.textBoxPhone.TabIndex = 45;
             // 
             // label1
@@ -132,11 +132,11 @@ namespace SalesManagement_SysDev
             // 
             // textBoxAddress
             // 
-            this.textBoxAddress.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBoxAddress.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxAddress.Location = new System.Drawing.Point(1193, 308);
             this.textBoxAddress.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(762, 43);
+            this.textBoxAddress.Size = new System.Drawing.Size(762, 39);
             this.textBoxAddress.TabIndex = 36;
             // 
             // buttonRegester
@@ -164,11 +164,11 @@ namespace SalesManagement_SysDev
             // 
             // textBoxClientName
             // 
-            this.textBoxClientName.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBoxClientName.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxClientName.Location = new System.Drawing.Point(522, 237);
             this.textBoxClientName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxClientName.Name = "textBoxClientName";
-            this.textBoxClientName.Size = new System.Drawing.Size(310, 43);
+            this.textBoxClientName.Size = new System.Drawing.Size(310, 39);
             this.textBoxClientName.TabIndex = 34;
             // 
             // dataGridViewDsp
@@ -200,11 +200,11 @@ namespace SalesManagement_SysDev
             // 
             // textBoxPostnumber
             // 
-            this.textBoxPostnumber.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBoxPostnumber.Font = new System.Drawing.Font("HGPｺﾞｼｯｸM", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxPostnumber.Location = new System.Drawing.Point(1193, 234);
             this.textBoxPostnumber.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPostnumber.Name = "textBoxPostnumber";
-            this.textBoxPostnumber.Size = new System.Drawing.Size(212, 43);
+            this.textBoxPostnumber.Size = new System.Drawing.Size(212, 39);
             this.textBoxPostnumber.TabIndex = 37;
             // 
             // textBoxHidden

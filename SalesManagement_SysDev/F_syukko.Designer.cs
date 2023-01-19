@@ -281,7 +281,7 @@ namespace SalesManagement_SysDev
             this.dataGridViewDsp.Name = "dataGridViewDsp";
             this.dataGridViewDsp.RowHeadersWidth = 62;
             this.dataGridViewDsp.RowTemplate.Height = 27;
-            this.dataGridViewDsp.Size = new System.Drawing.Size(1925, 566);
+            this.dataGridViewDsp.Size = new System.Drawing.Size(1925, 500);
             this.dataGridViewDsp.TabIndex = 90;
             this.dataGridViewDsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellClick);
             // 
@@ -296,6 +296,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxOrID
             // 
+            this.textBoxOrID.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxOrID.Location = new System.Drawing.Point(1365, 263);
             this.textBoxOrID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxOrID.Multiline = true;
@@ -306,6 +307,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxSyID
             // 
+            this.textBoxSyID.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxSyID.Location = new System.Drawing.Point(590, 160);
             this.textBoxSyID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSyID.Multiline = true;
@@ -390,6 +392,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxEmployee
             // 
+            this.textBoxEmployee.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxEmployee.Location = new System.Drawing.Point(590, 258);
             this.textBoxEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEmployee.Multiline = true;
@@ -400,6 +403,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxClient
             // 
+            this.textBoxClient.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxClient.Location = new System.Drawing.Point(590, 362);
             this.textBoxClient.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxClient.Multiline = true;
@@ -410,6 +414,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxSalesOffice
             // 
+            this.textBoxSalesOffice.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxSalesOffice.Location = new System.Drawing.Point(1365, 171);
             this.textBoxSalesOffice.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxSalesOffice.Multiline = true;

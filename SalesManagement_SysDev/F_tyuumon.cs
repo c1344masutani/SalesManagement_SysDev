@@ -209,7 +209,8 @@ namespace SalesManagement_SysDev
                                t1.SoID.ToString().Contains(soid) &&
                                t1.EmID.ToString().Contains(emid) &&
                                t1.ClID.ToString().Contains(clid) &&
-                               t1.OrID.ToString().Contains(orid) 
+                               t1.OrID.ToString().Contains(orid) &&
+                               t1.ChFlag == 0
                          select new
                          {
                              t1.ChID,
@@ -264,6 +265,7 @@ namespace SalesManagement_SysDev
         private void buttonClear_Click(object sender, EventArgs e)
         {
             ClearInput();
+            fncAllSelect();
         }
 
         private void buttonConfirm_Click(object sender, EventArgs e)
@@ -351,6 +353,7 @@ namespace SalesManagement_SysDev
                 context.T_SyukkoDetails.Add(syukkodetail);
                 context.SaveChanges();
                 ClearInput();
+                fncAllSelect();
                 MessageBox.Show("注文を確定しました");
             }
             catch (Exception ex)

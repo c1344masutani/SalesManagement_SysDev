@@ -91,6 +91,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxStID
             // 
+            this.textBoxStID.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxStID.Location = new System.Drawing.Point(425, 175);
             this.textBoxStID.Multiline = true;
             this.textBoxStID.Name = "textBoxStID";
@@ -100,6 +101,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxStQuantity
             // 
+            this.textBoxStQuantity.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxStQuantity.Location = new System.Drawing.Point(1089, 237);
             this.textBoxStQuantity.Multiline = true;
             this.textBoxStQuantity.Name = "textBoxStQuantity";
@@ -204,6 +206,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxPrName
             // 
+            this.textBoxPrName.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxPrName.Location = new System.Drawing.Point(425, 251);
             this.textBoxPrName.Multiline = true;
             this.textBoxPrName.Name = "textBoxPrName";
@@ -223,6 +226,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxPrice
             // 
+            this.textBoxPrice.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxPrice.Location = new System.Drawing.Point(1089, 161);
             this.textBoxPrice.Multiline = true;
             this.textBoxPrice.Name = "textBoxPrice";

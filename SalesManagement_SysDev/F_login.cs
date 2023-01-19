@@ -167,6 +167,21 @@ namespace SalesManagement_SysDev
             }
             else
             {
+                string loginPW = Interaction.InputBox("パスワードを入力してください", "パスワード確認", "", -1, -1);
+                //初期設定用
+                if (loginID == "setup" && loginPW == "setup")
+                {
+                    F_syain.from = "login";
+                    Form frm = new F_syain();
+
+                    Opacity = 0;
+
+                    frm.WindowState = FormWindowState.Maximized;
+                    frm.ShowDialog();
+
+
+                    this.Close();
+                }
                 MessageBox.Show("管理者の社員IDを入力してください");
                 return;
             }

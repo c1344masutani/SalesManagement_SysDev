@@ -232,6 +232,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxOrID
             // 
+            this.textBoxOrID.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxOrID.Location = new System.Drawing.Point(480, 160);
             this.textBoxOrID.Multiline = true;
             this.textBoxOrID.Name = "textBoxOrID";

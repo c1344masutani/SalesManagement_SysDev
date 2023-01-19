@@ -497,7 +497,8 @@ namespace SalesManagement_SysDev
                          where t1.HaID.ToString().Contains(haid) &&
                                t2.MaID.ToString().Contains(maid) &&
                                t3.EmID.ToString().Contains(emid) &&
-                               t4.PrID.ToString().Contains(prid) 
+                               t4.PrID.ToString().Contains(prid) &&
+                               t1.HaFlag == 0
                          select new
                          {
                              t1.HaID,

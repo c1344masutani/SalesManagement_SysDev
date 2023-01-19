@@ -187,7 +187,8 @@ namespace SalesManagement_SysDev
                                t1.ClID.ToString().Contains(clid) &&
                                t1.SoID.ToString().Contains(soid) &&
                                t1.EmID.ToString().Contains(emid) &&
-                               t1.ChID.ToString().Contains(chid)
+                               t1.ChID.ToString().Contains(chid) &&
+                               t1.SaFlag == 0
                          select new
                          {
                              t1.SaID,
@@ -225,7 +226,8 @@ namespace SalesManagement_SysDev
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
-            ClearInput();    
+            ClearInput();
+            fncAllSelect();
         }
 
         private void buttonHidden_Click(object sender, EventArgs e)

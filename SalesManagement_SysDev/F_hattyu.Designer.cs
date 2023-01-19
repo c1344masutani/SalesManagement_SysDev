@@ -158,6 +158,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxHaID
             // 
+            this.textBoxHaID.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxHaID.Location = new System.Drawing.Point(434, 139);
             this.textBoxHaID.Multiline = true;
             this.textBoxHaID.Name = "textBoxHaID";
@@ -362,6 +363,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxHaQuantity
             // 
+            this.textBoxHaQuantity.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxHaQuantity.Location = new System.Drawing.Point(1126, 311);
             this.textBoxHaQuantity.Multiline = true;
             this.textBoxHaQuantity.Name = "textBoxHaQuantity";

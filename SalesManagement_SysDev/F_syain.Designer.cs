@@ -248,7 +248,7 @@ namespace SalesManagement_SysDev
             this.dataGridViewDsp.Name = "dataGridViewDsp";
             this.dataGridViewDsp.RowHeadersWidth = 62;
             this.dataGridViewDsp.RowTemplate.Height = 27;
-            this.dataGridViewDsp.Size = new System.Drawing.Size(1804, 576);
+            this.dataGridViewDsp.Size = new System.Drawing.Size(1804, 548);
             this.dataGridViewDsp.TabIndex = 17;
             this.dataGridViewDsp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDsp_CellClick);
             // 

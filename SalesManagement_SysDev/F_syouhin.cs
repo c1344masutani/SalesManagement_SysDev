@@ -193,6 +193,7 @@ namespace SalesManagement_SysDev
 
         private void buttonClear_Click(object sender, EventArgs e)
         {
+            fncAllSelect();
             ClearInput();
 
 
@@ -552,7 +553,8 @@ namespace SalesManagement_SysDev
                                t1.PrSafetyStock.ToString().Contains(stock) &&
                                t1.ScID.ToString().Contains(smallclass) &&
                                t1.PrModelNumber.ToString().Contains(modelnumber) &&
-                               t1.PrColor.ToString().Contains(color) 
+                               t1.PrColor.ToString().Contains(color) &&
+                               t1.PrFlag == 0
                          select new
                          {
                              t1.PrID,

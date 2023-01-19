@@ -71,7 +71,7 @@ namespace SalesManagement_SysDev
             this.pictureBox1.Image = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
             this.pictureBox1.InitialImage = global::SalesManagement_SysDev.Properties.Resources.S__33333256;
             this.pictureBox1.Location = new System.Drawing.Point(27, 26);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(147, 94);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -96,7 +96,7 @@ namespace SalesManagement_SysDev
             this.buttonRegester.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.buttonRegester.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
             this.buttonRegester.Location = new System.Drawing.Point(723, 32);
-            this.buttonRegester.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonRegester.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRegester.Name = "buttonRegester";
             this.buttonRegester.Size = new System.Drawing.Size(232, 50);
             this.buttonRegester.TabIndex = 93;
@@ -109,7 +109,7 @@ namespace SalesManagement_SysDev
             this.buttonUpdate.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.buttonUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
             this.buttonUpdate.Location = new System.Drawing.Point(1007, 33);
-            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(142, 50);
             this.buttonUpdate.TabIndex = 94;
@@ -122,7 +122,7 @@ namespace SalesManagement_SysDev
             this.buttonSearch.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.buttonSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
             this.buttonSearch.Location = new System.Drawing.Point(907, 32);
-            this.buttonSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSearch.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSearch.Name = "buttonSearch";
             this.buttonSearch.Size = new System.Drawing.Size(368, 50);
             this.buttonSearch.TabIndex = 95;
@@ -144,8 +144,9 @@ namespace SalesManagement_SysDev
             // 
             // textBoxMaID
             // 
+            this.textBoxMaID.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxMaID.Location = new System.Drawing.Point(475, 176);
-            this.textBoxMaID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMaID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMaID.Multiline = true;
             this.textBoxMaID.Name = "textBoxMaID";
             this.textBoxMaID.ReadOnly = true;
@@ -168,7 +169,7 @@ namespace SalesManagement_SysDev
             // 
             this.textBoxMaName.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxMaName.Location = new System.Drawing.Point(475, 274);
-            this.textBoxMaName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxMaName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxMaName.Multiline = true;
             this.textBoxMaName.Name = "textBoxMaName";
             this.textBoxMaName.Size = new System.Drawing.Size(362, 48);
@@ -190,7 +191,7 @@ namespace SalesManagement_SysDev
             // 
             this.textBoxPostal.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxPostal.Location = new System.Drawing.Point(475, 376);
-            this.textBoxPostal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPostal.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPostal.Multiline = true;
             this.textBoxPostal.Name = "textBoxPostal";
             this.textBoxPostal.Size = new System.Drawing.Size(186, 48);
@@ -201,7 +202,7 @@ namespace SalesManagement_SysDev
             this.dataGridViewDsp.AllowUserToAddRows = false;
             this.dataGridViewDsp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDsp.Location = new System.Drawing.Point(58, 598);
-            this.dataGridViewDsp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewDsp.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewDsp.Name = "dataGridViewDsp";
             this.dataGridViewDsp.RowHeadersWidth = 62;
             this.dataGridViewDsp.RowTemplate.Height = 27;
@@ -225,7 +226,7 @@ namespace SalesManagement_SysDev
             // 
             this.textBoxAddress.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxAddress.Location = new System.Drawing.Point(214, 517);
-            this.textBoxAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxAddress.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAddress.Multiline = true;
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(614, 48);
@@ -247,7 +248,7 @@ namespace SalesManagement_SysDev
             // 
             this.textBoxPhone.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxPhone.Location = new System.Drawing.Point(1220, 174);
-            this.textBoxPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPhone.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPhone.Multiline = true;
             this.textBoxPhone.Name = "textBoxPhone";
             this.textBoxPhone.Size = new System.Drawing.Size(387, 48);
@@ -269,7 +270,7 @@ namespace SalesManagement_SysDev
             // 
             this.textBoxFax.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxFax.Location = new System.Drawing.Point(1220, 264);
-            this.textBoxFax.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxFax.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxFax.Multiline = true;
             this.textBoxFax.Name = "textBoxFax";
             this.textBoxFax.Size = new System.Drawing.Size(387, 48);
@@ -292,7 +293,7 @@ namespace SalesManagement_SysDev
             // 
             this.textBoxHidden.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxHidden.Location = new System.Drawing.Point(1490, 513);
-            this.textBoxHidden.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxHidden.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxHidden.Multiline = true;
             this.textBoxHidden.Name = "textBoxHidden";
             this.textBoxHidden.Size = new System.Drawing.Size(506, 48);
@@ -315,7 +316,7 @@ namespace SalesManagement_SysDev
             this.buttonBack.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.buttonBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
             this.buttonBack.Location = new System.Drawing.Point(1823, 32);
-            this.buttonBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBack.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(142, 48);
             this.buttonBack.TabIndex = 113;
@@ -329,7 +330,7 @@ namespace SalesManagement_SysDev
             this.button_Clear.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button_Clear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
             this.button_Clear.Location = new System.Drawing.Point(1468, 32);
-            this.button_Clear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button_Clear.Margin = new System.Windows.Forms.Padding(2);
             this.button_Clear.Name = "button_Clear";
             this.button_Clear.Size = new System.Drawing.Size(322, 50);
             this.button_Clear.TabIndex = 114;
@@ -342,7 +343,7 @@ namespace SalesManagement_SysDev
             this.buttonHidden.Font = new System.Drawing.Font("HGS明朝E", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.buttonHidden.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(123)))), ((int)(((byte)(68)))));
             this.buttonHidden.Location = new System.Drawing.Point(1225, 33);
-            this.buttonHidden.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonHidden.Margin = new System.Windows.Forms.Padding(2);
             this.buttonHidden.Name = "buttonHidden";
             this.buttonHidden.Size = new System.Drawing.Size(172, 50);
             this.buttonHidden.TabIndex = 118;

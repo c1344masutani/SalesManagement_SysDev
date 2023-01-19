@@ -209,6 +209,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxArID
             // 
+            this.textBoxArID.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxArID.Location = new System.Drawing.Point(449, 166);
             this.textBoxArID.Multiline = true;
             this.textBoxArID.Name = "textBoxArID";
@@ -218,10 +219,11 @@ namespace SalesManagement_SysDev
             // 
             // textBoxOrID
             // 
-            this.textBoxOrID.Location = new System.Drawing.Point(1075, 269);
+            this.textBoxOrID.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textBoxOrID.Location = new System.Drawing.Point(1075, 268);
             this.textBoxOrID.Multiline = true;
             this.textBoxOrID.Name = "textBoxOrID";
-            this.textBoxOrID.Size = new System.Drawing.Size(206, 51);
+            this.textBoxOrID.Size = new System.Drawing.Size(206, 40);
             this.textBoxOrID.TabIndex = 98;
             // 
             // textBoxArHidden

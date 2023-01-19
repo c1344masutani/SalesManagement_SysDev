@@ -246,6 +246,7 @@ namespace SalesManagement_SysDev
             // 
             // textBoxOrID
             // 
+            this.textBoxOrID.Font = new System.Drawing.Font("MS UI Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.textBoxOrID.Location = new System.Drawing.Point(1222, 240);
             this.textBoxOrID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxOrID.Multiline = true;

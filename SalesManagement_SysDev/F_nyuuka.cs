@@ -113,6 +113,7 @@ namespace SalesManagement_SysDev
         private void buttonClear_Click(object sender, EventArgs e)
         {
             ClearInput();
+            fncAllSelect();
         }
 
         private void F_nyuuka_Load(object sender, EventArgs e)
@@ -210,7 +211,8 @@ namespace SalesManagement_SysDev
                                t1.SoID.ToString().Contains(soid) &&
                                t1.EmID.ToString().Contains(emid) &&
                                t1.ClID.ToString().Contains(clid) &&
-                               t1.OrID.ToString().Contains(orid)
+                               t1.OrID.ToString().Contains(orid) && 
+                               t1.ArFlag == 0
                          select new
                          {
                              t1.ArID,
@@ -308,6 +310,7 @@ namespace SalesManagement_SysDev
                 context.T_ShipmentDetails.Add(shipmentdetail);
                 context.SaveChanges();
                 ClearInput();
+                fncAllSelect();
                 MessageBox.Show("入荷を確定しました");
             }
             catch (Exception ex)
