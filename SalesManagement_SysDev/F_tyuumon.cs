@@ -276,14 +276,21 @@ namespace SalesManagement_SysDev
 
             var context = new SalesManagement_DevContext();
             int chid = int.Parse(textBoxChid.Text);
-            int flg;
+            int flg = 0;
             if (checkBoxChStateflg.Checked == true)
             {
-                flg = 1;
+                DialogResult result = MessageBox.Show("注文を確定してもよろしいですか", "注文確定確認", MessageBoxButtons.OKCancel);
+                if (result == System.Windows.Forms.DialogResult.OK)
+                {
+                    flg = 1;
+                }
+                else if (result == System.Windows.Forms.DialogResult.Cancel)
+                {
+                    return;
+                }
             }
             else
             {
-                flg = 0;
                 MessageBox.Show("注文確定にチェックを入れてください");
                 return;
             }
@@ -362,14 +369,21 @@ namespace SalesManagement_SysDev
                 return;
             }
 
-            int flg;
+            int flg = 0;
             if (checkBoxChflg.Checked == true)
             {
-                flg = 2;
+                DialogResult result = MessageBox.Show("非表示にしてもよろしいですか？", "非表示確認", MessageBoxButtons.OKCancel);
+                if (result == System.Windows.Forms.DialogResult.OK)
+                {
+                    flg = 2;
+                }
+                else if (result == System.Windows.Forms.DialogResult.Cancel)
+                {
+                    return;
+                }
             }
             else
             {
-                flg = 0;
                 MessageBox.Show("非表示にチェックを入れてください。");
                 return;
             }

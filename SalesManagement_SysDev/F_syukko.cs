@@ -115,10 +115,18 @@ namespace SalesManagement_SysDev
 
             var context = new SalesManagement_DevContext();
             int syid = int.Parse(textBoxSyID.Text);
-            int flg;
+            int flg = 0;
             if (checkBoxSyStateFlag.Checked == true)
             {
-                flg = 1;
+                DialogResult result = MessageBox.Show("出庫を確定してもよろしいですか？", "出庫確定確認", MessageBoxButtons.OKCancel);
+                if (result == System.Windows.Forms.DialogResult.OK)
+                {
+                    flg = 1;
+                }
+                else if (result == System.Windows.Forms.DialogResult.Cancel)
+                { 
+                    return;
+                }
             }
             else
             {
@@ -190,14 +198,21 @@ namespace SalesManagement_SysDev
                 MessageBox.Show("出庫IDを入力してください");
                 return;
             }
-            int flg;
+            int flg = 0;
             if (checkBoxSyFlg.Checked == true)
             {
-                flg = 2;
+                DialogResult result = MessageBox.Show("非表示にしてもよろしいですか？", "非表示確認", MessageBoxButtons.OKCancel);
+                if (result == System.Windows.Forms.DialogResult.OK)
+                {
+                    flg = 2;
+                }
+                else if (result == System.Windows.Forms.DialogResult.Cancel)
+                {
+                    return;
+                }
             }
             else
             {
-                flg = 0;
                 MessageBox.Show("非表示にチェックを入れてください");
                 return;
             }

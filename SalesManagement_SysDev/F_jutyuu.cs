@@ -700,14 +700,22 @@ namespace SalesManagement_SysDev
                 return;
             }
 
-            int flg;
+            int flg = 0;
             if(checkBoxOrFlag.Checked == true)
             {
-                flg = 2;
+                DialogResult result = MessageBox.Show("発注確定してもよろしいですか？", "発注確定確認", MessageBoxButtons.OKCancel);
+                if (result == System.Windows.Forms.DialogResult.OK)
+                {
+                    flg = 2;
+                }
+                else if (result == System.Windows.Forms.DialogResult.Cancel)
+                {
+                    return;
+                }
+                
             }
             else
             {
-                flg = 0;
                 MessageBox.Show("非表示にチェックを入れてください");
                 return;
             }

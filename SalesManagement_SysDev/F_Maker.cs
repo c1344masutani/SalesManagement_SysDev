@@ -465,14 +465,21 @@ namespace SalesManagement_SysDev
                 return;
             }
 
-            int flg;
+            int flg = 0;
             if(checkBoxMaFlag.Checked == true)
             {
-                flg = 2;
+                DialogResult result = MessageBox.Show("非表示にしてもよろしいですか？", "非表示確認", MessageBoxButtons.OKCancel);
+                if (result == System.Windows.Forms.DialogResult.OK)
+                {
+                    flg = 2;
+                }
+                else if (result == System.Windows.Forms.DialogResult.Cancel)
+                {
+                    return;
+                }
             }
             else
             {
-                flg = 0;
                 MessageBox.Show("非表示にチェックを入れてください");
                 return;
             }

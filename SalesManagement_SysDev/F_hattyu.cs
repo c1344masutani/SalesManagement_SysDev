@@ -552,14 +552,21 @@ namespace SalesManagement_SysDev
                 return;
             }
 
-            int flg;
+            int flg = 0;
             if(checkBoxWaWarehouseFlag.Checked == true)
             {
-                flg = 1;
+                DialogResult result = MessageBox.Show("発注確定してもよろしいですか？", "発注確定確認", MessageBoxButtons.OKCancel);
+                if (result == System.Windows.Forms.DialogResult.OK)
+                {
+                    flg = 1;
+                }
+                else if (result == System.Windows.Forms.DialogResult.Cancel)
+                {
+                    return;
+                }
             }
             else
             {
-                flg = 0;
                 MessageBox.Show("発注確定にチェックを入れてください");
                 return;
             }
@@ -624,14 +631,22 @@ namespace SalesManagement_SysDev
                 return;
             }
 
-            int flg;
-            if(checkBoxHaFlag.Checked == true)
+            int flg = 0;
+            if (checkBoxHaFlag.Checked == true)
             {
-                flg = 2;
+                DialogResult result = MessageBox.Show("非表示にしてもよろしいですか？", "非表示確認", MessageBoxButtons.OKCancel);
+                if (result == System.Windows.Forms.DialogResult.OK)
+                {
+                    flg = 2;
+                }
+                else if (result == System.Windows.Forms.DialogResult.Cancel)
+                {
+                    return;
+                }
+
             }
             else
             {
-                flg = 0;
                 MessageBox.Show("非表示にチェックを入れてください");
                 return;
             }

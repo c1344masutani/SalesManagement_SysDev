@@ -188,15 +188,22 @@ namespace SalesManagement_SysDev
                 return;
             }
 
-            int checkWaState;
+            int flg = 0;
             if (checkBoxWaSheifFlag.Checked == true)
             {
-                checkWaState = 1;
+                DialogResult result = MessageBox.Show("入庫を確定してもよろしいですか", "入庫確定確認", MessageBoxButtons.OKCancel);
+                if (result == System.Windows.Forms.DialogResult.OK)
+                {
+                    flg = 1;
+                }
+                else if (result == System.Windows.Forms.DialogResult.Cancel)
+                {
+                    return;
+                }
             }
             else
             {
-                checkWaState = 0;
-                MessageBox.Show("入荷確定にチェックを入れてください");
+                MessageBox.Show("入庫確定にチェックを入れてください");
                 return;
             }
 
@@ -207,7 +214,7 @@ namespace SalesManagement_SysDev
                 var warehousing = context.T_Warehousings.Single(x => x.WaID == waid);
                 var warehousingdetail = context.T_WarehousingDetails.Single(x => x.WaID == waid);
                 var stock = context.T_Stocks.Single(x => x.PrID == warehousingdetail.PrID);
-                warehousing.WaShelfFlag = checkWaState;
+                warehousing.WaShelfFlag = flg;
                 //在庫数増加
                 stock.StQuantity = stock.StQuantity + warehousingdetail.WaQuantity;
                 context.SaveChanges();
@@ -243,14 +250,22 @@ namespace SalesManagement_SysDev
                 return;
             }
 
-            int checkWa;
+            int flg = 0;
             if (checkBoxWaFlag.Checked == true)
             {
-                checkWa = 2;
+                DialogResult result = MessageBox.Show("非表示にしてもよろしいですか？", "非表示確認", MessageBoxButtons.OKCancel);
+                if (result == System.Windows.Forms.DialogResult.OK)
+                {
+                    flg = 2;
+                }
+                else if (result == System.Windows.Forms.DialogResult.Cancel)
+                {
+                    return;
+                }
             }
             else
             {
-                checkWa = 0;
+                flg = 0;
                 MessageBox.Show("非表示にチェックを入れてください");
                 return;
             }
@@ -260,7 +275,7 @@ namespace SalesManagement_SysDev
             try
             {
                 var warehousing = context.T_Warehousings.Single(x => x.WaID == waid);
-                warehousing.WaFlag = checkWa;
+                warehousing.WaFlag = flg;
                 warehousing.WaHidden = textBoxWaHidden.Text;
                 context.SaveChanges();
                 context.Dispose();
